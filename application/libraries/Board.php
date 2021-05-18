@@ -497,7 +497,7 @@ class Board extends CI_Controller
 		$view = array();
 		$view['view'] = array();
 
-		$this->CI->load->model( array('Board_category_model', 'Post_file_model'));
+		$this->CI->load->model( array('Board_category_model', 'Post_file_model','Post_extra_vars_model'));
 
 		$skin = element('skin', $config);
 		$brd_id = element('brd_id', $config);
@@ -612,6 +612,15 @@ class Board extends CI_Controller
 				$view['view']['latest'][$key]['title'] = $length ? cut_str(element('post_title', $value), $length) : element('post_title', $value);
 				$view['view']['latest'][$key]['display_datetime'] = display_datetime(element('post_datetime', $value), '');
 				$view['view']['latest'][$key]['category'] = '';
+                $view['view']['latest'][$key]['extravars'] = $this->CI->Post_extra_vars_model->get_all_meta(element('post_id', $value));
+                /**첨부파일이 있으면 배열로 리스트에 전달*/
+
+                $filewhere = array(
+                    'post_id' => element('post_id', $value),
+                );
+                $view['view']['latest'][$key]['file'] = $file = $this->CI->Post_file_model
+                    ->get('', '', $filewhere, '', '', 'pfi_id', 'ASC');
+
 				if (element('post_category', $value)) {
 						$view['view']['latest'][$key]['category'] = $this->CI->Board_category_model->get_category_info(element('brd_id', $value), element('post_category', $value));
 				}

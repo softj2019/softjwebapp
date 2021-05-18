@@ -10,26 +10,21 @@
 <?php if (element('meta_author', $layout)) { ?><meta name="author" content="<?php echo html_escape(element('meta_author', $layout)); ?>"><?php } ?>
 <?php if (element('favicon', $layout)) { ?><link rel="shortcut icon" type="image/x-icon" href="<?php echo element('favicon', $layout); ?>" /><?php } ?>
 <?php if (element('canonical', $view)) { ?><link rel="canonical" href="<?php echo element('canonical', $view); ?>" /><?php } ?>
-
+    <link rel="stylesheet" type="text/css" href="<?php echo element('layout_skin_url', $layout); ?>/css/style.css" />
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <link href="<?php echo base_url('assets/plugins/slick-theme.css'); ?>" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url('assets/js/parallax_background.js'); ?>"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
-
-    <?php echo $this->managelayout->display_css(); ?>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link href="<?php echo base_url('assets/css/reset.css'); ?>" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="<?php echo element('layout_skin_url', $layout); ?>/css/style.css" />
+    <link href="<?php echo base_url('assets/css/common.css'); ?>" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <?php echo $this->managelayout->display_css(); ?>
 <script type="text/javascript">
 // 자바스크립트에서 사용하는 전역변수 선언
 var cb_url = "<?php echo trim(site_url(), '/'); ?>";
@@ -47,83 +42,14 @@ var cb_board_url = <?php echo ( isset($view) && element('board_key', $view)) ? '
 var cb_device_type = "<?php echo $this->cbconfig->get_device_type() === 'mobile' ? 'mobile' : 'desktop' ?>";
 var cb_csrf_hash = "<?php echo $this->security->get_csrf_hash(); ?>";
 var cookie_prefix = "<?php echo config_item('cookie_prefix'); ?>";
-
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NPTD5LV');
 </script>
 
 </head>
 <body <?php echo isset($view) ? element('body_script', $view) : ''; ?>>
-<div class="wrapper">
-    <header class="main-hd">
-        <div class="cursor"></div>
-        <button type="button" class="menu-btn"></button>
-        <ul class="links2">
-            <li><a href="#sec2">
-                    about us
-                </a></li>
-            <li><a href="#sec3">
-                    portfolio
-                </a></li>
-            <li><a href="#sec4">
-                    contact
-                </a></li>
-        </ul>
-        <div class="main-line"></div>
-        <h1 class="h-logo">
-            <a href="/">
-                <svg id="hLogo" x="0px" y="0px" viewbox="0 0 240 80">
-                    <style type="text/css">
-                        .st0{fill:none;stroke:#fff;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                        .dark .st0, .hovered .st0{stroke:#343434}
-                        .dark .hovered .st0{stroke:#fff}
-                    </style>
-                    <path class="st0" d="M40.1,25.42c0,0-4.9-7.23-13.42-7.23S13.27,22.84,13.27,28c0,7.48,6.73,10.84,12.52,10.84
-                        c6.02,0,14.32,3.87,14.32,11.61s-6.97,11.35-13.42,11.35s-15.23-5.42-15.23-7.74"/>
-                    <ellipse class="st0" cx="71.65" cy="39.63" rx="21" ry="21.44"/>
-                    <polyline class="st0" points="133.87,18.19 105.81,18.19 105.81,39.63 105.81,61.06 "/>
-                    <line class="st0" x1="127.29" y1="38.88" x2="106.81" y2="38.88"/>
-                    <polyline class="st0" points="142.97,18.19 158.94,18.19 174.9,18.19 "/>
-                    <line class="st0" x1="158.94" y1="61.06" x2="158.94" y2="18.19"/>
-                    <path class="st0" d="M226.77,18.19v33.97c0,0-2.9,8.9-11.03,8.9c-8.13,0-12-6.97-12-11.61"/>
-                </svg>
-
-                소프트제이
-            </a>
-        </h1>
-        <nav class="main-navi">
-            <button class="navi-close" type="button">
-                <span></span>
-            </button>
-            <ul class="links">
-                <li><a href="#sec1" class="on">
-                        main
-                    </a></li>
-                <li><a href="#sec2">
-                        about us
-                    </a></li>
-                <li><a href="#sec3">
-                        portfolio
-                    </a>
-<!--                    <ul class="navsub">-->
-<!--                        <li><a href="sub/portfolio-sub.html" target="_blank">onejoy mall</a></li>-->
-<!--                        <li><a href="">talk crm</a></li>-->
-<!--                        <li><a href="">good archive</a></li>-->
-<!--                    </ul>-->
-                </li>
-                <li><a href="#sec4">
-                        contact
-                    </a></li>
-            </ul>
-        </nav>
+    <header class="main-hd sub-hd">
+        <h1 class="sub-logo"><a href="/">소프트제이</a></h1>
     </header>
-    <!-- header end -->
-
-	<!-- main start -->
-    <div class="main-wrap">
+    <div class="sub-wrap">
 
 			<?php if (element('use_sidebar', $layout)) {?>
 				<div class="left">
@@ -141,6 +67,27 @@ var cookie_prefix = "<?php echo config_item('cookie_prefix'); ?>";
 				</div>
 
 			<?php } ?>
+        <footer class="foot-bg">
+            <div class="footer-inner">
+                <div class="foot-L">
+                    <div class="f-logo">
+                        <span>SOFT J</span>
+                    </div>
+                    <p>
+                        경기도 고양시 일산동구 정발산로 24 타워3차 603호 (장항동, 웨스턴돔2)<br>
+                        상호 : 소프트제이 ㅣ 대표자 : 김지훈<br>
+                        Copyright © 2020 SOFTJ. All Rights Reserved.
+                    </p>
+                </div>
+                <div class="ver-h"></div>
+                <div class="foot-R">
+                    <p>CONTACT US.</p>
+                    <p class="str-p">Tel. 010-4096-0221</p>
+                    <p class="fax-p">Fax. 02-6442-6623</p>
+                    <p>Email. dev@softj.net</p>
+                </div>
+            </div>
+        </footer>
 	</div>
 	<!-- main end -->
 
@@ -187,12 +134,16 @@ $(window).on('load resize', function() {
         slider.not('.slick-initialized').slick(slickOptions);
     }
 });
-$('.parallax-background').parallaxBackground({
-    event: 'mouse_move',
-    animation_type: 'shift',
-    animate_duration: 3
-});
-new Vivus('hLogo', {duration: 150, start:'autostart'});
+if($('.parallax-background') > 0){
+    $('.parallax-background').parallaxBackground({
+        event: 'mouse_move',
+        animation_type: 'shift',
+        animate_duration: 3
+    });
+}
+if($('#hLogo') > 0) {
+    new Vivus('hLogo', {duration: 150, start: 'autostart'});
+}
 </script>
 <?php echo element('popup', $layout); ?>
 <?php echo $this->cbconfig->item('footer_script'); ?>

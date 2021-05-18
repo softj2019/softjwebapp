@@ -591,7 +591,7 @@ class Board_post extends CB_Controller
 
 			$extravars = element('extravars', $board);
 			$form = json_decode($extravars, true);
-			$extra_content = '';
+			$extra_content = array();
 			$k = 0;
 			if ($form && is_array($form)) {
 				foreach ($form as $key => $value) {
@@ -599,7 +599,7 @@ class Board_post extends CB_Controller
 						continue;
 					}
 
-					$item = element(element('field_name', $value), element('extravars', $post));
+					$item = element(element('field_name', $value), html_escape(element('extravars', $post)));
 					$extra_content[$k]['field_name'] = element('field_name', $value);
 					$extra_content[$k]['display_name'] = element('display_name', $value);
 					if (element('field_type', $value) === 'checkbox') {
@@ -1210,7 +1210,7 @@ class Board_post extends CB_Controller
 		if (element('list', $result)) {
 			foreach (element('list', $result) as $key => $val) {
 				$result['list'][$key]['post_url'] = post_url(element('brd_key', $board), element('post_id', $val));
-
+                $result['list'][$key]['extravars'] = $this->Post_extra_vars_model->get_all_meta(element('post_id', $val));
 				$result['list'][$key]['meta'] = $meta
 					= $this->Post_meta_model
 					->get_all_meta(element('post_id', $val));
@@ -1293,6 +1293,14 @@ class Board_post extends CB_Controller
 				$result['list'][$key]['title_bold'] = ($use_subject_style && element('post_title_bold', $meta)) ? element('post_title_bold', $meta) : '';
 				$result['list'][$key]['is_mobile'] = (element('post_device', $val) === 'mobile') ? true : false;
 
+                /**첨부파일이 있으면 배열로 리스트에 전달*/
+                $this->load->model('Post_file_model');
+                $filewhere = array(
+                    'post_id' => $result['list'][$key]['post_id'],
+                );
+                $result['list'][$key]['file'] = $file = $this->Post_file_model
+                    ->get('', '', $filewhere, '', '', 'pfi_id', 'ASC');
+
 				$result['list'][$key]['thumb_url'] = '';
 				$result['list'][$key]['origin_image_url'] = '';
 				if (element('use_gallery_list', $board)) {
@@ -1314,6 +1322,7 @@ class Board_post extends CB_Controller
 						$result['list'][$key]['origin_image_url'] = $thumb_url;
 					}
 				}
+
 			}
 		}
 
