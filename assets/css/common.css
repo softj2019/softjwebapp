@@ -1250,11 +1250,11 @@ section .main-inner{
 }
 
 /* sec4 */
-/*
+
 .sec4{
     background: url(../img/foot.jpg)no-repeat center / cover;
 }
-*/
+
 .sec4 .parallax-inner{
     z-index: -1;
 }

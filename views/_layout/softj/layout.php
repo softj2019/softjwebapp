@@ -187,11 +187,11 @@ $(window).on('load resize', function() {
         slider.not('.slick-initialized').slick(slickOptions);
     }
 });
-$('.parallax-background').parallaxBackground({
-    event: 'mouse_move',
-    animation_type: 'shift',
-    animate_duration: 3
-});
+// $('.parallax-background').parallaxBackground({
+//     event: 'mouse_move',
+//     animation_type: 'shift',
+//     animate_duration: 3
+// });
 new Vivus('hLogo', {duration: 150, start:'autostart'});
 </script>
 <?php echo element('popup', $layout); ?>

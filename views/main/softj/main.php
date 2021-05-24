@@ -127,7 +127,7 @@
 
 <!-- footer start -->
 <section class="sec4" id="sec4">
-    <div class="main-inner parallax-background">
+    <div class="main-inner">
         <div class="parallax-inner"  style="background-image: url(<?php echo base_url('assets/img/foot.jpg'); ?>)"></div>
         <div class="con-box">
             <h2>CONTACT</h2>
