@@ -1473,7 +1473,6 @@ footer a{
     .footer-inner .foot-R .str-p {
         font-weight: 500;
         font-size: 18px;
-        margin: 0px 0;
     }
     
 }
@@ -1747,6 +1746,13 @@ a.link-btn.a-blue:hover{
     background:#fff;
     color: #307DCB;
     border: 1px solid #307DCB;
+}
+/* 210924 ch 추가*/
+.ch-kakao {
+    display: block;
+    background: url(../img/ch-softj.png)no-repeat left / contain;
+    width: 100%;
+    height: 35px;
 }
 @media screen and (min-width:1600px){
     .inner-main{
