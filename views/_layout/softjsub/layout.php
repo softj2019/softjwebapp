@@ -82,7 +82,8 @@ var cookie_prefix = "<?php echo config_item('cookie_prefix'); ?>";
                 <div class="ver-h"></div>
                 <div class="foot-R">
                     <p>CONTACT US.</p>
-                    <p class="str-p">Tel. 010-4096-0221</p>
+                    <p class="str-p">Tel. 070-7607-5532</p>
+                    <p class="str-p"><a href="http://pf.kakao.com/_kxexcxgs" class="ch-kakao" target="_blank"></a></p>
                     <p class="fax-p">Fax. 02-6442-6623</p>
                     <p>Email. dev@softj.net</p>
                 </div>
