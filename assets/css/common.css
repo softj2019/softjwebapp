@@ -468,7 +468,7 @@ header.main-hd{
     .main-hd.dark>ul li a{
         background-color:#343434;
     }
-    
+
     .main-line{
         visibility: hidden;
     }
@@ -488,7 +488,7 @@ header.main-hd{
     .main-hd h1{
         visibility: hidden;
     }
-    
+
 }
 /*header*/
 /*navigation*/
@@ -765,40 +765,40 @@ section .main-inner{
 }
 
 .icon-scroll{
-  width: 38px;
-  height: 60px;
-  box-shadow: inset 0 0 0 1px #fff;
-  border-radius: 25px;
-  opacity: 0.7;
-  position:absolute;
-  top:50%;left:50%;
-  margin-left:-19px;
-  margin-top:-30px;
-  z-index: 9999;
+    width: 38px;
+    height: 60px;
+    box-shadow: inset 0 0 0 1px #fff;
+    border-radius: 25px;
+    opacity: 0.7;
+    position:absolute;
+    top:50%;left:50%;
+    margin-left:-19px;
+    margin-top:-30px;
+    z-index: 9999;
 }
 
 .icon-scroll:before{
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: #fff;
-  margin-left: -4px;
-  top: 8px;
-  border-radius: 4px;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  animation-name: scroll
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll
 }
 
 @keyframes scroll
-  {20%{
-      opacity: 1;}
-  100%{
-      opacity: 0;
-      -webkit-transform: translateY(40px);
-      -ms-transform: translateY(40px);
-      transform: translateY(40px)
-      }
+{20%{
+    opacity: 1;}
+    100%{
+        opacity: 0;
+        -webkit-transform: translateY(40px);
+        -ms-transform: translateY(40px);
+        transform: translateY(40px)
+    }
 }
 .icon-arr1{
     animation-duration: 1.5s;
@@ -806,11 +806,11 @@ section .main-inner{
     animation-name: arrow}
 
 @keyframes arrow
-  {20%{
-      opacity: 1;}
-  100%{
-      opacity: 0;
-      }
+{20%{
+    opacity: 1;}
+    100%{
+        opacity: 0;
+    }
 }
 .icon-arr2{
     animation-duration: 1.5s;
@@ -823,8 +823,8 @@ section .main-inner{
     20%{
         opacity: 1;
     }100%{
-        opacity: 0;
-    }
+         opacity: 0;
+     }
 }
 .icon-arr3{
     animation-duration: 1.5s;
@@ -836,8 +836,8 @@ section .main-inner{
     0%{
         opacity: 1;
     }100%{
-        opacity: 0;
-    }
+         opacity: 0;
+     }
 }
 .icon-scroll-box>p{
     width:100%;
@@ -1139,7 +1139,7 @@ section .main-inner{
     left:10px;
     z-index:1;
 }
- .slick-prev::before,  .slick-next::before{
+.slick-prev::before,  .slick-next::before{
     display:block;
     width:60px;
     height:60px;
@@ -1149,14 +1149,14 @@ section .main-inner{
 .sec3 .slick-next{
     right:50px;
 } .slick-next::before{
-    background:url(../img/arr-right-bk2.png) no-repeat center;
-}
- .hovered.slick-prev::before{
+      background:url(../img/arr-right-bk2.png) no-repeat center;
+  }
+.hovered.slick-prev::before{
     position:absolute;
     top:0;
     background:url(../img/arr-left-w.png) no-repeat center;
 }
- .hovered.slick-next::before{
+.hovered.slick-next::before{
     position:absolute;
     top:0;
     background:url(../img/arr-right-w.png) no-repeat center;
@@ -1250,11 +1250,11 @@ section .main-inner{
 }
 
 /* sec4 */
-/*
+
 .sec4{
     background: url(../img/foot.jpg)no-repeat center / cover;
 }
-*/
+
 .sec4 .parallax-inner{
     z-index: -1;
 }
@@ -1305,7 +1305,7 @@ section .main-inner{
     font-size: 24px;
 }
 .main-wrap>section{
-    
+
     width:100%;
     height:100%;
     overflow: hidden;
@@ -1473,9 +1473,8 @@ footer a{
     .footer-inner .foot-R .str-p {
         font-weight: 500;
         font-size: 18px;
-        margin: 0px 0;
     }
-    
+
 }
 
 /* 상세페이지 */
@@ -1639,10 +1638,10 @@ footer a{
 }
 @keyframes opimg{
     from {
-    opacity: 0;
+        opacity: 0;
     }
     to {
-    opacity: 1;
+        opacity: 1;
     }
 }
 .img-box > div > img{
@@ -1748,6 +1747,13 @@ a.link-btn.a-blue:hover{
     color: #307DCB;
     border: 1px solid #307DCB;
 }
+/* 210924 ch 추가*/
+.ch-kakao {
+    display: block;
+    background: url(../img/ch-softj.png)no-repeat left / contain;
+    width: 100%;
+    height: 35px;
+}
 @media screen and (min-width:1600px){
     .inner-main{
         width:1266px;
@@ -1801,7 +1807,7 @@ a.link-btn.a-blue:hover{
     }
     .img-box{
         height: 59vw;
-    }   
+    }
     .in-box2 > div {
         width: 100%;
     }
@@ -1862,10 +1868,10 @@ a.link-btn.a-blue:hover{
     .in-ul1 li:last-child, .in-ul2 li:last-child{
         padding-right:0;
     }
-    
+
     .img-box{
         height: 59vw;
-    }   
+    }
     a.link-btn {
         width: 75%;
         height: 60px;
