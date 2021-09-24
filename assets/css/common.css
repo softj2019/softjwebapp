@@ -1750,7 +1750,7 @@ a.link-btn.a-blue:hover{
 /* 210924 ch 추가*/
 .ch-kakao {
     display: block;
-    background: url(../img/ch-softj.png)no-repeat left / contain;
+    background: url(/assets/img/ch-softj.png)no-repeat left / contain;
     width: 100%;
     height: 35px;
 }
