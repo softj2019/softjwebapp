@@ -481,6 +481,34 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
 	</div>
 </div>
 
+<div class="border_button mt20 mb20">
+    <div class="btn-group pull-left" role="group" aria-label="...">
+        <?php if (element('modify_url', $view)) { ?>
+            <button type="button" content="btn btn-default" onclick="location.href='<?php echo element('modify_url', $view); ?>'" class="btn btn-default btn-sm">수정</button>
+        <?php } ?>
+        <?php	if (element('delete_url', $view)) { ?>
+            <button type="button" class="btn btn-default btn-sm btn-one-delete" data-one-delete-url="<?php echo element('delete_url', $view); ?>">삭제</button>
+        <?php } ?>
+        <button type="button" onclick="location.href='<?php echo element('list_url', $view); ?>'" class="btn btn-default btn-sm">목록</button>
+        <?php if (element('search_list_url', $view)) { ?>
+            <a href="<?php echo element('search_list_url', $view); ?>" class="btn btn-default btn-sm">검색목록</a>
+        <?php } ?>
+        <?php if (element('reply_url', $view)) { ?>
+            <button type="button" onclick="location.href='<?php echo element('reply_url', $view); ?>'" class="btn btn-default btn-sm">답변</button>
+        <?php } ?>
+        <?php if (element('prev_post', $view)) { ?>
+            <button type="button" onclick="location.href='<?php echo element('url', element('prev_post', $view)); ?>'" class="btn btn-default btn-sm">이전글</button>
+        <?php } ?>
+        <?php if (element('next_post', $view)) { ?>
+            <button type="button" onclick="location.href='<?php echo element('url', element('next_post', $view)); ?>" class="btn btn-default btn-sm">다음글</button>
+        <?php } ?>
+    </div>
+    <?php if (element('write_url', $view)) { ?>
+        <div class="pull-right">
+            <button type="button"  onclick="location.href='<?php echo element('write_url', $view); ?>'" class="btn btn-success btn-sm">글쓰기</button>
+        </div>
+    <?php } ?>
+</div>
 
 <?php echo element('footercontent', element('board', $view)); ?>
 
