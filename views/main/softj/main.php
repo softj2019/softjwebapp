@@ -127,7 +127,7 @@
 
 <!-- footer start -->
 <section class="sec4" id="sec4">
-    <div class="main-inner">
+    <div class="main-inner parallax-background">
         <div class="parallax-inner"  style="background-image: url(<?php echo base_url('assets/img/foot.jpg'); ?>)"></div>
         <div class="con-box">
             <h2>CONTACT</h2>
@@ -158,7 +158,7 @@
                 <div class="ver-h"></div>
                 <div class="foot-R">
                     <p>CONTACT US.</p>
-                    <p class="str-p"><a href="http://pf.kakao.com/_kxexcxgs" class="ch-kakao" target="_blank"></a></p>//210924 수정
+                    <p class="str-p">Tel.   010-4096-0221</p>
                     <p class="fax-p">Fax.     02-6442-6623</p>
                     <p>Email.     dev@softj.net</p>
                 </div>

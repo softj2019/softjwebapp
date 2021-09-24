@@ -10,12 +10,13 @@
 <?php if (element('meta_author', $layout)) { ?><meta name="author" content="<?php echo html_escape(element('meta_author', $layout)); ?>"><?php } ?>
 <?php if (element('favicon', $layout)) { ?><link rel="shortcut icon" type="image/x-icon" href="<?php echo element('favicon', $layout); ?>" /><?php } ?>
 <?php if (element('canonical', $view)) { ?><link rel="canonical" href="<?php echo element('canonical', $view); ?>" /><?php } ?>
-
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<!--    <link rel="stylesheet" type="text/css" href="--><?php //echo element('layout_skin_url', $layout); ?><!--/css/style.css" />-->
+<!--    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link href="<?php echo base_url('assets/plugins/slick-theme.css'); ?>" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -29,7 +30,7 @@
     <?php echo $this->managelayout->display_css(); ?>
 
     <link href="<?php echo base_url('assets/css/reset.css'); ?>" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="<?php echo element('layout_skin_url', $layout); ?>/css/style.css" />
+    <link href="<?php echo base_url('assets/css/common.css'); ?>" rel="stylesheet" type="text/css">
 <script type="text/javascript">
 // 자바스크립트에서 사용하는 전역변수 선언
 var cb_url = "<?php echo trim(site_url(), '/'); ?>";
@@ -54,7 +55,16 @@ var cookie_prefix = "<?php echo config_item('cookie_prefix'); ?>";
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NPTD5LV');
 </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-191149610-1">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'UA-191149610-1');
+    </script>
 </head>
 <body <?php echo isset($view) ? element('body_script', $view) : ''; ?>>
 <div class="wrapper">
@@ -187,11 +197,11 @@ $(window).on('load resize', function() {
         slider.not('.slick-initialized').slick(slickOptions);
     }
 });
-// $('.parallax-background').parallaxBackground({
-//     event: 'mouse_move',
-//     animation_type: 'shift',
-//     animate_duration: 3
-// });
+$('.parallax-background').parallaxBackground({
+    event: 'mouse_move',
+    animation_type: 'shift',
+    animate_duration: 3
+});
 new Vivus('hLogo', {duration: 150, start:'autostart'});
 </script>
 <?php echo element('popup', $layout); ?>

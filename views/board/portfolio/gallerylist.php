@@ -2,13 +2,7 @@
 
 <?php echo element('headercontent', element('board', element('list', $view))); ?>
 
-<div class="border_button">
-    <?php if (element('write_url', element('list', $view))) { ?>
-        <div class="pull-right">
-            <button type="button" onclick="location.href='<?php echo element('write_url', element('list', $view)); ?>'" class="btn btn-success btn-sm">글쓰기</button>
-        </div>
-    <?php } ?>
-</div>
+
 	<h3 class="hidden">
         <?php
             echo html_escape(element('board_name', element('board', element('list', $view))));
@@ -206,4 +200,3 @@
 <?php
 echo form_close();
 ?>
-
