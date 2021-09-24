@@ -250,7 +250,7 @@
 		<?php } ?>
 		<?php if (element('write_url', element('list', $view))) { ?>
 			<div class="pull-right">
-				<a href="<?php echo element('write_url', element('list', $view)); ?>" class="btn btn-success btn-sm">글쓰기</a>
+				<button onclick="javascript:location.href='<?php echo element('write_url', element('list', $view)); ?>'" class="btn btn-success btn-sm">글쓰기</button>
 			</div>
 		<?php } ?>
 	</div>
