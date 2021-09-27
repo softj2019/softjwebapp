@@ -137,9 +137,8 @@
                     <input type="text" placeholder="이메일">
                     <input type="text" placeholder="직급">
                     <input type="text" placeholder="담당자명">
-                    <div id="summernote" ></div>
-
                 </div>
+                <div id="summernote"></div><!-- 200927 수정 -->
                 <button type="button" class="btn df">문의하기</button>
             </form>
 
