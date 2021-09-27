@@ -137,7 +137,8 @@
                     <input type="text" placeholder="이메일">
                     <input type="text" placeholder="직급">
                     <input type="text" placeholder="담당자명">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="내용"></textarea>
+                    <div id="summernote" ></div>
+
                 </div>
                 <button type="button" class="btn df">문의하기</button>
             </form>
@@ -167,6 +168,21 @@
         </footer>
     </div>
 </section>
-
+<script>
+    $('#summernote').summernote({
+        placeholder: '요청사항을 상세하게 작성 해주세요요',
+        tabsiz: 2,
+        height: 120,
+        toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'clear']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+    });
+</script>
 <!-- footer end -->
         

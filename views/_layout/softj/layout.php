@@ -28,7 +28,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
 
     <?php echo $this->managelayout->display_css(); ?>
-
+    <!--summernote-->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <link href="<?php echo base_url('assets/css/reset.css'); ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo base_url('assets/css/common.css'); ?>" rel="stylesheet" type="text/css">
 <script type="text/javascript">
