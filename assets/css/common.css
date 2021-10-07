@@ -1943,11 +1943,16 @@ a.link-btn.a-blue:hover{
 }
 /* footer 수정 0204 */
 /* sec4 */
-section.sec4 .main-inner {/* 210927 푸터수정 */
-    height: auto;
+.main-wrap>section.sec4 {/* 211007 푸터수정 */
+    height:auto;
+    min-height: 100vh;
 }
-.main-wrap>section.sec4 {/* 210927 푸터수정 */
-    height: auto;
+section.sec4 .main-inner {/* 211007 푸터수정 */
+    height:auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 /*@media screen and (max-width: 767px){210927 푸터삭제
     section.sec4 .main-inner {
@@ -1970,7 +1975,7 @@ section.sec4 .main-inner {/* 210927 푸터수정 */
     .con-box {
         height: 63%;
     }
-}*/
+}
 .hidden{display: none!important;}
 /* 210927 추가 */
 .note-editor.note-airframe .note-editing-area .note-editable, .note-editor.note-frame .note-editing-area .note-editable {
