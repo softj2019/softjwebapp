@@ -4,8 +4,10 @@
         <div class="temp-left on">
             <div class="sec1-txtbox">
                 <p>주식회사 <b>소프트제이</b>는</p>
-                <p>SI, 웹 및 모바일 App, UI UX 전문가를 통해<br />
-                    완성도 높은 <b>통합 솔루션 </b>를 서비스합니다.</p>
+                <p>SI, 웹 및 모바일 App,<br/>
+                    UI UX 전문가를 통해 완성도 높은
+                    <br/><b>통합 솔루션</b>을 서비스합니다.
+                </p>
             </div>
         </div>
         <div class="temp-right">
@@ -21,6 +23,7 @@
                 </div>
                 <div class="phoneLayout"></div>
             </div>
+            <button class="abtn" type="button" onclick="window.open('https://softj.net/jobopening')"><b>채용공고</b> 보기</button>
         </div>
         <div class="icon-scroll-box">
             <div class="icon-scroll">
@@ -169,7 +172,7 @@
 </section>
 <script>
     $('#summernote').summernote({
-        placeholder: '요청사항을 상세하게 작성 해주세요요',
+        placeholder: '요청사항을 상세하게 작성해주세요',
         tabsiz: 2,
         height: 120,
         toolbar: [

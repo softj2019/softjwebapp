@@ -662,14 +662,16 @@ section .main-inner{
     position:absolute;
 }
 .tabletBox{
-    top:50%;
+    /*top:50%;*/
+    top:40%;/*채용공고버튼*/
     right:10%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
 }
 .phoneBox{
-    top:50%;
+    /*top:50%;*/
+    top:36%;/*채용공고버튼*/
     right:18%;
     transform: translateY(-40%);
     -webkit-transform: translateY(-40%);
@@ -859,7 +861,7 @@ section .main-inner{
     color: #fff;
     font-size: 3vw;
     font-weight: 100;
-    line-height: 1.1em;
+    line-height: 1.4em;
     letter-spacing: -0.08em;
     -webkit-transform:translateY(-50%);
     -ms-transform:translateY(-50%);
@@ -1984,4 +1986,28 @@ section.sec4 .main-inner {/* 211007 푸터수정 */
 .note-editor.note-airframe .note-statusbar, .note-editor.note-frame .note-statusbar {
     background-color: #f5f5f5 !important;
 }
-/*2021-10-08 css 수정*/
+/* 211008 추가 */
+
+.abtn{
+    position: absolute;
+    top: 62%;
+    left: 45%;
+    transform: translateX(-50%);
+    background: #3897DE;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: -1px;
+    height: 66px;
+    padding: 0 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 24px -5px #000000;
+}
+.abtn:hover{
+    background-color:#1672B8;
+}
+
+@media (orientation: portrait)
+    .abtn {
+        top: 78%;
+        left: 50%;
+    }
