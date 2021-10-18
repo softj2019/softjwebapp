@@ -8,6 +8,7 @@
                     UI UX 전문가를 통해 완성도 높은
                     <br/><b>통합 솔루션</b>을 서비스합니다.
                 </p>
+                <button class="abtn" type="button" onclick="window.open('https://softj.net/jobopening')"><b>채용공고</b> 보기</button>
             </div>
         </div>
         <div class="temp-right">
@@ -23,7 +24,6 @@
                 </div>
                 <div class="phoneLayout"></div>
             </div>
-            <button class="abtn" type="button" onclick="window.open('https://softj.net/jobopening')"><b>채용공고</b> 보기</button>
         </div>
         <div class="icon-scroll-box">
             <div class="icon-scroll">

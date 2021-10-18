@@ -662,16 +662,14 @@ section .main-inner{
     position:absolute;
 }
 .tabletBox{
-    /*top:50%;*/
-    top:40%;/*채용공고버튼*/
+    top:50%;
     right:10%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);s
 }
 .phoneBox{
-    /*top:50%;*/
-    top:36%;/*채용공고버튼*/
+    top:50%;
     right:18%;
     transform: translateY(-40%);
     -webkit-transform: translateY(-40%);
@@ -886,7 +884,7 @@ section .main-inner{
         height:50vh;
     }
     .temp-left{
-        bottom:6vw;
+        bottom:18vw;/*채용공고 버튼*/
     }
     .temp-right{
         top:11vw;
@@ -898,6 +896,7 @@ section .main-inner{
         font-size:6vw;
     }
     .tabletBox{
+        top:40%;
         right:5%;
     }
     .tabletimg{
@@ -911,6 +910,7 @@ section .main-inner{
         max-width:65vh;
     }
     .phoneBox{
+        top:36%
         right:14%;
     }
     .phoneimg{
@@ -1989,10 +1989,10 @@ section.sec4 .main-inner {/* 211007 푸터수정 */
 /* 211008 추가 */
 
 .abtn{
-    position: absolute;
-    top: 62%;
-    left: 45%;
-    transform: translateX(-50%);
+    /*position: absolute;*/
+    /*top: 62%;*/
+    /*left: 45%;*/
+    /*transform: translateX(-50%);*/
     background: #3897DE;
     color: #fff;
     font-size: 24px;
