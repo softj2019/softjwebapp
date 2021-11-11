@@ -6,7 +6,7 @@
                 <p>주식회사 <b>소프트제이</b>는</p>
                 <p>SI, 웹 및 모바일 App,<br/>
                     UI UX 전문가를 통해 완성도 높은
-                    <br/><b>통합 솔루션</b>을 서비스합니다.
+                    <br/><b>통합 솔루션</b>을 제공합니다.
                 </p>
                 <button class="abtn" type="button" onclick="window.open('https://softj.net/jobopening')"><b>채용공고</b> 보기</button>
             </div>
