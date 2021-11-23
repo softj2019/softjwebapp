@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>onegame</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+</head>
+<body class="popup">
+    <div class="wrap">
+        <div class="flex-d game-info">
+            <div class="in-left">
+                <div class="left-btn"></div>
+                <div class="left-title">
+                    <div class="holdem"></div>
+                </div>
+                <div class="left-nv">
+                    <ul>
+                        <li class="active"><a href="">게임방법</a>
+                            <ul class="left-nv-sub">
+                                <li><a href="">게임소개</a></li>
+                                <li><a href="">게임규칙</a></li>
+                                <li><a href="">게임 가이드</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">자주하는 질문</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="in-right">
+                <div class="right-top">
+                    <div>
+                        <h3 class="right-title">게임방법</h3>
+                        <div class="left-btn"></div>
+                    </div>
+                    <ul>
+                        <li class="active"><a href="">홀덤</a></li>
+                        <li><a href="">바카라</a></li>
+                        <li><a href="">바카라</a></li>
+                        <li><a href="">바둑이</a></li>
+                        <li><a href="">7포커</a></li>
+                        <li><a href="">홀덤바둑이</a></li>
+                    </ul>
+                </div>
+                <div class="right-con">
+                    <h2 class="right-con-title">홀덤 게임 소개</h2>
+                    <div class="right-con-in">
+                        <div class="right-txt">
+                            <ul>
+                                <li>홀덤 게임 방법에 대한 설명.</li>
+                                <li>홀덤 게임 방법에 대한 설명.</li>
+                            </ul>
+                        </div>
+                        <div class="right-img mt10">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        $('.left-btn').click(function() {
+            $('.in-left').toggleClass('on');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>원게임</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <!--    slick slider-->
+    <link href="assets/plugins/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/common.css" rel="stylesheet" type="text/css">
+    </head>
+<body>
+    <header class="main-header">
+        <nav class="gnb">
+            <div class="gnb-inner">
+                <a href=""><h1>onegame poker</h1></a>
+                <ul>
+                    <li><a href="sub/login.html">로그인</a></li>
+                    <li><a href="">이벤트</a></li>
+                    <li><a href="">공지사항</a></li>
+                    <li><button type="button" class="ham-btn"><i class="i-menu"></i></button></li>
+                </ul>
+            </div>
+            <div class="category">
+                <div class="cate-bg"></div>
+                <div class="cate-content">
+                    <div class="cate-close"><i class="close-i"></i></div>
+                    <div class="cate-body">
+                        <ul class="mobile-gnb">
+                            <li><p>대메뉴1<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                    <li><a href="">소메뉴3</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴2<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴3<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">로그인</a>
+                            </li>
+                            <li><a href="">회원가입</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main-wrap index">
+        <div class="main-slide">
+            <div class="slider" style="background-image:url(assets/img/mainvs.png)">
+            </div>
+            <div class="slider" style="background-image:url(assets/img/mainvs.png)">
+            </div>
+        </div>
+        <div class="main-sec clearfix">
+            <div class="leftsec">
+                <h3 class="ttl3 mb18">Top Games</h3>
+                <div class="topGwrap slidebtnrel">
+                    <div class="scrollwrap">
+                       <div>
+                           <a href="#" class="topGbox">
+                               <div class="img" style="background-image:url(assets/img/subbanner-holdem.png)"></div>
+                                <div class="txtbox">
+                                    <p class="bigsub">짜릿하게 즐기자</p>
+                                    <p class="ttl1">홀덤</p>
+                                </div>
+                            </a>
+                            <a href="#" class="topGbox">
+                               <div class="img" style="background-image:url(assets/img/subbanner-7poker.png)"></div>
+                                <div class="txtbox">
+                                    <p class="bigsub">월드클래스 포커 게임</p>
+                                    <p class="ttl1">7포커</p>
+                                </div>
+                            </a>
+                            <a href="#" class="topGbox">
+                               <div class="img" style="background-image:url(assets/img/subbanner-baccarat.png)"></div>
+                                <div class="txtbox">
+                                    <p class="bigsub">끝까지 방심하지 마라</p>
+                                    <p class="ttl1">바카라</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slidebtnwrap">
+                            <button type="button" class="leftbtn"></button>
+                            <button type="button" class="rightbtn on"></button>
+                        </div>
+                </div>
+            </div>
+            <div class="loginbox">
+                <p class="smsub mb22">로그인 하고 다양한 게임을 모두 즐겨보세요.</p>
+                <input type="text" id="id" placeholder="아이디" class="mb16">
+                <input type="password" id="pw" placeholder="비밀번호" class="mb16">
+                <input type="checkbox" id="rememberid"><label for="rememberid">아이디 기억하기</label>
+                <button type="button" class="btn mt20 mb20 per100">로그인</button>
+                <div class="hrbox">
+                    <div class="hr"></div><span>또는</span><div class="hr"></div>
+                </div>
+                <div class="loginsnswrap flex-center">
+                    <button class="btn-naver"></button>
+                    <button class="btn-Kakao"></button>
+                    <button class="btn-Facebook"></button>
+                    <button class="btn-Google"></button>
+                    <button class="btn-Twitter"></button>
+                </div>
+                <div class="logintxtbox">
+                    <a href="sub/join-form.html" class="textWhite">회원가입</a>
+                    <div>
+                        <a href="sub/find-id.html" onclick="window.open(this.href, '_blank', 'width=570, height=580'); return false;" class="textWhite">아이디 찾기</a>
+                        <span>│</span>
+                        <a href="sub/find-pw.html" onclick="window.open(this.href, '_blank', 'width=580, height=580'); return false;" class="textWhite">비밀번호 찾기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-sec bgGray">
+            <div class="main-inner">
+                <h3 class="ttl3 mb18">PC Games</h3>
+                <div class="tabwrap slidebtnrel">
+                    <div class="scrollwrap">
+                        <ul class="main tab-ul flexwrap">
+                            <li class="active"><a href="#tab1" class="tab">BEST</a></li>
+                            <li><a href="#tab2">CASINO</a></li>
+                            <li><a href="#tab3">tab</a></li>
+                            <li><a href="#tab4">tab</a></li>
+                            <li><a href="#tab5">tab</a></li>
+                            <li><a href="#tab6">tab</a></li>
+                        </ul>
+                    </div>
+                    <div class="slidebtnwrap">
+                        <button type="button" class="leftbtn"></button>
+                        <button type="button" class="rightbtn on"></button>
+                    </div>
+                </div>
+                <div class="cont-wrap">
+                    <div id="tab1" class="cont slidebtnrel">
+                        <div class="scrollwrap">
+                            <ul class="sec-bnr-ul">
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:url(assets/img/subbanner2-holdem.png)"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3">홀덤</p>
+                                        <p class="smsub">짜릿하게 즐기자</p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:url(assets/img/subbanner2-holdembadugi.png)"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3">홀덤바둑이</p>
+                                        <p class="smsub">전략으로 승리를 쟁취하라</p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:url(assets/img/subbanner2-7poker.png)"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3">7포커</p>
+                                        <p class="smsub">월드클래스 포커 게임</p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:url(assets/img/subbanner2-badugi.png)"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3">바둑이</p>
+                                        <p class="smsub">행운은 나의 편</p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:url(assets/img/subbanner2-blackjack.png)"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3">블랙잭</p>
+                                        <p class="smsub">행운은 나의 편</p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:url(assets/img/subbanner2-baccarat.png)"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3">바카라</p>
+                                        <p class="smsub">월드클래스 포커 게임</p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:url(assets/img/subbanner2-matgo.png)"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3">맞고</p>
+                                        <p class="smsub">끝까지 방심하지 마라</p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                            </ul>
+                        </div>
+                        <div class="slidebtnwrap">
+                            <button type="button" class="leftbtn"></button>
+                            <button type="button" class="rightbtn on"></button>
+                        </div>
+                    </div>
+                    <div id="tab2" class="cont slidebtnrel" style="display:none;">
+                        <div class="scrollwrap">
+                            <ul class="sec-bnr-ul">
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:url(assets/img/subbanner2-holdem.png)"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3">홀덤</p>
+                                        <p class="smsub">짜릿하게 즐기자</p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:url(assets/img/subbanner2-holdembadugi.png)"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3">홀덤바둑이</p>
+                                        <p class="smsub">전략으로 승리를 쟁취하라</p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:url(assets/img/subbanner2-7poker.png)"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3">7포커</p>
+                                        <p class="smsub">월드클래스 포커 게임</p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:url(assets/img/subbanner2-badugi.png)"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3">바둑이</p>
+                                        <p class="smsub">행운은 나의 편</p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:url(assets/img/subbanner2-blackjack.png)"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3">블랙잭</p>
+                                        <p class="smsub">행운은 나의 편</p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:url(assets/img/subbanner2-baccarat.png)"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3">바카라</p>
+                                        <p class="smsub">월드클래스 포커 게임</p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                            </ul>
+                        </div>
+                        <div class="slidebtnwrap">
+                            <button type="button" class="leftbtn"></button>
+                            <button type="button" class="rightbtn on"></button>
+                        </div>
+                    </div>
+                    <div id="tab3" class="cont slidebtnrel" style="display:none;">
+                        <div class="scrollwrap">
+                            <ul class="sec-bnr-ul">
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                            </ul>
+                        </div>
+                        <div class="slidebtnwrap">
+                            <button type="button" class="leftbtn"></button>
+                            <button type="button" class="rightbtn on"></button>
+                        </div>
+                    </div>
+                    <div id="tab4" class="cont slidebtnrel" style="display:none;">
+                        <div class="scrollwrap">
+                            <ul class="sec-bnr-ul">
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                            </ul>
+                        </div>
+                        <div class="slidebtnwrap">
+                            <button type="button" class="leftbtn"></button>
+                            <button type="button" class="rightbtn on"></button>
+                        </div>
+                    </div>
+                    <div id="tab5" class="cont slidebtnrel" style="display:none;">
+                        <div class="scrollwrap">
+                            <ul class="sec-bnr-ul">
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                            </ul>
+                        </div>
+                        <div class="slidebtnwrap">
+                            <button type="button" class="leftbtn"></button>
+                            <button type="button" class="rightbtn on"></button>
+                        </div>
+                    </div>
+                    <div id="tab6" class="cont slidebtnrel" style="display:none;">
+                        <div class="scrollwrap">
+                            <ul class="sec-bnr-ul">
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                                <li class="pcGbox"><a href="#">
+                                    <div class="img" style="background-image:"></div>
+                                    <div class="txtbox">
+                                        <p class="ttl3"></p>
+                                        <p class="smsub"></p>
+                                    </div>
+                                </a></li>
+                            </ul>
+                        </div>
+                        <div class="slidebtnwrap">
+                            <button type="button" class="leftbtn"></button>
+                            <button type="button" class="rightbtn on"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-inner">
+                <h3 class="ttl3 mb18">Mobile Games</h3>
+                <div class="slidebtnrel">
+                    <div class="scrollwrap">
+                        <ul class="btm-bnr-ul">
+                            <li class="mbGbox">
+                                <div class="img" style="background-image:url(assets/img/app-holdem.png)"></div>
+                                <div class="txtbox">
+                                    <p class="ttl3">홀덤</p>
+                                    <p class="smsub">월드클래스 포커 게임</p>
+                                    <div class="storebox">
+                                        <button type="button" class="btn-playstore"></button>
+                                        <button type="button" class="btn-onestore"></button>
+                                        <button type="button" class="btn-appstore"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mbGbox">
+                                <div class="img" style="background-image:url(assets/img/app-holdembadugi.png)"></div>
+                                <div class="txtbox">
+                                    <p class="ttl3">홀덤바둑이</p>
+                                    <p class="smsub">짜릿하게 즐기자</p>
+                                    <div class="storebox">
+                                        <button type="button" class="btn-playstore"></button>
+                                        <button type="button" class="btn-onestore"></button>
+                                        <button type="button" class="btn-appstore"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mbGbox">
+                                <div class="img" style="background-image:url(assets/img/app-7poker.png)"></div>
+                                <div class="txtbox">
+                                    <p class="ttl3">7포커</p>
+                                    <p class="smsub">월드클래스 포커 게임</p>
+                                    <div class="storebox">
+                                        <button type="button" class="btn-playstore"></button>
+                                        <button type="button" class="btn-onestore"></button>
+                                        <button type="button" class="btn-appstore"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mbGbox">
+                                <div class="img" style="background-image:url(assets/img/app-badugi.png)"></div>
+                                <div class="txtbox">
+                                    <p class="ttl3">바둑이</p>
+                                    <p class="smsub">행운은 나의 편</p>
+                                    <div class="storebox">
+                                        <button type="button" class="btn-playstore"></button>
+                                        <button type="button" class="btn-onestore"></button>
+                                        <button type="button" class="btn-appstore"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mbGbox">
+                                <div class="img" style="background-image:url(assets/img/app-blackjack.png)"></div>
+                                <div class="txtbox">
+                                    <p class="ttl3">블랙잭</p>
+                                    <p class="smsub">행운은 나의 편</p>
+                                    <div class="storebox">
+                                        <button type="button" class="btn-playstore"></button>
+                                        <button type="button" class="btn-onestore"></button>
+                                        <button type="button" class="btn-appstore"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mbGbox">
+                                <div class="img" style="background-image:url(assets/img/app-baccarat.png)"></div>
+                                <div class="txtbox">
+                                    <p class="ttl3">바카라</p>
+                                    <p class="smsub">월드클래스 포커 게임</p>
+                                    <div class="storebox">
+                                        <button type="button" class="btn-playstore"></button>
+                                        <button type="button" class="btn-onestore"></button>
+                                        <button type="button" class="btn-appstore"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mbGbox">
+                                <div class="img" style="background-image:url(assets/img/app-matgo.png)"></div>
+                                <div class="txtbox">
+                                    <p class="ttl3">맞고</p>
+                                    <p class="smsub">끝까지 방심하지 마라</p>
+                                    <div class="storebox">
+                                        <button type="button" class="btn-playstore"></button>
+                                        <button type="button" class="btn-onestore"></button>
+                                        <button type="button" class="btn-appstore"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mbGbox nogame">
+                                <div class="img" style="background-image:url(assets/img/app-holdem.png)"></div>
+                                <div class="txtbox">
+                                    <p class="ttl3"></p>
+                                    <p class="smsub"></p>
+                                    <div class="storebox">
+                                        <button type="button" class="btn-playstore"></button>
+                                        <button type="button" class="btn-onestore"></button>
+                                        <button type="button" class="btn-appstore"></button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slidebtnwrap">
+                        <button type="button" class="leftbtn"></button>
+                        <button type="button" class="rightbtn on"></button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="btm-bnr">
+                <img class="pcbnr" src="assets/img/bottom-bnr.png" alt="">
+                <img class="mbnr" src="assets/img/bottom-bnr-m.png" alt="">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="foot-in">
+            <ul class="footerUl">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">고객센터</a></li>
+                <li>(주) Widblack 대표자 : ㅇㅇㅇ 서울시 서대문구 북아현로 105, 3층   Tel : 080-0000-0000   E-mail : emailme@gmail.com   사업자 등록번호 : 000-00-00000<br>© Widblack Corp. All rights reserved.</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="assets/js/common.js"></script>
+    <script type="text/javascript">
+        //슬라이더
+        $('.main-slide').slick({
+            slidesToShow:1,
+            infinite:true,
+            speed : 100,
+            dots : false, 
+            autoplay : true,
+            autoplaySpeed : 3000,
+            pauseOnHover : true,
+            arrows : true,
+        });
+        //tab
+        var tabList = document.querySelectorAll('.tab-ul li');
+        var contents = document.querySelectorAll('.cont-wrap .cont')
+        var activeCont = ''; // 현재 활성화 된 컨텐츠 (기본:#tab1 활성화)
+
+        for(var i = 0; i < tabList.length; i++){
+            tabList[i].querySelector('.tab-ul li a').addEventListener('click', function(e){
+              e.preventDefault();
+              for(var j = 0; j < tabList.length; j++){
+                tabList[j].classList.remove('active');
+                contents[j].style.display = 'none';
+              }
+              this.parentNode.classList.add('active');
+              activeCont = this.getAttribute('href');
+              document.querySelector(activeCont).style.display = 'block';
+            });
+        }
+        //scroll button
+        //window width
+        var intFrameWidth = window.innerWidth;
+        var onresize = function(){
+            intFrameWidth = window.innerWidth;
+        }
+        window.addEventListener("resize", onresize);
+        
+        //animate scrolling
+        animteScrollTo = function(_selector, _movepx, _duration) {
+          var scrollEle = _selector.parentNode.previousElementSibling;
+          var currentX = scrollEle.scrollLeft;
+          animateScrollTo(currentX, scrollEle, _duration);
+            
+          // - Animate and scroll to target position
+          function animateScrollTo(_startX, _scrolltarget, _duration) {
+            _duration = _duration ? _duration : 150;
+            var unitX = _movepx / _duration;
+            var startTime = new Date().getTime();
+            var endTime = new Date().getTime() + _duration;
+
+            var scrollTo = function() {
+              var now = new Date().getTime();
+              var passed = now - startTime;
+              if (now <= endTime) {
+                  scrollEle.scrollLeft = currentX + (unitX * passed);
+                requestAnimationFrame(scrollTo);
+              }
+            };
+            requestAnimationFrame(scrollTo);
+          };
+        };
+        
+        //get pixels to scroll
+        var rightbtn = document.querySelectorAll(".slidebtnwrap .rightbtn");
+        for (var i=0; i<rightbtn.length; i++){
+            rightbtn[i].addEventListener("click", function(){
+                var li = this.parentNode.previousElementSibling.children[0].children[0];
+                var liWidth = li.offsetWidth + 18;
+                if(intFrameWidth < liWidth*2 - 18){
+                    movepx = liWidth
+                }else{
+                    movepx = liWidth*2
+                }
+                animteScrollTo(this, movepx);
+            });
+        }
+        var leftbtn = document.querySelectorAll(".slidebtnwrap .leftbtn");
+        for (var i=0; i<leftbtn.length; i++){
+            leftbtn[i].addEventListener("click", function(){
+                var li = this.parentNode.previousElementSibling.children[0].children[1];
+                var liWidth = li.offsetWidth + 18;
+                if(intFrameWidth < liWidth*2 - 18){
+                    movepx = liWidth
+                }else{
+                    movepx = liWidth*2
+                }
+                animteScrollTo(this, -movepx);
+            });
+        }
+        
+        //button remove
+        function showGradient(){
+            if($(this).scrollLeft() == 0){   //스크롤이 0일 때
+                $(this).next().children('.leftbtn').removeClass('on');
+                $(this).next().children('.rightbtn').addClass('on');
+            }else{
+                $(this).next().children('.leftbtn').addClass('on');
+                $(this).next().children('.rightbtn').addClass('on');
+            }
+        };
+        $(function(){
+            showGradient();
+          $('.scrollwrap').on('scroll', showGradient);
+        });
+    </script>
+</body>
+</html>

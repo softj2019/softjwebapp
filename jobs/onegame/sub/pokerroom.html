@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>원게임</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    </head>
+<body>
+    <header class="main-header pokerroom">
+        <nav class="gnb">
+            <div class="gnb-inner">
+                <a href=""><h1>onegame poker</h1></a>
+                <ul>
+                    <li><a href="sub/login.html">로그인</a></li>
+                    <li><a href="">이벤트</a></li>
+                    <li><a href="">공지사항</a></li>
+                    <li><button type="button" class="ham-btn"><i class="i-menu"></i></button></li>
+                </ul>
+            </div>
+            <div class="category">
+                <div class="cate-bg"></div>
+                <div class="cate-content">
+                    <div class="cate-close"><i class="close-i"></i></div>
+                    <div class="cate-body">
+                        <div class="myinfobox clearfix">
+                            <div class="profile-imgbox">
+                                <img src="../assets/img/default-profile.png" alt="">
+                            </div>
+                            <div class="profile-infobox">
+                                <p class="usernamebox"><span>닉네임12345678</span> 님</p>
+                                <p class="notebox"><a href="#">쪽지 &#40;<span>900</span>&#41;</a></p>
+                                <div class="btnbox flexStart">
+                                    <button type="button" class="btn-red" onclick="location.href='limit-set.html'">손실한도보기</button>
+                                    <button type="button" class="btn" onclick="location.href='mypage.html'">내 정보</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mymoneybox bgGray mb20">
+                            <table class="moneytable">
+                                <tbody>
+                                    <tr>
+                                        <th>보유 충전머니</th>
+                                        <td><span>999,999,999</span> 원</td>
+                                    </tr>
+                                    <tr>
+                                        <th>유료머니</th>
+                                        <td><span>999,999,999</span> 원</td>
+                                    </tr>
+                                    <tr>
+                                        <th>무료머니</th>
+                                        <td><span>999,999,999</span> 원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <span class="note-gray">게임머니가 부족하다면?</span>
+                            <button type="button" class="btn-red">무료충전</button>
+                        </div>
+                        <ul class="mobile-gnb">
+                            <li><p>대메뉴1<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                    <li><a href="">소메뉴3</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴2<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴3<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">로그인</a>
+                            </li>
+                            <li><a href="">회원가입</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main-wrap">
+        <div class="pokerroom-sec clearfix">
+            <div class="sub-nav clearfix">
+                <ul class="sub-left-ul flexwrap">
+                    <li>onegame poker</li>
+                    <li><a href="#">포커홈</a></li>
+                    <li><a href="intro.html" onclick="window.open('intro.html','name','resizable=no width=1400 height=665');return false">포커가이드</a></li>
+                    <li><a href="store.html">상점</a></li>
+                </ul>
+                <ul class="sub-right-ul">
+                    <li><a href="intro.html" onclick="window.open('intro.html','name','resizable=no width=1400 height=665');return false">게임방법</a></li>
+                    <li><a href="qa-list.html">고객센터</a></li>
+                </ul>
+            </div>
+            <div class="pokerroom-inner">
+                <div class="tabwrap slidebtnrel">
+                    <div class="scrollwrap">
+                        <ul class="tab-ul">
+                            <li class="active"><a href="pokerroom.html">홀덤</a></li>
+                            <li><a href="pokerroom2.html">바카라</a></li>
+                            <li><a href="#tab3">t</a></li>
+                            <li><a href="#tab4">바둑이</a></li>
+                            <li><a href="#tab5">7포커</a></li>
+                            <li><a href="#tab6">홀덤바둑이</a></li>
+                        </ul>
+                    </div>
+                    <div class="slidebtnwrap">
+                        <button type="button" class="leftbtn"></button>
+                        <button type="button" class="rightbtn on"></button>
+                    </div>
+                </div>
+                <div class="cont-wrap">
+                    <div id="tab1" class="cont slidebtnrel">
+                        <div class="scrollwrap">
+                            <ul class="room-ul">
+                                <li class="roombox">
+                                    <h3 class="ttl3">자유방</h3>
+                                    <p class="room-info">2500 / 5000</p>
+                                    <div class="room-moneybox">
+                                        <i class="i-money"></i>
+                                        <p class="room-money">10억</p>
+                                    </div>
+                                    <button type="button" class="enterbtn" onclick="window.open('popup-game.html','name','resizable=no width=600 height=665');return false"></button>
+                                </li>
+                                <li class="roombox">
+                                    <h3 class="ttl3">비기너</h3>
+                                    <p class="room-info">5만 / 10만</p>
+                                    <div class="room-moneybox">
+                                        <i class="i-money"></i>
+                                        <p class="room-money">20억</p>
+                                    </div>
+                                    <button type="button" class="enterbtn" onclick="window.open('popup-game.html','name','resizable=no width=600 height=665');return false"></button>
+                                </li>
+                                <li class="roombox not-activated">
+                                    <h3 class="ttl3">프로</h3>
+                                    <p class="room-info">2500 / 5000</p>
+                                    <div class="room-moneybox">
+                                        <i class="i-money"></i>
+                                        <p class="room-money">10억</p>
+                                    </div>
+                                    <button type="button" class="enterbtn" disabled></button>
+                                </li>
+                                <li class="roombox not-activated">
+                                    <h3 class="ttl3">마스터즈</h3>
+                                    <p class="room-info">2500 / 5000</p>
+                                    <div class="room-moneybox">
+                                        <i class="i-money"></i>
+                                        <p class="room-money">10억</p>
+                                    </div>
+                                    <button type="button" class="enterbtn" disabled></button>
+                                </li>
+                                <li class="roombox not-activated">
+                                    <h3 class="ttl3">친구대전</h3>
+                                    <p class="room-info">2500 / 5000</p>
+                                    <div class="room-moneybox">
+                                        <i class="i-money"></i>
+                                        <p class="room-money">10억</p>
+                                    </div>
+                                    <button type="button" class="enterbtn" disabled></button>
+                                </li>
+                                <li class="roombox">
+                                    <h3 class="ttl3">마카오</h3>
+                                    <p class="room-info">2500 / 5000</p>
+                                    <div class="room-moneybox">
+                                        <i class="i-money"></i>
+                                        <p class="room-money">10억</p>
+                                    </div>
+                                    <button type="button" class="enterbtn"></button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="slidebtnwrap">
+                            <button type="button" class="leftbtn"></button>
+                            <button type="button" class="rightbtn on"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-inner clearfix">
+            <div class="pokerleft-sec">
+                <div class="big-bnr">
+                    <img src="../assets/img/room-banner1.png" alt="">
+                </div>
+                <div class="sm-bnr">
+                    <img src="../assets/img/minibanner.png" alt="">
+                </div>
+                <div class="shopwrap bgGray clearfix">
+                    <div class="title-sec flexwrap">
+                        <h4 class="ttl5">상점</h4>
+                        <a href="#" class="more-link" onclick="location.href='store.html'">더보기 &#8250;</a>
+                    </div>
+                    <ul class="shopul">
+                        <li>
+                            <div class="imgbox">
+                                <img src="../assets/img/coin-goods.png" alt="">
+                            </div>
+                            <p class="ttl4">3억 2000 포커칩</p>
+                            <p class="shop-price"><span>10,000</span>원</p>
+                            <button type="button" class="btn-red">구매하기</button>
+                        </li>
+                        <li>
+                            <div class="imgbox">
+                                <img src="../assets/img/coin-goods.png" alt="">
+                            </div>
+                            <p class="ttl4">3억 2000 포커칩</p>
+                            <p class="shop-price"><span>10,000</span>원</p>
+                            <button type="button" class="btn-red">구매하기</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pokerright-sec">
+                <div class="myinfobox mb20">
+                    <div class="profile-imgbox">
+                        <img src="../assets/img/default-profile.png" alt="">
+                    </div>
+                    <div class="profile-infobox">
+                        <p class="usernamebox"><span>닉네임12345678</span> 님</p>
+                        <p class="notebox"><a href="#">쪽지 &#40;<span>900</span>&#41;</a></p>
+                        <div class="btnbox flexwrap">
+                            <button type="button" class="btn-red" onclick="location.href='limit-set.html'">손실한도보기</button>
+                            <button type="button" class="btn" onclick="location.href='mypage.html'">내 정보</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mymoneybox bgGray mb20">
+                    <table class="moneytable">
+                        <tbody>
+                            <tr>
+                                <th>보유 충전머니</th>
+                                <td><span>999,999,999</span> 원</td>
+                            </tr>
+                            <tr>
+                                <th>유료머니</th>
+                                <td><span>999,999,999</span> 원</td>
+                            </tr>
+                            <tr>
+                                <th>무료머니</th>
+                                <td><span>999,999,999</span> 원</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <span class="note-gray">게임머니가 부족하다면?</span>
+                    <button type="button" class="btn-red">무료충전</button>
+                </div>
+                <div class="noticewrap bgGray">
+                    <table class="noticetb">
+                        <thead>
+                            <th>공지사항</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="">원게임 런칭 기념 이벤트</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">[안내] 추석 연휴 고객센터 휴무 안내</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">[안내] 추석 연휴 고객센터 휴무 안내</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">추석 연휴 고객센터 휴무 안내추석 연휴 고객센터 휴무 안내추석 연휴 고객센터 휴무 안내</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">[안내] 추석 연휴 고객센터 휴무 안내</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">추석 연휴 고객센터 휴무 안내추석 연휴 고객센터 휴무 안내추석 연휴 고객센터 휴무 안내</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="" class="more-link" onclick="location.href='notice-list.html'">더보기 &#8250;</a>
+                </div>
+            </div>
+        </div>
+        <div class="btm-bnr pt50">
+            <img class="pcbnr" src="../assets/img/bottom-bnr.png" alt="">
+            <img class="mbnr" src="../assets/img/bottom-bnr-m.png" alt="">
+        </div>
+    </div>
+    <footer>
+        <div class="foot-in">
+            <ul class="footerUl">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">고객센터</a></li>
+                <li>(주) Widblack 대표자 : ㅇㅇㅇ 서울시 서대문구 북아현로 105, 3층   Tel : 080-0000-0000   E-mail : emailme@gmail.com   사업자 등록번호 : 000-00-00000<br>© Widblack Corp. All rights reserved.</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../assets/js/common.js"></script>
+    <script type="text/javascript">
+        //scroll button
+        //window width
+        var intFrameWidth = window.innerWidth;
+        var onresize = function(){
+            intFrameWidth = window.innerWidth;
+        }
+        window.addEventListener("resize", onresize);
+        
+        //animate scrolling
+        animteScrollTo = function(_selector, _movepx, _duration) {
+          var scrollEle = _selector.parentNode.previousElementSibling;
+          var currentX = scrollEle.scrollLeft;
+          animateScrollTo(currentX, scrollEle, _duration);
+            
+          // - Animate and scroll to target position
+          function animateScrollTo(_startX, _scrolltarget, _duration) {
+            _duration = _duration ? _duration : 150;
+            var unitX = _movepx / _duration;
+            var startTime = new Date().getTime();
+            var endTime = new Date().getTime() + _duration;
+
+            var scrollTo = function() {
+              var now = new Date().getTime();
+              var passed = now - startTime;
+              if (now <= endTime) {
+                  scrollEle.scrollLeft = currentX + (unitX * passed);
+                requestAnimationFrame(scrollTo);
+              }
+            };
+            requestAnimationFrame(scrollTo);
+          };
+        };
+        
+        //get pixels to scroll
+        var rightbtn = document.querySelectorAll(".slidebtnwrap .rightbtn");
+        for (var i=0; i<rightbtn.length; i++){
+            rightbtn[i].addEventListener("click", function(){
+                var li = this.parentNode.previousElementSibling.children[0].children[0];
+                var liWidth = li.offsetWidth + 18;
+                if(intFrameWidth < liWidth*2 - 18){
+                    movepx = liWidth
+                }else{
+                    movepx = liWidth*2
+                }
+                animteScrollTo(this, movepx);
+            });
+        }
+        var leftbtn = document.querySelectorAll(".slidebtnwrap .leftbtn");
+        for (var i=0; i<leftbtn.length; i++){
+            leftbtn[i].addEventListener("click", function(){
+                var li = this.parentNode.previousElementSibling.children[0].children[1];
+                var liWidth = li.offsetWidth + 18;
+                if(intFrameWidth < liWidth*2 - 18){
+                    movepx = liWidth
+                }else{
+                    movepx = liWidth*2
+                }
+                animteScrollTo(this, -movepx);
+            });
+        }
+        
+        //button remove
+        function showGradient(){
+            if($(this).scrollLeft() == 0){   //스크롤이 0일 때
+                $(this).next().children('.leftbtn').removeClass('on');
+                $(this).next().children('.rightbtn').addClass('on');
+            }else{
+                $(this).next().children('.leftbtn').addClass('on');
+                $(this).next().children('.rightbtn').addClass('on');
+            }
+        };
+        $(function(){
+            showGradient();
+          $('.scrollwrap').on('scroll', showGradient);
+        });
+    </script>
+</body>
+</html>

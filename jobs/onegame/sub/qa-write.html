@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>원게임</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <!--    slick slider-->
+    <link href="../assets/plugins/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="gnb">
+            <div class="gnb-inner">
+                <a href=""><h1>onegame poker</h1></a>
+                <ul>
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="event-list.html">이벤트</a></li>
+                    <li><a href="notice-list.html">공지사항</a></li>
+                    <li><button type="button" class="ham-btn"><i class="i-menu"></i></button></li>
+                </ul>
+            </div>
+            <div class="category">
+                <div class="cate-bg"></div>
+                <div class="cate-content">
+                    <div class="cate-close"><i class="close-i"></i></div>
+                    <div class="cate-body">
+                        <ul class="mobile-gnb">
+                            <li><p>대메뉴1<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                    <li><a href="">소메뉴3</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴2<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴3<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">로그인</a>
+                            </li>
+                            <li><a href="">회원가입</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="wrap clearfix">
+        <div class="wrap-header">
+            <h4>1:1 문의</h4>
+        </div>
+        <div class="wrap-in2">
+            <div class=" clearfix">
+                <div class="list-top">
+                    <h3>1:1 문의</h3>
+                    <p>고객님의 소중한 의견을 빠르고 정확하게 해결하기 위해 최선을 다하겠습니다.</p>
+                </div>
+                <form action="">
+                    <div class="qa-form">
+                        <ul class="qa-form-ul">
+                            <li>
+                                <p>제목</p>
+                                <div class="qa-li">
+                                    <input type="text" placeholder="제목을 입력해주세요.">
+                                </div>
+                            </li>
+                            <li>
+                                <p>내용</p>
+                                <div class="qa-li">
+                                    <textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력해주세요."></textarea>
+                                </div>
+                            </li>
+                            <li>
+                                <p>첨부파일</p>
+                                <div class="qa-li">
+                                    <div class="fileBox">
+                                        <input type="text" class="fileName" id="fileName" name="fileName" readonly="readonly" placeholder="선택된 파일 없음">
+                                        <label for="uploadBtn" class="btn_file">파일선택</label>
+                                        <input type="file" id="uploadBtn" name="uploadBtn" class="uploadBtn">
+                                    </div>
+                                    <div class="up-file-box">
+                                        <div class="up-file">
+                                            <div class="file-up">
+                                                <input type="checkbox" id="all-chk"><label for="all-chk"></label><span>파일명</span>
+                                            </div>
+                                            <ul class="file-up-con">
+                                                <li file-value="1"><input type="checkbox" id="file-ch1" value="1"><label for="file-ch1"><span>파일1</span></label></li>
+                                                <li file-value="2"><input type="checkbox" id="file-ch2" value="2"><label for="file-ch2"><span>파일2</span></label></li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn-white">선택삭제</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-box">
+                        <button type="button" class="btn">취소</button>
+                        <button type="button" class="btn-red">문의하기</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="foot-in">
+            <ul class="footerUl">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">고객센터</a></li>
+                <li>(주) Widblack 대표자 : ㅇㅇㅇ 서울시 서대문구 북아현로 105, 3층   Tel : 080-0000-0000   E-mail : emailme@gmail.com   사업자 등록번호 : 000-00-00000<br>© Widblack Corp. All rights reserved.</li>
+            </ul>
+        </div>
+    </footer>
+    <!-- 모달 -->
+    <div class="modal on">
+        <div class="modalBg"></div>
+        <div class="modalContent xs">
+            <div class="modalHd">
+                <button type="button" class="modalClose"></button>
+            </div>
+            <div class="modalBody">
+                <div class="mo-bodyContent">
+                    <div class="qa-com">
+                        <div class="iconRed ch-icon"></div>
+                        <h2>등록완료!</h2>
+                        <p>1:1 문의하기가 등록 되었습니다.</p>
+                    </div>
+                </div>
+                <div class="modalBtn">
+                    <button type="button" class="btn-red">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/common.js"></script>
+    <script type="text/javascript">
+        // 모달
+        $(".mo-open").click(function(e){
+            event.preventDefault()
+            $(".modal").addClass('on');
+            $('body').css('overflow', 'hidden');
+        });
+        $(".modalClose").click(function(){
+            $(".modal").removeClass('on');
+            $('body').css('overflow', 'auto');
+        });
+    </script>
+</body>
+</html>

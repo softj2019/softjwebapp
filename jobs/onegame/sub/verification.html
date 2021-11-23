@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>원게임</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="gnb">
+            <div class="gnb-inner">
+                <a href=""><h1>onegame poker</h1></a>
+                <ul>
+                    <li><a href="">로그인</a></li>
+                    <li><a href="">이벤트</a></li>
+                    <li><a href="">공지사항</a></li>
+                    <li><button type="button" class="ham-btn"><i class="i-menu"></i></button></li>
+                </ul>
+            </div>
+            <div class="category">
+                <div class="cate-bg"></div>
+                <div class="cate-content">
+                    <div class="cate-close"><i class="close-i"></i></div>
+                    <div class="cate-body">
+                        <ul class="mobile-gnb">
+                            <li><p>대메뉴1<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                    <li><a href="">소메뉴3</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴2<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴3<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">로그인</a>
+                            </li>
+                            <li><a href="">회원가입</a>
+                            </li>
+                        </ul>l
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="wrap">
+        <div class="wrap-header">
+            <h4>서비스이용 본인 확인</h4>
+        </div>
+        <div class="wrap-in">
+            <form action="">
+                <div class=" t-center">
+                    <div class="iconRed ex-icon"></div>
+                    <p class="complet-tit">회원님께서 선택하신 서비스는<br> <span class="textRed">본인확인</span>이 필요한 서비스 입니다.</p>
+                    <p class=" mb30">아래의 개인정보 수집 및 이용에 대한 안내를 확인하신 후 본인확인을 진행해 주세요.<br>
+                        원게임에서는 1인당 최대 N개 아이디에 본인확인 정보를 등록하여 사용하실 수 있습니다.
+                    </p>
+                    <span class="s-text">만 18세 미만 회원께서는 반드시 법정대리인과 함께 본인확인 절차를 진행해 주세요.</span>
+                </div>
+                <div class="hr-box mb20">
+                    <ul class="ver-ul">
+                        <li><i class="ck-ci-icon"></i><p>수집하는 개인정보 항목<span class="s-text">- 이름, 생년월일, 성별, CI(연계정보), DI(중복가입확인정보)</span></p></li>
+                        <li><i class="ck-ci-icon"></i><p>수집 및 이용 목적<span class="s-text">- 서비스 이용을 위한 연령 확인, 중복 가입 방지를 위한 본인확인</span></p></li>
+                        <li><i class="ck-ci-icon"></i><p>보유 및 이용 기간<span class="s-text">- 회원 탈퇴 시까지</span></p></li>
+                    </ul>
+                    <p class="s-text">- 그 밖의 개인정보 취급에 관한 사항은 원게임 <a href="" class="textRed">개인정보처리방침</a>을 준수합니다.</p>
+                </div>
+                <input type="checkbox" id="ver-ck"><label for="ver-ck">개인정보 수집 및 이용에 동의합니다.</label>
+                <div class="btn-box mt50">
+                    <button type="button" class="btn-red">확인</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="foot-in">
+            <ul class="footerUl">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">고객센터</a></li>
+                <li>(주) Widblack 대표자 : ㅇㅇㅇ 서울시 서대문구 북아현로 105, 3층   Tel : 080-0000-0000   E-mail : emailme@gmail.com   사업자 등록번호 : 000-00-00000<br>© Widblack Corp. All rights reserved.</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

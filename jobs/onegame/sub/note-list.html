@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>원게임</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="gnb">
+            <div class="gnb-inner">
+                <a href=""><h1>onegame poker</h1></a>
+                <ul>
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="event-list.html">이벤트</a></li>
+                    <li><a href="notice-list.html">공지사항</a></li>
+                    <li><button type="button" class="ham-btn"><i class="i-menu"></i></button></li>
+                </ul>
+            </div>
+            <div class="category">
+                <div class="cate-bg"></div>
+                <div class="cate-content">
+                    <div class="cate-close"><i class="close-i"></i></div>
+                    <div class="cate-body">
+                        <ul class="mobile-gnb">
+                            <li><p>대메뉴1<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                    <li><a href="">소메뉴3</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴2<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴3<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">로그인</a>
+                            </li>
+                            <li><a href="">회원가입</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="wrap">
+        <div class="wrap-header">
+            <h4>쪽지함</h4>
+        </div>
+        <div class="wrap-in2">
+            <div class=" clearfix">
+                <ul class="tab-ul note-ul">
+                    <li class="active">받은 쪽지함(<span>0</span>)</li>
+                    <li>보낸 쪽지함</li>
+                    <li>쪽지 보관함</li>
+                </ul>
+                <div class="table-box note-table">
+                    <div class="table-top flexwrap">
+                        <div class="flex-d">
+                           <span class="note-s">받은쪽지 / <span>0</span>건( 미확인 건 )</span>
+                        </div>
+                        <div class="flex-d">
+                            <button type="button" class="btn-white">선택보관</button>
+                            <button type="button" class="btn-white">선택삭제</button>
+                            <button type="button" onclick="window.open('note-write.html','name','resizable=no width=570 height=665');return false" class="btn-red">쪽지보내기</button>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <colgroup>
+                            <col width="7%;">
+                            <col width="10%">
+                            <col width="auto">
+                            <col width="17%">
+                            <col width="13%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" name="" id="all-ck"><label for="all-ck"></label></th>
+                                <th>보낸사람</th>
+                                <th>내용</th>
+                                <th>발송시간</th>
+                                <th>상태</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body tbody-center3">
+                            <tr class="note-none">
+                                <td colspan="5">받은쪽지가 없습니다.</td>
+                            </tr>
+                            <tr class="note-list">
+                                <td><input type="checkbox" name="" id="aq-ck1"><label for="aq-ck1"></label></td>
+                                <td>아이디</td>
+                                <td>
+                                    <span class="note-mo-con textRed">[확인전]</span>
+                                    <div class="textoverflow">쪽지함 내용.쪽지함 내용.쪽지함 내용.쪽지함 내용.쪽지함 내용.쪽지함 내용.쪽지함 내용.쪽지함 내용.쪽지함 내용.쪽지함 내용.쪽지함 내용.쪽지함 내용.쪽지함 내용.쪽지함 내용.</div>
+                                    <div class="note-mo">
+                                        <span></span>
+                                        <span>2021-10-29</span>
+                                    </div>
+                                </td>
+                                <td>2021-10-29</td>
+                                <td>확인전</td>
+                            </tr>
+                            <tr class="note-view">
+                                <td colspan="5">
+                                    <ul>
+                                        <li><p>보낸사람</p><span>아이디</span></li>
+                                        <li><p>받은날짜</p><span>2021-11-03</span></li>
+                                    </ul>
+                                    <div class="note-cont">
+                                        쪽지내용.
+                                    </div>
+                                    <div class="note-btn">
+                                        <button type="button" class="btn-white">답장</button>
+                                        <button type="button" class="btn-white">신고</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="note-list">
+                                <td><input type="checkbox" name="" id="aq-ck2"><label for="aq-ck2"></label></td>
+                                <td>아이디</td>
+                                <td>
+                                    <span class="note-mo-con textRed">[확인전]</span>쪽지함 내용.
+                                    <div class="note-mo">
+                                        <span>아이디</span>
+                                        <span>2021-10-29</span>
+                                    </div>
+                                </td>
+                                <td>2021-10-29</td>
+                                <td>확인전</td>
+                            </tr>
+                            <tr class="note-view">
+                                <td colspan="5">
+                                    <ul>
+                                        <li><p>보낸사람</p><span>아이디</span></li>
+                                        <li><p>받은날짜</p><span>2021-11-03</span></li>
+                                    </ul>
+                                    <div class="note-cont">
+                                        쪽지내용.
+                                    </div>
+                                    <div class="note-btn">
+                                        <button type="button" class="btn-white">답장</button>
+                                        <button type="button" class="btn-white">신고</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="note-list">
+                                <td><input type="checkbox" name="" id="aq-ck3"><label for="aq-ck3"></label></td>
+                                <td>아이디</td>
+                                <td>
+                                    쪽지함 내용.
+                                    <div class="note-mo">
+                                        <span>아이디</span>
+                                        <span>2021-10-29</span>
+                                    </div>
+                                </td>
+                                <td>2021-10-29</td>
+                                <td>확인</td>
+                            </tr>
+                            <tr class="note-view">
+                                <td colspan="5">
+                                    <ul>
+                                        <li><p>보낸사람</p><span>아이디</span></li>
+                                        <li><p>받은날짜</p><span>2021-11-03</span></li>
+                                    </ul>
+                                    <div class="note-cont">
+                                        쪽지내용.
+                                    </div>
+                                    <div class="note-btn">
+                                        <button type="button" class="btn-white">답장</button>
+                                        <button type="button" class="btn-white">신고</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="note-list">
+                                <td><input type="checkbox" name="" id="aq-ck4"><label for="aq-ck4"></label></td>
+                                <td>아이디</td>
+                                <td>
+                                    쪽지함 내용.
+                                    <div class="note-mo">
+                                        <span>아이디</span>
+                                        <span>2021-10-29</span>
+                                    </div>
+                                </td>
+                                <td>2021-10-29</td>
+                                <td>확인</td>
+                            </tr>
+                            <tr class="note-view">
+                                <td colspan="5">
+                                    <ul>
+                                        <li><p>보낸사람</p><span>아이디</span></li>
+                                        <li><p>받은날짜</p><span>2021-11-03</span></li>
+                                    </ul>
+                                    <div class="note-cont">
+                                        쪽지내용.
+                                    </div>
+                                    <div class="note-btn">
+                                        <button type="button" class="btn-white">답장</button>
+                                        <button type="button" class="btn-white">신고</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="note-list">
+                                <td><input type="checkbox" name="" id="aq-ck5"><label for="aq-ck5"></label></td>
+                                <td>아이디</td>
+                                <td>
+                                    쪽지함 내용.
+                                    <div class="note-mo">
+                                        <span>아이디</span>
+                                        <span>2021-10-29</span>
+                                    </div>
+                                </td>
+                                <td>2021-10-29</td>
+                                <td>확인</td>
+                            </tr>
+                            <tr class="note-view">
+                                <td colspan="5">
+                                    <ul>
+                                        <li><p>보낸사람</p><span>아이디</span></li>
+                                        <li><p>받은날짜</p><span>2021-11-03</span></li>
+                                    </ul>
+                                    <div class="note-cont">
+                                        쪽지내용.
+                                    </div>
+                                    <div class="note-btn">
+                                        <button type="button" class="btn-white">답장</button>
+                                        <button type="button" class="btn-white">신고</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="note-list">
+                                <td><input type="checkbox" name="" id="aq-ck6"><label for="aq-ck6"></label></td>
+                                <td>아이디</td>
+                                <td>
+                                    쪽지함 내용.
+                                    <div class="note-mo">
+                                        <span>아이디</span>
+                                        <span>2021-10-29</span>
+                                    </div>
+                                </td>
+                                <td>2021-10-29</td>
+                                <td>확인</td>
+                            </tr>
+                            <tr class="note-view">
+                                <td colspan="5">
+                                    <ul>
+                                        <li><p>보낸사람</p><span>아이디</span></li>
+                                        <li><p>받은날짜</p><span>2021-11-03</span></li>
+                                    </ul>
+                                    <div class="note-cont">
+                                        쪽지내용.
+                                    </div>
+                                    <div class="note-btn">
+                                        <button type="button" class="btn-white">답장</button>
+                                        <button type="button" class="btn-white">신고</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="note-t">보관하지 않은 모든쪽지는 발송일 기준 7일 후 자동 삭제 됩니다.<br>
+                        (보관된 쪽지는 발송일 기준 30일 후 자동삭제됩니다.)</p>
+                </div>
+            </div>
+            <ul class="pagination mb100">
+                <li class="page-item"><a class="page-link" href="#">≪</a></li>
+                <li class="page-arrow"><a class="page-link" href="#">＜</a></li>
+                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-arrow"><a class="page-link" href="#">＞</a></li>
+                <li class="page-item"><a class="page-link" href="#">≫</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="foot-in">
+            <ul class="footerUl">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">고객센터</a></li>
+                <li>(주) Widblack 대표자 : ㅇㅇㅇ 서울시 서대문구 북아현로 105, 3층   Tel : 080-0000-0000   E-mail : emailme@gmail.com   사업자 등록번호 : 000-00-00000<br>© Widblack Corp. All rights reserved.</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        $('.tab-ul li').click(function() {
+            var $this = $(this);
+            $this.addClass('active');
+            $this.siblings('.active').removeClass('active');
+        });
+        // 체크박스
+        $('#all-ck').click(function(){
+            var ck = $(this).is(':checked');
+            if(ck) $('.tab-box input[type="checkbox"]').prop('checked',true);
+            else $('.tab-box input[type="checkbox"]').prop('checked',false);
+        });
+        // note
+        $('.note-list').click(function(e) {
+            var $noteList = $(this)
+            var $noteView = $(this).next('.note-view');
+            if(!$(e.target).is("label") && !$(e.target).is("input")){
+                console.log($(e.target))
+                if ($noteList.hasClass("show")) {
+                    $noteList.removeClass("show");
+                    $noteView.removeClass("show");
+                } else {
+                    $(".note-table tr.note-list").removeClass("show");
+                    $(".note-table tr.note-view").removeClass("show");
+                    $noteList.addClass("show");
+                    $noteView.addClass("show");
+                }
+            }
+        });
+    </script>
+</body>
+</html>

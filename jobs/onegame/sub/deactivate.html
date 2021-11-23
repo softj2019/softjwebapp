@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>원게임</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="gnb">
+            <div class="gnb-inner">
+                <a href=""><h1>onegame poker</h1></a>
+                <ul>
+                    <li><a href="">로그인</a></li>
+                    <li><a href="">이벤트</a></li>
+                    <li><a href="">공지사항</a></li>
+                    <li><button type="button" class="ham-btn"><i class="i-menu"></i></button></li>
+                </ul>
+            </div>
+            <div class="category">
+                <div class="cate-bg"></div>
+                <div class="cate-content">
+                    <div class="cate-close"><i class="close-i"></i></div>
+                    <div class="cate-body">
+                        <ul class="mobile-gnb">
+                            <li><p>대메뉴1<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                    <li><a href="">소메뉴3</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴2<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴3<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="">소메뉴1</a></li>
+                                    <li><a href="">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">로그인</a>
+                            </li>
+                            <li><a href="">회원가입</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="wrap">
+        <div class="wrap-header clearfix">
+            <h4>내정보관리</h4>
+            <div class="sub-nv">
+                <ul class="sub-nv-ul">
+                    <li><a href="">내정보</a></li>
+                    <li><a href="">충전머니</a></li>
+                    <li><a href="">보유머니</a></li>
+                    <li><a href="">비밀번호 변경</a></li>
+                    <li class="active"><a href="">탈퇴하기</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrap-in word-k">
+            <form action="">
+                <div class=" t-center">
+                    <div class="iconRed ex-icon"></div>
+                    <p class="complet-tit textRed bold deac-t">탈퇴하기</p>
+                    <p class=" mb30">회원계정을 삭제하기 전에 <span class="bold">아래 사항</span>을 꼭 읽어보세요.<br>
+                        삭제한 계정은 재사용 및 복구가 불가능하니 신중하게 선택하시기 바랍니다.
+                    </p>
+                </div>
+                <div class="con-md">
+                    <div class="hr-box2 mb50 deac-box">
+                        <h2 class="textRed">회원탈퇴 시 주의사항</h2>
+                        <div class="text-sq">
+                            <ul>
+                                <li><p>회원탈퇴를 신청하시면 해당 계정은 <span class="textRed">즉시 탈퇴</span> 처리됩니다.</p></li>
+                                <li><p>탈퇴 후에는 다시 <span class="textRed">복원이 불가능</span>합니다.</p></li>
+                                <li><p>보유하고 있는 <span class="textRed">코인과 각 게임의 재화는 환불 및 복구가 불가능</span>하니 신중하게 생각하시고 결정하시기 바랍니다.</p></li>
+                                <li><p>같은 계정(이메일)으로는 <span class="textRed">재가입이 불가능</span>합니다.</p></li>
+                                <li><p>추가 회원가입을 통한 본인인증은 탈퇴일을 기준으로 30일 후에 본인인증이 가능합니다.</p></li>
+                                <li><p>One Game에 작성한 모든 <span class="textRed">게시물과 댓글은 탈퇴를 하더라도 유지</span>됩니다.</p></li>
+                                <li><p>탈퇴한 <span class="textRed">동일 데이터로는 7일 간 재가입이 불가능</span>합니다.</p></li>
+                            </ul>
+                        </div>
+                        <div class="flex-d">
+                            <input type="checkbox" id="deac-ck"><label for="deac-ck">회원탈퇴 시 주의사항을 모두 확인하였습니다.</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <button type="button" class="btn">취소</button>
+                    <button type="button" class="btn-red">탈퇴하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="foot-in">
+            <ul class="footerUl">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">고객센터</a></li>
+                <li>(주) Widblack 대표자 : ㅇㅇㅇ 서울시 서대문구 북아현로 105, 3층   Tel : 080-0000-0000   E-mail : emailme@gmail.com   사업자 등록번호 : 000-00-00000<br>© Widblack Corp. All rights reserved.</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>
