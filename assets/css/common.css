@@ -652,7 +652,7 @@ section .main-inner{
 }
 @keyframes tpleft{
     100%{
-        left:0%
+        left:0%;
     }
 }
 .temp-right{
@@ -666,7 +666,7 @@ section .main-inner{
     right:10%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);s
+    -ms-transform: translateY(-50%);
 }
 .phoneBox{
     top:50%;
@@ -734,7 +734,7 @@ section .main-inner{
     position:absolute;
     top:0vw;
     width:100%;
-    animation: phimg 4s infinite;
+    animation: phimg 5s infinite;
 }
 @keyframes phimg{
     0%{
@@ -910,7 +910,7 @@ section .main-inner{
         max-width:65vh;
     }
     .phoneBox{
-        top:36%
+        top:36%;
         right:14%;
     }
     .phoneimg{
@@ -1106,6 +1106,7 @@ section .main-inner{
     background-color:#343434;
 }
 .pj-title{
+    word-break: keep-all;
     font-size: 70px;
     font-weight: 900;
     margin-bottom:50px;
@@ -1173,6 +1174,7 @@ section .main-inner{
 }
 @media screen and (max-width:1300px){
     .pj-title{
+        word-break: keep-all;
         font-size: 4.5vw;
         font-weight: 900;
         margin-bottom:50px;
@@ -1193,6 +1195,7 @@ section .main-inner{
         left:80px;
     }
     .pj-title{
+        word-break: keep-all;
         font-size:30px;
         margin-bottom:0;
     }
@@ -1227,6 +1230,7 @@ section .main-inner{
         padding-top: 2vw;
     }
     .pj-title{
+        word-break: keep-all;
         font-size: 8.8vw;
         font-weight: 900;
         line-height: 9vw;
@@ -1627,6 +1631,7 @@ footer a{
     box-shadow: 0px 0px 24px -14px #000000;
     opacity: 0;
     animation: opimg 2s forwards;
+    line-height: 0;
 }
 .img-box .mo-img {
     width: 16%;
@@ -1637,6 +1642,7 @@ footer a{
     box-shadow: 0px 1px 24px -14px #000000;
     opacity: 0;
     animation: opimg 2s forwards;
+    line-height: 0;
 }
 @keyframes opimg{
     from {
@@ -2006,8 +2012,9 @@ section.sec4 .main-inner {/* 211007 푸터수정 */
     background-color:#1672B8;
 }
 
-@media (orientation: portrait)
+@media (orientation: portrait) {
     .abtn {
         top: 78%;
         left: 50%;
     }
+}

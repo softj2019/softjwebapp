@@ -683,93 +683,97 @@
     <script src="assets/js/common.js"></script>
     <script type="text/javascript">
         //슬라이더
-        $('.main-slide').slick({
-            slidesToShow:1,
-            infinite:true,
-            speed : 100,
-            dots : false, 
-            autoplay : true,
-            autoplaySpeed : 3000,
-            pauseOnHover : true,
-            arrows : true,
+        $(function(){
+            $('.main-slide').slick({
+                slidesToShow:1,
+                infinite:true,
+                speed : 100,
+                dots : false,
+                autoplay : true,
+                autoplaySpeed : 3000,
+                pauseOnHover : true,
+                arrows : true,
+            });
         });
         //tab
-        var tabList = document.querySelectorAll('.tab-ul li');
-        var contents = document.querySelectorAll('.cont-wrap .cont')
-        var activeCont = ''; // 현재 활성화 된 컨텐츠 (기본:#tab1 활성화)
+        $(function(){
+            var tabList = document.querySelectorAll('.tab-ul li');
+            var contents = document.querySelectorAll('.cont-wrap .cont')
+            var activeCont = ''; // 현재 활성화 된 컨텐츠 (기본:#tab1 활성화)
 
-        for(var i = 0; i < tabList.length; i++){
-            tabList[i].querySelector('.tab-ul li a').addEventListener('click', function(e){
-              e.preventDefault();
-              for(var j = 0; j < tabList.length; j++){
-                tabList[j].classList.remove('active');
-                contents[j].style.display = 'none';
-              }
-              this.parentNode.classList.add('active');
-              activeCont = this.getAttribute('href');
-              document.querySelector(activeCont).style.display = 'block';
-            });
-        }
-        //scroll button
-        //window width
-        var intFrameWidth = window.innerWidth;
-        var onresize = function(){
-            intFrameWidth = window.innerWidth;
-        }
-        window.addEventListener("resize", onresize);
-        
-        //animate scrolling
-        animteScrollTo = function(_selector, _movepx, _duration) {
-          var scrollEle = _selector.parentNode.previousElementSibling;
-          var currentX = scrollEle.scrollLeft;
-          animateScrollTo(currentX, scrollEle, _duration);
-            
-          // - Animate and scroll to target position
-          function animateScrollTo(_startX, _scrolltarget, _duration) {
-            _duration = _duration ? _duration : 150;
-            var unitX = _movepx / _duration;
-            var startTime = new Date().getTime();
-            var endTime = new Date().getTime() + _duration;
+            for(var i = 0; i < tabList.length; i++){
+                tabList[i].querySelector('.tab-ul li a').addEventListener('click', function(e){
+                  e.preventDefault();
+                  for(var j = 0; j < tabList.length; j++){
+                    tabList[j].classList.remove('active');
+                    contents[j].style.display = 'none';
+                  }
+                  this.parentNode.classList.add('active');
+                  activeCont = this.getAttribute('href');
+                  document.querySelector(activeCont).style.display = 'block';
+                });
+            }
+            //scroll button
+            //window width
+            var intFrameWidth = window.innerWidth;
+            var onresize = function(){
+                intFrameWidth = window.innerWidth;
+            }
+            window.addEventListener("resize", onresize);
 
-            var scrollTo = function() {
-              var now = new Date().getTime();
-              var passed = now - startTime;
-              if (now <= endTime) {
-                  scrollEle.scrollLeft = currentX + (unitX * passed);
+            //animate scrolling
+            animteScrollTo = function(_selector, _movepx, _duration) {
+              var scrollEle = _selector.parentNode.previousElementSibling;
+              var currentX = scrollEle.scrollLeft;
+              animateScrollTo(currentX, scrollEle, _duration);
+
+              // - Animate and scroll to target position
+              function animateScrollTo(_startX, _scrolltarget, _duration) {
+                _duration = _duration ? _duration : 150;
+                var unitX = _movepx / _duration;
+                var startTime = new Date().getTime();
+                var endTime = new Date().getTime() + _duration;
+
+                var scrollTo = function() {
+                  var now = new Date().getTime();
+                  var passed = now - startTime;
+                  if (now <= endTime) {
+                      scrollEle.scrollLeft = currentX + (unitX * passed);
+                    requestAnimationFrame(scrollTo);
+                  }
+                };
                 requestAnimationFrame(scrollTo);
-              }
+              };
             };
-            requestAnimationFrame(scrollTo);
-          };
-        };
-        
-        //get pixels to scroll
-        var rightbtn = document.querySelectorAll(".slidebtnwrap .rightbtn");
-        for (var i=0; i<rightbtn.length; i++){
-            rightbtn[i].addEventListener("click", function(){
-                var li = this.parentNode.previousElementSibling.children[0].children[0];
-                var liWidth = li.offsetWidth + 18;
-                if(intFrameWidth < liWidth*2 - 18){
-                    movepx = liWidth
-                }else{
-                    movepx = liWidth*2
-                }
-                animteScrollTo(this, movepx);
-            });
-        }
-        var leftbtn = document.querySelectorAll(".slidebtnwrap .leftbtn");
-        for (var i=0; i<leftbtn.length; i++){
-            leftbtn[i].addEventListener("click", function(){
-                var li = this.parentNode.previousElementSibling.children[0].children[1];
-                var liWidth = li.offsetWidth + 18;
-                if(intFrameWidth < liWidth*2 - 18){
-                    movepx = liWidth
-                }else{
-                    movepx = liWidth*2
-                }
-                animteScrollTo(this, -movepx);
-            });
-        }
+
+            //get pixels to scroll
+            var rightbtn = document.querySelectorAll(".slidebtnwrap .rightbtn");
+            for (var i=0; i<rightbtn.length; i++){
+                rightbtn[i].addEventListener("click", function(){
+                    var li = this.parentNode.previousElementSibling.children[0].children[0];
+                    var liWidth = li.offsetWidth + 18;
+                    if(intFrameWidth < liWidth*2 - 18){
+                        movepx = liWidth
+                    }else{
+                        movepx = liWidth*2
+                    }
+                    animteScrollTo(this, movepx);
+                });
+            }
+            var leftbtn = document.querySelectorAll(".slidebtnwrap .leftbtn");
+            for (var i=0; i<leftbtn.length; i++){
+                leftbtn[i].addEventListener("click", function(){
+                    var li = this.parentNode.previousElementSibling.children[0].children[1];
+                    var liWidth = li.offsetWidth + 18;
+                    if(intFrameWidth < liWidth*2 - 18){
+                        movepx = liWidth
+                    }else{
+                        movepx = liWidth*2
+                    }
+                    animteScrollTo(this, -movepx);
+                });
+            }
+        });
         
         //button remove
         function showGradient(){
