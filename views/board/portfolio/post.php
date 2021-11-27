@@ -118,7 +118,7 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
     </div>
 
 
-<div class="border_button mt20 mb20">
+<div class="border_button mt20">
     <div class="btn-group pull-left" role="group" aria-label="...">
         <?php if (element('modify_url', $view)) { ?>
             <button type="button" content="btn btn-default" onclick="location.href='<?php echo element('modify_url', $view); ?>'" class="btn btn-default btn-sm">수정</button>
