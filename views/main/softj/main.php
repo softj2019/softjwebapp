@@ -142,8 +142,11 @@
             <form action="" method="post">
                 <div class="form-in">
                     <input type="hidden" name="post_title" value="문의" >
+                    <input type="hidden" name="post_nickname">
+                    <input type="hidden" name="post_password">
                     <input type="text" placeholder="회사명" name="company">
                     <input type="text" placeholder="이메일" name="email">
+
                     <input type="text" placeholder="직급" name="jobclass">
                     <input type="text" placeholder="담당자명" name="name">
                     <input type="hidden" name="post_content">
@@ -151,7 +154,18 @@
                 <div id="summernote"></div><!-- 200927 수정 -->
                 <button type="submit" class="btn df">문의하기</button>
             </form>
-
+            <?php if ($this->member->is_member() === false) { ?>
+                <div class="well text-center mt20">
+                    <?php if ($this->cbconfig->item('use_recaptcha')) { ?>
+                        <div class="captcha" id="recaptcha"><button type="button" id="captcha"></button></div>
+                        <input type="hidden" name="recaptcha" />
+                    <?php } else { ?>
+                        <img src="<?php echo base_url('assets/images/preload.png'); ?>" width="160" height="40" id="captcha" alt="captcha" title="captcha" />
+                        <input type="text" class="input col-md-4" id="captcha_key" name="captcha_key" />
+                        자동등록방지 숫자를 순서대로 입력하세요.
+                    <?php } ?>
+                </div>
+            <?php } ?>
         </div>
         <footer>
             <div class="footer-inner">
@@ -181,6 +195,8 @@
     $('#fwrite').submit(function (){
         var vaildate = true
         $('input[name=post_content]').val($('#summernote').summernote('code'))
+        $('input[name=post_nickname]').val($('input[name=name]').val());
+        $('input[name=post_password]').val($('input[name=email]').val());
         if($('input[name=email]').val()==''){
             toastr.error('*이메일은 필수 입력 사항 입니다.')
             vaildate = false
