@@ -374,17 +374,17 @@ class Board_write extends CB_Controller
 
 		if ( check_use_captcha($this->member, $board) ) {
 			if ($this->cbconfig->item('use_recaptcha')) {
-				$config[] = array(
-					'field' => 'g-recaptcha-response',
-					'label' => '자동등록방지문자',
-					'rules' => 'trim|required|callback__check_recaptcha',
-				);
+//				$config[] = array(
+//					'field' => 'g-recaptcha-response',
+//					'label' => '자동등록방지문자',
+//					'rules' => 'trim|required|callback__check_recaptcha',
+//				);
 			} else {
-				$config[] = array(
-					'field' => 'captcha_key',
-					'label' => '자동등록방지문자',
-					'rules' => 'trim|required|callback__check_captcha',
-				);
+//				$config[] = array(
+//					'field' => 'captcha_key',
+//					'label' => '자동등록방지문자',
+//					'rules' => 'trim|required|callback__check_captcha',
+//				);
 			}
 		}
 		if ($use_subj_style) {
@@ -1729,17 +1729,17 @@ class Board_write extends CB_Controller
 				'rules' => 'trim|required|min_length[' . $password_length . ']|callback__mem_password_check',
 			);
 			if ($this->cbconfig->item('use_recaptcha')) {
-				$config[] = array(
-					'field' => 'g-recaptcha-response',
-					'label' => '자동등록방지문자',
-					'rules' => 'trim|required|callback__check_recaptcha',
-				);
+//				$config[] = array(
+//					'field' => 'g-recaptcha-response',
+//					'label' => '자동등록방지문자',
+//					'rules' => 'trim|required|callback__check_recaptcha',
+//				);
 			} else {
-				$config[] = array(
-					'field' => 'captcha_key',
-					'label' => '자동등록방지문자',
-					'rules' => 'trim|required|callback__check_captcha',
-				);
+//				$config[] = array(
+//					'field' => 'captcha_key',
+//					'label' => '자동등록방지문자',
+//					'rules' => 'trim|required|callback__check_captcha',
+//				);
 			}
 		}
 		if ($use_subject_style) {
@@ -2067,6 +2067,7 @@ class Board_write extends CB_Controller
 			$use_mobile_sidebar = element('board_mobile_sidebar', $board) ? element('board_mobile_sidebar', $board) : $this->cbconfig->item('mobile_sidebar_board');
 			$skin_dir = element('board_skin', $board) ? element('board_skin', $board) : $this->cbconfig->item('skin_board');
 			$mobile_skin_dir = element('board_mobile_skin', $board) ? element('board_mobile_skin', $board) : $this->cbconfig->item('mobile_skin_board');
+
 			$layoutconfig = array(
 				'path' => 'board',
 				'layout' => 'layout',
