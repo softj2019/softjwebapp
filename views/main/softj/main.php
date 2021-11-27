@@ -1,3 +1,4 @@
+<?php echo element('headercontent', element('board', $view)); ?>
 <section class="sec1" id="sec1">
     <div class="main-inner parallax-background" style="overflow:hidden;">
         <div class="parallax-inner"  style="background-image: url(<?php echo base_url('assets/img/sample1.jpg'); ?>)"></div>
@@ -134,15 +135,21 @@
         <div class="parallax-inner"  style="background-image: url(<?php echo base_url('assets/img/foot.jpg'); ?>)"></div>
         <div class="con-box">
             <h2>CONTACT</h2>
+            <?php
+            $attributes = array('class' => 'form-horizontal', 'name' => 'fwrite', 'id' => 'fwrite');
+            echo form_open(site_url('write/contact'), $attributes);
+            ?>
             <form action="" method="post">
                 <div class="form-in">
-                    <input type="text" placeholder="회사명">
-                    <input type="text" placeholder="이메일">
-                    <input type="text" placeholder="직급">
-                    <input type="text" placeholder="담당자명">
+                    <input type="hidden" name="post_title" value="문의" >
+                    <input type="text" placeholder="회사명" name="company">
+                    <input type="text" placeholder="이메일" name="email">
+                    <input type="text" placeholder="직급" name="jobclass">
+                    <input type="text" placeholder="담당자명" name="name">
+                    <input type="hidden" name="post_content">
                 </div>
                 <div id="summernote"></div><!-- 200927 수정 -->
-                <button type="button" class="btn df">문의하기</button>
+                <button type="submit" class="btn df">문의하기</button>
             </form>
 
         </div>
@@ -171,6 +178,20 @@
     </div>
 </section>
 <script>
+    $('#fwrite').submit(function (){
+        var vaildate = true
+        $('input[name=post_content]').val($('#summernote').summernote('code'))
+        if($('input[name=email]').val()==''){
+            toastr.error('*이메일은 필수 입력 사항 입니다.')
+            vaildate = false
+        }
+        if($('input[name=name]').val()==''){
+            toastr.error('*담당자명 은 필수 입력 사항 입니다.')
+            vaildate = false
+        }
+
+        return vaildate;
+    });
     $('#summernote').summernote({
         placeholder: '요청사항을 상세하게 작성해주세요',
         tabsiz: 2,
@@ -183,8 +204,42 @@
             ['table', ['table']],
             ['insert', ['link', 'picture', 'video']],
             ['view', ['fullscreen', 'codeview', 'help']]
-        ]
+        ],
+        callbacks: {
+
+            onImageUpload : function(files, editor, welEditable) {
+                sendFile(files);
+
+            },
+        }
     });
+    function sendFile(file) {
+        $.each(file,function (index,item) {
+            var data = new FormData();
+            data.append("file", file[index]);
+            data.append("csrf_test_name",$('input[name=csrf_test_name]').val())
+            $.ajax({
+                url: cb_url+"/summernote/upload",
+                data: data,
+                cache: false,
+                contentType: false,
+                enctype: 'multipart/form-data',
+                processData: false,
+                type: 'POST',
+                success: function (data) {
+                    if (data.success) {
+                        $('#summernote').summernote("insertImage", data.save_url); // summernote 에디터에 img 태그를 보여줌
+
+                    } else {
+
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus + " " + errorThrown);
+                }
+            });
+        })
+    }
 </script>
 <!-- footer end -->
         

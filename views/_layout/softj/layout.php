@@ -33,6 +33,8 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <link href="<?php echo base_url('assets/css/reset.css'); ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo base_url('assets/css/common.css'); ?>" rel="stylesheet" type="text/css">
+    <!-- Toastr -->
+    <link rel="stylesheet" href="<?php echo base_url('assets/plugins/toastr/toastr.min.css'); ?>">
 <script type="text/javascript">
 // 자바스크립트에서 사용하는 전역변수 선언
 var cb_url = "<?php echo trim(site_url(), '/'); ?>";
@@ -166,6 +168,8 @@ var cookie_prefix = "<?php echo config_item('cookie_prefix'); ?>";
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.validate.extension.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/sideview.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/js.cookie.js'); ?>"></script>
+<!-- Toastr -->
+<script type="text/javascript" src="<?php echo base_url('assets/plugins/toastr/toastr.min.js'); ?>"></script>
 <?php echo $this->managelayout->display_js(); ?>
 <script type="text/javascript">
 $(document).on('click', '.viewpcversion', function(){

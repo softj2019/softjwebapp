@@ -748,22 +748,26 @@ class Board_write extends CB_Controller
 			$use_mobile_sidebar = element('board_mobile_sidebar', $board) ? element('board_mobile_sidebar', $board) : $this->cbconfig->item('mobile_sidebar_board');
 			$skin_dir = element('board_skin', $board) ? element('board_skin', $board) : $this->cbconfig->item('skin_board');
 			$mobile_skin_dir = element('board_mobile_skin', $board) ? element('board_mobile_skin', $board) : $this->cbconfig->item('mobile_skin_board');
-			$layoutconfig = array(
-				'path' => 'board',
-				'layout' => 'layout',
-				'skin' => 'write',
-				'layout_dir' => $layout_dir,
-				'mobile_layout_dir' => $mobile_layout_dir,
-				'use_sidebar' => $use_sidebar,
-				'use_mobile_sidebar' => $use_mobile_sidebar,
-				'skin_dir' => $skin_dir,
-				'mobile_skin_dir' => $mobile_skin_dir,
-				'page_title' => $page_title,
-				'meta_description' => $meta_description,
-				'meta_keywords' => $meta_keywords,
-				'meta_author' => $meta_author,
-				'page_name' => $page_name,
-			);
+
+
+            $layoutconfig = array(
+                'path' => 'board',
+                'layout' => 'layout',
+                'skin' => 'write',
+                'layout_dir' => $layout_dir,
+                'mobile_layout_dir' => $mobile_layout_dir,
+                'use_sidebar' => $use_sidebar,
+                'use_mobile_sidebar' => $use_mobile_sidebar,
+                'skin_dir' => $skin_dir,
+                'mobile_skin_dir' => $mobile_skin_dir,
+                'page_title' => $page_title,
+                'meta_description' => $meta_description,
+                'meta_keywords' => $meta_keywords,
+                'meta_author' => $meta_author,
+                'page_name' => $page_name,
+            );
+
+
 			$view['layout'] = $this->managelayout->front($layoutconfig, $this->cbconfig->get_device_view_type());
 			$this->data = $view;
 			$this->layout = element('layout_skin_file', element('layout', $view));
@@ -1349,7 +1353,12 @@ class Board_write extends CB_Controller
 			 * 게시물의 신규입력 또는 수정작업이 끝난 후 뷰 페이지로 이동합니다
 			 */
 			$redirecturl = post_url(element('brd_key', $board), $post_id);
-			redirect($redirecturl);
+            /**문의게시판이면 메인페이지로 이동**/
+            if(element('brd_key', $board)=='contact'){
+                redirect(site_url(), 'refresh');
+            }else {
+                redirect($redirecturl);
+            }
 		}
 	}
 

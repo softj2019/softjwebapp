@@ -47,7 +47,7 @@ var cookie_prefix = "<?php echo config_item('cookie_prefix'); ?>";
 </head>
 <body <?php echo isset($view) ? element('body_script', $view) : ''; ?>>
     <header class="main-hd sub-hd">
-        <h1 class="sub-logo"><a href="/">소프트제이</a></h1>
+        <h1 class="sub-logo"><a href="<?=current_full_url()?>">소프트제이</a></h1>
     </header>
     <div class="sub-wrap">
 
