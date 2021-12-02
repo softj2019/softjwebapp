@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>춘미샵</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+</head>
+<body class="popup" style="min-width:950px">
+    <div class="body-mar">
+        <table>
+            <p class="body-tit">거래명세표</p>
+            <colgroup>
+                <col style="width: 25px;">
+                <col style="width: 80px;">
+                <col style="width: 142px;">
+                <col style="width: 80px;">
+                <col style="width: 142px;">
+                <col style="width: 25px;">
+                <col style="width: 80px;">
+                <col style="width: 142px;">
+                <col style="width: 80px;">
+                <col style="width: 143px;">
+            </colgroup>
+            <tbody class="t-body3">
+                <tr class="tr-tit">
+                    <td rowspan="4">공<br>급<br>자</td>
+                    <td>사업자<br>등록번호</td>
+                    <td colspan="3"><span>000-00-00000</span></td>
+                    <td rowspan="4">공<br>급<br>받<br>는<br>자</td>
+                    <td>사업자<br>등록번호</td>
+                    <td colspan="3"><span><input type="text" placeholder="직접 기입해주세요."></span></td>
+                </tr>
+                <tr>
+                    <td>상호<br>(법인명)</td>
+                    <td><span>춘미샵</span></td>
+                    <td>성명</td>
+                    <td><span>홍길동</span></td>
+                    <td>상호<br>(법인명)</td>
+                    <td><span><input type="text" placeholder="직접 기입해주세요."></span></td>
+                    <td>성명</td>
+                    <td><span><input type="text" placeholder="직접 기입해주세요."></span></td>
+                </tr>
+                <tr class="tr-tit">
+                    <td>사업장<br>주소</td>
+                    <td colspan="3"><span></span></td>
+                    <td>사업장<br>주소</td>
+                    <td colspan="3"><span><input type="text" placeholder="직접 기입해주세요."></span></td>
+                </tr>
+                <tr>
+                    <td>업태</td>
+                    <td><span>원조이라이프</span></td>
+                    <td>종목</td>
+                    <td><span></span></td>
+                    <td>업태</td>
+                    <td><span><input type="text" placeholder="직접 기입해주세요."></span></td>
+                    <td>종목</td>
+                    <td><span><input type="text" placeholder="직접 기입해주세요."></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <colgroup>
+                <col style="width: 105px;">
+                <col style="width: 364px;">
+                <col style="width: 105px;">
+                <col style="width: 222px;">
+                <col style="width: 143px;">
+            </colgroup>
+            <tbody class="t-body3">
+                <tr class="tr-tit">
+                    <td>거래일자</td>
+                    <td>상품명</td>
+                    <td>수량</td>
+                    <td>거래액<br>(VAT포함 원화)</td>
+                    <td>비고</td>
+                </tr>
+                <tr>
+                    <td><span>2020-02-03</span></td>
+                    <td><span></span></td>
+                    <td><span>1</span></td>
+                    <td><span>18,000원</span></td>
+                    <td><span></span></td>
+                </tr>
+                <tr>
+                    <td><span>2020-02-03</span></td>
+                    <td><span></span></td>
+                    <td><span>1</span></td>
+                    <td><span>18,000원</span></td>
+                    <td><span></span></td>
+                </tr>
+                <tr>
+                    <td><span>2020-02-03</span></td>
+                    <td><span></span></td>
+                    <td><span>1</span></td>
+                    <td><span>18,000원</span></td>
+                    <td><span></span></td>
+                </tr>
+                <tr>
+                    <td colspan="5"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">총거래액 합계</td>
+                    <td></td>
+                    <td><span>54,000원</span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2">배송비 합계</td>
+                    <td></td>
+                    <td><span>3,000원</span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2">할인금액</td>
+                    <td></td>
+                    <td><span>3,000원</span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2">실제 총 결제 금액</td>
+                    <td></td>
+                    <td><span>54,000원</span></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="txt-p">* 거래명세표는 춘미샵의 거래내역을 보여주며 세금계산서와 같은 법적 효력은 없습니다.</p>
+        <p class="txt-p">* 부가세 신고용 증빙은 현금영수증이나 신용카드전표를 활용하시기 바랍니다.</p>
+        <div class="but-box">
+            <button type="button" class="btn per100 mb5 mt20">인쇄하기</button>
+            <button type="button" class="btn-bor per100">확인</button>
+        </div>
+    </div>
+</body>
+</html>

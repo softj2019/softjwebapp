@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>춘미샵</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/mo-common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="mo-hd-l">
+            <ul>
+                <li><a href="mypage.html" class="my-i">마이페이지</a></li>
+                <li><a href="cart.html" class="car-i">장바구니</a><span class="car-num">0</span></li>
+            </ul>
+        </div>
+        <div class="mo-hd-title">
+            <a href=""><h1>CHUNMISHOP</h1></a>
+        </div>
+        <div class="mo-hd-ham">
+            <button type="button" class="ham-btn"></button>
+        </div>
+    </header>
+    <div class="main-wrap wrap-padding">
+        <h3 class="tit-txt">주문상세</h3>
+        <div class="order-box">
+            <div class="mb30">
+                <p class="od-tit">상품정보</p>
+                <ul class="od-table od-det">
+                    <li>
+                        <p>주문일[주문번호]</p>
+                        <div>
+                            <span>2021-04-21[4654987812]</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>주문자</p>
+                        <div>
+                            <span>홍길동</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>주문상태</p>
+                        <div>
+                            <span>배송상태</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mb30">
+                <div class="flexwrap od-tit">
+                     <p class="">배송지 정보</p><button type="button" class="btn-s" onclick="location.href='javascript:documentPop(1)'">거래전표</button>
+                </div>
+                <ul class="od-table od-det">
+                    <li>
+                        <p>총 주문금액</p>
+                        <div>
+                            <span>999,999,999원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>총 결제금액</p>
+                        <div>
+                            <span>999,999,999원</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>결제수단</p>
+                        <div>
+                            <span>카드결제</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mb30">
+                <p class="od-tit">상품정보</p>
+                <ul class="od-table">
+                    <li class="prd-li">
+                        <div class="prd-t">
+                            <p>주문일</p>
+                            <p class="align-r">
+                                <span>2021-04-21</span><br>
+                                <span>[4654987812]</span>
+                            </p>
+                        </div>
+                        <div class="prd-m">
+                            <div>
+                                <div style="background-image: url(../../assets/img/img3.png);" class="prd-img"></div>
+                                <div>
+                                    <a href="" class="prd-name">상품이름상품이름상품이름상품이름상품이름상품이름상품이름상품이름상품이름상품이름상품이름상품이름</a>
+                                    <p>[옵션 : 핑크]</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prd-t">
+                            <div>
+                                <p>수량</p>
+                                <p>구매금액</p>
+                                <p>주문상태</p>
+                            </div>
+                            <div class="align-r">
+                                <p>9999999</p>
+                                <p>999,999,999 원</p>
+                                <p>배송완료</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="prd-li">
+                        <div class="prd-t">
+                            <p>주문일</p>
+                            <p class="align-r">
+                                <span>2021-04-21</span><br>
+                                <span>[4654987812]</span>
+                            </p>
+                        </div>
+                        <div class="prd-m">
+                            <div>
+                                <div style="background-image: url(../../assets/img/img3.png);" class="prd-img"></div>
+                                <div>
+                                    <a href="" class="prd-name">상품이름</a>
+                                    <p>[옵션 : 핑크]</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="background-image: url(../../assets/img/img3.png);" class="prd-img"></div>
+                                <div>
+                                    <a href="" class="prd-name">상품이름</a>
+                                    <p>[옵션 : 핑크]</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prd-t">
+                            <div>
+                                <p>수량</p>
+                                <p>구매금액</p>
+                                <p>주문상태</p>
+                            </div>
+                            <div class="align-r">
+                                <p>9999999</p>
+                                <p>999,999,999 원</p>
+                                <p>배송완료</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mb30">
+                <p class="od-tit">배송정보</p>
+                <ul class="od-table od-det">
+                    <li>
+                        <p>수령인</p>
+                        <div>
+                            <span>홍길동</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>휴대폰 번호</p>
+                        <div>
+                            <span>010-0000-0000</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>주소</p>
+                        <div>
+                            <span>06643 서울특별시 서초구 서울길 3 서울빌딩 112호</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>배송 요청사항</p>
+                        <div>
+                            <span>부재시 경비실에 맡겨주세요.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-box">
+                <button type="button" class="btn per100" onclick="location.href='javascript:documentPop(2)'">거래명세서 확인</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="foot-in">
+            <ul class="footerUl">
+                <li>SOFTJ</li>
+                <li>company : 춘미샵 ㅣ owner : 홍길동</li>
+                <li>서울시 은평구 ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</li>
+                <li>tel : 010 - 0000 - 0000 ㅣ fax : 02 - 0000 - 0000</li>
+                <li>E-MAIL : email@email.com</li>
+            </ul>
+            <ul class="footerSubul">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보취급방침</a></li>
+                <li><a href="">고객센터</a></li>
+                 
+            </ul>
+        </div>
+    </footer>
+    <div class="category">
+        <div class="cate-bg"></div>
+        <div class="cate-content">
+            <div class="cate-close"><i class="close-i"></i></div>
+            <div class="cate-head clearfix">
+                <ul class="mh-leftUl">
+                    <li><a href="login.html">
+                        LOGRIN
+                    </a></li>
+                    <li><a href="join.html">
+                        JOIN
+                    </a></li>
+                    <li><a href="cart.html">
+                        CART
+                    </a></li>
+                    <li><a href="mypage.html">
+                        MYPAGE
+                    </a></li>
+                </ul>
+            </div>
+            <div class="cate-body clearfix">
+                <nav class="gnb">
+                    <ul>
+                        <li><p>BEST<a href=""></a></p> 
+                        </li>
+                        <li><p>TOP<a href=""></a></p>
+                            <ul class="lnb">
+                                <li><a href="">SHIRT</a></li>
+                                <li><a href="">BLOUSE</a></li>
+                                <li><a href="">KNIT</a></li>
+                            </ul>
+                        </li>
+                        <li><p>OUTER<a href=""></a></p>
+                            <ul class="lnb">
+                                <li><a href="">JACKET</a></li>
+                                <li><a href="">CARDIGAN</a></li>
+                                <li><a href="">COAT</a></li>
+                            </ul>
+                        </li>
+                        <li><p>BOTTOM<a href=""></a></p>
+                            <ul class="lnb">
+                                <li><a href="">PANTS</a></li>
+                                <li><a href="">SKIRT</a></li>
+                            </ul>
+                        </li>
+                        <li><p>DRESS<a href=""></a></p>
+                        </li>
+                        <li><p>SHOES<a href=""></a></p>
+                        </li>
+                        <li><p>ACC<a href=""></a></p>
+                            <ul class="lnb">
+                                <li><a href="">RING</a></li>
+                                <li><a href="">EARRING</a></li>
+                                <li><a href="">BRACELET</a></li>
+                                <li><a href="">ETC</a></li>
+                            </ul>
+                        </li>
+                        <li><p>NEW<a href=""></a></p>
+                        </li>
+                        <li><p>EVENT<a href=""></a></p>
+                        </li>
+                        <li><p>SALE<a href=""></a></p>
+                        </li>
+                        <li><p>당일발송<a href=""></a></p>
+                        </li>
+                    </ul>
+                    <ul class="mh-rightUl mt60">
+                        <li><a href="notice.html">
+                            NOTICE
+                        </a></li>
+                        <li><a href="qna.html">
+                            Q&amp;A
+                        </a></li>
+                        <li><a href="review.html">
+                            REVIEW
+                        </a></li>
+                    </ul>
+                </nav>
+                <div class="cate-rv">
+                    <div class="rv-bg"></div>
+                    <a href="">PHOTO REVIEW</a>
+                </div>
+                <div>
+                    <form action="">
+                        <div class="srcBox">
+                            <button type="button" class="src-btn"></button>
+                            <input type="text" class="src-form">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="cate-footer clearfix">
+                <ul class="footerUl mb80">
+                    <li>c/s center</li>
+                    <li class="big">1588-0000</li>
+                    <li>MON - FRI 09:00 - 18:00<br>LUNCH TIME 12:00 - 13:00</li>
+                </ul>
+                <ul class="footerUl mb80">
+                    <li>BANK INFO</li>
+                    <li>국민은행 000000-000000</li>
+                    <li>우리은행 000000-000000</li>
+                    <li>농협 000000-000000</li>
+                    <li>춘미샵</li>
+                </ul>
+                <ul class="footerUl sns">
+                    <li><a href="" class="tweet3">트위터</a></li>
+                    <li><a href="" class="facebook3">페이스북</a></li>
+                     <li><a href="" class="insta3">인스타그램</a></li>
+                     
+                 </ul>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="order-sub1">
+        <div class="body-mar">
+            <div class="pop-close"><p class="pop-hd">거래전표</p><i class="close-i"></i></div>
+            <div class="pop-cont">
+                <table>
+                    <p class="body-tit">신용카드 매출전표</p>
+                    <colgroup>
+                        <col style="width: 180px;">
+                        <col style="width: 180px;">
+                        <col style="width: 180px;">
+                    </colgroup>
+                    <tbody class="t-body1">
+                        <tr class="tr-tit">
+                            <td>승인번호</td>
+                            <td>카드종류</td>
+                            <td>카드번호</td>
+                        </tr>
+                        <tr>
+                            <td><span>00065785</span></td>
+                            <td><span>현대</span></td>
+                            <td><span>***-***-***</span></td>
+                        </tr>
+                        <tr class="tr-tit">
+                            <td>유효기간</td>
+                            <td>거래종류</td>
+                            <td>할부</td>
+                        </tr>
+                        <tr>
+                            <td><span>**/**</span></td>
+                            <td><span>신용승인</span></td>
+                            <td><span>일시불</span></td>
+                        </tr>
+                        <tr class="tr-tit">
+                            <td>결제일자</td>
+                            <td>취소일자</td>
+                            <td>구분</td>
+                        </tr>
+                        <tr>
+                            <td><span>2019-03-21</span><span> 12:29:06</span></td>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <colgroup>
+                        <col style="width: 270px;">
+                        <col style="width: 270px;">
+                    </colgroup>
+                    <tbody class="t-body2">
+                        <tr class="tr-tit">
+                            <td colspan="2" class="bor-non">상품명</td>
+                        </tr>
+                        <tr >
+                            <td colspan="2" class="bor-non"><span>일시불</span></td>
+                        </tr>
+                        <tr class="tr-tit">
+                            <td>주문번호</td>
+                            <td>상품주문번호</td>
+                        </tr>
+                        <tr>
+                            <td><span></span></td>
+                            <td><span></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <p class="body-tit">판매자 정보</p>
+                    <colgroup>
+                        <col style="width: 270px;">
+                        <col style="width: 270px;">
+                    </colgroup>
+                    <tbody class="t-body2">
+                        <tr class="tr-tit">
+                            <td>판매자상호</td>
+                            <td>대표자명</td>
+                        </tr>
+                        <tr>
+                            <td><span>스킨셀러</span></td>
+                            <td><span>홍길동</span></td>
+                        </tr>
+                        <tr class="tr-tit">
+                            <td>사업자등록번호</td>
+                            <td>판매자전화번호</td>
+                        </tr>
+                        <tr>
+                            <td><span>123-45-67890</span></td>
+                            <td><span>070-1234-5678</span></td>
+                        </tr>
+                        <tr class="tr-tit">
+                            <td colspan="2" class="bor-non">판매자사업장주소</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="bor-non"><span></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <p class="body-tit">가맹점 정보</p>
+                    <colgroup>
+                        <col style="width: 270px;">
+                        <col style="width: 270px;">
+                    </colgroup>
+                    <tbody class="t-body2">
+                        <tr class="tr-tit">
+                            <td>가맹점명</td>
+                            <td>대표자명</td>
+                        </tr>
+                        <tr>
+                            <td><span>(주)춘미샵</span></td>
+                            <td><span></span></td>
+                        </tr>
+                        <tr class="tr-tit">
+                            <td>가맹점번호</td>
+                            <td>사업자등록번호</td>
+                        </tr>
+                        <tr>
+                            <td><span>1234*****</span></td>
+                            <td><span>000-00-0000</span></td>
+                        </tr>
+                        <tr class="tr-tit">
+                            <td colspan="2" class="bor-non">주소</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="bor-non"><span></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <p class="body-tit">금액</p>
+                    <colgroup>
+                        <col style="width: 270px;">
+                        <col style="width: 270px;">
+                    </colgroup>
+                    <tbody class="t-body2">
+                        <tr>
+                            <td class="tr-tit">승인금액</td>
+                            <td><span>2,500</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tr-tit">공급가액</td>
+                            <td><span>2,273</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tr-tit">부가세액</td>
+                            <td><span>227</span></td>
+                        </tr>
+                        <tr class="tr-color">
+                            <td class="tr-tit">합계</td>
+                            <td><span>2,500</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="txt-p">본 영수증은 (주)춘미샵에서 발행한 것이며, 부가가치세법 제 46조에 따른 신용카드 매출전표입니다.</p>
+                <div class="but-box">
+                    <button type="button" class="btn per100">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="order-sub2">
+        <div class="body-mar">
+            <div class="pop-close"><p class="pop-hd">거래명세서</p><i class="close-i"></i></div>
+            <div class="pop-cont">
+                    <table>
+                    <p class="body-tit">거래명세표</p>
+                    <colgroup>
+                        <col style="width: 150px;">
+                        <col style="width: 150px;">
+                        <col style="width: 150px;">
+                        <col style="width: 150px;">
+                    </colgroup>
+                    <tbody class="t-body3">
+                        <tr class="tr-tit">
+                            <td colspan="4">공급자</td>
+                        </tr>
+                        <tr>
+                            <td>사업자<br>등록번호</td>
+                            <td colspan="3"><span>000-00-00000</span></td>
+                        </tr>
+                        <tr>
+                            <td>상호<br>(법인명)</td>
+                            <td><span>춘미샵</span></td>
+                            <td>성명</td>
+                            <td><span>홍길동</span></td>
+                        </tr>
+                        <tr>
+                            <td>사업장<br>주소</td>
+                            <td colspan="3"><span></span></td>
+                        </tr>
+                        <tr>
+                            <td>업태</td>
+                            <td colspan="3"><span>춘미샵</span></td>
+                        </tr>
+                        <tr>
+                            <td>종목</td>
+                            <td colspan="3"><span></span></td>
+                        </tr>
+                        <tr class="tr-tit">
+                            <td colspan="4">공급받는자</td>
+                        </tr>
+                        <tr>
+                            <td>사업자<br>등록번호</td>
+                            <td colspan="3"><span><input type="text" placeholder="직접기입"></span></td>
+                        </tr>
+                        <tr>
+                            <td>상호<br>(법인명)</td>
+                            <td><span><input type="text" placeholder="직접기입"></span></td>
+                            <td>성명</td>
+                            <td><span><input type="text" placeholder="직접기입"></span></td>
+                        </tr>
+                        <tr>
+                            <td>사업장<br>주소</td>
+                            <td colspan="3"><span><input type="text" placeholder="직접기입"></span></td>
+                        </tr>
+                        <tr>
+                            <td>업태</td>
+                            <td colspan="3"><span><input type="text" placeholder="직접기입"></span></td>
+                        </tr>
+                        <tr>
+                            <td>종목</td>
+                            <td colspan="3"><span><input type="text" placeholder="직접기입"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <colgroup>
+                        <col style="width: 105px;">
+                        <col style="width: 364px;">
+                        <col style="width: 105px;">
+                        <col style="width: 222px;">
+                        <col style="width: 143px;">
+                    </colgroup>
+                    <tbody class="t-body3">
+                        <tr class="tr-tit">
+                            <td>거래일자</td>
+                            <td>상품명</td>
+                            <td>수량</td>
+                            <td>거래액<br>(VAT포함 원화)</td>
+                            <td>비고</td>
+                        </tr>
+                        <tr>
+                            <td><span>2020-02-03</span></td>
+                            <td><span></span></td>
+                            <td><span>1</span></td>
+                            <td><span>18,000원</span></td>
+                            <td><span></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>2020-02-03</span></td>
+                            <td><span></span></td>
+                            <td><span>1</span></td>
+                            <td><span>18,000원</span></td>
+                            <td><span></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>2020-02-03</span></td>
+                            <td><span></span></td>
+                            <td><span>1</span></td>
+                            <td><span>18,000원</span></td>
+                            <td><span></span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">총거래액 합계</td>
+                            <td></td>
+                            <td><span>54,000원</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">배송비 합계</td>
+                            <td></td>
+                            <td><span>3,000원</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">할인금액</td>
+                            <td></td>
+                            <td><span>3,000원</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">실제 총 결제 금액</td>
+                            <td></td>
+                            <td><span>54,000원</span></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="txt-p">* 거래명세표는 춘미샵의 거래내역을 보여주며 세금계산서와 같은 법적 효력은 없습니다.</p>
+                <p class="txt-p">* 부가세 신고용 증빙은 현금영수증이나 신용카드전표를 활용하시기 바랍니다.</p>
+                <div class="but-box">
+                    <button type="button" class="btn per100">확인</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="../../assets/js/mo-common.js"></script>
+    <script>
+        function documentPop(num){
+            if(num == 1) $('#order-sub1').addClass('on');
+            else if(num == 2) $('#order-sub2').addClass('on');
+            $('body').attr('style', 'overflow:hidden')
+        }
+        $('.pop-close').on('click',function(){
+            $('.popup').removeClass('on');
+            $('body').attr('style', '')
+        })
+    </script>
+</body>
+</html>

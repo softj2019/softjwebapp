@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>춘미샵</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/mo-common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="mo-hd-l">
+            <ul>
+                <li><a href="mypage.html" class="my-i">마이페이지</a></li>
+                <li><a href="cart.html" class="car-i">장바구니</a><span class="car-num">0</span></li>
+            </ul>
+        </div>
+        <div class="mo-hd-title">
+            <a href=""><h1>CHUNMISHOP</h1></a>
+        </div>
+        <div class="mo-hd-ham">
+            <button type="button" class="ham-btn"></button>
+        </div>
+    </header>
+    <div class="main-wrap wrap-padding">
+        <h3 class="tit-txt">주문하기</h3>
+        <div class="order-box">
+            <div class="mb30">
+                <p class="od-tit">상품정보</p>
+                <ul class="od-table">
+                    <li>
+                        <p>상품이름 ABCDEFG</p>
+                        <div>
+                            <span>39,000원ㅣ</span><span>1개</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mb30">
+                <p class="od-tit">배송지 정보</p>
+                <ul class="od-table2">
+                    <li>
+                        <p>배송지선택</p>
+                        <div>
+                            <ul class="address-ul">
+                                <li><input type="radio" id="add-rd1" name="add-rd" checked><label for="add-rd1">기본배송지</label></li>
+                                <li><input type="radio" id="add-rd2" name="add-rd"><label for="add-rd2">최근배송지</label></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <p>받는분<span class="red-s">⁎</span></p>
+                        <div>
+                            <input type="text" class="">
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <p>이메일<span class="red-s">⁎</span></p>
+                        <div>
+                            <input type="text" class="">
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <p>휴대전화<span class="red-s">⁎</span></p>
+                        <div>
+                            <select name="" id="" class="select1">
+                                <option value="">010</option>
+                            </select> - <input type="text" class="input6">
+                        </div>
+                    </li>
+                    <li>
+                        <p>주소<span class="red-s">⁎</span></p>
+                        <div>
+                            <ul>
+                                <li class="flexstart"><input type="text" class="input7 mr10"><button type="button" class="btn-black-l">우편번호</button></li>
+                                <li class="mrb10"><input type="text" placeholder="기본주소" class=""></li>
+                                <li><input type="text" placeholder="나머지주소"class=""></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <p>배송시<br>요청사항</p>
+                        <div>
+                            <select name="" id="" class="">
+                                <option value="">배송시 요청사항</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mb30">
+                <p class="od-tit">쿠폰선택</p>
+                <ul class="od-table2">
+                    <li>
+                        <p>쿠폰사용</p>
+                        <div>
+                            <select name="" id="" class="">
+                                <option value="">10% 쿠폰</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mb30">
+                <p class="od-tit">적립금 사용</p>
+                <ul class="od-table2">
+                    <li>
+                        <p>보유적립금</p>
+                        <div class="align-r">
+                            <span>2,000</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>적립금 사용</p>
+                        <div>
+                            <input type="text" class="input8 mr10"><button type="button"  class="btn-black-l">전체사용</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mb30">
+                <p class="od-tit">최종 결제금액</p>
+                <div class="total-pay flexwrap">
+                    <div>
+                        <p>상품가격</p>
+                        <p>쿠폰할인</p>
+                        <p>적립금 사용</p>
+                        <p>배송비</p>
+                    </div>
+                    <div class="align-r">
+                        <p>39,000원</p>
+                        <p>- 0원</p>
+                        <p>- 0원</p>
+                        <p>+ 3,000원</p>
+                    </div>
+                </div>
+                <div class="flexwrap total">
+                    <p>총 결제금액</p>
+                    <p class="pay-txt align-r">39,000원</p>
+                </div>
+            </div>
+            <div class="mt10">
+                <p class="od-tit">결제방법 선택</p>
+                <div class="pay-box">
+                    <ul class="pay-ul clearfix">
+                        <li><input type="radio" id="rd1" name="payment-rd" checked><label for="rd1">카드결제</label></li>
+                        <li><input type="radio" id="rd2"name="payment-rd"><label for="rd2">핸드폰 결제</label></li>
+                        <li><input type="radio" id="rd3"name="payment-rd"><label for="rd3">무통장 입금</label></li>
+                        <li><input type="radio" id="rd4"name="payment-rd"><label for="rd4">카카오페이</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-box">
+                <button type="button" class="btn per100 mb10">결제하기</button>
+                <button type="button" class="btn-bor per100">취소하기</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="foot-in">
+            <ul class="footerUl">
+                <li>SOFTJ</li>
+                <li>company : 춘미샵 ㅣ owner : 홍길동</li>
+                <li>서울시 은평구 ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</li>
+                <li>tel : 010 - 0000 - 0000 ㅣ fax : 02 - 0000 - 0000</li>
+                <li>E-MAIL : email@email.com</li>
+            </ul>
+            <ul class="footerSubul">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보취급방침</a></li>
+                <li><a href="">고객센터</a></li>
+                 
+            </ul>
+        </div>
+    </footer>
+    <div class="category">
+        <div class="cate-bg"></div>
+        <div class="cate-content">
+            <div class="cate-close"><i class="close-i"></i></div>
+            <div class="cate-head clearfix">
+                <ul class="mh-leftUl">
+                    <li><a href="login.html">
+                        LOGRIN
+                    </a></li>
+                    <li><a href="join.html">
+                        JOIN
+                    </a></li>
+                    <li><a href="cart.html">
+                        CART
+                    </a></li>
+                    <li><a href="mypage.html">
+                        MYPAGE
+                    </a></li>
+                </ul>
+            </div>
+            <div class="cate-body clearfix">
+                <nav class="gnb">
+                    <ul>
+                        <li><p>BEST<a href=""></a></p> 
+                        </li>
+                        <li><p>TOP<a href=""></a></p>
+                            <ul class="lnb">
+                                <li><a href="">SHIRT</a></li>
+                                <li><a href="">BLOUSE</a></li>
+                                <li><a href="">KNIT</a></li>
+                            </ul>
+                        </li>
+                        <li><p>OUTER<a href=""></a></p>
+                            <ul class="lnb">
+                                <li><a href="">JACKET</a></li>
+                                <li><a href="">CARDIGAN</a></li>
+                                <li><a href="">COAT</a></li>
+                            </ul>
+                        </li>
+                        <li><p>BOTTOM<a href=""></a></p>
+                            <ul class="lnb">
+                                <li><a href="">PANTS</a></li>
+                                <li><a href="">SKIRT</a></li>
+                            </ul>
+                        </li>
+                        <li><p>DRESS<a href=""></a></p>
+                        </li>
+                        <li><p>SHOES<a href=""></a></p>
+                        </li>
+                        <li><p>ACC<a href=""></a></p>
+                            <ul class="lnb">
+                                <li><a href="">RING</a></li>
+                                <li><a href="">EARRING</a></li>
+                                <li><a href="">BRACELET</a></li>
+                                <li><a href="">ETC</a></li>
+                            </ul>
+                        </li>
+                        <li><p>NEW<a href=""></a></p>
+                        </li>
+                        <li><p>EVENT<a href=""></a></p>
+                        </li>
+                        <li><p>SALE<a href=""></a></p>
+                        </li>
+                        <li><p>당일발송<a href=""></a></p>
+                        </li>
+                    </ul>
+                    <ul class="mh-rightUl mt60">
+                        <li><a href="notice.html">
+                            NOTICE
+                        </a></li>
+                        <li><a href="qna.html">
+                            Q&amp;A
+                        </a></li>
+                        <li><a href="review.html">
+                            REVIEW
+                        </a></li>
+                    </ul>
+                </nav>
+                <div class="cate-rv">
+                    <div class="rv-bg"></div>
+                    <a href="">PHOTO REVIEW</a>
+                </div>
+                <div>
+                    <form action="">
+                        <div class="srcBox">
+                            <button type="button" class="src-btn"></button>
+                            <input type="text" class="src-form">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="cate-footer clearfix">
+                <ul class="footerUl mb80">
+                    <li>c/s center</li>
+                    <li class="big">1588-0000</li>
+                    <li>MON - FRI 09:00 - 18:00<br>LUNCH TIME 12:00 - 13:00</li>
+                </ul>
+                <ul class="footerUl mb80">
+                    <li>BANK INFO</li>
+                    <li>국민은행 000000-000000</li>
+                    <li>우리은행 000000-000000</li>
+                    <li>농협 000000-000000</li>
+                    <li>춘미샵</li>
+                </ul>
+                <ul class="footerUl sns">
+                    <li><a href="" class="tweet3">트위터</a></li>
+                    <li><a href="" class="facebook3">페이스북</a></li>
+                     <li><a href="" class="insta3">인스타그램</a></li>
+                     
+                 </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/js/mo-common.js"></script>
+</body>
+</html>

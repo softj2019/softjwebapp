@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>춘미샵</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="main-header">  
+        <div class="mh-topbox">
+            <div class="mh-topinner">
+                <ul class="mh-leftUl">
+                    <li><a href="login.html">
+                        로그인
+                    </a></li>
+                    <li><a href="join.html">
+                        회원가입
+                    </a></li>
+                    <li><a href="cart.html">
+                        장바구니
+                    </a></li>
+                    <li><a href="mypage.html">
+                        마이페이지
+                    </a></li>
+                </ul>
+                <ul class="mh-rightUl">
+                    <li><a href="notice.html">
+                        NOTICE
+                    </a></li>
+                    <li><a href="qna.html">
+                        Q&amp;A
+                    </a></li>
+                    <li><a href="review.html">
+                        REVIEW
+                    </a></li>
+                    <li>
+                        <form action="">
+                            <div class="srcBox">
+                                <input type="text" class="src-form">
+                                <button type="button" class="src-btn"></button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+                <ul class="mh-snsUl">
+                    <li><a href="" class="insta">인스타그램</a></li>
+                    <li><a href="" class="facebook">페이스북</a></li>
+                    <li><a href="" class="tweet">트위터</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="main-title">
+            <a href=""><h1>CHUNMISHOP</h1></a>
+        </div>
+        <nav class="gnb">
+            <ul>
+                <li><a href="">BEST</a>
+                </li>
+                <li><a href="">TOP</a>
+                    <ul class="lnb">
+                        <li><a href="">SHIRT</a></li>
+                        <li><a href="">BLOUSE</a></li>
+                        <li><a href="">KNIT</a></li>
+                    </ul>
+                </li>
+                <li><a href="">OUTER</a>
+                    <ul class="lnb">
+                        <li><a href="">JACKET</a></li>
+                        <li><a href="">CARDIGAN</a></li>
+                        <li><a href="">COAT</a></li>
+                    </ul>
+                </li>
+                <li><a href="">BOTTOM</a>
+                    <ul class="lnb">
+                        <li><a href="">PANTS</a></li>
+                        <li><a href="">SKIRT</a></li>
+                    </ul>
+                </li>
+                <li><a href="">DRESS</a>
+                </li>
+                <li><a href="">SHOES</a>
+                </li>
+                <li><a href="">ACC</a>
+                    <ul class="lnb">
+                        <li><a href="">RING</a></li>
+                        <li><a href="">EARRING</a></li>
+                        <li><a href="">BRACELET</a></li>
+                        <li><a href="">ETC</a></li>
+                    </ul>
+                </li>
+                <li><a href=""><strong>NEW</strong></a>
+                </li>
+                <li><a href=""><strong>EVENT</strong></a>
+                </li>
+                <li><a href=""><strong>SALE</strong></a>
+                </li>
+                <li><a href=""><strong>당일발송</strong></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-wrap">
+        <div class="padding-30">
+            <h3 class="tit-txt">적립금</h3>
+            <div class="gray mileage-box mb50">
+                <div class="per50">
+                    <p>사용가능 적립금</p>
+                    <p class="mileage-total"><span>2,000</span>원</p>
+                </div>
+                <ul class="mileage-ul">
+                    <li>
+                        <p>총 적립금</p>
+                        <p>999</p>
+                    </li>
+                    <li>
+                        <p>사용한 적립금</p>
+                        <p>999</p>
+                    </li>
+                    <li>
+                        <p>소멸예정 적립금</p>
+                        <p><span class="textRed">999</span></p>
+                    </li>
+                </ul>
+            </div>
+            <h4 class="sub-txt">적립내역보기</h4>
+            <table class="table-c mb50">
+                <colgroup>
+                    <col style="width: 10%;">
+                    <col style="width: 10%;">
+                    <col style="width: 20%;">
+                    <col style="width: 40%;">
+                    <col style="width: 20%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <td>주문날짜</td>
+                        <td>적립금</td>
+                        <td>관련주문</td>
+                        <td>내용</td>
+                        <td>사용기한</td>
+                    </tr>
+                </thead>
+                <tbody class="mileage-bd">
+                    <tr>
+                        <td>2021-06-30</td>
+                        <td>+140원</td>
+                        <td>20210408-0012247</td>
+                        <td>첫 가입 이벤트 적립</td>
+                        <td>2021-06-30 ~ 2022-06-30</td>
+                    </tr>
+                    <tr>
+                        <td>2021-06-30</td>
+                        <td>-140원</td>
+                        <td></td>
+                        <td>2018-12-31이전 적립금 소멸</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul class="pagination">
+                <li class="page-arrow"><a class="page-link" href="#">≪</a></li>
+                <li class="page-arrow"><a class="page-link" href="#">＜</a></li>
+                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-arrow"><a class="page-link" href="#">＞</a></li>
+                <li class="page-arrow"><a class="page-link" href="#">≫</a></li>
+            </ul>
+
+            <h4 class="sub-txt mt50">적립금 이용 안내</h4>
+            <div class="gray">
+                <p>- 적립금 이용시 안내사항 입니다.</p>
+                <p>- 적립금 이용시 안내사항 입니다.</p>
+                <p>- 적립금 이용시 안내사항 입니다.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="foot-in">
+            <ul class="footerUl">
+                <li>SOFTJ</li>
+                <li>company : 춘미샵 ㅣ owner : 홍길동</li>
+                <li>서울시 은평구 ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</li>
+                <li>tel : 010 - 0000 - 0000 ㅣ fax : 02 - 0000 - 0000</li>
+                <li>E-MAIL : email@email.com</li>
+            </ul>
+            <ul class="footerUl">
+                <li>c/s center</li>
+                <li class="big">1588-0000</li>
+                <li>MON - FRI 09:00 - 18:00<br>LUNCH TIME 12:00 - 13:00</li>
+            </ul>
+            <ul class="footerUl">
+                <li>BANK INFO</li>
+                <li>국민은행 000000-000000</li>
+                <li>우리은행 000000-000000</li>
+                <li>농협 000000-000000</li>
+                <li>춘미샵</li>
+            </ul>
+            <ul class="footerUl sns">
+               <li><a href="" class="tweet2">트위터</a></li>
+               <li><a href="" class="facebook2">페이스북</a></li>
+                <li><a href="" class="insta2">인스타그램</a></li>
+                
+            </ul>
+            <ul class="footerSubul">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보취급방침</a></li>
+                <li><a href="">고객센터</a></li>
+                 
+            </ul>
+        </div>
+    </footer>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

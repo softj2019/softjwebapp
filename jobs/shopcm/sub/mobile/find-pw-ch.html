@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>춘미샵</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/mo-common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="mo-hd-l">
+            <ul>
+                <li><a href="mypage.html" class="my-i">마이페이지</a></li>
+                <li><a href="cart.html" class="car-i">장바구니</a><span class="car-num">0</span></li>
+            </ul>
+        </div>
+        <div class="mo-hd-title">
+            <a href=""><h1>CHUNMISHOP</h1></a>
+        </div>
+        <div class="mo-hd-ham">
+            <button type="button" class="ham-btn"></button>
+        </div>
+    </header>
+    <div class="main-wrap wrap-padding">
+        <div class="join-w">
+            <h3 class="tit-txt mb40">아이디 / 비밀번호 찾기</h3>
+            <form action="">
+                <div class="tab-box mt50">
+                    <input type="radio" id="find-id" name="find-rd" class="find-tab">
+                    <label for="find-id">아이디 찾기</label>
+                    <input type="radio" id="find-pw" name="find-rd" class="find-tab" checked>
+                    <label for="find-pw">비밀번호 찾기</label>
+                    <div class="tab-id">
+                        <p class="com-p">가입된 아이디는<br> <span class="bold">softj123@naver.com</span> 입니다.</p>
+                        <div class="btn-box">
+                            <button type="button" class="btn mb10">확인</button>
+                            <button type="button" class="btn-bor">취소</button>
+                        </div>
+                    </div>
+                    <div class="tab-pw">
+                        <ul class="pw-mail2">
+                            <li>
+                                <label for="">기존비밀번호</label>
+                                <div>
+                                    <input type="text">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">비밀번호변경</label>
+                                <div>
+                                    <input type="text">
+                                    <p class="error"> ⁎ 기존비밀번호와 같습니다.</p>
+                                </div>
+                            </li>
+                            <li class="mt10">
+                                <label for="">비밀번호확인</label>
+                                <div>
+                                    <input type="text">
+                                    <p class="error"> ⁎ 비밀번호가 다릅니다.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn-box">
+                            <button type="button" class="btn mb10">비밀번호 변경</button>
+                            <button type="button" class="btn-bor">취소</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="foot-in">
+            <ul class="footerUl">
+                <li>SOFTJ</li>
+                <li>company : 춘미샵 ㅣ owner : 홍길동</li>
+                <li>서울시 은평구 ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</li>
+                <li>tel : 010 - 0000 - 0000 ㅣ fax : 02 - 0000 - 0000</li>
+                <li>E-MAIL : email@email.com</li>
+            </ul>
+            <ul class="footerSubul">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보취급방침</a></li>
+                <li><a href="">고객센터</a></li>
+                 
+            </ul>
+        </div>
+    </footer>
+    <div class="category">
+        <div class="cate-bg"></div>
+        <div class="cate-content">
+            <div class="cate-close"><i class="close-i"></i></div>
+            <div class="cate-head clearfix">
+                <ul class="mh-leftUl">
+                    <li><a href="login.html">
+                        LOGRIN
+                    </a></li>
+                    <li><a href="join.html">
+                        JOIN
+                    </a></li>
+                    <li><a href="cart.html">
+                        CART
+                    </a></li>
+                    <li><a href="mypage.html">
+                        MYPAGE
+                    </a></li>
+                </ul>
+            </div>
+            <div class="cate-body clearfix">
+                <nav class="gnb">
+                    <ul>
+                        <li><p>BEST<a href=""></a></p> 
+                        </li>
+                        <li><p>TOP<a href=""></a></p>
+                            <ul class="lnb">
+                                <li><a href="">SHIRT</a></li>
+                                <li><a href="">BLOUSE</a></li>
+                                <li><a href="">KNIT</a></li>
+                            </ul>
+                        </li>
+                        <li><p>OUTER<a href=""></a></p>
+                            <ul class="lnb">
+                                <li><a href="">JACKET</a></li>
+                                <li><a href="">CARDIGAN</a></li>
+                                <li><a href="">COAT</a></li>
+                            </ul>
+                        </li>
+                        <li><p>BOTTOM<a href=""></a></p>
+                            <ul class="lnb">
+                                <li><a href="">PANTS</a></li>
+                                <li><a href="">SKIRT</a></li>
+                            </ul>
+                        </li>
+                        <li><p>DRESS<a href=""></a></p>
+                        </li>
+                        <li><p>SHOES<a href=""></a></p>
+                        </li>
+                        <li><p>ACC<a href=""></a></p>
+                            <ul class="lnb">
+                                <li><a href="">RING</a></li>
+                                <li><a href="">EARRING</a></li>
+                                <li><a href="">BRACELET</a></li>
+                                <li><a href="">ETC</a></li>
+                            </ul>
+                        </li>
+                        <li><p>NEW<a href=""></a></p>
+                        </li>
+                        <li><p>EVENT<a href=""></a></p>
+                        </li>
+                        <li><p>SALE<a href=""></a></p>
+                        </li>
+                        <li><p>당일발송<a href=""></a></p>
+                        </li>
+                    </ul>
+                    <ul class="mh-rightUl mt60">
+                        <li><a href="notice.html">
+                            NOTICE
+                        </a></li>
+                        <li><a href="qna.html">
+                            Q&amp;A
+                        </a></li>
+                        <li><a href="review.html">
+                            REVIEW
+                        </a></li>
+                    </ul>
+                </nav>
+                <div class="cate-rv">
+                    <div class="rv-bg"></div>
+                    <a href="">PHOTO REVIEW</a>
+                </div>
+                <div>
+                    <form action="">
+                        <div class="srcBox">
+                            <button type="button" class="src-btn"></button>
+                            <input type="text" class="src-form">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="cate-footer clearfix">
+                <ul class="footerUl mb80">
+                    <li>c/s center</li>
+                    <li class="big">1588-0000</li>
+                    <li>MON - FRI 09:00 - 18:00<br>LUNCH TIME 12:00 - 13:00</li>
+                </ul>
+                <ul class="footerUl mb80">
+                    <li>BANK INFO</li>
+                    <li>국민은행 000000-000000</li>
+                    <li>우리은행 000000-000000</li>
+                    <li>농협 000000-000000</li>
+                    <li>춘미샵</li>
+                </ul>
+                <ul class="footerUl sns">
+                    <li><a href="" class="tweet3">트위터</a></li>
+                    <li><a href="" class="facebook3">페이스북</a></li>
+                     <li><a href="" class="insta3">인스타그램</a></li>
+                     
+                 </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/js/mo-common.js"></script>
+</body>
+</html>
