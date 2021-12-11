@@ -42,6 +42,3 @@ PHP version 5.6 이상이 요구됩니다.
 ## Powered By
 
 씨아이보드 : [http://www.ciboard.co.kr](http://www.ciboard.co.kr)
-
-설명추가 12
-설명추가 13
