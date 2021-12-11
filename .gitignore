@@ -29,3 +29,4 @@ composer.lock
 *.sublime-project
 /tests/tests/
 /tests/results/
+application/config/config.php
