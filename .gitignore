@@ -30,3 +30,6 @@ composer.lock
 /tests/tests/
 /tests/results/
 application/config/config.php
+boxmaru
+talkcrm
+uploads
