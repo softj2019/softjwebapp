@@ -145,6 +145,10 @@ if($('.parallax-background') > 0){
 if($('#hLogo') > 0) {
     new Vivus('hLogo', {duration: 150, start: 'autostart'});
 }
+$('.sub-logo a').on("click",function () {
+    location.href=cb_url;
+})
+
 </script>
 <?php echo element('popup', $layout); ?>
 <?php echo $this->cbconfig->item('footer_script'); ?>

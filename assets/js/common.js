@@ -934,6 +934,3 @@ if (typeof(COMMON_JS) === 'undefined') {
 		}
 	}
 }
-$('.sub-logo').on("click",function () {
-	location.href='/';
-})
