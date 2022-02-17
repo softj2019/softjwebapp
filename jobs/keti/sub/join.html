@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>전자부품연구원</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="../assets/plugins/malihuScrollbar/jquery.mCustomScrollbar.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    <script src="http://jamesallardice.github.io/Placeholders.js/assets/js/placeholders.jquery.min.js"></script><!--201028 추가-->
+    <style type="text/css">
+        
+        
+    </style>
+</head>
+<body class="grey">
+    <div class="main-wrap">
+        <div class="main-inner">
+           <div class="loginBox join">
+               <h2 class="logo"><a href="eq-res.html"></a></h2>
+                <form action="">
+                    <label for="name">이름</label>
+                    <input type="text" placeholder="이름" id="name" name="name">
+                    <label for="id">아이디</label>
+                    <input type="text" placeholder="아이디" id="id" name="id" class="inputsm"><button type="button" class="numbercheck">사번확인</button>
+                    <label for="ps1">비밀번호</label>
+                    <input type="password" placeholder="비밀번호" id="ps1" name="ps1">
+                    <label for="ps2">비밀번호 확인</label>
+                    <input type="password" placeholder="비밀번호 확인" id="ps2" name="ps2">
+                    <button type="button" class="joinBtn">회원가입</button>
+                </form>
+           </div>
+        </div>
+    </div>
+    <div class="modal" id="memnumber">
+       <div class="modal-bg"></div>
+       <div class="modalContent xs">
+           <div class="modalHd">
+               <h3>사번확인</h3>
+               <button class="modalClose"></button>
+           </div>
+           <div class="modalBody">
+               <ul class="tableHd">
+                   <li>이름</li>
+                   <li>사번</li>
+               </ul>
+               <div class="tableBody">
+                   <ul>
+                       <li>홍길동</li>
+                       <li>12312412</li>
+                   </ul>
+                   <ul>
+                       <li>홍길동</li>
+                       <li>23452453</li>
+                   </ul>
+                   <ul>
+                       <li>홍길동</li>
+                       <li>75362345</li>
+                   </ul>
+                   <ul>
+                       <li>홍길동</li>
+                       <li>57437356</li>
+                   </ul>
+                   <ul>
+                       <li>홍길동</li>
+                       <li>68456243</li>
+                   </ul>
+                   <ul>
+                       <li>홍길동</li>
+                       <li>76584734</li>
+                   </ul>
+                   <ul>
+                       <li>홍길동</li>
+                       <li>14753753</li>
+                   </ul>
+                   <ul>
+                       <li>홍길동</li>
+                       <li>94524531</li>
+                   </ul>
+                   <ul>
+                       <li>홍길동</li>
+                       <li>613547357</li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+   </div>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/plugins/malihuScrollbar/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript">
+        $(window).on("load",function(){
+            $(".tableBody").mCustomScrollbar({
+                autoHideScrollbar:true,
+                theme:"dark"
+            });
+        });
+        $('.numbercheck').on('click', function(){
+            $('#memnumber').addClass('on');
+        })
+        $('.tableBody ul').click(function(){
+            $('#memnumber').removeClass('on');
+            var name = $(this).children('li:nth-child(1)').text()
+            var num = $(this).children('li:nth-child(2)').text()
+            $('#name').val(name);
+            $('#id').val(num);
+        })
+    </script>
+</body>
+</html>
