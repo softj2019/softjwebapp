@@ -43,8 +43,4 @@ PHP version 5.6 이상이 요구됩니다.
 
 씨아이보드 : [http://www.ciboard.co.kr](http://www.ciboard.co.kr)
 
-<<<<<<< HEAD
-이슈 해결 test ct brach
-=======
 jira 에서 발생된 이슈 번호를 커밋 메시지에 작성후 푸시
->>>>>>> origin/dev
