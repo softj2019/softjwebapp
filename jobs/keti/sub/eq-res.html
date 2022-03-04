@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>전자부품연구원</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="../assets/plugins/Intl.complete.js"></script>
+    <script src="../assets/plugins/classList.min.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages/core/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages-premium/resource-timegrid/main.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="../assets/plugins/malihuScrollbar/jquery.mCustomScrollbar.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    <!--풀캘린더-->    
+    <link href="../assets/plugins/fullcalendar/packages/core/main.css" rel="stylesheet" />
+    <link href="../assets/plugins/fullcalendar/packages/daygrid/main.css" rel="stylesheet" />
+    <link href="../assets/plugins/fullcalendar/packages/timegrid/main.css" rel="stylesheet" />
+
+    <script src="../assets/plugins/fullcalendar/packages/core/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages/interaction/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages/daygrid/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages/timegrid/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages-premium/resource-common/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages-premium/resource-daygrid/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages-premium/resource-timegrid/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages/moment/main.js"></script>
+    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+    <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+    <script src="https://jamesallardice.github.io/Placeholders.js/assets/js/placeholders.jquery.min.js"></script><!--201028 추가-->
+</head>
+<body>
+    <header class="main-hd">
+        <h1 class="h-logo"><a href="eq-res.html"></a></h1>
+        <ul>
+            <li><a href="login.html">
+                로그인
+            </a></li>
+            <li><a href="pwCh.html">
+                비밀번호 변경
+            </a></li>
+        </ul>
+    </header>
+    <div class="main-wrap">
+        <nav class="main-navi">
+            <ul>
+                <li class="on"><a href="">
+                    공지사항
+                </a>
+                    <ul class="navsub">
+                        <li><a href="bulletin-board.html">ABRC 공지사항</a></li>
+                        <li><a href="bulletin-board.html">장비공지사항</a></li>
+                    </ul>
+                </li>
+                <li><a href="">
+                    ABRC현황
+                </a>
+                    <ul class="navsub">
+                        <li><a href="bulletin-board.html">장비현황</a></li>
+                        <li><a href="bulletin-board.html">인력현황</a></li>
+                        <li><a href="bulletin-board.html">공간현황</a></li>
+                        <li><a href="bulletin-board.html">업무분담</a></li>
+                    </ul>
+                </li>
+                <li><a href="eq-res.html">
+                    장비예약
+                </a>
+                </li>
+                <li><a href="eq-res.html">
+                    소모품관리
+                </a></li>
+            </ul>
+        </nav>
+        <div class="main-inner clearfix"> <!--201027 수정-->
+            <div class="eqLeft">
+<!--200929수정       <a href="eq-res2.html" class="btn-eq2">장비 예약하기</a>-->
+                <div class="datepicker eqdp">
+                </div>
+                <div class="eqCate">
+                    <ul class="eqCateUl">
+                        <li class="eqCateLi">
+                           <button type="button" class="catearr"></button>
+                            <a href="">드라이룸</a>
+                            <ul class="catesub">
+                                <li>
+                                    <a href="">3층 드라이룸</a>
+                                </li>
+                                <li>
+                                    <a href="">로비층 드라이룸</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="eqCateLi">
+                           <button type="button" class="catearr"></button>
+                            <a href="">분석장비</a>
+                            <ul class="catesub">
+                                <li><a href="">XRD</a></li>
+                                <li><a href="">Raman(로비드룸)</a></li>
+                                <li><a href="">FT-IR(로비드룸)</a></li>
+                                <li><a href="">TG/DTA(L04)</a></li>
+                                <li><a href="">DSC(L04)</a></li>
+                                <li><a href="">비표면적측정기(L04)</a></li>
+                                <li><a href="">GC-MS(L04)</a></li>
+                                <li><a href="">입자강도측정기(L04)</a></li>
+                                <li><a href="">분체저항측정기(L04)</a></li>
+                                <li><a href="">입도분석기(224)</a></li>
+                            </ul>
+                        </li>
+                        <li class="eqCateLi">
+                           <button type="button" class="catearr"></button>
+                            <a href="">볼밀링기</a>
+                            <ul class="catesub">
+                                <li><a href="">스펙스밀Large<br>(3층 드라이룸)</a></li>
+                                <li><a href="">스펙스밀Small<br>(3층 드라이룸)</a></li>
+                                <li><a href="">공자전밀Large<br>(3층 드라이룸)</a></li>
+                                <li><a href="">공자전밀Small<br>(3층 드라이룸)</a></li>
+                                <li><a href="">고에너지밀<br>(3층 드룸입구, 예정)</a></li>
+                            </ul>
+                        </li>
+                        <li class="eqCateLi">
+                           <button type="button" class="catearr"></button>
+                            <a href="">열처리로</a>
+                            <ul class="catesub">
+                                <li><a href="">머플퍼니스[위](326)</a></li>
+                                <li><a href="">머플퍼니스[아래](326)</a></li>
+                                <li><a href="">박스형수평로[위](224)</a></li>
+                                <li><a href="">박스형수평로[아래](224)</a></li>
+                                <li><a href="">수평로1(326)</a></li>
+                                <li><a href="">수평로2(326)</a></li>
+                                <li><a href="">수평로3(326)</a></li>
+                                <li><a href="">수평로4(326)</a></li>
+                                <li><a href="">수평로5(326)</a></li>
+                                <li><a href="">수평로6(326)</a></li>
+                                <li><a href="">수평로7(326)</a></li>
+                                <li><a href="">수평로8(326)</a></li>
+                                <li><a href="">수평로9(326)</a></li>
+                                <li><a href="">수평로10(326)</a></li>
+                                <li><a href="">수평로11(326)</a></li>
+                                <li><a href="">수평로12(326)</a></li>
+                                <li><a href="">수평로13(326)</a></li>
+                            </ul>
+                        </li>
+                        <li class="eqCateLi">
+                           <button type="button" class="catearr"></button>
+                            <a href="">분석실 장비</a>
+                            <ul class="catesub">
+                                <li><a href="">TEM(L06)</a></li>
+                                <li><a href="">Ion Slicer(L05)</a></li>
+                                <li><a href="">FIB(L05)</a></li>
+                                <li><a href="">SEM(L05)</a></li>
+                                <li><a href="">NMR(318)</a></li>
+                                <li><a href="">ICP-MS(318)</a></li>
+                                <li><a href="">XPS(로비드룸)</a></li>
+                                <li><a href="">CP1(L05)</a></li>
+                                <li><a href="">CP2(L05)</a></li>
+                            </ul>
+                        </li>
+                        <li class="eqCateLi">
+                           <button type="button" class="catearr"></button>
+                            <a href="">기타장비</a>
+                            <ul class="catesub">
+                                <li><a href="">회전증발기(326)</a></li>
+                                <li><a href="">슈랭크라인(328)</a></li>
+                            </ul>
+                        </li>
+                        <li class="eqCateLi">
+                           <button type="button" class="catearr"></button>
+                            <a href="">구매예정장비</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="eqRight">
+                <div class="fullcalendar" id="calendar">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="" id="eqpop">
+        <div class="eqpopbody">
+            <div class="pd20"><!--201028 수정-->
+                <div class="eqCate ver2"><!--201028 수정-->
+                    <ul class="eqCateUl">
+                        <li class="eqCateLi">
+                           <button type="button" class="catearr"></button>
+                            드라이룸
+                            <ul class="catesub">
+                                <li>
+                                    <a href="">3층 드라이룸</a>
+                                </li>
+                                <li>
+                                    <a href="">로비층 드라이룸</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="eqCateLi">
+                           <button type="button" class="catearr"></button>
+                            분석장비
+                            <ul class="catesub">
+                                <li><a href="">XRD</a></li>
+                                <li><a href="">Raman(로비드룸)</a></li>
+                                <li><a href="">FT-IR(로비드룸)</a></li>
+                                <li><a href="">TG/DTA(L04)</a></li>
+                                <li><a href="">DSC(L04)</a></li>
+                                <li><a href="">비표면적측정기(L04)</a></li>
+                                <li><a href="">GC-MS(L04)</a></li>
+                                <li><a href="">입자강도측정기(L04)</a></li>
+                                <li><a href="">분체저항측정기(L04)</a></li>
+                                <li><a href="">입도분석기(224)</a></li>
+                            </ul>
+                        </li>
+                        <li class="eqCateLi">
+                           <button type="button" class="catearr"></button>
+                            볼밀링기
+                            <ul class="catesub">
+                                <li><a href="">스펙스밀Large<br>(3층 드라이룸)</a></li>
+                                <li><a href="">스펙스밀Small<br>(3층 드라이룸)</a></li>
+                                <li><a href="">공자전밀Large<br>(3층 드라이룸)</a></li>
+                                <li><a href="">공자전밀Small<br>(3층 드라이룸)</a></li>
+                                <li><a href="">고에너지밀<br>(3층 드룸입구, 예정)</a></li>
+                            </ul>
+                        </li>
+                        <li class="eqCateLi">
+                           <button type="button" class="catearr"></button>
+                            열처리로
+                            <ul class="catesub">
+                                <li><a href="">머플퍼니스[위](326)</a></li>
+                                <li><a href="">머플퍼니스[아래](326)</a></li>
+                                <li><a href="">박스형수평로[위](224)</a></li>
+                                <li><a href="">박스형수평로[아래](224)</a></li>
+                                <li><a href="">수평로1(326)</a></li>
+                                <li><a href="">수평로2(326)</a></li>
+                                <li><a href="">수평로3(326)</a></li>
+                                <li><a href="">수평로4(326)</a></li>
+                                <li><a href="">수평로5(326)</a></li>
+                                <li><a href="">수평로6(326)</a></li>
+                                <li><a href="">수평로7(326)</a></li>
+                                <li><a href="">수평로8(326)</a></li>
+                                <li><a href="">수평로9(326)</a></li>
+                                <li><a href="">수평로10(326)</a></li>
+                                <li><a href="">수평로11(326)</a></li>
+                                <li><a href="">수평로12(326)</a></li>
+                                <li><a href="">수평로13(326)</a></li>
+                            </ul>
+                        </li>
+                        <li class="eqCateLi">
+                           <button type="button" class="catearr"></button>
+                            분석실 장비
+                            <ul class="catesub">
+                                <li><a href="">TEM(L06)</a></li>
+                                <li><a href="">Ion Slicer(L05)</a></li>
+                                <li><a href="">FIB(L05)</a></li>
+                                <li><a href="">SEM(L05)</a></li>
+                                <li><a href="">NMR(318)</a></li>
+                                <li><a href="">ICP-MS(318)</a></li>
+                                <li><a href="">XPS(로비드룸)</a></li>
+                                <li><a href="">CP1(L05)</a></li>
+                                <li><a href="">CP2(L05)</a></li>
+                            </ul>
+                        </li>
+                        <li class="eqCateLi">
+                           <button type="button" class="catearr"></button>
+                            기타장비
+                            <ul class="catesub">
+                                <li><a href="">회전증발기(326)</a></li>
+                                <li><a href="">슈랭크라인(328)</a></li>
+                            </ul>
+                        </li>
+                        <li class="eqCateLi">
+                           <button type="button" class="catearr"></button>
+                            구매예정장비
+                        </li>
+                    </ul>
+                </div>
+                <div class="eqinput"><!--201028 수정-->
+                    <form action="">
+                        <label for="name">성함</label>
+                        <input type="text" class="w100px" id="" name="name">
+                        <br>
+                        <label for="">연락처</label>
+                        <input type="text" class="w100px" id="" name=""> -
+                        <input type="text" class="w100px" id="" name=""> -
+                        <input type="text" class="w100px" id="" name="">
+                        <br>
+                        <label for="eqname">예약장비</label>
+                        <input type="text" class="w150px" id="eqname" name="eqname">
+                        <br>
+                        <label for="eqdate">예약날짜</label>
+                        <input type="text" class="w100px datepicker" id="" name="eqdate">
+                        <br>
+                        <label for="eqtime">예약시간</label>
+                        <input type="text" class="w100px" id="" name="eqtime">
+                        <br>
+                        <label for="eqmemo">메모</label><br>
+                        <textarea class="w100" name="" id=""></textarea>
+                        <div class="flexEnd">
+                            <button type="button" class="btn-grey mr10 cancelbtn">취소</button>
+                            <button type="button" class="btn-blue">수정하기</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    <style type="text/css">
+        
+    </style>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/plugins/malihuScrollbar/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript">
+        $(".datepicker").datepicker({
+            monthNamesShort: [ '01','02','03','04','05','06','07','08','09','10','11','12' ],
+            dateFormat: 'yy-mm-dd',
+            showMonthAfterYear:true, //년도 먼저 나오고, 뒤에 월 표시
+            monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],//달력의 월 부분 텍스트
+            dayNamesMin: ['일','월','화','수','목','금','토'], //달력의 요일 부분 텍스트
+            dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'], //달력의 요일 부분 Tooltip 텍스트
+            numberOfMonths: [1,1], // 1행 2열로 표시
+            onSelect: function(dateText, inst) {
+                var date = $(this).val();
+                console.log(date);
+                
+                //document.form1.rs_date.value = date;
+                //document.form1.submit();
+                //selectedDate = $.datepicker.formatDate("yy-mm-dd", $(this).datepicker(testdate));
+            }
+        });
+        function getParameterByName( name ){
+          name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+          var regexS = "[\\?&]"+name+"=([^&#]*)";
+          var regex = new RegExp( regexS );
+          var results = regex.exec( window.location.href );
+          if( results == null )
+            return "";
+          else
+            return decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+        var testdate = '2020-03-10';
+        var today = $('.datepicker').datepicker();
+        $(document).ready(function(){
+            $('.datepicker').datepicker('setDate', testdate);
+        })
+        $(window).on("load",function(){
+            $(".eqCate.ver2 .eqCateUl").mCustomScrollbar({
+                autoHideScrollbar:true,
+                theme:"dark"
+            });
+        });
+		
+        var calendar;
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+        if(dd<10) {
+            dd='0'+dd
+        }
+        if(mm<10) {
+            mm='0'+mm
+        }
+        today = yyyy+'-'+mm+'-'+dd;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            locale: 'ko',
+            schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
+            defaultView: 'resourceTimeGridDay',
+            defaultDate: today,
+            initialView: 'resourceTimeGridDay',
+            plugins: ['interaction', 'resourceDayGrid', 'resourceTimeGrid', 'dayGrid', 'timeGrid'],
+            allDaySlot: false,//종일 이벤트 숨기기
+            header: {
+                left: 'resourceTimeGridDay,timeGridWeek,dayGridMonth',
+                center: 'prev title next',
+                right: false,
+            },
+            views: {
+                resourceTimeGridDay: {
+                    type: 'resourceTimeGridDay',
+                    buttonText: 'day',
+                    eventLimit: 3 // adjust to 6 only for timeGridWeek/timeGridDay
+                },
+                timeGrid: {
+                    type: 'timeGrid',
+                    buttonText: 'timeGrid',
+                    eventLimit: 3, // adjust to 6 only for timeGridWeek/timeGridDay
+                },
+                timeGridWeek: {
+                    type: 'timeGridWeek',
+                    buttonText: 'Week',
+                },
+                dayGridMonth: {
+                    type: 'dayGridMonth',
+                    buttonText: 'Month',
+                    eventLimit:7,
+                }
+            },
+            slotLabelFormat: [
+                // { month: 'numeric', year: 'numeric' }, // top level of text
+                {
+                    // day: 'numeric',
+                    // weekday: 'long',// lower level of text
+                    hour: '2-digit',    //numeric 3 2-digit 03
+                    minute: '2-digit',  //numeric 3 2-digit 03
+                    hour12: false,      //true am 6 false 06
+                    // meridiem: 'numeric'
+                }
+            ],
+            editable: true,//수정기능
+            selectable: true,//선택기능
+            selectHelper: true,
+            eventLimit: true, // allow "more" link when too many events
+            resources: [
+
+                {id: 'a', title: '1'},
+                {id: 'b', title: '2'},
+                {id: 'c', title: '3'},
+                {id: 'd', title: '4'}
+            ],
+            events: [
+                {
+                    id: '1',
+                    resourceId: 'a',
+                    title: '홍길동'+'9시'+'TG/DTA',
+                    start: today + 'T09:00:00',
+                    end: today + 'T09:40:00',
+                },
+                {id: '3', resourceId: 'a', start: today + 'T10:00:00', end: today + 'T10:30:00', title: '홍길동'+'9시'+'TG/DTA',backgroundColor:'#CCD6E3',textColor:'',borderColor:"#003473"},
+                {id: '3', resourceId: 'a', start: today + 'T00:00:00', end: today + 'T00:30:00', title: '홍길동'+'9시'+'TG/DTA'},
+            ],
+            eventRender: function(arg){
+                arg.el.onclick = (function(){
+                    $('#eqpop').addClass('on');
+                })
+            },
+             //새로운 날짜 집합이 렌더링되면 트리거됩니다.
+            datesRender: function(arg) {
+                //마우스 우클릭
+                arg.el.oncontextmenu = (function(e){ //20.06.25 수정
+                    callRightSmallNavEmptyDate(e, arg);
+                });
+            },
+            //이벤트를 랜더링시 적용할 대상 세팅
+            eventRender: function (arg) {
+                var tooltip = new Tooltip(arg.el, {
+                    title: arg.event.extendedProps.description,
+                    placement: 'right',
+                    trigger: 'hover',
+                    container: 'body',
+                    html: true,
+                });
+                 arg.el.oncontextmenu = (function(e){//20.06.25 수정
+                     callRightSmallNav(e);
+                 });
+            }
+        });
+        calendar.render();
+      });
+        //메뉴호출 예약 이벤트
+        function callRightSmallNav(e){
+            var clientX= e.clientX;
+            var clientY= e.clientY;
+            $('.rcpop').remove()
+            $('.main-wrap').append('<div class="rcpop"><ul><li class="bor-b-g"><a href="#" class="editpop-btn">예약수정</a></li><li><a href="#" class="reserv-btn">예약취소</a></li></ul></div>');
+            $('.rcpop').css('position',"fixed");
+            $('.rcpop').css('display',"block");
+            var winWidth = $(window).width();//20.07.29 수정 436~467
+            var winHeight = $(window).height();
+            var posX = e.clientX;
+            var posY = e.clientY;
+            var menuWidth = $('.rcpop').width();
+            var menuHeight = $('.rcpop').height();
+
+            if(posX + menuWidth >= winWidth
+            && posY + menuHeight >= winHeight){
+              //Case 1: right-bottom overflow:
+              posLeft = posX - menuWidth + "px";
+              posTop = posY - menuHeight + "px";
+            }
+            else if(posX + menuWidth >= winWidth){
+              //Case 2: right overflow:
+              posLeft = posX - menuWidth + "px";
+              posTop = posY + "px";
+            }
+            else if(posY + menuHeight >= winHeight){
+              //Case 3: bottom overflow:
+              posLeft = posX + "px";
+              posTop = posY - menuHeight + "px";
+            }
+            else {
+              //Case 4: default values:
+              posLeft = posX + "px";
+              posTop = posY + "px";
+            }
+            $('.rcpop').css({
+               "left": posLeft,
+               "top": posTop
+            });
+            $(".editpop-btn").click(function(){
+                $("#eqpop").addClass('on');
+            });
+             //console.log('callRightSmallNav',e)
+            console.log(e.target.classList)
+            e.preventDefault();
+        }
+
+        //메뉴호출 빈셀 빈날짜
+        function callRightSmallNavEmptyDate(e,el){
+
+            if(e.target.classList=='fc-widget-content' || e.target.classList=='fc-highlight'){
+
+                
+                var clientX= e.clientX;
+                var clientY= e.clientY;
+                $('.rcpop').remove()
+                $('.main-wrap').append(' <div class="rcpop"><ul><li><a href="#" class="eqpop-btn">예약등록</a></li></ul></div>');
+                $('.rcpop').css('position',"fixed");
+                $('.rcpop').css('display',"block");
+                var winWidth = $(window).width();//20.07.29 수정 491~522
+                var winHeight = $(window).height();
+                var posX = e.clientX;
+                var posY = e.clientY;
+                var menuWidth = $('.rcpop').width();
+                var menuHeight = $('.rcpop').height();
+
+                if(posX + menuWidth >= winWidth
+                && posY + menuHeight >= winHeight){
+                  //Case 1: right-bottom overflow:
+                  posLeft = posX - menuWidth + "px";
+                  posTop = posY - menuHeight + "px";
+                }
+                else if(posX + menuWidth >= winWidth){
+                  //Case 2: right overflow:
+                  posLeft = posX - menuWidth + "px";
+                  posTop = posY + "px";
+                }
+                else if(posY + menuHeight >= winHeight){
+                  //Case 3: bottom overflow:
+                  posLeft = posX + "px";
+                  posTop = posY - menuHeight + "px";
+                }
+                else {
+                  //Case 4: default values:
+                  posLeft = posX + "px";
+                  posTop = posY + "px";
+                }
+                $('.rcpop').css({
+                   "left": posLeft,
+                   "top": posTop
+                });
+                $(".eqpop-btn").click(function(){
+                    $("#eqpop").addClass('on');
+                });
+                e.preventDefault();
+            }
+        }
+
+        $('.catearr').click(function(){
+           $(this).parent('li').toggleClass('on'); 
+        });
+        $('.ver2 .catesub li a').click(function(e){
+            e.preventDefault();
+            $('.ver2 .catesub li a').removeClass('on');
+            $(this).addClass('on');
+            var eq = $(this).text();
+            $(this).parents('.flexwrap').find('#eqname').val(eq);
+        });
+        $('.cancelbtn').click(function(){
+            $(this).parents('#eqpop').removeClass('on')
+        });
+        
+        $('.catesub a').click(function(e){
+            e.preventDefault();
+            $('.catesub a').removeClass('on');
+            $(this).addClass('on');
+        });
+        $('body').on('click', function(e){
+            var $tgPoint = $(e.target);
+            var $popArea = $tgPoint.parents().hasClass('rcpop');
+            if ( !$popArea ){
+                $('.rcpop').remove();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>전자부품연구원</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages/core/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages-premium/resource-timegrid/main.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+
+    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+    <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-lite.min.js"></script>
+    <script src="https://jamesallardice.github.io/Placeholders.js/assets/js/placeholders.jquery.min.js"></script><!--201028 추가-->
+</head>
+<body>
+    <header class="main-hd">
+        <h1 class="h-logo"><a href="eq-res.html"></a></h1>
+        <ul>
+            <li><a href="login.html">
+                로그인
+            </a></li>
+            <li><a href="pwCh.html">
+                비밀번호 변경
+            </a></li>
+        </ul>
+    </header>
+    <div class="main-wrap">
+        <nav class="main-navi">
+            <ul>
+                <li class="on"><a href="">
+                    공지사항
+                </a>
+                    <ul class="navsub">
+                        <li><a href="bulletin-board.html">ABRC 공지사항</a></li>
+                        <li><a href="bulletin-board.html">장비공지사항</a></li>
+                    </ul>
+                </li>
+                <li><a href="">
+                    ABRC현황
+                </a>
+                    <ul class="navsub">
+                        <li><a href="bulletin-board.html">장비현황</a></li>
+                        <li><a href="bulletin-board.html">인력현황</a></li>
+                        <li><a href="bulletin-board.html">공간현황</a></li>
+                        <li><a href="bulletin-board.html">업무분담</a></li>
+                    </ul>
+                </li>
+                <li><a href="eq-res.html">
+                    장비예약
+                </a>
+                </li>
+                <li><a href="eq-res.html">
+                    소모품관리
+                </a></li>
+            </ul>
+        </nav>
+        <div class="main-inner2">
+            <h3 class="pageTitle"><i class="sq-dot"></i>게시글 작성</h3>
+            <div class="t-tb mt20">
+                <table>
+                    <colgroup>
+                        <col style="width: 10%;">
+                        <col style="width: 90%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>작성자</td>
+                            <td>
+                                <input type="text" class="input1">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>제목</td>
+                            <td>
+                                <input type="text" class="input1">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">내용</td>
+                            <td><textarea id="summernote"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>비밀번호 입력</td>
+                            <td><input type="text" class="input2"></td>
+                        </tr>
+                        <tr>
+                            <td>파일첨부</td>
+                            <td>
+                                <div class="fileBox">
+                                    <input type="text" class="fileName" id="fileName" name="fileName" readonly="readonly" placeholder="선택된 파일 없음">
+                                    <label for="uploadBtn" class="btn_file">파일선택</label>
+                                    <input type="file" id="uploadBtn" name="uploadBtn" class="uploadBtn">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btn-box mt20">
+                <a href="bulletin-board.html">취소</a>
+                <button type="button" class="btn-blue">저장</button>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/common.js"></script>
+    <script type="text/javascript">
+       //summernote
+       $(document).ready(function (){
+            $('#summernote').summernote({
+                tabsize: 2,
+                height: 250,
+                lang: 'ko-KR' // default: 'en-US'
+            });
+        });
+    </script>
+</body>
+</html>
