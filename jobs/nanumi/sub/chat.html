@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nanumi</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
+</head>
+<body>
+    <div class="wrap chat-wrap">
+        <div class="header">
+            <a href class="h-logo"></a>
+        </div>
+        <div class="chat-con">
+            <div class="cont-t clearfix" id="chatContent">
+                <div class="question"></div>
+                <div class="chat-left clearfix">
+                    <div class="chat-i"></div>
+                    <div class="chat chat-f">
+                        <div class="ch-time">
+                            <span class="chat-id">나누미</span>,
+                            <span class="chat-time" id="time-ch"></span>
+                        </div>
+                        <div class="t-load1">안녕하세요, 저는 인공지능 나누미예요</div>
+                    </div>
+                </div>
+                <div class="chat-left clearfix">
+                    <div class="chat-i"></div>
+                    <div class="chat chat-f">
+                        <div class="ch-time">
+                            <span class="chat-id">나누미</span>,
+                            <span class="chat-time" id="time-ch"></span>
+                        </div>
+                        <div class="chat-img"><img src="../assets/img/q-img.png" alt=""></div>
+                        <div class="">“안내된 그림에 해당하는 램프가 육안으로 보이시나요? 
+                            보인다면 아래 예시에서 선택해 주세요.”
+                        </div>
+                        <div class="chat-btn-box">
+                            <button type="button" class="ch-btn ex1-img">Controller FRU
+                            </button>
+                            <button type="button" class="ch-btn ex2-img">APD Battery
+                            </button>
+                            <button type="button" class="ch-btn ex3-img">Enclosure ind
+                            </button>
+                        </div>
+                        <div>“Battery 장애로 의심됩니다. 아래 보이는 QR 코드 촬영 버튼을 누르고 안내처럼 장비 정면에 부착된 QR 코드를 촬영해주세요.” 
+                        </div>
+                        <div class="qr-img">
+                            <img src="../assets/img/ex-i.png" alt="">
+                        </div>
+                        <div class="qr-div">
+                            <button type="button" class="qr-btn">APP 에서 촬영</button>
+                        </div>
+
+                        <!-- <div class="loading-txt1">요청사항이 접수되어 엔지니어가 확인하고 있습니다. 방문 일정 및 참고사항 등 안내를 위해 엔지니어 또는 운영지원단 담당자가 연락드릴 수 있습니다.</div>
+                        <div class="loading-txt2">담당 엔지니어 정보입니다. 스마트폰에 설치된 운영지원 App에서도 방문일정과 진행 상태 확인이 가능합니다.<button type="button" class="app-btn">APP 실행하기</button></div>
+                        <div class="eng-info">
+                            <div class="eng-img" style="background-image: url(../assets/img/eng-i.png);"></div>
+                            <div class="eng">
+                                <p>이름 : <span>홍길동</span></p>
+                                <p>소속 : <span>조선</span></p>
+                                <p>연락처 : <span>010-0000-0000</span></p>
+                                <p>방문일정 : <span>22.02.20</span></p>
+                            </div>
+                        </div> -->
+                        <!-- <div class="loading-box">“운영지원 포탈에 서비스 요청 Task 가 등록 중 입니다. 촬영된 QR 코드로 부품 재고 확인 및 조치 방문 가능 일정을 확인하고 있습니다."<br>
+                            인공지능이 답변을 작성하고 있습니다.
+                            <div class="loading">
+                                <div class="one scale-blue1"></div>
+                                <div class="one scale-blue2"></div>
+                                <div class="one scale-blue3"></div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="input-box clearfix">
+                <div class="q-box q-box-list">
+                    <ul class="q-tab-rd1">
+                        <li>전체</li>
+                        <li>운영지원</li>
+                        <li>이관</li>
+                        <li>보존포맷변환</li>
+                        <li>공개재분류</li>
+                        <li>연계시스템지원</li>
+                        <li>AP지원</li>
+                        <li>목록추출</li>
+                        <li>경졍요청</li>
+                        <li>단순문의</li>
+                        <li>기타</li>
+                    </ul>
+                    <ul class="q-tab-rd2">
+                        <li>전체</li>
+                        <li>기록관리서버</li>
+                        <li>보존포맷변환서버</li>
+                        <li>일반스토리지</li>
+                        <li>아카이빙스토리지</li>
+                        <li>백업장비</li>
+                        <li>기타</li>
+                    </ul>
+                    <ul class="q-tab-rd3">
+                        <li>전체</li>
+                        <li>WebServer,WAS</li>
+                        <li>검색엔진</li>
+                        <li>대용량송수신SW</li>
+                        <li>SSO</li>
+                        <li>문서보안</li>
+                        <li>백신</li>
+                        <li>DBMS</li>
+                        <li>단순문의</li>
+                        <li>기타</li>
+                        <li>레포팅툴</li>
+                        <li>백업SW</li>
+                        <li>서버보안</li>
+                    </ul>
+                    <ul class="q-tab-rd4">
+                        <li>전체</li>
+                        <li>기능개선</li>
+                        <li>단순문의</li>
+                        <li>기타</li>
+                    </ul>
+                </div>
+                <div class="q-box2">
+                    <input type="radio" name="q-box-rd" id="q-tab-rd1"><label for="q-tab-rd1">운영지원</label>
+                    <input type="radio" name="q-box-rd" id="q-tab-rd2"><label for="q-tab-rd2">HW</label>
+                    <input type="radio" name="q-box-rd" id="q-tab-rd3"><label for="q-tab-rd3">SW</label>
+                    <input type="radio" name="q-box-rd" id="q-tab-rd4"><label for="q-tab-rd4">운영지원포탈</label>
+                </div>
+                <div class="q-con">
+                    <textarea name="question" id="" cols="30" rows="1" placeholder="상담 내용을 입력해주세요." data-autoresize style="height: auto;"></textarea>
+                    <button class="q-btn"></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-in">
+                <a href="#" class="f-logo"></a>
+                <div class="f-content">
+                    <p>한국지역정보개발원</p>
+                    <div class="address mt10">
+                        <div>
+                            <span>본원 :  03923 ㅣ 서울특별시 마포구 성암로 301(상암동) ㅣ </span>
+                            <span>TEL  :  02-2031-9100 ㅣ </span><span>FAX  :  02-2031-9360</span><br>
+                            <span>정보학교육장  :  03924 ㅣ 서울특별시 마포구 월드컵북로54길 11, 701호(상암동)</span>
+                            <p class="mt10">Copyright © 2022 All Rights Reserved.</p>
+                        </div>
+                        <div class="f-po mt10">
+                            <a href="">서비스 이용약관 ㅣ </a>
+                            <a href="">개인정보 처리 방침</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            autosize($('.q-con textarea'));
+            $("input[name='q-box-rd']").change(function(){
+                var qList = $('.q-box-list ul');
+                var qBox = $(this).prop("checked",true).attr("id");
+                qList.removeClass('on');
+                $('.'+qBox).addClass('on');
+                $('.q-box.q-box-list ul li').removeClass('on');
+            });
+        });
+    
+        $(document).ready(function() {
+            $('.q-box.q-box-list ul li').click(function(){
+                $(this).toggleClass('on');
+                // if($('.q-box.q-box-list ul li.on').length >= 4){
+                //     // $('.text-e1').addClass('on');
+                //     $('.chat').last().append('<div class="text-e1">정확한 상담 결과를 위해 상담 분야는<br>최대 3개 까지 선택하실 수 있습니다.</div>');
+                //     $(this).removeClass('on');
+                // }
+            });   
+            $('.q-con .q-btn').click(function(){
+                var txt_co = $('.q-con textarea')
+                var lion = $('.q-box.q-box-list ul li.on').length;
+                if(txt_co.val().length >= 10 && lion < 1) {
+                    $('.chat').last().append('<div class="text-e2">상담 분야는 최소 1개 이상 선택해주세요.</div>')
+                }
+                if(txt_co.val().length < 10 && lion >= 1 && lion <= 3) {
+                    $('.chat').last().append('<div class="text-e3">정확한 상담 결과를 위해 상담 내용은<br>최소 10자 이상 작성해주세요.</div>')
+                }
+            });
+            $('.q-con textarea').on('keyup', function() {
+                var lion = $('.q-box.q-box-list ul li.on').length;
+                // if($(this).val().length > 100 && lion >= 1 && lion <= 3) {
+                //     $(this).val($(this).val().substring(0, 100));
+                //     $('.chat').last().append('<div class="text-e4">상담 내용은 최대 100자까지 작성 가능합니다!<br>내용이 길어지는 경우 상담 내용의 핵심 부분을<br>요약하여 작성해보세요.</div>')
+                // }
+                if($(this).val() != ''){
+                    $(".q-con .q-btn").addClass("on");
+                    $(".q-con .q-btn").prop('disabled', false);
+                }
+                else {
+                    $(".q-con .q-btn").removeClass("on");
+                    $(".q-con .q-btn").prop("disabled", true);
+                }
+            });
+        });
+        $('.question').click(function(){
+            $('.question-on').addClass('on');
+            $(this).addClass('off');
+        });
+        //bar percent value
+        $(document).ready(function(){
+            $(".bar-p span").each(function(index, item){
+                var percent = $(this).text()
+                var pcValue = $(this).parents(".bar");
+                pcValue.css("width", percent + '%');
+            })
+        });
+        setTimeout(function() { 
+            $(".loading-box").after('<div class="loading-txt1">요청사항이 접수되어 엔지니어가 확인하고 있습니다. 방문 일정 및 참고사항 등 안내를 위해 엔지니어 또는 운영지원단 담당자가 연락드릴 수 있습니다.</div>');
+            setTimeout(function() { 
+                $(".loading-txt1").after('<div class="loading-txt2">담당 엔지니어 정보입니다. 스마트폰에 설치된 운영지원 App에서도 방문일정과 진행 상태 확인이 가능합니다.<button type="button" class="app-btn">APP 실행하기</button></div>');
+                setTimeout(function() { 
+                    $(".loading-txt2").after('<div class="eng-info"><div class="eng-img" style="background-image: url(../assets/img/eng-i.png);"></div><div class="eng"><p>이름 : <span>홍길동</span></p><p>소속 : <span>조선</span></p><p>연락처 : <span>010-0000-0000</span></p><p>방문일정 : <span>22.02.20</span></p></div></div>');
+                }, 2000);
+            }, 2000);
+        }, 5000);
+        
+        const  now = new Date();
+        const  getHours = now.getHours(); // 시
+        const  getMinutes = now.getMinutes(); // 분
+        $("#time-ch").text(getHours + ':' + getMinutes);
+	setTimeout(function() {
+		$(".t-load1").after('<div class="t-load2">저와 소통하는 방법이 궁금하시다면 우측 상단의 물음표 버튼을 눌러주세요</div>');
+	}, 1000);
+        $('.question').click(function(){
+            $(this).addClass('off');
+            setTimeout(function() {
+                
+                $('.t-load2').after('<div class="t-load3">아래의 카테고리별 상담받고 싶은 분야를 선택하신 후, 양식에 구애받지 않고 자유롭게 상담 내용을 입력해주세요! 예를 들어볼까요? “스토리지 장비에 경고 램프가 발생했는데 점검을 받고 싶어요” 라는 질문을 해보겠습니다!”</div>');
+                        setTimeout(function() {
+                        $(".t-load3").parent().parent(".chat-left").after('<div class="chat-right question-on on qt-on qt1"><div>“스토리지 장비에 경고 램프가 발생했는데 점검을 받고 싶어요”</div><div class="ch-time"><span class="chat-id">보냄</span>,<span class="chat-time">'+getHours + ':' + getMinutes+'</span></div></div>');
+                            setTimeout(function(){
+                                $(".qt1").after('<div class="chat-left clearfix t-load4"><div class="chat-i"></div><div class="chat"><div class="ch-time"><span class="chat-id">바로</span>,<span class="chat-time">'+getHours + ':' + getMinutes+'</span></div><div class="clearfix">“점검을 원하시는 제품의 제조사를 알려주세요”</div>')
+                                setTimeout(function() {
+                                    $(".t-load4").after('<div class="chat-right question-on on qt-on qt2"><div>“IBM”</div><div class="ch-time"><span class="chat-id">보냄</span>,<span class="chat-time">'+getHours + ':' + getMinutes+'</span></div></div>');
+                                    setTimeout(function(){
+                                        $(".qt2").after('<div class="chat-left clearfix t-load5"><div class="chat-i"></div><div class="chat"><div class="ch-time"><span class="chat-id">바로</span>,<span class="chat-time">'+getHours + ':' + getMinutes+'</span></div><div class=" clearfix">“점검을 원하시는 제품의 모델명을 알려주세요”</div>')
+                                        setTimeout(function() {
+                                            $(".t-load5").after('<div class="chat-right question-on on qt-on qt3"><div>“R740”</div><div class="ch-time"><span class="chat-id">보냄</span>,<span class="chat-time">'+getHours + ':' + getMinutes+'</span></div></div>');
+                                    setTimeout(function(){
+                                        $(".qt3").after('<div class="chat-left clearfix qt4"><div class="chat-i"></div><div class="chat"><div class="ch-time"><span class="chat-id">바로</span>,<span class="chat-time">'+getHours + ':' + getMinutes+'</span></div><div class="qt-t1 clearfix">“스토리지 장비에 경고 램프가 발생했는데 점검을 받고 싶어요”<br>에 대한 수치 답변입니다.<div class="bar-box  clearfix"><div class="bar" id="bar-1"><div class="bar-p"><p><span>100</span>%</p></div></div></div></div>')
+                                        setTimeout(function(){
+                                            $(".qt-t1").after('<div class="a-chat qt5">상담 내용에 대해서 더 자세히 알고 싶나요? Nanumi는 질문하신 상담 내용과 유사한 서비스 조치 사례를 제공해드립니다. 아래 결과를 확인해보세요.<div><div class="a-cont"><span class="bold">관련 사례</span><p class="p-con"> “<span class="span-con">요청주신 사항은 스토리지 디스크 장애</span>”</p></div><a href="search-result-precedent-detail.html" class="bold mb20">서비스 조치 사례 자세히 보기 ></a></div>')
+                                            setTimeout(function(){
+                                                $(".qt5").after('<div>잘 보셨죠? 정확한 상담 결과를 위한 팁을 드리자면, 질문은 가급적 하나만, 핵심을 요약하여 간결하게 적어주세요!</div>')
+                                            }, 1000);
+                                        }, 1000);
+                                    }, 1000);
+                                }, 1000);
+                            }, 1000);
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 0);
+            
+        });
+        $('.q-con textarea').keypress(function(event){
+            if ( event.which == 13 ) {
+                $('.q-con .q-btn').click();
+                return false;
+            }
+        });
+        if(data.code===0){
+            setTimeout(function() { 
+                $('.input-box').prev().append(defaultHtmlHeader+'<div class="non-txt1">이런, 질문에 맞는 답변을 드리지 못하겠어요. 그렇지만 저는 지속적으로 업데이트되고 있으니 다음에는 꼭 답변을 드릴게요!</div>'+ defaultHtmlFooter)
+                    setTimeout(function() { 
+                    $(".non-txt1").after('<div class="non-txt2">정확한 검색 결과를 위한 팁을 드리자면, 질문은 가급적 하나만, 핵심을 요약하여 간결하게 적어주세요!</div>');
+                }, 1000);
+            }, 0);
+        }
+        
+    </script>
+</body>
+</html>     
