@@ -688,12 +688,12 @@ section .main-inner{
 .tabletimg{
     position:absolute;
     top:50%;
+    left: 50%;
     transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     width:41vw;
     height:26.1vw;
-    margin:0 2vw;
     z-index: -1;
     overflow: hidden;
 }
@@ -721,12 +721,12 @@ section .main-inner{
 .phoneimg{
     position:absolute;
     top:50%;
+    left: 50%;
     transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    width:11vw;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 10.5vw;
     height:18.5vw;
-    margin:0 0.5vw;
     z-index: -1;
     overflow: hidden;
 }
@@ -2011,10 +2011,17 @@ section.sec4 .main-inner {/* 211007 푸터수정 */
 .abtn:hover{
     background-color:#1672B8;
 }
-
+.sec3 .tabletimg2 img{
+    animation: none;
+}
+.sec3 .tabletimg img,
+.sec3 .phoneimg img{
+    animation: none;
+}
 @media (orientation: portrait) {
     .abtn {
         top: 78%;
         left: 50%;
     }
 }
+
