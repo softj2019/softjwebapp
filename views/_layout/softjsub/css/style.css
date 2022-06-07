@@ -12,7 +12,7 @@ button{
     border:none;
     cursor: pointer;
 }
-button.btn{
+.main-wrap button.btn{
     height:72px;
     background:#fff;
     border:1px solid #cccccc;
@@ -20,7 +20,7 @@ button.btn{
     font-size:20px;
     transition: .3s ease-out, -webkit-.3s ease-out;
 }
-button.btn:hover{
+.main-wrap button.btn:hover{
     background:#064f82;
     border:1px solid #064f82;
     color:#fff;
@@ -152,7 +152,9 @@ input[type=radio]:checked+label::after{
 .w1200{
     width:1500px!important;/*2020.05.14 수정*/
 }
-
+.px150{
+    width:150px;
+}
 .mt10{
     margin-top:10px;
 }

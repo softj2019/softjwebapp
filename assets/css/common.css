@@ -12,7 +12,7 @@ button{
     border:none;
     cursor: pointer;
 }
-button.btn{
+.main-inner button.btn{
     height:72px;
     background:#fff;
     border:1px solid #cccccc;
@@ -20,7 +20,7 @@ button.btn{
     font-size:20px;
     transition: .3s ease-out, -webkit-.3s ease-out;
 }
-button.btn:hover{
+.main-inner button.btn:hover{
     background:#064f82;
     border:1px solid #064f82;
     color:#fff;
@@ -691,12 +691,12 @@ section .main-inner{
 .tabletimg{
     position:absolute;
     top:50%;
-    left: 50%;
     transform: translateY(-50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     width:41vw;
     height:26.1vw;
+    margin: 0 2vw;
     z-index: -1;
     overflow: hidden;
 }
@@ -724,12 +724,12 @@ section .main-inner{
 .phoneimg{
     position:absolute;
     top:50%;
-    left: 50%;
     transform: translateY(-50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    width: 10.5vw;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    width: 11vw;
     height:18.5vw;
+    margin: 0 0.5vw;
     z-index: -1;
     overflow: hidden;
 }
@@ -904,9 +904,10 @@ section .main-inner{
     }
     .tabletimg{
         width:82vw;
-        max-width:60vh;
+        max-width:59vh;
         height:53vw;
         max-height:38vh;
+        margin: 0 4vw;
     }
     .tabletLayout{
         width:90vw;
@@ -918,9 +919,10 @@ section .main-inner{
     }
     .phoneimg{
         width:28vw;
-        max-width: 15vh;
+        max-width: calc(15vh - 6px);
         height:47vw;
         max-height:25vh;
+        margin: 0 1vw;
     }
     .phoneLayout{
         width:30vw;
