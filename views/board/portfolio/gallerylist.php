@@ -73,7 +73,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="temp-right">
+                <div class='temp-right <?=$view["extra_content"][15]["output"]?> test'>
                     <div class="tabletBox">
                         <div class="tabletimg">
                             <img src="<?php echo site_url(config_item('uploads_dir') . '/post/' .$result['file'][0]['pfi_filename'])?>" alt="tabletimg">

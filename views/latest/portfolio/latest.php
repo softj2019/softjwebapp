@@ -21,7 +21,7 @@ if (element('latest', $view)) {
                     </a>
                 </div>
             </div>
-            <div class="temp-right">
+            <div class='temp-right <?=element('modisplay',element('extravars', $result))?>'>
                 <div class="tabletBox">
                     <div class="tabletimg">
                         <img src="<?php echo site_url(config_item('uploads_dir') . '/post/' .$result['file'][4]['pfi_filename'])?>" alt="tabletimg">

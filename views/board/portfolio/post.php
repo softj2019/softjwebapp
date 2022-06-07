@@ -78,7 +78,7 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
                     </div>
 
                 </div>
-                <div class='img-box clearfix <?=$view["extra_content"][13]["output"]?>'>
+                <div class='img-box clearfix <?=$view["extra_content"][15]["output"]?>'>
                     <div class="pc-img">
                         <img src="<?=$view['file_image'][0]['origin_image_url']?>" alt="">
                     </div>

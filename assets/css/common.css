@@ -658,6 +658,9 @@ section .main-inner{
 .temp-right{
     right:0;
 }
+.temp-right.displayNone .phoneBox{
+    display:none;
+}
 .tabletBox, .phoneBox{
     position:absolute;
 }
