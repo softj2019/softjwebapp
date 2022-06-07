@@ -32,7 +32,7 @@
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <link href="<?php echo base_url('assets/css/reset.css'); ?>" rel="stylesheet" type="text/css">
-    <link href="<?php echo base_url('assets/css/common.css'); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url('assets/css/common.css?ver220607'); ?>" rel="stylesheet" type="text/css">
     <!-- Toastr -->
     <link rel="stylesheet" href="<?php echo base_url('assets/plugins/toastr/toastr.min.css'); ?>">
 <script type="text/javascript">

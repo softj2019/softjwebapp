@@ -1644,6 +1644,12 @@ footer a{
     animation: opimg 2s forwards;
     line-height: 0;
 }
+.img-box.displayNone .pc-img{
+    width:100%;
+}
+.img-box.displayNone .mo-img{
+    display:none;
+}
 @keyframes opimg{
     from {
         opacity: 0;
