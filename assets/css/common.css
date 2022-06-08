@@ -621,7 +621,6 @@ header.main-hd{
 .sec1{
     width:100%;
     height:100vh;
-    background:url(../img/sample2.jpg) no-repeat center / cover;
     overflow:hidden;
 }
 section .main-inner{
@@ -1145,7 +1144,7 @@ section .main-inner{
 }
 .sec3 .slick-prev{
     left:10px;
-    z-index:1;
+    z-index:99;
 }
 .slick-prev::before,  .slick-next::before{
     display:block;
@@ -1156,7 +1155,9 @@ section .main-inner{
 }
 .sec3 .slick-next{
     right:50px;
-} .slick-next::before{
+    z-index: 99;
+}
+.slick-next::before{
       background:url(../img/arr-right-bk2.png) no-repeat center;
   }
 .hovered.slick-prev::before{
@@ -1176,6 +1177,15 @@ section .main-inner{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.more-box{
+    position: absolute;
+    bottom: 50px;
+    right: 62px;
+    z-index:99;
+}
+.more-box:hover *{
+    color:#ffffff
 }
 @media screen and (max-width:1300px){
     .pj-title{
@@ -1257,6 +1267,15 @@ section .main-inner{
     }
     .sec3 .slick-dots{
         bottom:5vh!important;
+    }
+    .more-box{
+        right:4vw;
+        bottom:4.5vh;
+    }
+}
+@media screen and (max-width:512px){
+    .more-box a{
+        font-size:14px;
     }
 }
 

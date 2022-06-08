@@ -2,19 +2,27 @@
 
 <?php echo element('headercontent', element('board', element('list', $view))); ?>
 
-
+    <style type="text/css">
+	    .pj-title a{color:#333333;}
+	    .pj-title a:hover{color:#333333; text-decoration:none;}
+	    img.bg, .sec3 .slick-list, .slick-slide, .temp-left, .temp-right, section .main-inner {height:calc(100vh - 100px)!important}
+	    @media screen and (max-width: 767px){
+	        img.bg, .sec3 .slick-list, .slick-slide, .temp-left, .temp-right, section .main-inner {height:calc(100vh - 60px)!important}
+	    }
+	</style>
+	<?php if (element('write_url', element('list', $view))) { ?>
 	<h3 >
         <?php
             echo html_escape(element('board_name', element('board', element('list', $view))));
         ?>
     </h3>
     <div class="border_button mt20">
-        <?php if (element('write_url', element('list', $view))) { ?>
+
             <div class="pull-right">
                 <button type="button" onclick="location.href='<?php echo element('write_url', element('list', $view)); ?>'" class="btn btn-success btn-sm">글쓰기</button>
             </div>
-        <?php } ?>
     </div>
+    <?php } ?>
 
 
 

@@ -14,15 +14,16 @@
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<!--    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
     <link href="<?php echo base_url('assets/plugins/slick-theme.css'); ?>" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link href="<?php echo base_url('assets/css/reset.css'); ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo base_url('assets/css/common.css'); ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url('views/mypage/bootstrap/css/style.css'); ?>" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <?php echo $this->managelayout->display_css(); ?>
 <script type="text/javascript">
@@ -56,6 +57,9 @@ var cookie_prefix = "<?php echo config_item('cookie_prefix'); ?>";
 			<?php } ?>
 
 			<!-- 본문 시작 -->
+			<style>
+			    .board{padding: 0 20px}
+			</style>
 			<?php if (isset($yield))echo $yield; ?>
 			<!-- 본문 끝 -->
 

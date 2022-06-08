@@ -73,9 +73,9 @@
                     <h3>SI 개발 및 유지관리</h3>
                     <div class="hr"></div>
                     <p>
-                        웹,앱 어플리케이션 개발<br>
+                        웹, 앱 어플리케이션 개발<br>
                         전자정부 egov 개발 및 유지관리<br>
-                        SI,정보시스템 통합 관리 업무
+                        SI, 정보시스템 통합 관리 업무
                     </p>
                 </div>
                 <div class="sec2-BotL">
@@ -92,7 +92,7 @@
                     <div class="hr"></div>
                     <p>
                         웹표준 CSS, HTML, jQuery, JAVAScript<br>
-                        UI/UX 디자인 및 퍼블리싱 업무
+                        UI/UX 디자인, 퍼블리싱 업무
                     </p>
                 </div>
                 <div class="sec2-BotR">
@@ -102,21 +102,32 @@
                     <p>
                         구글 SEO 검색 최적화<br>
                         디스플레이 애드워즈 광고 운영<br>
-                        통합 온라인 마케팅
-                        통합 광고주센터 개발 및 운영유지보수
+                        통합 온라인 마케팅<br>
+                        통합 광고주센터 개발, 운영유지보수
                     </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="sec3" id="sec3">
+<section class="sec3" id="sec3" style="position: relative;">
     <img class="bg" src="<?php echo base_url('assets/img/sec3.png'); ?>" />
+    <div class="more-box">
+        <a href="/board/portfolio?" style="font-weight: 300;">
+            <p style="letter-spacing: -5px;">
+                <span style="letter-spacing: -1px;margin-right: 8px;">SHOW ALL</span>
+                <span class="icon-arr1">〉</span>
+                <span class="icon-arr2">〉</span>
+                <span class="icon-arr3">〉</span>
+            </p>
+        </a>
+    </div>
     <div class="main-inner slider">
         <?php
         $config_main = array(
             'skin' => 'portfolio',
             'brd_key' => 'portfolio',
+            'limit' => 3,
             'length' => 40,
             'is_gallery' => '',
             'image_width' => '',
@@ -198,17 +209,17 @@
             vaildate = false
         }
         if($('input[name=name]').val()==''){
-            toastr.error('*담당자명 은 필수 입력 사항 입니다.')
+            toastr.error('*담당자 명은 필수 입력 사항 입니다.')
             vaildate = false
         }
         if(validateEmail($('input[name=email]').val())==false){
-            toastr.error('*이메일 형식이 올바르지 않습니다..')
+            toastr.error('*이메일 형식이 올바르지 않습니다.')
             vaildate = false
         }
         return vaildate;
     });
     $('#summernote').summernote({
-        placeholder: '요청사항을 상세하게 작성해주세요',
+        placeholder: '요청사항을 상세하게 작성해주세요.',
         tabsiz: 2,
         height: 120,
         toolbar: [
