@@ -117,7 +117,6 @@
         $config_main = array(
             'skin' => 'portfolio',
             'brd_key' => 'portfolio',
-            'limit' => 10,
             'length' => 40,
             'is_gallery' => '',
             'image_width' => '',
