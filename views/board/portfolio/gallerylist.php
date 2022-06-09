@@ -5,9 +5,9 @@
     <style type="text/css">
 	    .pj-title a{color:#333333;}
 	    .pj-title a:hover{color:#333333; text-decoration:none;}
-	    img.bg, .sec3 .slick-list, .slick-slide, .temp-left, .temp-right, section .main-inner {height:calc(100vh - 100px)!important}
+	    img.bg, .sec3 .slick-list, .slick-slide, .temp-left, section .main-inner {height:calc(100vh - 100px)!important}
 	    @media screen and (max-width: 767px){
-	        img.bg, .sec3 .slick-list, .slick-slide, .temp-left, .temp-right, section .main-inner {height:calc(100vh - 60px)!important}
+	        img.bg, .sec3 .slick-list, .slick-slide, .temp-left, section .main-inner {height:calc(100vh - 60px)!important}
 	    }
 	</style>
 	<?php if (element('write_url', element('list', $view))) { ?>
@@ -84,13 +84,13 @@
                 <div class='temp-right <?=element('modisplay',element('extravars', $result))?>'>
                     <div class="tabletBox">
                         <div class="tabletimg">
-                            <img src="<?php echo site_url(config_item('uploads_dir') . '/post/' .$result['file'][0]['pfi_filename'])?>" alt="tabletimg">
+                            <img src="<?php echo site_url(config_item('uploads_dir') . '/post/' .$result['file'][4]['pfi_filename'])?>" alt="tabletimg">
                         </div>
                         <div class="tabletLayout"></div>
                     </div>
                     <div class="phoneBox">
                         <div class="phoneimg">
-                            <img src="<?php echo site_url(config_item('uploads_dir') . '/post/' .$result['file'][1]['pfi_filename'])?>" alt="tabletimg">
+                            <img src="<?php echo site_url(config_item('uploads_dir') . '/post/' .$result['file'][5]['pfi_filename'])?>" alt="tabletimg">
                         </div>
                         <div class="phoneLayout"></div>
                     </div>
