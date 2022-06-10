@@ -1,4 +1,4 @@
-<?php $this->managelayout->add_css(element('view_skin_url', $layout) . '/css/style.css'); ?>
+<?php $this->managelayout->add_css(element('view_skin_url', $layout) . '/css/gallerylist.css'); ?>
 
 <?php echo element('headercontent', element('board', element('list', $view))); ?>
 
@@ -10,22 +10,6 @@
 	        img.bg, .sec3 .slick-list, .slick-slide, .temp-left, section .main-inner {height:calc(100vh - 60px)!important}
 	    }
 	</style>
-	<?php if (element('write_url', element('list', $view))) { ?>
-	<h3 >
-        <?php
-            echo html_escape(element('board_name', element('board', element('list', $view))));
-        ?>
-    </h3>
-    <div class="border_button mt20">
-
-            <div class="pull-right">
-                <button type="button" onclick="location.href='<?php echo element('write_url', element('list', $view)); ?>'" class="btn btn-success btn-sm">글쓰기</button>
-            </div>
-    </div>
-    <?php } ?>
-
-
-
 	<?php
 	$attributes = array('name' => 'fboardlist', 'id' => 'fboardlist');
 	echo form_open('', $attributes);
@@ -104,6 +88,13 @@
     ?>
         </div>
     </section>
+    <?php if (element('write_url', element('list', $view))) { ?>
+        <div class="border_button mt20 mr20">
+            <div class="pull-right">
+                <button type="button" onclick="location.href='<?php echo element('write_url', element('list', $view)); ?>'" class="btn btn-success btn-sm">글쓰기</button>
+            </div>
+        </div>
+    <?php } ?>
 <?php
 echo form_close();
 ?>

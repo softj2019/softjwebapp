@@ -219,6 +219,9 @@
                         case 5;
                             $file_title='모바일화면 리스트썸네일(200*432)';
                             break;
+                        case 6;
+                            $file_title='폰트예시(가로 680px, 폰트46px 권장)';
+                            break;
                         default;
                             $file_title='';
                     }

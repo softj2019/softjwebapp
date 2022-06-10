@@ -1704,7 +1704,6 @@ footer a{
 .img-box{
     height: 53vw;
     margin-top: 6vw;
-    transition: all ease 3s, -webkit-all ease 3s;
     position: relative;
 }
 .img-box.pconly{

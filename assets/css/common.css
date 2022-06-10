@@ -27,6 +27,7 @@ button{
 }
 button.btn.df{
     width:200px;
+    letter-spacing: -1px;
 }
 .wrap{
     overflow: auto;
@@ -451,6 +452,14 @@ header.main-hd{
 .dark .cursor-grow{
     background-color:#343434
 }
+@media screen and (max-width:1200px){
+    header.main-hd {
+        padding: 20px 20px 0 0;
+    }
+    .menu-btn{
+        top: 50px;
+    }
+}
 @media screen and (max-width:1023px){
     .main-hd>ul{
         padding-left:calc(100% / 12)
@@ -468,7 +477,6 @@ header.main-hd{
     .main-hd.dark>ul li a{
         background-color:#343434;
     }
-
     .main-line{
         visibility: hidden;
     }
@@ -479,8 +487,11 @@ header.main-hd{
         padding:20px 20px 0 0;
     }
     .menu-btn{
-        top:50px;
-        left:40px;
+        top:24px;
+        left:30px;
+    }
+    .menu-btn::after, .menu-btn::before{
+        width:50px;
     }
     .main-hd>ul{
         visibility: hidden;
@@ -728,10 +739,10 @@ section .main-inner{
     -ms-transform: translateY(-50%);
     width: 10.7vw;
     padding-top: 192%;
-    margin: 0 0.7vw;
+    margin: 0 5.3%;
     z-index: -1;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 .phoneimg img{
     position:absolute;
@@ -917,16 +928,16 @@ section .main-inner{
         transform: translate(50%, -50%);
     }
     .tabletimg{
-        width: 84vw;
+        width: 75vw;
         max-width: 47vh;
         margin: 0 3%;
     }
     .tabletLayout{
-        width:90vw;
+        width:80vw;
         max-width:50vh;
     }
     .phoneBox{
-        top:50%;
+        top:45%;
         right:14%;
     }
     .phoneimg{
@@ -934,7 +945,7 @@ section .main-inner{
         max-width: calc(15vh - 6px);
         height:47vw;
         max-height:25vh;
-        margin: 0 1vw;
+        margin: 0 6%;
     }
     .phoneLayout{
         width:30vw;
@@ -945,21 +956,7 @@ section .main-inner{
         left: 50%;
     }
 }
-@media screen and (max-width:1200px){
-    header.main-hd {
-        padding: 20px 20px 0 0;
-    }
-    .menu-btn{
-        top: 50px;
-    }
-}
 @media screen and (max-width:720px){
-    .menu-btn{
-        top: 40px;
-    }
-    .menu-btn::after, .menu-btn::before{
-        width:50px;
-    }
     .icon-scroll-box{
         width:50px;
         height:50px;
@@ -970,10 +967,14 @@ section .main-inner{
         margin:0;
         transform:translate(-50%, -50%);
     }
+    .icon-scroll-box>p{
+        letter-spacing: -5px;
+        bottom:-35px;
+    }
     .sec1-txtbox{
         font-size: 20px;
     }
-    .temp-left{
+    .sec1 .temp-left{
         bottom: 8%;
     }
     .sec1-txtbox p{
@@ -982,6 +983,11 @@ section .main-inner{
     .abtn{
         font-size:20px;
         height:55px;
+    }
+    .sec3 .btn.df{
+        width:120px;
+        height: 45px!important;
+        font-size: 16px;
     }
 }
 /* sec2 */
@@ -1093,7 +1099,9 @@ section .main-inner{
 .slick-initialized.sec2-out {
     width: 100%;
     height: auto;
+    padding-top: 10%;
     top: 65%;
+    background-color: rgba(238, 238, 238, 0.65);
 }
 .slick-initialized.sec2-out .sec2-TopL,
 .slick-initialized.sec2-out .sec2-BotL,
@@ -1115,13 +1123,13 @@ section .main-inner{
     width: 27.5vw;
 }
 .slick-initialized.sec2-out h3 {
-    font-size: 6vw;
+    font-size: 18px;
 }
 .slick-initialized.sec2-out h3::after {
     width: 50%;
 }
 .slick-initialized.sec2-out p {
-    font-size: 4.4vw;
+    font-size: 14px;
 }
 .slick-initialized.sec2-out .sec2-TopL:hover,
 .slick-initialized.sec2-out .sec2-BotL:hover,
@@ -1130,6 +1138,19 @@ section .main-inner{
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
+}
+@media screen and (max-width:572px){
+    .slick-initialized.sec2-out h3{
+        font-size: 6vw;
+    }
+    .slick-initialized.sec2-out p {
+        font-size: 4.4vw;
+    }
+    .sec2-icon {
+        width: 43vw;
+        height: 43vw;
+        top: 38%;
+    }
 }
 /*sec3*/
 .sec3 .bg{
@@ -1300,6 +1321,9 @@ section .main-inner{
         padding:0 14vw;
         padding-top: 2vw;
     }
+     .sec3-txtbox::before {
+         display:none;
+     }
     .pj-title{
         word-break: keep-all;
         font-size: 8.8vw;
@@ -1312,7 +1336,7 @@ section .main-inner{
         padding-left:1vw;
     }
     .pj-ul{
-        margin:40px 0;
+        margin:10px 0 20px;
         padding-left:30px;
         font-weight: 300;
     }
@@ -1704,7 +1728,6 @@ footer a{
 .img-box{
     height: 53vw;
     margin-top: 6vw;
-    transition: all ease 3s, -webkit-all ease 3s;
     position: relative;
 }
 .img-box.pconly{
@@ -1779,7 +1802,7 @@ a.link-btn:hover{
     float: left;
 }
 .in-box2 p.tit{
-    font-size: 40px;
+    font-size: 24px;
     font-weight: bold;
 }
 .in-box2 p.tit::before{
@@ -1788,7 +1811,7 @@ a.link-btn:hover{
     width: 6vw;
     height: 1px;
     background: #707070;
-    margin-top: 32px;
+    margin-top: 20px;
     margin-right: 10px;
     float: left;
 }
@@ -1820,6 +1843,12 @@ a.link-btn:hover{
 }
 .txt-size li:nth-of-type(4){
     font-weight: 500;
+}
+.in-box2 .typo{
+    width:100%;
+}
+.in-box2 .typo img{
+    width: auto;
 }
 footer.foot-bg{
     background: #2D2D2D;
@@ -1923,16 +1952,20 @@ a.link-btn.a-blue:hover{
 }
 @media screen and (max-width: 767px){
     header.sub-hd{
-        height: 60px!important;
+        height: 45px!important;
     }
     .pre-btn {
         background: url(../img/sw-L.png) no-repeat center / 16px;
     }
+    header.sub-hd .sub-logo{
+        height: 45px;
+    }
     .sub-logo a {
-        background-size: 100px;
+        height: 45px;
+        background-size: 70px;
     }
     .sub-wrap {
-        padding-top: 60px;
+        padding-top: 45px;
     }
     .sub-hd h1 {visibility: visible;}
     .inner-head {
@@ -2001,6 +2034,12 @@ a.link-btn.a-blue:hover{
     }
     .txt-size li {
         font-size: 5vw;
+    }
+    .in-box2 .typo img{
+        width: 95%;
+    }
+    .in-box2 .typo .box2-img{
+        width:100%;
     }
     footer.foot-bg {
         padding: 30px;
@@ -2075,12 +2114,21 @@ section.sec4 .main-inner {/* 211007 푸터수정 */
     .con-box {
         height: 63%;
     }
-}
+}*/
 .hidden{display: none!important;}
-/* 210927 추가 */
+
+/* main-footer */
 .note-editor.note-airframe .note-editing-area .note-editable, .note-editor.note-frame .note-editing-area .note-editable {
     background-color: #ffffff;
 }
 .note-editor.note-airframe .note-statusbar, .note-editor.note-frame .note-statusbar {
     background-color: #f5f5f5 !important;
+}
+
+/*post displayNone*/
+.img-box.displayNone .pc-img{
+    width:100%;
+}
+.img-box.displayNone .mo-img{
+    display:none;
 }

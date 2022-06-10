@@ -162,7 +162,7 @@
                     <input type="text" placeholder="담당자명" name="name">
                     <input type="hidden" name="post_content">
                 </div>
-                <div id="summernote"></div><!-- 200927 수정 -->
+                <div id="summernote"></div>
 
                 <button type="submit" class="btn df">문의하기</button>
 
