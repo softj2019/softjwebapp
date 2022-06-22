@@ -1,4 +1,3 @@
-<?php $this->managelayout->add_css(element('view_skin_url', $layout) . '/css/style.css'); ?>
 <?php	$this->managelayout->add_js(base_url('plugin/zeroclipboard/ZeroClipboard.js')); ?>
 
 <?php
@@ -78,7 +77,7 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
                     </div>
 
                 </div>
-                <div class="img-box clearfix">
+                <div class='img-box clearfix <?=$view["extra_content"][15]["output"]?>'>
                     <div class="pc-img">
                         <img src="<?=$view['file_image'][0]['origin_image_url']?>" alt="">
                     </div>
@@ -90,27 +89,22 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
             </div>
             <div class="in-box2 clearfix">
                 <div>
-                    <div>
-                        <p class="tit">Logo</p>
-                        <div class="box2-div box2-img">
-                            <img src="<?=$view['file_image'][2]['origin_image_url']?>" alt="">
-                        </div>
-                    </div>
-                    <div>
-                        <p class="tit">Colours</p>
-                        <div class="box2-div box2-img color-box">
-                            <img src="<?=$view['file_image'][3]['origin_image_url']?>" alt="">
-                        </div>
+                    <p class="tit">Logo</p>
+                    <div class="box2-div box2-img">
+                        <img src="<?=$view['file_image'][2]['origin_image_url']?>" alt="">
                     </div>
                 </div>
                 <div>
+                    <p class="tit">Colours</p>
+                    <div class="box2-div box2-img color-box">
+                        <img src="<?=$view['file_image'][3]['origin_image_url']?>" alt="">
+                    </div>
+                </div>
+                <div class="typo">
                     <p class="tit">Typography</p>
-                    <ul class="box2-div txt-size">
-                        <li class="txt-name"><?=$view["extra_content"][9]["output"]?></li>
-                        <li><?=$view["extra_content"][10]["output"]?></li>
-                        <li><?=$view["extra_content"][11]["output"]?></li>
-                        <li><?=$view["extra_content"][12]["output"]?></li>
-                    </ul>
+                    <div class="box2-div box2-img">
+                        <img src="<?=$view['file_image'][6]['origin_image_url']?>" alt="">
+                    </div>
                 </div>
             </div>
         </div>

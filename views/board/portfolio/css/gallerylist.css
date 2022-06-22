@@ -106,3 +106,16 @@ textarea.post_content  {width:97%;height:350px;margin:0 20px;}
 #qrcode-content .qrcode_code {border:5px solid #479BE3;float:left;}
 #qrcode-content .qrcode_code img {width:100px;height:100px;}
 #qrcode-content .qrcode_info {float:left;margin:0 0 0 10px;width:90px;font-size:12px;line-height:18px;color:#555;}
+
+.slick-dotted.slick-slider{
+    margin-bottom:0;
+}
+@media (orientation: portrait){
+    .sec3 .slick-dots {
+        padding: 0 20px;
+    }
+    .slick-dots li{
+        width:10px;
+    }
+
+}

@@ -202,22 +202,25 @@
 
 					switch ($i){
 					    case 0;
-                            $file_title='PC 화면';
+                            $file_title='PC화면 본문(1000*634)';
 					    break;
                         case 1;
-                            $file_title='모바일 화면';
+                            $file_title='모바일화면 본문';
                         break;
                         case 2;
                             $file_title='로고';
                             break;
                         case 3;
-                            $file_title='컬러';
+                            $file_title='컬러코드';
                             break;
                         case 4;
-                            $file_title='PC 자동 스크롤';
+                            $file_title='PC화면 리스트썸네일(580*464, 5:4비율)';
                             break;
                         case 5;
-                            $file_title='모바일 자동 스크롤';
+                            $file_title='모바일화면 리스트썸네일(200*432)';
+                            break;
+                        case 6;
+                            $file_title='폰트예시(가로 680px, 폰트46px 권장)';
                             break;
                         default;
                             $file_title='';
