@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-lite.min.js"></script>
+    <script src="http://jamesallardice.github.io/Placeholders.js/assets/js/placeholders.jquery.min.js"></script>
 </head>
 <body>
     <header class="main-header">
@@ -60,11 +64,11 @@
             
         </div>
         <div class="main-title">
-            <a href="../index.html"><h1>CHUNMISHOP</h1></a>
+            <a href=""><h1>CHUNMISHOP</h1></a>
         </div>
         <nav class="gnb">
             <ul>
-                <li><a href="list.html">BEST</a>
+                <li><a href="">BEST</a>
                 </li>
                 <li><a href="">TOP</a>
                     <ul class="lnb">
@@ -110,51 +114,70 @@
         </nav>
     </header>
     <div class="main-wrap">
-        <div class="join-w">
-            <h3 class="tit-txt mb40">아이디 / 비밀번호 찾기</h3>
-            <form action="">
-                <div class="tab-box">
-                    <input type="radio" id="find-id" name="find-rd" class="find-tab">
-                    <label for="find-id">아이디 찾기</label>
-                    <input type="radio" id="find-pw" name="find-rd" class="find-tab" checked>
-                    <label for="find-pw">비밀번호 찾기</label>
-                    <div class="tab-id">
-                        <ul>
-                            <li>
-                                <label for="">아이디</label>
-                                <input type="text">
-                            </li>
-                            <li>
-                                <label for="">핸드폰번호</label>
-                                <input type="number">
-                                <button type="button" class="btn-s-bor">인증번호 전송</button>
-                                
-                            <p class="b-txt">⁎ 휴대폰 번호를 정확하게 입력해 주세요.</p>
-                            </li>
-                            <li>
-                                <label for="">인증번호</label>
-                                <input type="number">
-                                <button type="button" class="btn-s-bor">인증확인</button>
-                            </li>
-                        </ul>
-                        <div class="flexwrap mt50">
-                            <button type="button" class="btn-bor">취소</button>
-                            <button type="button" class="btn">아이디 찾기</button>
-                        </div>
-                    </div>
-                    <div class="tab-pw">
-                        <div class="pw-mail">
-                            <label for="">이메일</label>
-                            <input type="text">
-                            <p class="b-txt">⁎ 가입하신 이메일을 입력해 주세요.</p>
-                        </div>
-                        <div class="flexwrap mt50">
-                            <button type="button" class="btn-bor">취소</button>
-                            <button type="button" class="btn">비밀번호 찾기</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
+        <div class="postList-div">
+            <h3>게시글 작성</h3>
+            <div class="t-tb mt20">
+                <table>
+                    <colgroup>
+                        <col style="width: 10%;">
+                        <col style="width: 90%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>작성자</td>
+                            <td>
+                                <span>춘미샵</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>제목</td>
+                            <td>
+                                <input type="text" class="input1">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>유형</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">유형을 선택해주세요.</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">내용</td>
+                            <td><textarea id="summernote"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>비밀번호 입력</td>
+                            <td><input type="text" class="input2"></td>
+                        </tr>
+                        <tr>
+                            <td>파일첨부</td>
+                            <td>
+                                <div class="fileBox">
+                                    <input type="text" class="fileName" id="fileName" name="fileName" readonly="readonly" placeholder="선택된 파일 없음">
+                                    <label for="uploadBtn" class="btn_file">파일선택</label>
+                                    <input type="file" id="uploadBtn" name="uploadBtn" class="uploadBtn">
+                                </div>
+                                <div class="up-file-box">
+                                    <div class="file-up">
+                                        <input type="checkbox" id="all-chk"><label for="all-chk"></label><span>파일명</span>
+                                        <button type="button" class="ch-remove">선택삭제</button>
+                                    </div>
+                                    <ul class="file-up-con">
+                                        <li file-value="1"><input type="checkbox" id="file-ch1" value="1"><label for="file-ch1"><span>파일1</span></label></li>
+                                        <li file-value="2"><input type="checkbox" id="file-ch2" value="2"><label for="file-ch2"><span>파일2</span></label></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btn-box mt20">
+                <a href="" class="btn-bor back-btn">취소</a>
+                <button type="button" class="btn">작성</button>
+            </div>
         </div>
     </div>
     <footer>
@@ -189,10 +212,38 @@
                 <li><a href="">이용약관</a></li>
                 <li><a href="">개인정보취급방침</a></li>
                 <li><a href="">고객센터</a></li>
-                 
+                <li><a href="">자주묻는질문</a></li>
             </ul>
         </div>
     </footer>
     <script src="../assets/js/common.js"></script>
+    <script>
+        //summernote
+       $(document).ready(function (){
+            $('#summernote').summernote({
+                tabsize: 2,
+                height: 250,
+                lang: 'ko-KR' // default: 'en-US'
+            });
+        });
+        $(function(){
+            $('#all-chk').click(function(){
+                var chk = $(this).is(':checked');
+                if(chk) $('.file-up-con input').prop('checked',true);
+                else $('.file-up-con input').prop('checked',false);
+            });
+        });
+        $('.ch-remove').click(function(){
+            if(confirm("삭제하시겠습니까?")){
+                $(".file-up-con input[type=checkbox]:checked").each(function(){
+                    var tr_value =$(this).val();
+                    var tr=$("li[file-value='"+tr_value+"']");
+                    tr.remove();
+                });
+            }else{
+                return false;
+            }
+        });
+    </script>
 </body>
 </html>

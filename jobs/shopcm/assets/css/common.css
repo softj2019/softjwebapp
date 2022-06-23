@@ -854,7 +854,8 @@ h1{
     overflow: hidden;
     border: 1px solid #dedede;
     opacity: 0;
-    transition:.3s;
+    transition:all .3s;
+    visibility: hidden;
 }
 .lnb>li{
     display:block;
@@ -876,6 +877,7 @@ h1{
 .gnb>ul>li:hover .lnb{
     opacity: 1;
     top:50px;
+    visibility: visible;
 }
 
 /*footer*/
@@ -2403,4 +2405,205 @@ body.popup{
 }
 .policybox h4{
     margin:40px 0 20px 0;
+}
+/* 게시판 */
+.postList-t.view thead td:first-child {
+    border-right: 1px solid #cccccc;
+}
+.postList-t.view tbody td div {
+    min-height: 300px;
+    text-align: left;
+    padding: 10px;
+}
+.postList-t.view tbody td {
+    border-bottom: 2px solid #cccccc;
+}
+.comment {
+    width: 100%;
+    overflow: hidden;
+}
+.com-t {
+    overflow: hidden;
+}
+.com-t textarea{
+    width: 90%;
+    height: 80px;
+    padding: 5px;
+    resize: none;
+    border-right: none;
+    float: left;
+}
+.com-t button{
+    width: 10%;
+    height: 80px;
+    background: #5A589A;
+    color: #fff;
+    float: left;
+}
+.com-renderer {
+    margin: 20px 0;
+    border-top: 1px solid #cccccc;
+    padding: 10px;
+}
+.com-ren{
+    padding: 20px 10px;
+    border-bottom: 1px solid #cccccc;
+}
+.com-btn{overflow: hidden;}
+.com-btn button{
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    border: 1px solid #cccccc;
+    color: #333333;
+    background: #ffffff;
+}
+.com-id {
+    font-weight: bold;
+}
+.com-btn .red-t {
+    color: #da394d;
+}
+.com-r{
+    padding: 5px 5px 5px 10px;
+}
+.day-c {
+    color: #636363;
+    margin-bottom: 10px;
+    display: block;
+}
+.com-ren-r {
+    background: #f9f9f9;
+    border-bottom: 1px solid #cccccc;
+    padding: 20px 20px 20px 50px;
+}
+.com-rcom {
+    display: none;
+}
+.com-rcom.on {
+    margin-top: 10px;
+    display: block;
+}
+.com-rcom textarea{
+    width: 84%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    height: 40px;
+    padding-left: 10px;
+    resize: none;
+    background: transparent;
+}
+.rcom-btn{
+    width: 15%;
+    display: flex;
+}
+.rcom-btn button{
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+}.rcom-btn button.btn-g{
+    background: #5A589A;
+    color: #ffffff;
+    border-left: none;
+}
+.btn-g {
+    background: #ccc;
+    color: #fff;
+}
+.btn-box{
+    float: right;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+.btn-box .btn {
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 10px;
+    float: left;
+}
+.btn-box a {
+    display: block;
+    border: none;
+    border: 1px solid #5A589A;
+    color: #5A589A;
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 10px;
+    float: left;
+}
+.t-tb>table>tbody>tr> td{
+    height: 40px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.t-tb>table>tbody>tr> td:nth-child(1){
+    text-align: center;
+    background: #f9f9f9;;
+}
+.t-tb>table>tbody>tr>td> input {
+    text-align: left;
+    border: 1px solid #ccc;
+    height: 30px;
+    padding-left: 10px;
+    margin-bottom: 0;
+}
+.t-tb>table>tbody>tr>td> select {
+    margin-bottom: 0;
+}
+.input2{
+    width: 350px;
+}
+.up-file-box{
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+.file-up,.file-up-con li{
+    display: flex;
+    align-items: center;
+}
+.up-file-box input[type=checkbox]+label {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.up-file-box input[type=checkbox]+label span{
+    display: flex;
+    align-items: center;
+    min-width: 500px;
+    width: auto;
+}
+.file-up{
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 10px;
+}.file-up span{
+    color: #6d6d6d;
+}
+.file-up button{
+    border: 1px solid #da394d;
+    color: #da394d;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    margin: 0 0 0 auto;
+    background-color: #fff;
+}
+.file-up-con{
+    height: 120px;
+    overflow-y: scroll;
+}
+.file-up-con li{
+    padding: 5px 10px;
+}
+.file-up input[type=checkbox]+label::before {
+    top: -7px;
+}
+.file-up input[type=checkbox]:checked+label::after {
+    top: -6px;
 }
