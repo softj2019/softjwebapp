@@ -9,7 +9,7 @@
                     UI UX 전문가를 통해 완성도 높은
                     <br/><b>통합 솔루션</b>을 제공합니다.
                 </p>
-                <button class="abtn" type="button" onclick="window.open('https://softj.net/jobopening')"><b>채용공고</b> 보기</button>
+                <button class="abtn" type="button" onclick="window.open('https://softj.net/jobopening')"><b>웹 개발자 채용공고</b> 보기</button>
             </div>
         </div>
         <div class="temp-right">
@@ -164,7 +164,7 @@
                 </div>
                 <div id="summernote"></div>
 
-                <button type="submit" class="btn df">문의하기</button>
+                <button type="submit" class="btn df">홈페이지 개발/유지보수 문의기</button>
 
             </form>
 
