@@ -60,9 +60,7 @@
                             <li><?=element('info1',element('extravars', $result))?></li>
                             <li><?=element('info2',element('extravars', $result))?></li>
                         </ul>
-                        <a href="<?php echo element('post_url', $result); ?>" target="_blank">
-                            <button type="button" class="btn df">자세히 보기</button>
-                        </a>
+                        <a href="<?php echo element('post_url', $result); ?>" target="_blank" class="btn df">포트폴리오 자세히 보기</a>
                     </div>
                 </div>
                 <div class='temp-right <?=element('modisplay',element('extravars', $result))?>'>

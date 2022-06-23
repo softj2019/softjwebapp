@@ -12,22 +12,24 @@ button{
     border:none;
     cursor: pointer;
 }
-.main-inner button.btn{
-    height:72px;
+.main-inner .btn{
+    font-weight: 400;
     background:#fff;
     border:1px solid #cccccc;
     color:#064f82;
     font-size:20px;
     transition: .3s ease-out, -webkit-.3s ease-out;
 }
-.main-inner button.btn:hover{
+.main-inner .btn:hover{
     background:#064f82;
     border:1px solid #064f82;
     color:#fff;
 }
-button.btn.df{
-    width:200px;
+.btn.df{
+    display: inline-block;
+    padding: 20px 36px;
     letter-spacing: -1px;
+    text-align: center;
 }
 .wrap{
     overflow: auto;
@@ -58,32 +60,33 @@ button.btn.df{
 .bgGrey{
     background:#f0f0f0
 }
-button{
+button, a.abtn{
+    display:inline-block;
     height:35px;
     text-align: center;
     line-height: 35px;
     padding:0 15px;
 }
-button.btn-grey{/*201007 수정 ~ 164*/
+.btn-grey{/*201007 수정 ~ 164*/
     background:#323d49!important;
     color:#fff!important;
     border:1px solid #323d49!important;
 }
-button.btn-mint{
+.btn-mint{
     background:#2bc8ad;
     color:#fff;
 }
-button.btn-white{
+.btn-white{
     background:#fff;
     color:#333;
     border:1px solid #333;
 }
-button.btn-blue{
+.btn-blue{
     background:#327ECB;
     color:#fff;
     border:1px solid #327ECB;
 }
-button.btn-inline{
+.btn-inline{
     padding:0;
     height:auto;
     line-height: normal;
@@ -892,12 +895,13 @@ section .main-inner{
 .sec1-txtbox p{
     margin-bottom:30px;
 }
-.abtn{
+a.abtn{
     background: #3897DE;
     color: #fff;
     font-size: 24px;
     letter-spacing: -1px;
     height: 66px;
+    line-height: 62px;
     padding: 0 25px;
     border-radius: 10px;
     box-shadow: 0px 0px 24px -5px #000000;
@@ -985,8 +989,6 @@ section .main-inner{
         height:55px;
     }
     .sec3 .btn.df{
-        width:120px;
-        height: 45px!important;
         font-size: 16px;
     }
 }
@@ -1342,7 +1344,6 @@ section .main-inner{
     }
     .sec3 .btn.df{
         margin:0 auto;
-        height:70px;
         display:block;
     }
     .sec3 .slick-dots{
@@ -1368,7 +1369,7 @@ section .main-inner{
 /* sec4 */
 
 .sec4{
-    background: url(../img/foot.jpg)no-repeat center / cover;
+    /*background: url(../img/foot.jpg)no-repeat center / cover;*/
 }
 
 .sec4 .parallax-inner{
@@ -1420,7 +1421,6 @@ section.sec4 .main-inner {/* 210927 푸터수정 */
 .con-box .btn {/*200927 수정*/
     display: block;
     margin: 30px auto 0;
-    font-weight: 800;
     font-size: 24px;
 }
 .main-wrap>section{
@@ -1568,7 +1568,6 @@ footer a{
         width: 100% !important;;
         margin: 30px auto 0;
         font-size: 18px;
-        height: 7vh;
     }
     /* footer {
         position: static;
@@ -1653,6 +1652,8 @@ footer a{
     background-color: rgba(23, 23, 23, 0.7);
     position: absolute;
     top: 0px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 .inner-head .info-txt{
     width: 100%;

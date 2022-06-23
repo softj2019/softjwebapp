@@ -9,7 +9,7 @@
                     UI UX 전문가를 통해 완성도 높은
                     <br/><b>통합 솔루션</b>을 제공합니다.
                 </p>
-                <button class="abtn" type="button" onclick="window.open('https://softj.net/jobopening')"><b>웹 개발자 채용공고</b> 보기</button>
+                <a class="abtn" type="button" onclick="window.open('https://softj.net/jobopening')"><b>웹 개발자</b> 채용공고 보기</a>
             </div>
         </div>
         <div class="temp-right">
@@ -164,7 +164,7 @@
                 </div>
                 <div id="summernote"></div>
 
-                <button type="submit" class="btn df">홈페이지 개발/유지보수 문의기</button>
+                <a href="#" onclick="$('#fwrite').submit()" class="btn df" id="a-submit">홈페이지 개발/유지보수 문의하기</a>
 
             </form>
 
@@ -206,6 +206,10 @@
         var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
         return re.test(email);
     }
+    $('#a-submit').on("click", function(e){
+        e.preventDefault();
+    })
+
     $('#fwrite').submit(function (){
         var vaildate = true
         $('input[name=post_content]').val($('#summernote').summernote('code'))
