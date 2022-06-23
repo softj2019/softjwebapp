@@ -78,7 +78,7 @@ var cookie_prefix = "<?php echo config_item('cookie_prefix'); ?>";
                     </div>
                     <p>
                         경기도 고양시 일산동구 정발산로 24 타워3차 603호 (장항동, 웨스턴돔2)<br>
-                        상호 : 소프트제이 ㅣ 대표자 : 김지훈<br>
+                        상호 : <span class="ftc_btn">소프트제이</span> ㅣ 대표자 : 김지훈<br>
                         Copyright © 2020 SOFTJ. All Rights Reserved.
                     </p>
                 </div>
@@ -107,6 +107,14 @@ var cookie_prefix = "<?php echo config_item('cookie_prefix'); ?>";
 <script type="text/javascript" src="<?php echo base_url('assets/js/js.cookie.js'); ?>"></script>
 <?php echo $this->managelayout->display_js(); ?>
 <script type="text/javascript">
+    var url =
+        "http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1348738964"
+    $(document).ready(function(){
+        $('.ftc_btn').click(function(){
+            window.open(url, "bizCommPop", "width=750, height=700;");
+            return false;
+        });
+    });
 $(document).on('click', '.viewpcversion', function(){
 	Cookies.set('device_view_type', 'desktop', { expires: 1 });
 });
