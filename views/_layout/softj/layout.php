@@ -6,6 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=yes">
     <meta name="naver-site-verification" content="cb4d0aca060421d60668ed297e58cd7d1654d6d3" />
 <title><?php echo html_escape(element('page_title', $layout)); ?></title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="웹 사이트 맞춤형 통합 솔루션 제공 softj">
+    <meta property="og:description" content="홈페이지제작,맞춤형 홈페이지,반응형 홈페이지,적응형 기업홈페이지,홍보용홈페이지,웹사이트제작,쇼핑몰제작,정보시스템 유지관리,전자정부,유지관리,SI,SEO 최적화, 웹 개발, 웹사이트 유지보수,웹 기능개선">
+    <meta property="og:image" content="https://softj.net/assets/img/logo.png">
+    <meta property="og:url" content="https://softj.net">
 <?php if (element('meta_description', $layout)) { ?><meta name="description" content="<?php echo html_escape(element('meta_description', $layout)); ?>"><?php } ?>
 <?php if (element('meta_keywords', $layout)) { ?><meta name="keywords" content="<?php echo html_escape(element('meta_keywords', $layout)); ?>"><?php } ?>
 <?php if (element('meta_author', $layout)) { ?><meta name="author" content="<?php echo html_escape(element('meta_author', $layout)); ?>"><?php } ?>
