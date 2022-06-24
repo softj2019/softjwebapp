@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=yes">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/statistics.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="hd-top clearfix">
+                <ul class="hd-nav">
+                    <li><a href="../index.html">홈</a></li>
+                    <li><a href="../sub/login.html">로그인</a></li>
+                    <li><a href="">마이페이지</a></li>
+                    <li><a href="">관리자</a></li>
+                    <li><a href=""><span class="hd-id">admin</span></a></li>
+                </ul>
+                <div class="hd-in clearfix">
+                    <h1 class="logo">
+                        <a href="">타이틀</a>
+                    </h1>
+                    <div class="search clearfix">
+                        <form action="">
+                            <select name="" id="">
+                                <option value="">통합검색</option>
+                                <option value="">통합검색</option>
+                            </select>
+                            <input type="text">
+                            <button type="button"></button>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            <nav class="clearfix">
+                <ul class="gnb">
+                    <li>
+                        <a href="contents.html">컨텐츠(정형/비정형)</a>
+                        <ul class="lnb">
+                            <li><a href="">동영상</a></li>
+                            <li><a href="">이미지</a></li>
+                            <li><a href="">문서</a></li>
+                            <li><a href="">기타</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="DBpage.html">DB구축데이터</a>
+                        <ul class="lnb">
+                            <li><a href="">정형데이터</a></li>
+                            <li><a href="">비정형데이터</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="DBpage-re.html">DB구축데이터 이관</a>
+                        <ul class="lnb">
+                            <li><a href="">이관데이터 선정</a></li>
+                            <li><a href="">이관데이터 현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="statistics.html" class="on">통계 및 이력관리</a>
+                        <ul class="lnb">
+                            <li><a href="">통계 및 집계</a></li>
+                            <li><a href="">이력관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="list.html">목록관리</a>
+                        <ul class="lnb">
+                            <li><a href="">영상목록</a></li>
+                            <li><a href="">이미지목록</a></li>
+                            <li><a href="">문서목록</a></li>
+                            <li><a href="">기타</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="app-read.html">열람신청</a>
+                        <ul class="lnb">
+                            <li><a href="">열람신청</a></li>
+                            <li><a href="">열람승인</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="user-mgt.html">시스템관리</a>
+                        <ul class="lnb">
+                            <li><a href="">사용자관리</a></li>
+                            <li><a href="">그룹관리</a></li>
+                            <li><a href="">권한관리</a></li>
+                            <li><a href="">조직도관리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="main-in clearfix">
+                <div class="left">
+                    <h2 class="left-tit">통계 및 이력관리</h2>
+                    <ul class="snb">
+                        <li>통계</li>
+                        <li><a href="">컨텐츠</a></li>
+                        <li><a href="">DB구축데이터</a></li>
+                        <li><a href="">데이터이관</a></li>
+                        <li class="dep1 mt20">이력</li>
+                        <li><a href="">열람이력</a></li>
+                        <li><a href="">이관이력</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div>
+                        <h2 class="right-tit">통계</h2>
+                        <form action="">
+                            <table class="sec-table">
+                                <colgroup>
+                                    <col style="width: 12%;">
+                                    <col style="width: 30%;">
+                                    <col style="width: 12%;"> 
+                                    <col style="width: 33%;">
+                                    <col style="width: 80px;">
+                                </colgroup>
+                                <tr>
+                                    <td class="sec-tit">구분</td>
+                                    <td colspan="3">
+                                        <select name="" id="">
+                                            <option value="">영상</option>
+                                            <option value="">이미지</option>
+                                            <option value="">문서</option>
+                                            <option value="">기타</option>
+                                        </select>
+                                    </td>
+                                    <td rowspan="3" class="pd0"><button type="button" class="btn sec-btn small">조회</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="sec-tit">등록연도</td>
+                                    <td colspan="3">
+                                        <div class="date">
+                                            <select name="" id="">
+                                                <option value="2000">2000</option>
+                                                <option value="2001">2001</option>
+                                                <option value="2002">2002</option>
+                                                <option value="2003">2003</option>
+                                                <option value="2004">2004</option>
+                                                <option value="2005">2005</option>
+                                                <option value="2006">2006</option>
+                                                <option value="2007">2007</option>
+                                                <option value="2008">2008</option>
+                                                <option value="2009">2009</option>
+                                                <option value="2010">2010</option>
+                                                <option value="2011">2011</option>
+                                                <option value="2012">2012</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2021">2021</option>
+                                            </select>
+                                            <p class="date-p"> ~ </p>
+                                            <select name="" id="">
+                                                <option value="2000">2000</option>
+                                                <option value="2001">2001</option>
+                                                <option value="2002">2002</option>
+                                                <option value="2003">2003</option>
+                                                <option value="2004">2004</option>
+                                                <option value="2005">2005</option>
+                                                <option value="2006">2006</option>
+                                                <option value="2007">2007</option>
+                                                <option value="2008">2008</option>
+                                                <option value="2009">2009</option>
+                                                <option value="2010">2010</option>
+                                                <option value="2011">2011</option>
+                                                <option value="2012">2012</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2021">2021</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                        <div>
+                            <p class="R-total">총건수 : <span>5</span>건</p>
+                            <div class="R-btn clearfix">
+                                <a href="popup-upload.html"  onclick="window.open(this.href, '_blank', 'width=900px,height=745px,toolbars=no,scrollbars=no'); return false;" class="btn">등록</a>
+                                <a href="popup-upload.html"  onclick="window.open(this.href, '_blank', 'width=900px,height=745px,toolbars=no,scrollbars=no'); return false;" class="btn btn-grey">수정</a>
+                                <button type="button" class="btn Bred">삭제</button>
+                            </div>
+                            <table class="R-table">
+                                <colgroup>
+                                    <col style="width:3%">
+                                    <col style="width:15%">
+                                    <col style="width:15%">
+                                    <col style="width:15%">
+                                    <col style="width:15%">
+                                    <col style="width:15%">
+                                    <col style="width:10%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" id="ch-all"><label for="ch-all"></label></th>
+                                        <th>계</th>
+                                        <th>영상</th>
+                                        <th>이미지</th>
+                                        <th>문서</th>
+                                        <th>기타</th>
+                                        <th>목록</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="R-tbody3">
+                                    <tr>
+                                        <td><input type="checkbox" id="ch1"><label for="ch1"></label></td>
+                                        <td>총계</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="ch2"><label for="ch2"></label></td>
+                                        <td>일반문서</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="ch3"><label for="ch3"></label></td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="ch4"><label for="ch4"></label></td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="ch5"><label for="ch5"></label></td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">≪</a></li>
+                                <li class="page-item"><a class="page-link" href="#">＜</a></li>
+                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                <li class="page-item"><a class="page-link" href="#">＞</a></li>
+                                <li class="page-item"><a class="page-link" href="#">≫</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </main>
+    </div>
+    <script src="../assets/js/common.js"></script>
+    
+</body>
+</html>

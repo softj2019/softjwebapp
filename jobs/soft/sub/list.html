@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=yes">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/list.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="hd-top clearfix">
+                <ul class="hd-nav">
+                    <li><a href="../index.html">홈</a></li>
+                    <li><a href="../sub/login.html">로그인</a></li>
+                    <li><a href="">마이페이지</a></li>
+                    <li><a href="">관리자</a></li>
+                    <li><a href=""><span class="hd-id">admin</span></a></li>
+                </ul>
+                <div class="hd-in clearfix">
+                    <h1 class="logo">
+                        <a href="">타이틀</a>
+                    </h1>
+                    <div class="search clearfix">
+                        <form action="">
+                            <select name="" id="">
+                                <option value="">통합검색</option>
+                                <option value="">통합검색</option>
+                            </select>
+                            <input type="text">
+                            <button type="button"></button>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            <nav class="clearfix">
+                <ul class="gnb">
+                    <li>
+                        <a href="contents.html">컨텐츠(정형/비정형)</a>
+                        <ul class="lnb">
+                            <li><a href="">동영상</a></li>
+                            <li><a href="">이미지</a></li>
+                            <li><a href="">문서</a></li>
+                            <li><a href="">기타</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="DBpage.html">DB구축데이터</a>
+                        <ul class="lnb">
+                            <li><a href="">정형데이터</a></li>
+                            <li><a href="">비정형데이터</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="DBpage-re.html">DB구축데이터 이관</a>
+                        <ul class="lnb">
+                            <li><a href="">이관데이터 선정</a></li>
+                            <li><a href="">이관데이터 현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="statistics.html">통계 및 이력관리</a>
+                        <ul class="lnb">
+                            <li><a href="">통계 및 집계</a></li>
+                            <li><a href="">이력관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="list.html" class="on">목록관리</a>
+                        <ul class="lnb">
+                            <li><a href="">영상목록</a></li>
+                            <li><a href="">이미지목록</a></li>
+                            <li><a href="">문서목록</a></li>
+                            <li><a href="">기타</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="app-read.html">열람신청</a>
+                        <ul class="lnb">
+                            <li><a href="">열람신청</a></li>
+                            <li><a href="">열람승인</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="user-mgt.html">시스템관리</a>
+                        <ul class="lnb">
+                            <li><a href="">사용자관리</a></li>
+                            <li><a href="">그룹관리</a></li>
+                            <li><a href="">권한관리</a></li>
+                            <li><a href="">조직도관리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="main-in clearfix">
+                <div class="left">
+                    <h2 class="left-tit">목록관리</h2>
+                    <ul class="snb">
+                        <li>목록관리</li>
+                        <li><a href="">영상목록</a></li>
+                        <li><a href="">이미지목록</a></li>
+                        <li><a href="">문서목록</a></li>
+                        <li><a href="">기타</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div>
+                        <h2 class="right-tit">목록관리</h2>
+                        <form action="">
+                            <table class="sec-table">
+                                <colgroup>
+                                    <col style="width: 12%;">
+                                    <col style="width: 30%;">
+                                    <col style="width: 12%;"> 
+                                    <col style="width: 33%;">
+                                    <col style="width: 80px;">
+                                </colgroup>
+                                <tr>
+                                    <td class="sec-tit">제목</td>
+                                    <td colspan="3"><input type="text"></td>
+                                    <td rowspan="3" class="pd0"><button type="button" class="btn sec-btn">조회</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="sec-tit">부서명</td>
+                                    <td class="sec-box"><input type="text"><button type="button">검색</button></td>
+                                    <td class="sec-tit">유형구분</td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">전체</option>
+                                            <option value="">전체</option>
+                                            <option value="">전체</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sec-tit">등록일자</td>
+                                    <td colspan="3">
+                                        <div class="date">
+                                            <div class="cla">
+                                                <input type="text" id="from_date" class="date_pick">
+                                                <div class="cla-img1"></div>
+                                            </div>
+                                            <p class="cla-p1"> ~ </p>
+                                            <div class="cla">
+                                                <input type="text" id="to_date" class="date_pick">
+                                                <div class="cla-img1"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                        <div>
+                            <p class="R-total">총건수 : <span>5</span>건</p>
+                            <div class="R-btn clearfix">
+                                <a href="popup-upload.html"  onclick="window.open(this.href, '_blank', 'width=900px,height=745px,toolbars=no,scrollbars=no'); return false;" class="btn">등록</a>
+                                <a href="popup-upload.html"  onclick="window.open(this.href, '_blank', 'width=900px,height=745px,toolbars=no,scrollbars=no'); return false;" class="btn btn-grey">수정</a>
+                                <button type="button" class="btn Bred">삭제</button>
+                            </div>
+                            <table class="R-table">
+                                <colgroup>
+                                    <col style="width:3%">
+                                    <col style="width:10%">
+                                    <col style="width:15%">
+                                    <col style="width:15%">
+                                    <col style="width:15%">
+                                    <col style="width:32%">
+                                    <col style="width:10%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" id="ch-all"><label for="ch-all"></label></th>
+                                        <th>순번</th>
+                                        <th>유형구분</th>
+                                        <th>부서명</th>
+                                        <th>등록일자</th>
+                                        <th>제목</th>
+                                        <th>위치</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" id="ch1"><label for="ch1"></label></td>
+                                        <td>1</td>
+                                        <td>유형구분</td>
+                                        <td>부서명</td>
+                                        <td>2021-01-19</td>
+                                        <td>등록검색 제목</td>
+                                        <td>케비넷</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="ch2"><label for="ch2"></label></td>
+                                        <td>1</td>
+                                        <td>유형구분</td>
+                                        <td>부서명</td>
+                                        <td>2021-01-19</td>
+                                        <td>등록검색 제목</td>
+                                        <td>서고</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="ch3"><label for="ch3"></label></td>
+                                        <td>1</td>
+                                        <td>유형구분</td>
+                                        <td>부서명</td>
+                                        <td>2021-01-19</td>
+                                        <td>등록검색 제목</td>
+                                        <td>홍보실</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="ch4"><label for="ch4"></label></td>
+                                        <td>1</td>
+                                        <td>유형구분</td>
+                                        <td>부서명</td>
+                                        <td>2021-01-19</td>
+                                        <td>등록검색 제목</td>
+                                        <td>서고</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="ch5"><label for="ch5"></label></td>
+                                        <td>1</td>
+                                        <td>유형구분</td>
+                                        <td>부서명</td>
+                                        <td>2021-01-19</td>
+                                        <td>등록검색 제목</td>
+                                        <td>홍보실</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">≪</a></li>
+                                <li class="page-item"><a class="page-link" href="#">＜</a></li>
+                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                <li class="page-item"><a class="page-link" href="#">＞</a></li>
+                                <li class="page-item"><a class="page-link" href="#">≫</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </main>
+    </div>
+    <script src="../assets/js/common.js"></script>
+    
+</body>
+</html>

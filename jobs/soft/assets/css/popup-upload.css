@@ -1,0 +1,174 @@
+@charset "utf-8";
+/*popup*/
+.popup-wrap{
+    width:500px;
+    padding:10px 20px;
+}
+.popup-wrap h2{
+    color:#2d5776;
+    line-height: 50px;
+    border-bottom: 2px solid #2d5776;
+}
+.popup-wrap h3{
+    margin-bottom:15px;
+    padding-left:5px;
+    font-size:16px;
+}
+.popup-wrap h3:before{
+    content:"";
+    display:inline-block;
+    width:3px;
+    height:18px;
+    margin-right:8px;
+    vertical-align: middle;
+    background:#4280b0;
+}
+.search-box{
+    width:100%;
+}
+.search-box input{
+    height:40px;
+    padding:0 15px;
+    font-size:14px;
+    vertical-align: middle;
+}
+.search-box .input-name{
+    width:150px;
+}
+.search-box .input-title{
+    width:calc(100% - 240px);
+}
+.search-box button.srch-btn{
+    width:80px;
+    height:40px;
+    background:#4280B0;
+    color:#fff;
+    transition: all ease 0.5s, -webkit-all ease 0.5s;
+    vertical-align: middle;
+}
+.search-box button.srch-btn:hover{
+    background:#2D5776;
+}
+.popup-sec .left{
+    float:left;
+    width:calc(50% - 20px);
+    height:570px;
+    margin-right:20px;
+    overflow: auto;
+}
+.popup-sec .right{
+    float:right;
+    width:50%;
+    height:570px;
+    overflow: auto;
+}
+.popup-tb{
+    width:100%;
+    border-top:1px solid #d3d3d3;
+    border-bottom:1px solid #d3d3d3;
+}
+.popup-tb tr:not(:last-child){
+    border-bottom:1px solid #d3d3d3;
+}
+.popup-tb th, .popup-tb td{
+    padding: 10px;
+}
+.popup-tb th{
+    background:#f0f0f0;
+    text-align: left;
+}
+.popup-tb input{
+    width:100%;
+    height:40px;
+    padding: 10px;
+    text-align: left;
+    border:1px solid #d3d3d3;
+}
+.popup-tb .input2{
+    width:185px;
+    padding-right:40px;
+}
+.popup-sec input[type='checkbox'] + label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.popup-sec input[type='checkbox']:checked + label{
+    border: 1px solid #4280B0;
+    background:#4280B0 url(../img/check.png)no-repeat center / 17px;
+}
+.popup-sec input[type='checkbox']{
+    display: none;
+}
+.popup-sec .pagination{
+    padding:10px 0;
+}
+.nolist{
+    text-align: center;
+}
+.date2{
+    position: relative;
+    width:185px;
+}
+.date2 .cal1{
+    position:absolute;
+    right:3px;
+    top:3px;
+    display: inline-block;
+    width:35px;
+    height:35px;
+    vertical-align: middle;
+    background: url(../img/calendar2.png) no-repeat center / 18px;
+}
+.popup-tb select{
+    width:120px;
+    height:40px;
+    margin:0;
+}
+.popup-tb textarea{
+    width:100%;
+    margin:0;
+    height:100px;
+}
+.popup-tb .fileBox .fileName{
+    width:calc(100% - 70px);
+}
+.popup-wrap .btn-box{
+    text-align: center;
+}
+.popup-wrap .btn-box button{
+    display: inline-block;
+    width:80px;
+    height:40px;
+    color:#fff;
+    transition: all ease 0.5s, -webkit-all ease 0.5s;
+}
+button.btn-red{
+    background:#d35353;
+}
+.popup-wrap.large{
+    width:900px;
+}
+.popup-tb.ver2{
+    margin-bottom:30px;
+}
+.popup-tb.ver2 td:not(:first-child), .popup-tb.ver2 th:not(:first-child){
+    border-left:1px solid #d3d3d3;
+}
+.popup-tb.ver2 tfoot{
+    border-top:1px solid #d3d3d3;
+    text-align: right;
+}
+.btn-file{
+    background:#4280B0;
+    color:#fff;
+    float:right;
+}
+.popup-tb.ver2 td:nth-child(2){
+    color:#7b7b7b;
+    font-weight: 300;
+    text-align: right;
+}
