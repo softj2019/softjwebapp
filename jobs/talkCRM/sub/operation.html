@@ -1,0 +1,2376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>TalkCRM 경영관리</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../assets/js/kcalander_script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script> 
+    <!-- 달력 사용시 필요 -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/header.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        window.addEventListener("load", function(){
+        setTimeout(loaded, 100);
+
+        }, false);
+
+        function loaded(){
+        window.scrollTo(0, 1);
+        }
+        
+        function handleFirstTab(e) {
+          if (e.keyCode === 9) {
+            document.body.classList.add('user-is-tabbing');
+
+            window.removeEventListener('keydown', handleFirstTab);
+            window.addEventListener('mousedown', handleMouseDownOnce);
+          }
+        }
+
+        function handleMouseDownOnce() {
+          document.body.classList.remove('user-is-tabbing');
+
+          window.removeEventListener('mousedown', handleMouseDownOnce);
+          window.addEventListener('keydown', handleFirstTab);
+        }
+
+        window.addEventListener('keydown', handleFirstTab);
+    </script>
+    <style type="text/css">
+        @media print {
+            .main-navi, header, .op-tabwrap, .re-Src-t, .formwrap { display:none; }
+        }
+    </style>
+</head>
+<body>
+   <div class="main-wrap">
+        <nav class="main-navi sm">
+            <ul>
+                <li class="h1title">
+                    <a href="#"><h1>TalkCRM</h1></a>
+                    <button type="button" class="left-arrow"></button>
+                </li>
+                <li>
+                    <a href="reservationfc.html">
+                        <i class="navcal"></i><span>예약관리</span>
+                    </a>
+                </li>
+                <li><a href="front.html"><i class="navfront"></i><span>Front</span></a></li>
+                <li><a href="member.html"><i class="navcust"></i><span>고객관리</span></a></li>
+                <li><a href="member-dt.html" class="nav-aP"><i class="mem"></i><span>고객상세</span></a></li><!-- 20.06.15 추가-->
+                <li class="hassub">
+                    <a href="recall.html"><i class="navrecall"></i><span>리콜관리</span></a>
+                    <button type="button" class="down-arrow"></button>
+                    <ul class="dp2">
+                        <li><a href="recall.html">예약취소리콜</a></li>
+                        <li><a href="recall-2p.html">예약부도리콜</a></li>
+                        <li><a href="recall-3p.html">응대리콜</a></li>
+                        <li><a href="recall-4p.html">확인콜</a></li>
+                        <li><a href="recall-5p.html">해피콜</a></li>
+                        <li><a href="recall-6p.html">상담권유리콜</a></li>
+                        <li><a href="recall-7p.html">소개자리콜</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="navCTI"></i><span>CTI</span></a></li>
+                <li><a href="task.html"><i class="navtask"></i><span>업무관리</span></a></li>
+                <li class="on"><a href="operation.html"><i class="navop"></i><span>경영관리</span></a></li>
+                <li class="hassub">
+                    <a href="setup.html"><i class="navset"></i><span>설정관리</span></a>
+                    <button type="button" class="down-arrow"></button>
+                    <ul class="dp2">
+                        <li><a href="setup.html">기본설정</a></li>
+                        <li><a href="setup-2p.html">예약화면</a></li>
+                        <li><a href="setup-3p.html">진료설정</a></li>
+                        <li><a href="setup-4p.html">문자설정</a></li>
+                        <li><a href="setup-5p.html">병원설정</a></li>
+                        <li><a href="setup-6p.html">직원설정</a></li>
+                        <li><a href="setup-7p.html">펜차트설정</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-footer">
+                <div class="footer-date">
+                    <p>2020.03.28.수요일</p>
+                    <p>오늘 방문자 현황 : <span>50</span>명</p>
+                    <p>오늘 예약 현황 : <span>50</span>건</p>
+                    <p>오늘 리콜 현황 : <span>50</span>건</p>
+                </div>
+                <div class="footer-txt">
+                    <p>[마케팅] 김진수 팀장</p>
+                    <p>Copyright ⓒ 2020 TalkCRM.<br> All rights reserved.</p>
+                </div>
+                <div class="s-footer" style="display: none;">
+                    <p>3월<br>28일</p>
+                    <p>수요일</p>
+                </div>
+            </div>
+            <div class="s-footer">
+                <p>3월<br>28일</p>
+                <p>수요일</p>
+            </div>
+        </nav>
+        <div class="right-main">
+            <header class="clearfix">
+                <div id="space_around">
+                    <div class="around-in">
+                        <div class="head-tit">
+                            <h1>경영관리</h1>
+                        </div>
+                    </div>
+                    <div class="btn3 clearfix">
+                        <button type="button" class="board-b board-btn"><img src="../assets/img/icon_borad.svg" alt=""><span class="bell"></span></button>
+                        <span>|</span>
+                        <button type="button" class="advice-b help-btn"><img src="../assets/img/icon_advice.svg" alt=""></button>
+                        <span>|</span>
+                        <div class="set-box">
+                           <button type="button" class="setup-b"><img src="../assets/img/icon_setup.svg" alt=""></button> 
+                           <ul class="setup-ul">
+                                <li>예약색상</li>
+                                <li>예약문자</li>
+                                <li>휴일설정</li>
+                                <li>예약시간</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="content clearfix">
+                <div class="con-left re-con">
+                    <div class="op-tabwrap">
+                        <ul class="tabUl">
+                            <li data-id="op-tab1" class="on">기간별 매출현황</li>
+                            <li data-id="op-tab2">유입경로별 매출금액</li>
+                            <li data-id="op-tab3">진료항목별 매출</li>
+                            <li data-id="op-tab4">상담사별 매출금액</li>
+                            <li data-id="op-tab5">지정의별 매출금액</li>
+                            <li data-id="op-tab6">상담결과별 건수</li>
+                            <li data-id="op-tab7">상담부위별 상담건수</li>
+                            <li data-id="op-tab8">고객통계</li>
+                        </ul>
+                    </div>
+                    <div class="op-wrap on" id="op-tab1">
+                        <div class="re-con-t clearfix">
+                            <form action="">
+                                <div class="re-Src-t clearfix">
+                                    <table class="t-con-t1">
+                                        <colgroup>
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 6%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>년도별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 ~ 
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년
+                                                </td>
+                                                <th>월별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 
+                                                </td>
+                                                <th>일별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    월
+                                                </td>
+                                                <td rowspan="3" class="btn-td">
+                                                    <button type="button" class="btn-blue2">검색</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>초진/재진</th>
+                                                <td>
+                                                    <input type="radio" name="op-ra1" id="op-ra1"><label for="op-ra1">전체</label>
+                                                    <input type="radio" name="op-ra1" id="op-ra2"><label for="op-ra2">초진</label>
+                                                    <input type="radio" name="op-ra1" id="op-ra3"><label for="op-ra3">재진</label>
+                                                </td>
+                                                <th>성별</th>
+                                                <td>
+                                                    <input type="radio" name="op-ra2" id="op-ra4"><label for="op-ra4">전체</label>
+                                                    <input type="radio" name="op-ra2" id="op-ra5"><label for="op-ra5">남자</label>
+                                                    <input type="radio" name="op-ra2" id="op-ra6"><label for="op-ra6">여자</label>
+                                                </td>
+                                                <th>고객 등급</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">전체</option>
+                                                        <option value="">전체</option>
+                                                        <option value="">전체</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="buttonTable">
+                                       <tr>
+                                           <td>
+                                               <div>
+                                                    <button type="button" class="btn-gray w80px mr10 ex-btn">엑셀저장</button>
+                                                   <a href="javascript:window.print()"><button type="button" class="btn-gray w80px">인쇄</button></a>
+                                                </div>
+                                           </td>
+                                       </tr>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="opTablewrap">
+                           <div class="tab-wrap">
+                               <div class="t-hd-width">
+                               <div class="table-header-bg"></div>
+                               <div class="table-in">
+                                <table class="opTable">
+                                <colgroup>
+                                    <col width="28%">
+                                    <col width="18%">
+                                    <col width="18%">
+                                    <col width="18%">
+                                    <col width="18%">
+                                </colgroup>
+                                <thead class="bgGrey">
+                                    <tr>
+                                        <th rowspan="2" style="width:28%"><div class="th-text db">항목/기간</div></th>
+                                        <th colspan="2" style="width:36%"><div class="th-text bgMint">2019년</div></th>
+                                        <th colspan="2" style="width:36%"><div class="th-text bgBlue">2020년</div></th>
+                                    </tr>
+                                    <tr>
+                                        <th style="width:18%"><div class="th-text">금액</div></th>
+                                        <th style="width:18%"><div class="th-text">건수</div></th>
+                                        <th style="width:18%"><div class="th-text">금액</div></th>
+                                        <th style="width:18%"><div class="th-text">건수</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>카드수납금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>현금수납금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>현금영수수납금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>통장이체금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr class="bgGrey">
+                                        <th>총수납금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>미수금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr class="bgGrey">
+                                        <th>총 실수납금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>환불금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>할인금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>마일리지금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>쿠폰금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr class="bgGrey">
+                                        <th>총추가할인금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr class="bgDgrey">
+                                        <th>총표준금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                               </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="op-wrap" id="op-tab2">
+                        <div class="re-con-t clearfix">
+                            <form action="">
+                                <div class="re-Src-t clearfix">
+                                    <table class="t-con-t1">
+                                        <colgroup>
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 6%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>년도별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 ~ 
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년
+                                                </td>
+                                                <th>월별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 
+                                                </td>
+                                                <th>일별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    월
+                                                </td>
+                                                <td rowspan="3" class="btn-td">
+                                                    <button type="button" class="btn-blue2">검색</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>초진/재진</th>
+                                                <td>
+                                                    <input type="radio" name="op-ra3" id="op-ra7"><label for="op-ra7">전체</label>
+                                                    <input type="radio" name="op-ra3" id="op-ra8"><label for="op-ra8">초진</label>
+                                                    <input type="radio" name="op-ra3" id="op-ra9"><label for="op-ra9">재진</label>
+                                                </td>
+                                                <th>성별</th>
+                                                <td>
+                                                    <input type="radio" name="op-ra4" id="op-ra10"><label for="op-ra10">전체</label>
+                                                    <input type="radio" name="op-ra4" id="op-ra11"><label for="op-ra11">남자</label>
+                                                    <input type="radio" name="op-ra4" id="op-ra12"><label for="op-ra12">여자</label>
+                                                </td>
+                                                <th>고객 등급</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">전체</option>
+                                                        <option value="">전체</option>
+                                                        <option value="">전체</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="buttonTable">
+                                       <tr>
+                                           <td>
+                                               <div>
+                                                    <button type="button" class="btn-gray w80px mr10 ex-btn">엑셀저장</button>
+                                                    <a href="javascript:window.print()"><button type="button" class="btn-gray w80px">인쇄</button></a>
+                                                </div>
+                                           </td>
+                                       </tr>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="opTablewrap">
+                           <div class="tab-wrap">
+                               <div class="t-hd-width">
+                               <div class="table-header-bg"></div>
+                               <div class="table-in">
+                                <table class="opTable">
+                                <colgroup>
+                                    <col width="28%">
+                                    <col width="18%">
+                                    <col width="18%">
+                                    <col width="18%">
+                                    <col width="18%">
+                                </colgroup>
+                                <thead class="bgGrey">
+                                    <tr>
+                                        <th rowspan="2" style="width:28%"><div class="th-text db">유입경로</div></th>
+                                        <th colspan="2" style="width:36%"><div class="th-text bgMint">2019년</div></th>
+                                        <th colspan="2" style="width:36%"><div class="th-text bgBlue">2020년</div></th>
+                                    </tr>
+                                    <tr>
+                                        <th style="width:18%"><div class="th-text">실수납금액</div></th>
+                                        <th style="width:18%"><div class="th-text">백분율</div></th>
+                                        <th style="width:18%"><div class="th-text">실수납금액</div></th>
+                                        <th style="width:18%"><div class="th-text">백분율</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>고객</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>직원</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>업체</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr class="bgGrey">
+                                        <th>소개합계금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>네이버_블러그</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>네이버_오버추어</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>카카오톡</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>굿닥_블러그</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>굿닥_이벤트</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr class="bgGrey">
+                                        <th>경로합계금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr class="bgDgrey">
+                                        <th>총표준금액</th>
+                                        <td>100</td>
+                                        <td>12</td>
+                                        <td>100</td>
+                                        <td>12</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                               </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="op-wrap" id="op-tab3">
+                        <div class="re-con-t clearfix">
+                            <form action="">
+                                <div class="re-Src-t clearfix">
+                                    <table class="t-con-t1">
+                                        <colgroup>
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 6%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>년도별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 ~ 
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년
+                                                </td>
+                                                <th>월별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 
+                                                </td>
+                                                <th>일별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    월
+                                                </td>
+                                                <td rowspan="3" class="btn-td">
+                                                    <button type="button" class="btn-blue2">검색</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>초진/재진</th><!--20.06.29 수정-->
+                                                <td>
+                                                    <input type="radio" name="op-ra5" id="op-ra13"><label for="op-ra13">전체</label>
+                                                    <input type="radio" name="op-ra5" id="op-ra14"><label for="op-ra14">초진</label><!--20.06.29 수정-->
+                                                    <input type="radio" name="op-ra5" id="op-ra15"><label for="op-ra15">재진</label><!--20.06.29 수정-->
+                                                </td>
+                                                <th>성별</th>
+                                                <td>
+                                                    <input type="radio" name="op-ra6" id="op-ra16"><label for="op-ra16">전체</label>
+                                                    <input type="radio" name="op-ra6" id="op-ra17"><label for="op-ra17">남자</label>
+                                                    <input type="radio" name="op-ra6" id="op-ra18"><label for="op-ra18">여자</label>
+                                                </td>
+                                                <th>고객 등급</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">전체</option>
+                                                        <option value="">전체</option>
+                                                        <option value="">전체</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="buttonTable">
+                                       <tr>
+                                           <td>
+                                               <div>
+                                                    <button type="button" class="btn-gray w80px mr10 ex-btn">엑셀저장</button>
+                                                    <a href="javascript:window.print()"><button type="button" class="btn-gray w80px">인쇄</button></a>
+                                                </div>
+                                           </td>
+                                       </tr>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="opTablewrap">
+                           <div class="tab-wrap big">
+                               <div class="t-hd-width">
+                               <div class="table-header-bg"></div>
+                               <div class="table-in">
+                                <table class="opTable">
+                                <thead class="bgGrey">
+                                    <tr>
+                                        <th rowspan="2" style="width:24%"><div class="th-text db">진료서비스</div></th>
+                                        <th colspan="5" style="width:38.5%"><div class="th-text bgMint">합계</div></th>
+                                        <th colspan="5" style="width:37.8%"><div class="th-text bgBlue">2020년</div></th>
+                                    </tr>
+                                    <tr>
+                                        <th style="width:9%"><div class="th-text">견적금액</div></th>
+                                        <th style="width:9%"><div class="th-text">결제금액</div></th>
+                                        <th style="width:9%"><div class="th-text">할인금액</div></th>
+                                        <th style="width:5%"><div class="th-text">횟수</div></th>
+                                        <th style="width:6%"><div class="th-text">백분율</div></th>
+                                        <th style="width:9%"><div class="th-text">견적금액</div></th>
+                                        <th style="width:9%"><div class="th-text">결제금액</div></th>
+                                        <th style="width:9%"><div class="th-text">할인금액</div></th>
+                                        <th style="width:5%"><div class="th-text">횟수</div></th>
+                                        <th style="width:6%"><div class="th-text">백분율</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u2차이벤트▶승모근보톡스50u2차이벤트▶승모근보톡스50u</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="op-wrap" id="op-tab4">
+                        <div class="re-con-t clearfix">
+                            <form action="">
+                                <div class="re-Src-t clearfix">
+                                    <table class="t-con-t1">
+                                        <colgroup>
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 6%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>년도별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 ~ 
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년
+                                                </td>
+                                                <th>월별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 
+                                                </td>
+                                                <th>일별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    월
+                                                </td>
+                                                <td rowspan="3" class="btn-td">
+                                                    <button type="button" class="btn-blue2">검색</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>초진/재진</th>
+                                                <td>
+                                                    <input type="radio" name="op-ra7" id="op-ra19"><label for="op-ra19">전체</label>
+                                                    <input type="radio" name="op-ra7" id="op-ra20"><label for="op-ra20">초진</label>
+                                                    <input type="radio" name="op-ra7" id="op-ra21"><label for="op-ra21">재진</label>
+                                                </td>
+                                                <th>성별</th>
+                                                <td>
+                                                    <input type="radio" name="op-ra8" id="op-ra22"><label for="op-ra22">전체</label>
+                                                    <input type="radio" name="op-ra8" id="op-ra23"><label for="op-ra23">남자</label>
+                                                    <input type="radio" name="op-ra8" id="op-ra24"><label for="op-ra24">여자</label>
+                                                </td>
+                                                <th>고객 등급</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">전체</option>
+                                                        <option value="">전체</option>
+                                                        <option value="">전체</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="buttonTable">
+                                       <tr>
+                                           <td>
+                                               <div>
+                                                    <button type="button" class="btn-gray w80px mr10 ex-btn">엑셀저장</button>
+                                                    <a href="javascript:window.print()"><button type="button" class="btn-gray w80px">인쇄</button></a>
+                                                </div>
+                                           </td>
+                                       </tr>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="opTablewrap">
+                           <div class="tab-wrap big">
+                               <div class="t-hd-width">
+                               <div class="table-header-bg"></div>
+                               <div class="table-in">
+                                <table class="opTable">
+                                <thead class="bgGrey">
+                                    <tr>
+                                        <th rowspan="2" style="width:24%"><div class="th-text db">상담사</div></th>
+                                        <th colspan="5" style="width:38.5%"><div class="th-text bgMint">합계</div></th>
+                                        <th colspan="5" style="width:37.8%"><div class="th-text bgBlue">2020년</div></th>
+                                    </tr>
+                                    <tr>
+                                        <th style="width:9%"><div class="th-text">견적금액</div></th>
+                                        <th style="width:9%"><div class="th-text">결제금액</div></th>
+                                        <th style="width:9%"><div class="th-text">할인금액</div></th>
+                                        <th style="width:5%"><div class="th-text">건수</div></th>
+                                        <th style="width:6%"><div class="th-text">백분율</div></th>
+                                        <th style="width:9%"><div class="th-text">견적금액</div></th>
+                                        <th style="width:9%"><div class="th-text">결제금액</div></th>
+                                        <th style="width:9%"><div class="th-text">할인금액</div></th>
+                                        <th style="width:5%"><div class="th-text">건수</div></th>
+                                        <th style="width:6%"><div class="th-text">백분율</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>이지원</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>소미나</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr class="bgDgrey">
+                                        <th>전체합계</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="op-wrap" id="op-tab5">
+                        <div class="re-con-t clearfix">
+                            <form action="">
+                                <div class="re-Src-t clearfix">
+                                    <table class="t-con-t1">
+                                        <colgroup>
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 6%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>년도별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 ~ 
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년
+                                                </td>
+                                                <th>월별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 
+                                                </td>
+                                                <th>일별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    월
+                                                </td>
+                                                <td rowspan="3" class="btn-td">
+                                                    <button type="button" class="btn-blue2">검색</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>초진/재진</th>
+                                                <td>
+                                                    <input type="radio" name="op-ra9" id="op-ra25"><label for="op-ra25">전체</label>
+                                                    <input type="radio" name="op-ra9" id="op-ra26"><label for="op-ra26">초진</label>
+                                                    <input type="radio" name="op-ra9" id="op-ra27"><label for="op-ra27">재진</label>
+                                                </td>
+                                                <th>성별</th>
+                                                <td>
+                                                    <input type="radio" name="op-ra10" id="op-ra28"><label for="op-ra28">전체</label>
+                                                    <input type="radio" name="op-ra10" id="op-ra29"><label for="op-ra29">남자</label>
+                                                    <input type="radio" name="op-ra10" id="op-ra30"><label for="op-ra30">여자</label>
+                                                </td>
+                                                <th>고객 등급</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">전체</option>
+                                                        <option value="">전체</option>
+                                                        <option value="">전체</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="buttonTable">
+                                       <tr>
+                                           <td>
+                                               <div>
+                                                    <button type="button" class="btn-gray w80px mr10 ex-btn">엑셀저장</button>
+                                                    <a href="javascript:window.print()"><button type="button" class="btn-gray w80px">인쇄</button></a>
+                                                </div>
+                                           </td>
+                                       </tr>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="opTablewrap">
+                           <div class="tab-wrap big">
+                               <div class="t-hd-width">
+                               <div class="table-header-bg"></div>
+                               <div class="table-in">
+                                <table class="opTable">
+                                <thead class="bgGrey">
+                                    <tr>
+                                        <th rowspan="2" style="width:24%"><div class="th-text db">상담사</div></th>
+                                        <th colspan="5" style="width:38.5%"><div class="th-text bgMint">합계</div></th>
+                                        <th colspan="5" style="width:37.8%"><div class="th-text bgBlue">2020년</div></th>
+                                    </tr>
+                                    <tr>
+                                        <th style="width:9%"><div class="th-text">견적금액</div></th>
+                                        <th style="width:9%"><div class="th-text">결제금액</div></th>
+                                        <th style="width:9%"><div class="th-text">할인금액</div></th>
+                                        <th style="width:5%"><div class="th-text">건수</div></th>
+                                        <th style="width:6%"><div class="th-text">백분율</div></th>
+                                        <th style="width:9%"><div class="th-text">견적금액</div></th>
+                                        <th style="width:9%"><div class="th-text">결제금액</div></th>
+                                        <th style="width:9%"><div class="th-text">할인금액</div></th>
+                                        <th style="width:5%"><div class="th-text">건수</div></th>
+                                        <th style="width:6%"><div class="th-text">백분율</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>이지원</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>소미나</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>홍길동</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                    <tr class="bgDgrey">
+                                        <th>전체합계</th>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                        <td>1,000,000</td>
+                                        <td>1,200,000</td>
+                                        <td>100,000</td>
+                                        <td>12</td>
+                                        <td>1.2%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="op-wrap" id="op-tab6">
+                        <div class="re-con-t clearfix">
+                            <form action="">
+                                <div class="re-Src-t clearfix">
+                                    <table class="t-con-t1">
+                                        <colgroup>
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 6%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>년도별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 ~ 
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년
+                                                </td>
+                                                <th>월별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 
+                                                </td>
+                                                <th>일별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    월
+                                                </td>
+                                                <td rowspan="3" class="btn-td">
+                                                    <button type="button" class="btn-blue2">검색</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>초진/재진</th>
+                                                <td colspan="5">
+                                                    <input type="radio" name="op-ra11" id="op-ra31"><label for="op-ra31">전체</label>
+                                                    <input type="radio" name="op-ra11" id="op-ra32"><label for="op-ra32">초진</label>
+                                                    <input type="radio" name="op-ra11" id="op-ra33"><label for="op-ra33">재진</label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="buttonTable">
+                                       <tr>
+                                           <td>
+                                               <div>
+                                                    <button type="button" class="btn-gray w80px mr10 ex-btn">엑셀저장</button>
+                                                    <a href="javascript:window.print()"><button type="button" class="btn-gray w80px">인쇄</button></a>
+                                                </div>
+                                           </td>
+                                       </tr>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="opTablewrap">
+                           <div class="tab-wrap">
+                               <div class="t-hd-width">
+                               <div class="table-header-bg one"></div>
+                               <div class="table-in">
+                                <table class="opTable">
+                                <colgroup>
+                                    <col width="36%">
+                                    <col width="28%">
+                                    <col width="36%">
+                                </colgroup>
+                                <thead class="bgGrey">
+                                    <tr>
+                                        <th style="width:36%"><div class="th-text">상담결과</div></th>
+                                        <th style="width:28%"><div class="th-text bgMint">2020년</div></th>
+                                        <th style="width:36%"><div class="th-text bgBlue">합계</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>다시 내원상담</th>
+                                        <td>6</td>
+                                        <td>6 (0.15%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>예약</th>
+                                        <td>12</td>
+                                        <td>12 (0.3%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>리콜</th>
+                                        <td>69</td>
+                                        <td>69 (1.71%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>경과</th>
+                                        <td>100</td>
+                                        <td>100 (2.47%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>상담만</th>
+                                        <td>190</td>
+                                        <td>190 (4.7%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>해피콜</th>
+                                        <td>207</td>
+                                        <td>207 (5.12%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>입력안됨</th>
+                                        <td>576</td>
+                                        <td>576 (14.25%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>당일시술</th>
+                                        <td>2,881</td>
+                                        <td>2,881 (71.29%)</td>
+                                    </tr>
+                                    <tr class="bgDgrey">
+                                        <th>합계</th>
+                                        <td>4,041 (100%)</td>
+                                        <td>4,041 (100%)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                               </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="op-wrap" id="op-tab7">
+                        <div class="re-con-t clearfix">
+                            <form action="">
+                                <div class="re-Src-t clearfix">
+                                    <table class="t-con-t1">
+                                        <colgroup>
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 80px;">
+                                            <col style="width: calc(100% - 80px);">
+                                            <col style="width: 6%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>년도별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 ~ 
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년
+                                                </td>
+                                                <th>월별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 
+                                                </td>
+                                                <th>일별</th>
+                                                <td>
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    년 
+                                                    <select name="" id="">
+                                                        <option value="">2020</option>
+                                                        <option value="">2019</option>
+                                                        <option value="">2018</option>
+                                                    </select>
+                                                    월
+                                                </td>
+                                                <td rowspan="3" class="btn-td">
+                                                    <button type="button" class="btn-blue2">검색</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="buttonTable">
+                                       <tr>
+                                           <td>
+                                               <div>
+                                                    <button type="button" class="btn-gray w80px mr10 ex-btn">엑셀저장</button>
+                                                    <a href="javascript:window.print()"><button type="button" class="btn-gray w80px">인쇄</button></a>
+                                                </div>
+                                           </td>
+                                       </tr>
+                                    </table>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="opTablewrap">
+                           <div class="tab-wrap">
+                               <div class="t-hd-width">
+                               <div class="table-header-bg one"></div>
+                               <div class="table-in">
+                                <table class="opTable">
+                                <colgroup>
+                                    <col width="36%">
+                                    <col width="28%">
+                                    <col width="36%">
+                                </colgroup>
+                                <thead class="bgGrey">
+                                    <tr>
+                                        <th style="width:36%"><div class="th-text">진료항목</div></th>
+                                        <th style="width:28%"><div class="th-text bgMint">2020년</div></th>
+                                        <th style="width:36%"><div class="th-text bgBlue">합계</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>6</td>
+                                        <td>6 (0.15%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>12</td>
+                                        <td>12 (0.3%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>69</td>
+                                        <td>69 (1.71%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>100</td>
+                                        <td>100 (2.47%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>190</td>
+                                        <td>190 (4.7%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>207</td>
+                                        <td>207 (5.12%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>576</td>
+                                        <td>576 (14.25%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>2,881</td>
+                                        <td>2,881 (71.29%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>2,881</td>
+                                        <td>2,881 (71.29%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>2,881</td>
+                                        <td>2,881 (71.29%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>2,881</td>
+                                        <td>2,881 (71.29%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>2,881</td>
+                                        <td>2,881 (71.29%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>2,881</td>
+                                        <td>2,881 (71.29%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>2,881</td>
+                                        <td>2,881 (71.29%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>2,881</td>
+                                        <td>2,881 (71.29%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>2,881</td>
+                                        <td>2,881 (71.29%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>2,881</td>
+                                        <td>2,881 (71.29%)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2차이벤트▶승모근보톡스50u</th>
+                                        <td>2,881</td>
+                                        <td>2,881 (71.29%)</td>
+                                    </tr>
+                                    <tr class="bgDgrey">
+                                        <th>합계</th>
+                                        <td>4,041 (100%)</td>
+                                        <td>4,041 (100%)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                               </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="op-wrap" id="op-tab8">
+                        <div class="formwrap bgGrey pd10">
+                            <form action="">
+                                <label for="">통합고객검색</label>
+                                <select>
+                                    <option>고객명</option>
+                                    <option>전화번호</option>
+                                    <option>주민번호</option>
+                                    <option>고객번호</option>
+                                </select>
+                                <input type="text" id="" placeholder="고객검색">
+                                <button type="button" class="btn-grey">조회</button>
+                                <select class="mr10">
+                                    <option>화면목록</option>
+                                </select>
+                                <select class="mr20">
+                                    <option>예약관리</option>
+                                </select>
+                                <button type="button" class="btn-white ">즐겨찾기 추가</button>
+                            </form>
+                        </div>
+                        <div class="quarter">
+                        <h3>유입경로별 고객수</h3>
+                        <div class="opTablewrap">
+                           <div class="tab-wrap">
+                               <div class="t-hd-width">
+                               <div class="table-header-bg one"></div>
+                               <div class="table-in">
+                                <table class="opTable">
+                                <colgroup>
+                                    <col width="75%">
+                                    <col width="25%">
+                                </colgroup>
+                                <thead class="bgGrey">
+                                    <tr>
+                                        <th style="width:75%"><div class="th-text">구분</div></th>
+                                        <th style="width:25%"><div class="th-text">인원</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>직원소개</th>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <th>간판</th>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>간판(지나가다 보고)</th>
+                                        <td>69</td>
+                                    </tr>
+                                    <tr>
+                                        <th>강남언니 콜</th>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <th>굿닥</th>
+                                        <td>190</td>
+                                    </tr>
+                                    <tr>
+                                        <th>굿닥</th>
+                                        <td>207</td>
+                                    </tr>
+                                    <tr>
+                                        <th>입력안됨</th>
+                                        <td>576</td>
+                                    </tr>
+                                    <tr>
+                                        <th>당일시술</th>
+                                        <td>2,881</td>
+                                    </tr>
+                                    <tr>
+                                        <th>당일시술</th>
+                                        <td>2,881</td>
+                                    </tr>
+                                    <tr>
+                                        <th>당일시술</th>
+                                        <td>2,881</td>
+                                    </tr>
+                                    <tr>
+                                        <th>당일시술</th>
+                                        <td>2,881</td>
+                                    </tr>
+                                    <tr>
+                                        <th>당일시술</th>
+                                        <td>2,881</td>
+                                    </tr>
+                                    <tr>
+                                        <th>당일시술</th>
+                                        <td>2,881</td>
+                                    </tr>
+                                    <tr>
+                                        <th>당일시술</th>
+                                        <td>2,881</td>
+                                    </tr>
+                                    <tr>
+                                        <th>당일시술</th>
+                                        <td>2,881</td>
+                                    </tr>
+                                    <tr>
+                                        <th>당일시술</th>
+                                        <td>2,881</td>
+                                    </tr>
+                                    <tr class="bgBlue">
+                                        <th>합계</th>
+                                        <td>4,041</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                               </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="quarter">
+                        <h3>연령대별 고객수</h3>
+                        <div class="opTablewrap">
+                           <div class="tab-wrap">
+                               <div class="t-hd-width">
+                               <div class="table-header-bg one"></div>
+                               <div class="table-in">
+                                <table class="opTable">
+                                <colgroup>
+                                    <col width="75%">
+                                    <col width="25%">
+                                </colgroup>
+                                <thead class="bgGrey">
+                                    <tr>
+                                        <th style="width:75%"><div class="th-text">구분</div></th>
+                                        <th style="width:25%"><div class="th-text">인원</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>소아</th>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <th>10데</th>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>20대</th>
+                                        <td>69</td>
+                                    </tr>
+                                    <tr>
+                                        <th>30대</th>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <th>40대</th>
+                                        <td>190</td>
+                                    </tr>
+                                    <tr>
+                                        <th>50대</th>
+                                        <td>207</td>
+                                    </tr>
+                                    <tr>
+                                        <th>60대</th>
+                                        <td>576</td>
+                                    </tr>
+                                    <tr>
+                                        <th>70대</th>
+                                        <td>2,881</td>
+                                    </tr>
+                                    <tr>
+                                        <th>80대</th>
+                                        <td>2,881</td>
+                                    </tr>
+                                    <tr>
+                                        <th>90대</th>
+                                        <td>2,881</td>
+                                    </tr>
+                                    <tr>
+                                        <th>미입력</th>
+                                        <td>2,881</td>
+                                    </tr>
+                                    <tr class="bgBlue">
+                                        <th>합계</th>
+                                        <td>4,041</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                               </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="quarter">
+                        <h3>성별 고객수</h3>
+                        <div class="opTablewrap">
+                           <div class="tab-wrap">
+                               <div class="t-hd-width">
+                               <div class="table-header-bg one"></div>
+                               <div class="table-in">
+                                <table class="opTable">
+                                <colgroup>
+                                    <col width="75%">
+                                    <col width="25%">
+                                </colgroup>
+                                <thead class="bgGrey">
+                                    <tr>
+                                        <th style="width:75%"><div class="th-text">구분</div></th>
+                                        <th style="width:25%"><div class="th-text">인원</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>여</th>
+                                        <td>2,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th>남</th>
+                                        <td>2,041</td>
+                                    </tr>
+                                    <tr>
+                                        <th>미입력</th>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr class="bgBlue">
+                                        <th>합계</th>
+                                        <td>4,041</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                               </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="quarter">
+                        <h3>고객등급별 고객수</h3>
+                        <div class="opTablewrap">
+                           <div class="tab-wrap">
+                               <div class="t-hd-width">
+                               <div class="table-header-bg one"></div>
+                               <div class="table-in">
+                                <table class="opTable">
+                                <colgroup>
+                                    <col width="75%">
+                                    <col width="25%">
+                                </colgroup>
+                                <thead class="bgGrey">
+                                    <tr>
+                                        <th style="width:75%"><div class="th-text">구분</div></th>
+                                        <th style="width:25%"><div class="th-text">인원</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>다시 내원상담</th>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <th>예약</th>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <th>리콜</th>
+                                        <td>69</td>
+                                    </tr>
+                                    <tr>
+                                        <th>경과</th>
+                                        <td>100</td>
+                                    </tr>
+                                    <tr>
+                                        <th>상담만</th>
+                                        <td>190</td>
+                                    </tr>
+                                    <tr>
+                                        <th>해피콜</th>
+                                        <td>207</td>
+                                    </tr>
+                                    <tr>
+                                        <th>입력안됨</th>
+                                        <td>576</td>
+                                    </tr>
+                                    <tr>
+                                        <th>당일시술</th>
+                                        <td>2,881</td>
+                                    </tr>
+                                    <tr class="bgBlue">
+                                        <th>합계</th>
+                                        <td>4,041</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                               </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal " id="board-list">
+        <div class="modal-bg"></div>
+        <div class="modalContent md">
+            <header class="modalHd">
+                <h3>게시판</h3>
+                <button class="modalClose"></button>
+            </header>
+            <div class="modalBody">
+                <div class="formwrap bgGrey pd10 Scr-form">
+                    <form action="">
+                        <input type="text" class="input2" id="" placeholder="검색어를 입력하세요.">
+                        <button type="button" class="btn-grey">검색</button>
+                        <button type="button" class="btn-white marL-10 board-write-btn">등록</button>
+                        <button type="button" class="g-color">초기화</button>
+                    </form>
+                </div>
+                <ul class="tableHd">
+                    <li class="Hdtit">제목</li>
+                    <li class="Hdname">등록자</li>
+                    <li class="Hddate">등록일</li>
+                </ul>
+                <div class="wrap height-300">
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                </div>
+                <ul class="pagination">
+                    <li class="page-arrow"><a class="page-link" href="#">≪</a></li>
+                    <li class="page-arrow"><a class="page-link" href="#">＜</a></li>
+                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-arrow"><a class="page-link" href="#">＞</a></li>
+                    <li class="page-arrow"><a class="page-link" href="#">≫</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="modal " id="board-view">
+        <div class="modal-bg"></div>
+        <div class="modalContent md board-con">
+            <header class="modalHd ">
+                <h3>게시판</h3>
+                <button class="modalClose"></button>
+            </header>
+            <div class="modalBody">
+                <ul class="tableHd">
+                    <li class="Hdtit">개발 상황 안내 - 2020년 1월 20일 현재</li>
+                    <li class="Hdname">등록자 <span>차명일</span></li>
+                </ul>
+                <div class="wrap">
+                    <div class="txt-box">
+                        오늘 오전에 서버에 “오토스케일링” 기능 적용을 시도 하다 중단 했습니다.<br> 위 기능은, 마치 풍선처럼, 필요에 따라 서버 용량을 늘일 수 있는 기능 입니다.<br> 더욱 쾌적한 사용자 환경을 제공하기 위한 노력의 일환 입니다.<br> 지난 몇 주간 미국 마이크로소프트 Auzer 개발팀 지원을 받아, 오늘 오전에 위 기능을 적용 했습니다만, 예상하지 못 했던 문제가 생겨서 11시경에 적용을 중단 했습니다.<br> 1~2주 정도 더 준비를 해서 다시 적용 하려고 합니다.<br> 사용자 환경을 개선하기 위해서 계속 노력하겠습니다. <br><br>오늘 오전에 서버에 “오토스케일링” 기능 적용을 시도 하다 중단 했습니다.<br> 위 기능은, 마치 풍선처럼, 필요에 따라 서버 용량을 늘일 수 있는 기능 입니다.<br> 더욱 쾌적한 사용자 환경을 제공하기 위한 노력의 일환 입니다.<br> 지난 몇 주간 미국 마이크로소프트 Auzer 개발팀 지원을 받아, 오늘 오전에 위 기능을 적용 했습니다만, 예상하지 못 했던 문제가 생겨서 11시경에 적용을 중단 했습니다. 1~2주 정도 더 준비를 해서 다시 적용 하려고 합니다.<br> 사용자 환경을 개선하기 위해서 계속 노력하겠습니다.
+                        
+                    </div>
+                    <ul class="tableFt">
+                        <li class="Ftdate">등록일 <span>2020-03-20</span></li>
+                        <li class="Ftbtn"><button class="btn-white list-btn">목록</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal " id="board-write">
+        <div class="modal-bg"></div>
+        <div class="modalContent md board-con">
+            <header class="modalHd">
+                <h3>게시판</h3>
+                <button class="modalClose"></button>
+            </header>
+            <div class="modalBody">
+                <ul class="tableHd">
+                    <li class="Hdtit">
+                        제목<input type="text" placeholder="제목을 입력하세요." class="input6">
+                    </li>
+                    <li class="Hdname">
+                        등록자<input type="text" placeholder="등록자를 입력하세요." class="input6">
+                    </li>
+                </ul>
+                <div class="wrap">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력하세요." class="txt-box">
+
+                    </textarea>
+                    <ul class="tableFt">
+                        <li class="Ftbtn"><button class="btn-white">취소</button></li>
+                        <li class="Ftbtn"><button class="btn-grey list-btn">목록</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal " id="help">
+        <div class="modal-bg"></div>
+        <div class="modalContent md">
+            <header class="modalHd">
+                <h3>도움말</h3>
+                <button class="modalClose"></button>
+            </header>
+            <div class="modalBody">
+                <div class="formwrap bgGrey pd10 Scr-form">
+                    <form action="">
+                        <input type="text" class="input2" id="" placeholder="검색어를 입력하세요.">
+                        <button type="button" class="btn-grey">검색</button>
+                        <button type="button" class="g-color">초기화</button>
+                        <span class="help-f-span">구분</span>
+                        <select name="" id="">
+                            <option value="">펜차트</option>
+                            <option value="">펜차트</option>
+                            <option value="">펜차트</option>
+                        </select>
+                    </form>
+                </div>
+                <ul class="tableHd">
+                    <li class="Hdtit">제목</li>
+                    <li class="Hdname">등록자</li>
+                    <li class="Hddate">등록일</li>
+                </ul>
+                <div class="wrap height-300">
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                    <ul class="tableBody">
+                        <li>개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내 - 2020년 1월 20일 현재 개발 상황 안내</li>
+                        <li>차명일</li>
+                        <li>2020-03-20</li>
+                    </ul>
+                </div>
+                <ul class="pagination">
+                    <li class="page-arrow"><a class="page-link" href="#">≪</a></li>
+                    <li class="page-arrow"><a class="page-link" href="#">＜</a></li>
+                    <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-arrow"><a class="page-link" href="#">＞</a></li>
+                    <li class="page-arrow"><a class="page-link" href="#">≫</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="modal " id="help-view">
+        <div class="modal-bg"></div>
+        <div class="modalContent md board-con">
+            <header class="modalHd ">
+                <h3>도움말</h3>
+                <button class="modalClose"></button>
+            </header>
+            <div class="modalBody">
+                <ul class="tableHd">
+                    <li class="Hdtit">개발 상황 안내 - 2020년 1월 20일 현재</li>
+                    <li class="Hdname">구분 <span>펜차트</span></li>
+                </ul>
+                <div class="wrap helf-v">
+                    <div class="txt-box">
+                        오늘 오전에 서버에 “오토스케일링” 기능 적용을 시도 하다 중단 했습니다.<br> 위 기능은, 마치 풍선처럼, 필요에 따라 서버 용량을 늘일 수 있는 기능 입니다.<br> 더욱 쾌적한 사용자 환경을 제공하기 위한 노력의 일환 입니다.<br> 지난 몇 주간 미국 마이크로소프트 Auzer 개발팀 지원을 받아, 오늘 오전에 위 기능을 적용 했습니다만, 예상하지 못 했던 문제가 생겨서 11시경에 적용을 중단 했습니다.<br> 1~2주 정도 더 준비를 해서 다시 적용 하려고 합니다.<br> 사용자 환경을 개선하기 위해서 계속 노력하겠습니다. <br><br>오늘 오전에 서버에 “오토스케일링” 기능 적용을 시도 하다 중단 했습니다.<br> 위 기능은, 마치 풍선처럼, 필요에 따라 서버 용량을 늘일 수 있는 기능 입니다.<br> 더욱 쾌적한 사용자 환경을 제공하기 위한 노력의 일환 입니다.<br> 지난 몇 주간 미국 마이크로소프트 Auzer 개발팀 지원을 받아, 오늘 오전에 위 기능을 적용 했습니다만, 예상하지 못 했던 문제가 생겨서 11시경에 적용을 중단 했습니다. 1~2주 정도 더 준비를 해서 다시 적용 하려고 합니다.<br> 사용자 환경을 개선하기 위해서 계속 노력하겠습니다.
+                        오늘 오전에 서버에 “오토스케일링” 기능 적용을 시도 하다 중단 했습니다.<br> 위 기능은, 마치 풍선처럼, 필요에 따라 서버 용량을 늘일 수 있는 기능 입니다.<br> 더욱 쾌적한 사용자 환경을 제공하기 위한 노력의 일환 입니다.<br> 지난 몇 주간 미국 마이크로소프트 Auzer 개발팀 지원을 받아, 오늘 오전에 위 기능을 적용 했습니다만, 예상하지 못 했던 문제가 생겨서 11시경에 적용을 중단 했습니다.<br> 1~2주 정도 더 준비를 해서 다시 적용 하려고 합니다.<br> 사용자 환경을 개선하기 위해서 계속 노력하겠습니다. <br><br>오늘 오전에 서버에 “오토스케일링” 기능 적용을 시도 하다 중단 했습니다.<br> 위 기능은, 마치 풍선처럼, 필요에 따라 서버 용량을 늘일 수 있는 기능 입니다.<br> 더욱 쾌적한 사용자 환경을 제공하기 위한 노력의 일환 입니다.<br> 지난 몇 주간 미국 마이크로소프트 Auzer 개발팀 지원을 받아, 오늘 오전에 위 기능을 적용 했습니다만, 예상하지 못 했던 문제가 생겨서 11시경에 적용을 중단 했습니다. 1~2주 정도 더 준비를 해서 다시 적용 하려고 합니다.<br> 사용자 환경을 개선하기 위해서 계속 노력하겠습니다.
+                    </div>
+                    <ul class="tableFt">
+                        <li class="Ftbtn"><button class="btn-white help-btn">목록</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal " id="excel-save">
+        <div class="modal-bg"></div>
+        <div class="modalContent xs board-con">
+            <header class="modalHd ">
+                <h3>내용이 엑셀파일로 저장됩니다. (다운로드 폴더)</h3>
+                <button class="modalClose"></button>
+            </header>
+            <div class="modalBody">
+                <div class="save-box">
+                    <div>파일명</div>
+                    <input type="text" value="경영관리_20200305.xlsx">
+                    <button type="button" class="btn-grey">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        $(function() { 
+                $.datepicker.setDefaults({
+                    dateFormat: 'yy-mm-dd',
+                    showMonthAfterYear:true,
+                    monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                    dayNamesMin: ['일','월','화','수','목','금','토'],
+                    dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
+                    numberOfMonths: [1,1],
+                });
+                $(".date_pick").datepicker();                    
+            });
+    </script>
+</body>
+</html>

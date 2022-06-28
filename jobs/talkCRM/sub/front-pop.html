@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>TalkCRM front</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../assets/js/kcalander_script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script> 
+    <!-- 달력 사용시 필요 -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <!-- <link href="../assets/css/common.css" rel="stylesheet" type="text/css"> -->
+    
+    <link href="../assets/css/header.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        window.addEventListener("load", function(){
+        setTimeout(loaded, 100);
+
+        }, false);
+
+        function loaded(){
+        window.scrollTo(0, 1);
+        }
+        
+        function handleFirstTab(e) {
+          if (e.keyCode === 9) {
+            document.body.classList.add('user-is-tabbing');
+
+            window.removeEventListener('keydown', handleFirstTab);
+            window.addEventListener('mousedown', handleMouseDownOnce);
+          }
+        }
+
+        function handleMouseDownOnce() {
+          document.body.classList.remove('user-is-tabbing');
+
+          window.removeEventListener('mousedown', handleMouseDownOnce);
+          window.addEventListener('keydown', handleFirstTab);
+        }
+
+        window.addEventListener('keydown', handleFirstTab);
+    </script>
+    <style type="text/css">
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 14px;
+            line-height: normal;
+            color: #333;
+            letter-spacing: -0.5px;
+            -webkit-overflow-scrolling: touch;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #ddd;
+            font-size: 9px;
+        }
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+        .paper2 {
+            width: 80mm;
+            /* min-height: 297mm; */
+            /* height: 297mm; */
+            padding: 5mm;
+            margin: 10mm auto;
+            border-radius: 0px;
+            background: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            padding: 0;
+            border: 1px solid #333 ;
+            min-height: 257mm;
+        }
+        .mb10 {
+            margin-bottom: 15px;
+        }
+        .mt20 {
+            margin-top: 20px;
+        }
+        @media print {
+            html, body {
+                width: 80mm;
+                background: #fff;
+            }
+            .paper2 {
+                margin: 0;
+                border: initial;
+                border-radius: initial;
+                width: initial;
+                min-height: initial;
+                box-shadow: initial;
+                background: initial;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="paper2">
+        <div class="mb10">
+            <p>[내원시간]</p>
+            <p>2020.05.06.오후 3:32</p>
+        </div>
+        <div class="mb10">
+            <p>[고객정보]</p>
+            <p>131313131313 <span>ㅣ</span> 김성경 <span>ㅣ</span> 010-1234-1234</p>
+        </div>
+        <div class="mb10">
+            <p>[상담정보]</p>
+            <p>쁘티시술5월이벤트 필러 (조끔)<br>쁘티시술5월이벤트, 스킨<br>쁘티시술_필러윤관터칭</p>
+            <p class="mt20">사진촬영할 필요없고 처방전 안내 하고 실리프팅 처음</p>
+        </div>
+        <div class="mb10">
+            <p>[진료차트]</p>
+            <p>쁘티시술5월이벤트 필러 /미지정/미지정/미지정<br>쁘티시술5월이벤트, 스킨 /미지정/미지정/미지정<br>쁘티시술_필러윤관터칭 /미지정/미지정/미지정</p>
+        </div>
+    </div>
+</body>
+</html>

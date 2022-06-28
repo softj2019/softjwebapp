@@ -1,0 +1,362 @@
+.fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {/*20.06.19 수정 ~*/
+    float: left;
+    font-size: 14px;
+    display: block;
+    overflow: hidden;
+    width: 10px;
+    height: 20px;
+    cursor: pointer/*20.07.31 추가*/
+}/* ~ */
+.fc-row.fc-rigid .fc-content-skeleton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    line-height: 20px;
+}
+.fc-widget-header {
+    border-right: none !important;
+}
+.fc-widget-header:first-child {
+    border-left: none !important;
+}
+.fc-view-container {
+    position: relative;
+    overflow: auto;
+}
+.fc-view, .fc-view > table {
+    position: relative;
+    z-index: 1;
+    min-width: 1500px;
+}
+.fc-event, .fc-event:hover {
+    color: #856404;
+    text-decoration: none;
+}
+.fc-event, .fc-event-dot {
+    background-color: #FFF3CD;
+}
+.fc-event {
+    position: relative;
+    display: block;
+    font-size: 0.85em;
+    line-height: 1.4;
+    border-radius: 0px;
+    border: 1px solid #ccc;
+    border-left: 3px solid #FFC107;
+}
+.fc-time-grid-event-inset {
+    -webkit-box-shadow: 0px 0px 0px 0px #fff;
+    box-shadow: 0px 0px 0px 0px #fff;
+}
+/* 20.06.12 수정47 ~ 79*/
+.fc-dayGrid-view .fc-body .fc-row {
+    min-height: 10.5em;
+}
+.fc-title>img{/*20.07.29 수정 55~60*/
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: -4px;
+}
+.fc-time-grid-event .fc-time {
+    font-size: 1em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* display: -webkit-box; */
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.fc-unthemed td {
+    height: 0;
+    border-color: #ccc;
+}
+.fc-unthemed .fc-row .fc-day-number {
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    line-height: normal;
+    padding: 5px;
+}
+/* ~ */
+.fc-event {
+    position: relative;
+    display: block;
+    font-size: 12px;
+    line-height: 1.4;
+    border-radius: 0px;
+    border-top: 1px solid #ccc !important;/*20.06.19 수정~*/
+    border-right: 1px solid #ccc !important;
+    border-bottom: 1px solid #ccc !important;
+    border-left: 4px solid #FFC107;/*~*/
+}
+/* 20.06.17 수정 데이터피커 */ 
+.releft-t .ui-datepicker {
+    width: 15em;
+    height: 240px;
+    padding: .2em .2em 0;
+    display: none;
+    border: none;
+}
+.releft-t .ui-datepicker-calendar thead{
+    display: none;
+}
+.releft-t .reserv-con .releft-t tbody td {
+    position: relative;
+    padding: 5px 0px;
+    cursor: pointer;
+}
+.releft-t .ui-datepicker .ui-datepicker-title {
+    margin: 0 2.3em;
+    line-height: 1.8em;
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    font-weight: 400;
+}
+/* .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    display: none;
+} */
+
+/*20.06.17 
+.ui-datepicker .ui-datepicker-next {
+    right: 2px;
+    background: url(../img/calendar_arrow_R_grey.png)no-repeat center / 10px;
+}
+*/
+.releft-t .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    width: 25px;
+    border-radius: 50px;
+    background: #2bc8ad!important;/*20.07.30 수정*/
+    color: #fff;
+    font-weight: 400;
+    height: 25px;
+    margin: 0 auto;
+}
+.fc-more-cell {
+    line-height: 18px;
+}
+/*일자공지*/
+.res-f{
+    position:absolute;
+    top:52px;
+}
+.res-t.on .fc-view-container {
+    margin-top: 68px;
+}
+.r-calander td{
+    height:40px!important;
+    vertical-align: inherit!important;
+}
+.ul-tab-box, .tab-btn{
+    position: relative;
+    z-index: 2;
+}
+
+/*left-con datepicker*/
+.releft-t .ui-state-active,
+.releft-t .ui-widget-content .ui-state-active,
+.releft-t .ui-widget-header .ui-state-active{
+    line-height:18px;
+    padding-right:4px;
+    width:25px;
+}
+.reserv-con .releft-t tbody td{
+    width:32px;
+}
+.releft-t .ui-datepicker-today a::before{
+    content:'';
+    display:block;
+    position: absolute;
+    left: 14px;
+    top: 3px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background: red;
+}
+
+.releft-t .ui-datepicker .ui-datepicker-prev span{
+    background: url(../img/calendar_arrow_L_navy.png) no-repeat center / contain;
+}
+.releft-t .ui-datepicker .ui-datepicker-next span {
+    background: url(../img/calendar_arrow_R_navy.png) no-repeat center / contain;
+}
+.releft-t .ui-datepicker .ui-datepicker-prev,
+.releft-t .ui-datepicker .ui-datepicker-next{
+    height:35px
+}
+.releft-t .ui-datepicker-week-end:nth-of-type(1) a{
+    color:red;
+}
+.releft-t .ui-datepicker-week-end:nth-of-type(1).ui-datepicker-current-day a{
+    color:#ffffff;
+}
+.releft-t .ui-datepicker .ui-datepicker-header{
+    margin:6px 0;
+}
+.fc-icon-chevron-left:before, .fc-icon-chevron-right:before{
+    width:20px;
+}
+.r-calander .ui-datepicker-calendar{
+    margin:0 32px;
+    width:calc(100% - 64px);
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+}
+.r-calander .ui-datepicker-header{
+    position: absolute;
+    width: 100%;
+    padding: 0;
+}
+.r-calander .ui-widget-header a.ui-corner-all{
+    position: absolute;
+    top:0;
+    width: 32px;
+    height: 41px;
+    border: 1px solid #ccc;
+    opacity: 1;
+    border-radius: 0;
+}
+.r-calander .ui-widget-header a.ui-corner-all:first-child{
+    border-right:0px;
+}
+.r-calander .ui-widget-header a.ui-corner-all span{
+    display:none;
+}
+.r-calander .ui-widget-header .ui-datepicker-prev{
+    left:0;
+    background: #f0f0f0 url(../img/calendar_arrow_L_grey.png) no-repeat center / 10px;
+}
+.r-calander .ui-widget-header .ui-datepicker-next{
+    right:0;
+    background:#f0f0f0 url(../img/calendar_arrow_R_grey.png) no-repeat center / 10px;
+}
+.r-calander .ui-widget-header .ui-datepicker-title{
+    display:none;
+}
+.r-calander .ui-datepicker-calendar tr {
+    float: left;
+}
+.r-calander td:not(.ui-datepicker-other-month) {
+/*            width: calc((1440px / 30) )!important;*/
+    border-top:0;
+    border-bottom:0;
+    border-right:0;
+}
+.r-calander td:last-child:not(.ui-datepicker-other-month){
+    border-right:0;
+}
+.r-calander .ui-datepicker{
+    border:none;
+    padding:0;
+    width:100%;
+}
+.r-calander table thead{
+    display: none;
+}
+.r-calander>table{
+    display:none;
+}
+.r-calander .ui-datepicker-other-month{
+    display:none;
+}
+.r-calander .ui-state-active{
+    padding:0;
+}
+.r-calander .ui-datepicker-week-end a{
+    color:#E85B5B;
+}
+.r-calander .ui-datepicker-week-end:nth-child(7n) a{
+    color:#5B8AE8;
+}
+.r-calander .ui-datepicker-current-day{
+    background:#2bc8ad;
+    border-color:#2bc8ad;
+}
+.r-calander .ui-datepicker-today a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 45%;
+    top: 3px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background: #E85B5B;
+}
+/*표높이*/
+.res-t.on .fc-time-grid-container, .res-t.on .fc-day-grid-container{
+    height:662px!important;
+}
+.res-t.on .fc-view-container.on .fc-time-grid-container,
+.res-t.on .fc-view-container.on .fc-day-grid-container{
+    height:510px!important;
+}
+.res-t.on .fc-view-container{
+    margin-top:68px;
+}
+.res-t.on .fc-view-container.on{
+    margin-top:220px;
+}
+/* 20.06.19 추가 */
+.fc-day-top.fc-sun .fc-day-number,.fc-day-header.fc-sun span{
+    color: #E85B5B;
+}
+.fc-day-top.fc-sat .fc-day-number,.fc-day-header.fc-sat span {
+    color: #5B8AE8;
+}
+.fc-day-header.fc-sun.fc-past span, .fc-day-header.fc-sat.fc-future span,.fc-day-header.fc-widget-header.fc-sun.fc-future span{
+    color: #333;
+}/*20.07.14 수정*/
+
+.hidden{
+    display: none!important;
+}
+/*20.07.30 추가*/
+.r-calander {
+    padding-left: 80px;
+}
+.r-calander .ui-datepicker-header{
+    width: calc(100% - 80px)
+}
+.r-calander .ui-widget-header .ui-datepicker-title {
+    display: block;
+    position: absolute;
+    left: -80px;
+    width: 80px;
+    height: 41px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-right: none;
+    line-height: 40px;
+    color: #666;
+    font-size: 18px;
+    font-weight: 400;
+}
+.r-calander .ui-datepicker-year{
+    display:none;
+}
+.r-calander .ui-datepicker-month{
+    position:absolute;
+    width:100%;
+    left:0;
+}
+.releft-t a.restDay{
+    border-radius: 50px;
+    background:#F0F0F0;
+    height:25px;
+    width:25px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 18px;
+    padding-right: 4px;
+    margin:1px auto 0;
+}
+.r-calander a.restDay{
+    background:#f0f0f0;
+    line-height: 33px;
+}

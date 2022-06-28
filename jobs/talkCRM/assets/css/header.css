@@ -1,0 +1,799 @@
+/* header */
+.right-main header {
+    width: 100%;
+    background: #EDEFF3;
+    color: #333333;
+}
+header #space_around{
+    width: 100%;
+    padding: 10px 0px 10px;/*2020.05.19 수정*/
+    justify-content: space-between;
+    display: flex;
+}
+header > div > div {
+    display: flex;
+    padding-left: 0px;
+}
+header button {
+    height: 36px;
+    text-align: center;
+    line-height: 0px;
+    padding: 0px;
+}
+/* 05.21 수정 */
+header h1 {
+    font-size: 20px;
+    line-height: 58px;
+    width: auto;
+}
+header .head-tit {
+    margin-right: 36px;
+}
+header .form-box {
+    margin-top: 10px;
+    padding-left: 20px;
+    width: auto;
+}
+/* ~ */
+header .btn1 {
+    padding: 10px 0 0 30px;
+}
+header .btn1 button {
+    color: #666666;
+}
+header .btn2 {
+    margin-left: 30px;
+    margin-top: 10px;
+    width: auto;
+}
+header .form-box select {
+    display: block;
+    width: 110px;
+    height: 40px;
+    float: left;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    font-size: 14px;
+    color: #666666;
+    padding-left: 10px;
+    font-weight: 400;
+    border: 1px solid #CCCCCC;
+}
+header .form-box form input[type="text"]{
+    width: 150px;
+    height: 40px;
+    border: 1px solid #CCCCCC;
+    border-left: none;
+    padding-left: 10px;
+    font-weight: 400;
+    color: #CCCCCC;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    
+}
+header .form-box form .reseSrc-btn {
+    margin-left: 10px;
+    border-left: 1px solid #cccccc !important;
+}
+
+header .form-box form input[type="submit"] {
+    width: 80px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    background: #384253;
+    color: #fff;
+    display: block;
+    float: left;
+}
+header .form-box form input::placeholder {
+    color: #CCCCCC;
+    font-size: 14px;
+}
+.btn1 button{
+    font-size: 14px;
+}
+.btn1 button:not(:last-child)::after {
+    content: "|";
+    display: inline-block;
+    color: #CCCCCC;
+    height: 15px;
+    width: 1px;
+    line-height: 15px;
+    margin: 0 19px;
+}
+.btn1 .msg-btn span,.btn1 .call-btn span{
+    color: #548BC7;
+}
+.btn1 button img {
+    vertical-align: -3px;
+    margin-right: 5px;
+}
+header .btn2 img {
+    margin-right: 5px;
+}
+header .btn2 .imgUp-btn img {
+    width:16px;
+    height:16px;
+    vertical-align: -2px;
+}
+header .btn2 button{
+    height: 40px;
+    margin-right: 10px;
+    color: #fff;
+    border: 1px solid #2BC8AD;
+    background: #2BC8AD;
+    padding: 0 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+header .btn2 .board-b {
+    color: #2BC8AD;
+    border: 1px solid #2BC8AD;
+    background: white;
+}
+header .btn2 .ex-btn {
+    color: #666666;
+    border: 1px solid #cccccc;
+    background: white;
+}
+header .btn2 select {
+    width: 180px;
+    height: 40px;
+    padding: 10px 3px 10px 10px;
+    vertical-align: 1.5px;
+}
+header .btn3 {
+   margin-top: 10px;
+}
+header .btn3 .board-b{
+    position: relative;
+}
+header .btn3 button .bell {
+    position: absolute;
+    right: -2px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: #E85B5B;
+} 
+.btn3 > span {
+    display: inline-block;
+    color: #CCCCCC;
+    height: 15px;
+    width: 1px;
+    line-height: 27px;
+    margin: 3px 27px;
+}
+/* nav 2020.05.15 전체삭제*/
+@media screen and (min-width:1600px) and (max-width:1850px){  
+    .head-tit{
+        white-space: nowrap;
+    }
+    header .form-box select{
+        width:92px
+    }
+    header .form-box form input[type="text"]{
+        width:100px;
+    }
+    /* 05.25 삭제 */
+    /* header .form-box form input[type="submit"]{
+        width:60px;
+    } */
+    /* ~ */
+    header .form-box form .reseSrc-btn + input{
+        width: 70px;
+    }
+    header > div div:nth-child(1) {
+        margin-right: 0px;
+    }
+    header .btn1 button:not(:last-child)::after{
+        margin:0 13px;
+    }
+    header .btn3 > span {
+        margin: 3px 17px;
+    }
+
+    
+}
+@media screen and (max-width:1600px){
+    .right-main header{
+        min-width:1120px;
+    }
+    header .btn1 button:not(:first-child){
+        width:30px;
+    }
+    header .btn1 button span{
+        display:none;
+    }
+    header .btn1 button:not(:first-child)::after{
+        display: none;
+    }
+    header .btn2 button{
+        width:44px;
+        padding:0!important;
+    }
+    header .btn2 .ex-btn {
+        width: 83px;
+    }
+    header .btn2 button span{
+        display:none;
+    }
+    header .btn2 img{
+        margin:0;
+    }
+    /* 05.25 수정 */
+    header .btn3 .bas-view, header .btn3 .hor-view{
+        width: 24px;
+        overflow: hidden;
+    }
+    /* ~ */
+    header .btn2 select {
+        width: 100px;
+    }
+    header .form-box select{
+        width:92px
+    }
+    header .form-box form input[type="text"]{
+        width:100px;
+    }
+    header .btn3 > span {
+        margin: 3px 19px;
+    }
+    /* 05.25 추가 수정 */
+    header .head-tit {
+        margin-right: 0px;
+    }
+    header .form-box {
+        padding-left: 20px;
+    }
+    .select {
+        min-width: 135px !important;
+        max-width: 135px;
+    }
+    header .form-box form input[type="submit"]{
+        width:70px;
+    }
+    header .btn2 {
+        margin-left: 10px;
+    }
+    /* ~ */
+}
+
+.main-navi{
+    width: 200px;
+    min-height: 100%;
+    background: #323D49;
+    position: absolute;
+    left: 0;
+    z-index: 99;
+}
+.main-navi>ul{
+    margin-bottom:260px;
+}
+.h1title{
+    position:relative;
+    width: 100%;
+    height:80px!important;
+    padding:31px 20px;
+    background-color: #47515C;
+}
+.h1title h1{
+    width:110px;
+    height:18px;
+    background:url(../img/one_logo.svg);
+    white-space: nowrap;
+    text-indent: 100%;
+    overflow: hidden;
+}
+.main-navi .h1title a{
+    padding:0!important;
+    vertical-align: 20px;
+    width:auto;
+}
+.h1title .left-arrow{
+    position: absolute;
+    top:29px;
+    right:15px;
+    width:15px;
+    height:22px;
+    padding:0;
+    background:url(../img/logo_right.svg) no-repeat ;
+}
+.main-navi a{
+    color:#cccccc;
+    font-size: 16px;
+}
+.main-navi>ul>li{
+    position: relative;
+    line-height: 60px;
+}
+.main-navi>ul>li>a{
+    display: inline-block;
+    width:200px;
+    padding: 0 12px 0 20px;
+}
+.main-navi li.hassub>a{
+    width:146px;
+}
+.main-navi>ul>li.on{/*20.06.18 수정*/
+    background:#2BC8AD;
+}
+.main-navi li.on>a, li.hassub.hover>a {
+    color: #fff;
+}
+.main-navi>ul>li:not(.h1title):not(.on):not(.hover):hover, li.hassub.hover{/*20.06.18 수정*/
+    background:rgba(43, 200, 173, 0.3);
+}
+.main-navi .dp2 {
+    display:none;
+    padding:7px;
+    padding-left: 33px;
+    width: 200px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #CCCCCC;
+    background: #5a667b;
+    overflow: hidden;
+}
+.main-navi .dp2 li::before{
+    content:'·';
+    position:relative;
+    right:12px;
+}
+.main-navi .dp2 li a{
+    display:inline-block;
+    width:90%;
+}
+.main-navi .dp2 li:hover a{
+    color:#ffffff;
+}
+.footer-txt p:nth-of-type(2){
+    font-size: 12px;
+}
+.main-navi li a i{
+    display: inline-block;
+    width: 20px;
+    /* 05.25 height 수정 */
+    height: 21px;
+    vertical-align: -4px;
+    margin-right: 30px;
+}
+i[class*="nav"]{
+    background-size:100%!important;
+    background-repeat: no-repeat!important;
+}
+i.navcal{
+    background:url(../img/gnb_cal.png)
+}
+i.navfront{
+    background:url(../img/gnb_front.png)
+}
+i.navcust{
+    background:url(../img/gnb_user.png)
+}
+i.navrecall{
+    background:url(../img/gnb_recall.png)
+}
+i.navCTI{
+    background:url(../img/gnb_CTI.png)
+}
+i.navtask{
+    background:url(../img/gnb_task.png)
+}
+i.navop{
+    background:url(../img/gnb_operation.png)
+}
+i.navset{
+    background:url(../img/gnb_set.png)
+}
+/* 20.06.08 추가~ */
+i.mem{
+    width: 40px !important;
+    height: 28px !important;
+    margin-right: 15px !important;/*20.06.12 수정*/
+    background: url(../img/gnb_mem_G.png)no-repeat center /contain;
+    vertical-align: -7px !important;
+}
+.on i.mem{/*20.06.12 수정 ~409*/
+    width: 40px !important;
+    height: 28px !important;
+    background: url(../img/gnb_mem_w.png)no-repeat center /contain;
+}
+.nav-aP{
+    padding-left:15px !important;
+}/* ~ */
+.on i.navcal{
+    background:url(../img/gnb_cal-1.png)
+}
+.on i.navfront{
+    background:url(../img/gnb_front-1.png)
+}
+.on i.navcust{
+    background:url(../img/gnb_user-1.png)
+}
+.on i.navrecall{
+    background:url(../img/gnb_recall-1.png)
+}
+.on i.navCTI{
+    background:url(../img/gnb_CTI-1.png)
+}
+.on i.navtask{
+    background:url(../img/gnb_task-1.png)
+}
+.on i.navop{
+    background:url(../img/gnb_operation-1.png)
+}
+.on i.navset{
+    background:url(../img/gnb_set-1.png)
+}
+.main-navi .dp2.on{
+    display:block;
+}
+/* 05.25 png로 수정 */
+.hassub button.down-arrow {
+    width: 51px;
+    height: 60px;
+    background: url(../img/arrow_down.png) no-repeat center / 14px;
+    vertical-align: -24px;
+}
+.hassub button.up-arrow {
+    width: 51px;
+    height: 60px;
+    background: url(../img/arrow_up.png) no-repeat center / 14px;
+    vertical-align: -24px;
+}
+/* ~ */
+/*nav small*/
+.main-navi.sm{
+    width:70px;
+}
+.sm .h1title{
+    padding:0;
+}
+.sm .h1title h1{
+    width:70px;
+    height:80px;
+    background:url(../img/logo_symbol.svg) no-repeat center center;
+    white-space: nowrap;
+    text-indent: 100%;
+    overflow: hidden;
+}
+.sm .h1title .left-arrow{
+    display:none;
+}
+.main-navi.sm>ul>li>a{
+    padding-left:25px;
+    width:auto;
+}
+.main-navi.sm>ul>li>a span{
+    display:none;
+}
+/* 20.06.18 추가 수정 */
+.main-navi.sm .hassub {
+    position: relative;
+}
+.main-navi.sm .hassub ul {
+    position: absolute;
+    top: 0;
+    left: 70px;
+}
+.main-navi.sm .hassub ul.hover {
+    position: absolute;
+    left: 70px;
+    width:200px;
+}
+.main-navi.sm .hassub.hover .dp2{
+    display:block!important;
+}
+.main-navi.sm .hassub button{
+    display:none;
+}
+.main-navi.sm>ul{
+    margin-bottom:150px;
+}
+.main-navi.sm .nav-footer{
+    display:none;
+}
+/* .main-navi.sm .hassub:hover>a{
+    width:146px;
+}
+.main-navi.sm .hassub:hover a span, .main-navi.sm .hassub:hover button{
+    display:inline-block;
+} */
+.dp2-tit {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 11px 0 10px 20px;
+    background: #2BC8AD;
+    color: #fff;
+    width: 100%;
+}
+.main-navi.sm .hassub.hover .dp2-tit{
+    display:block!important;
+}
+.main-navi .dp2 .dp2-tit::before {
+    display: none;
+}
+.main-navi .dp2 .dp2-tit a {
+    display: inline-block;
+    width: 100%;
+}
+.main-navi .dp2 .dp2-tit a span{
+    color: #fff;
+}
+.main-navi.sm .hassub.hover .dp2-tit + li {
+    padding-top: 60px;
+}
+.dp2-tit i.navrecall{
+    background:url(../img/gnb_recall-1.png)
+}
+.dp2-tit i.navset{
+    background:url(../img/gnb_set-1.png)
+}/* ~ */
+/* f */
+.nav-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:200px;
+    padding: 20px;
+}
+.footer-date {
+    width: 100%;
+    background: #4C5564;
+    color: #fff;
+    padding: 10px;
+}
+.footer-date p {
+    font-weight: 300;
+    line-height: 25px;
+    color:#D9D9D9;
+}
+.footer-date p:nth-of-type(1){
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 400;
+    color:#FFFFFF;
+}
+.footer-txt p:nth-of-type(1) {
+    font-weight: 300;
+    font-size:16px;
+    margin-bottom: 20px;
+}
+.footer-txt p:nth-of-type(2) {
+    color: #999999;
+    font-weight: 300;
+}
+.footer-txt {
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+    padding: 10px 0 0px;
+}
+.s-footer {
+    display:none;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.sm .s-footer{
+    display:block;
+}
+.s-footer p {
+    font-size: 20px;
+    line-height: 22px;
+}
+.s-footer p:nth-child(2){
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.main-navi+.right-main{
+    margin-left:200px;
+    max-width:calc(100% - 200px);
+}
+.main-navi.sm+.right-main{
+    margin-left:70px;
+    max-width:calc(100% - 70px);
+}
+/* 05.25 전체 수정 */
+/* select */
+.select {
+    position: relative;
+    line-height: 40px;
+    z-index: 95;
+    display: inline-block;
+    vertical-align: -16px;
+    background: #fff;
+    min-width: 180px;
+}
+
+.select > a {
+    height: 42px;
+    display:block;
+    border:1px solid #ccc; 
+    padding:0 25px 0 8px; 
+    overflow:hidden;
+    color: #666;
+    
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    max-height: 42px;
+}
+.select > a:after,
+.select > ul > li:first-child:after {
+    display:block; 
+    float:right;
+}
+.select > a:after {
+    content:'';
+    width: 28px;
+    height: 42px;
+    background: url(../img/arrow_g_down.png)no-repeat center / 10px;
+    transform: rotate(0deg);
+    position: absolute;
+    right: 4px;
+    top: 0;
+}
+.select > a.on:after {
+    transform: rotate(180deg);
+}
+.select > ul {
+    position:absolute; 
+    width:100%; 
+    top:41px; 
+    background:#fff; 
+    display:none;
+    border:1px solid #ccc; 
+}
+.select-mem {
+    position: relative;
+    line-height: 38px;
+    z-index: 95;
+    background: #fff;
+    width: 110px;
+    left: 0;
+    float: left;
+}
+.select-mem > a {
+    display:block;
+    border:1px solid #ccc; 
+    padding:0 8px; 
+    overflow:hidden;
+    color: #666;
+}
+.select-mem > a:after {
+    display: block;
+    float: right;
+    content: '';
+    width: 16px;
+    height: 38px;
+    background: url(../img/arrow_g_down.png)no-repeat center / 10px;
+    transform: rotate(0deg);
+}
+.select-mem > a.on:after {
+    transform: rotate(180deg);
+}
+.select-mem > ul > li {
+    cursor:pointer; 
+    padding:0 8px; 
+    /* border:1px solid #ccc;  */
+    background:#F8F8F8;
+    border-top:0;
+    line-height: 40px;
+}
+.select-mem > ul > li *{
+    cursor:pointer; 
+}
+.select-mem > ul {
+    position:absolute; 
+    width:100%; 
+    top:39px; 
+    background:#fff; 
+    display:none;
+    border:1px solid #ccc; 
+}
+.select-mem .on+ul{/*05.25 추가 ~ 655 */
+    display:block;
+}
+.select-mem > ul > li {
+    cursor:pointer; 
+    padding:0 8px; 
+    /* border:1px solid #ccc;  */
+    background:#F8F8F8;
+    border-top:0;}
+.select-mem > ul > li *{
+    cursor:pointer; 
+}
+.select > ul > li span{
+    display: inline-block;
+    margin: 0 5px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #CCCCCC;
+    background: #fff;
+} 
+.select > ul > li label{
+    display:block;
+}
+.select > ul > li input:checked + label > span::before{
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #666;
+    margin: 1px auto;
+} 
+/* ~ */
+/* 설정 */
+/* 05.19 8:00 수정 */
+.set-box {
+    position: relative;
+}
+.setup-ul{
+    display: none;
+    position: absolute;
+    left: -66px;
+    top: 41px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100px;
+    z-index: 93;
+}
+.setup-ul.on{
+    display: block;
+}
+.setup-ul::before{
+    position: absolute;
+    left: 69px;
+    top: -6.5px;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    background: #fff;
+    transform: rotate(45deg);
+}
+.setup-ul li{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+.setup-ul li:hover {
+    color: #548BC7;
+}
+/* 가로/기본 보기 */
+.btn3 .bas-view{
+    margin-right: 10px;
+}
+.btn3 svg {
+    vertical-align: -4px;
+    margin-right: 5px;
+}
+.btn3 svg path{
+    fill: #ccc;
+}
+.btn3 .on svg path{
+    fill: #548BC7;
+}

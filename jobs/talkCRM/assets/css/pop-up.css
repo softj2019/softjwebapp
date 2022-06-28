@@ -1,0 +1,145 @@
+/* 처방전 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    line-height: normal;
+    color: #333;
+    letter-spacing: -0.5px;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+    font-size: 9px;
+}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.paper {
+    width: 210mm;
+    min-height: 297mm;
+    /* height: 297mm; */
+    padding: 20mm; /* set contents area */
+    margin: 10mm auto;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.content {
+    padding: 0;
+    border: 1px solid #333 ;
+    min-height: 257mm;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+    html, body {
+        width: 210mm;
+        min-height: 297mm;
+        background: #fff;
+    }
+    .paper {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+}
+.a4{
+    background: #fff;
+    padding: 3%;
+}
+.a4 > p {
+    text-align: right;
+    margin-bottom: 10px;
+}
+.a4 .h1-tit {
+    font-size: 28px;
+    margin: 20px auto;
+    width: 76px;
+}
+.a4 .p-wrap .ck-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 5px;
+}
+.a4 .p-wrap table {
+    width: 100%;
+    text-align: center;
+}
+.a4 .p-wrap table td{
+    border: 1px solid #707070;
+    height: 30px;
+
+}
+.a4 .p-wrap table .me-he td{
+    height: 25px;
+    font-size: 8px;
+}
+.a4 .p-ck-box {
+    display: flex;
+}
+.a4 .p-ck-box p {
+    margin-right: 10px;
+}
+.a4 .p-ck-box p span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #333;
+    background: url(../img/arrow-down-bk.png) no-repeat center / contain;
+}
+.a4 .ck-box1{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #333;
+    background: #fff url(../img/arrow-down-bk.png) no-repeat center / contain;
+    margin: 0 10px;
+}
+.a4 .gray-bac{
+    background: #F0F0F0;
+    color: #666;
+}
+.a4 .gray-bac2{
+    background: #D9D9D9;
+    color: #666;
+}
+.a4 .text-r{
+    text-align: right;
+}
+.a4 .bor-none td {
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+.a4 .bor-t-n{
+    border-top: none !important;
+}
+.a4 .bor-b-n{
+    border-bottom: none !important;
+}
+.a4 .bor-l-n{
+    border-left: none !important;
+}
+.h-35 {
+    height: 35px !important;
+}
+.h-50 td{
+    height: 50px !important;
+}
+.pad-10{
+    padding-right: 10px;
+}
+table tr td:last-child {
+    border-right: none !important;
+}

@@ -1,0 +1,423 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset= utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=10">
+<title>인터넷끝판왕 온라인 서비스</title>
+<link rel="stylesheet" type="text/css" href="../_css/base_order.css"/>
+<script src='../include/common.js'></script>
+<script src='../include/jquery-1.6.1.min.js'></script>
+<script language="javascript" src="../include/jquery-ui.min.js"></script>
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
+
+<style>
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year { width: 75px; }
+/*input, select, textarea { font-weight:bold; }*/
+</style>
+<script>
+$(document).ready(function(){
+
+		/* jquery달력 Start(20120516) */
+		$("#datepicker" ).datepicker( $.datepicker.regional[ "ko" ] );
+			var clareCalendar = {
+				monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+				dayNamesMin: ['일','월','화','수','목','금','토'],
+				weekHeader: 'Wk',
+				dateFormat: 'yy-mm-dd',
+				autoSize: false,
+				changeMonth: true,
+				changeYear: true,
+				showMonthAfterYear: true,
+				buttonImageOnly: true,
+				buttonText: '달력선택',
+				buttonImage: 'http://www.smartadmin.kr/_image/day.png',
+				showOn: "both",
+				yearRange: '2019:2020',
+				nextText: '다음달',
+				prevText: '이전달'
+			};
+		$("#setupdate").datepicker(clareCalendar);
+		$("img.ui-datepicker-trigger").attr("style","margin-left:5px;cursor:pointer;display:'none'");
+		$("#ui-datepicker-div").hide();
+		/* jquery달력 End */
+	});
+	</script>
+	<script language="javascript">
+<!--
+var isNN = (navigator.appName.indexOf("Netscape") != -1);
+function autoTab(input, len, e){
+    var keyCode = (isNN) ? e.which : e.keyCode;
+    var filter = (isNN) ? [0, 8, 9] : [0, 8, 9, 16, 17, 18, 37, 38, 39, 40, 46];
+    if (input.value.length >= len && !containsElement(filter, keyCode)) {
+        input.value = input.value.slice(0, len);
+        input.form[(getIndex(input) + 1) % input.form.length].focus();
+    }
+    function containsElement(arr, ele){
+        var found = false, index = 0;
+        while (!found && index < arr.length)
+            if (arr[index] == ele)
+                found = true;
+            else
+                index++;
+        return found;
+    }
+    function getIndex(input){
+        var index = -1, i = 0, found = false;
+        while (i < input.form.length && index == -1)
+            if (input.form[i] == input)
+                index = i;
+            else
+                i++;
+        return index;
+    }
+    return true;
+}
+
+function gubun_chg() {
+	if(document.RegFm.gubun[0].checked == true) {
+		document.getElementById("unametitle").innerHTML = "이 름";
+		document.getElementById("birthtitle").innerHTML = "생년월일";
+	} else if(document.RegFm.gubun[1].checked == true) {
+		document.getElementById("unametitle").innerHTML = "사업자명";
+		document.getElementById("birthtitle").innerHTML = "사업자등록번호";
+	}
+}
+function formCheck() {
+	var frm = document.RegFm;
+
+
+	if (!frm.uname.value) {
+	 	alert("가입자이름을 입력하세요.    ");
+	 	frm.uname.focus();
+	 	return false;
+	}
+
+
+	if (!frm.hp.value) {
+			alert("휴대폰 번호를 입력하여 주십시오.     ");
+	 		frm.hp.focus();
+			return false;
+	}
+
+
+	if(!frm.yak_chk.checked){
+		alert("약관 동의서 및 개인정보 취급방침에 동의합니다 에 동의 하셔야 합니다.       ");
+	 	frm.yak_chk.focus();
+		return false;
+	}
+}
+
+function emailCheck(email_address){
+	email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+	if(!email_regex.test(email_address)){
+		return false;
+	}else{
+		return true;
+	}
+}
+
+//  -->
+</script>
+
+<script src='https://spi.maps.daum.net/imap/map_js_init/postcode.v2.js'></script>
+<script>
+    function DaumPostcode() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var fullAddr = ''; // 최종 주소 변수
+                var extraAddr = ''; // 조합형 주소 변수
+
+                // 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                    fullAddr = data.roadAddress;
+
+                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                    fullAddr = data.jibunAddress;
+                }
+
+                // 사용자가 선택한 주소가 도로명 타입일때 조합한다.
+                if(data.userSelectedType === 'R'){
+                    //법정동명이 있을 경우 추가한다.
+                    if(data.bname !== ''){
+                        extraAddr += data.bname;
+                    }
+                    // 건물명이 있을 경우 추가한다.
+                    if(data.buildingName !== ''){
+                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    }
+                    // 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+                    fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+                }
+
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById('zip').value = data.zonecode; //5자리 새우편번호 사용
+                document.getElementById('addr1').value = fullAddr;
+
+                // 커서를 상세주소 필드로 이동한다.
+                document.getElementById('addr2').focus();
+            }
+        }).open();
+    }
+function setbank()
+{
+		RegFm.gbankowner.value = RegFm.bankowner.value;
+		RegFm.gbank.value = RegFm.bank.value;
+		RegFm.gbanknum.value = RegFm.banknum.value;
+
+}
+
+</script>
+
+<style type="text/css" media="print">
+.noprint{ display:none; }
+</style>
+</head>
+
+<body>
+<!-- -->
+<div style="text-align:center;padding-bottom:10px"><img src="../_image/logo_ic.gif" /></div>
+<div style="text-align:center;padding-bottom:10px;color:#ff0000; font-size:36px">SKYLIFE</div>
+<div style="text-align:center;padding-bottom:10px;color:#ff0000; font-size:36px">문의전화: 1644-3047</div>
+<!-- 중앙 -->
+<div class="order">
+<div class="order_900">
+<form name='RegFm' id='RegFm' method='post' action="../form_mail_sky.php"  enctype='multipart/form-data'  onSubmit="return formCheck()">
+	<input type=hidden name='mode' value="add">
+	<input type=hidden name='pidx' value="367">
+	<input type=hidden name='seller' value="decamp19">
+
+<!---->
+
+<!-- -->
+<p><span class="title"><img src="../_image/icon_red.gif">인터넷 신청 정보</p>
+<table width="100%" class="otable3">
+	<tr>
+	  <td class="title">요금제</td>
+	  <td><div style="display:inline-block;padding-right:20px"><input type="radio" name="yakjung" id="yakjung" value="30%할인 요금"> 30%할인 요금</div><div style="display:inline-block;padding-right:20px"><input type="radio" name="yakjung" id="yakjung" value="일반 요금"> 일반 요금</div>
+	</td>
+	</tr>
+<!--업체별 세팅 2019-05-13-->
+	<tr>
+	<td class="title">인터넷 선택</td>
+	<td><div style="display:inline-block;padding-right:20px"><input type="radio" name="internet" id="internet" value="100메가" > 100메가</div><div style="display:inline-block;padding-right:20px"><input type="radio" name="internet" id="internet" value="200메가" > 
+	200메가</div>
+	  <div style="display:inline-block;padding-right:20px"><input type="radio" name="internet" id="internet" value=" 500메가" >  500메가</div><div style="display:inline-block;padding-right:20px"><input type="radio" name="internet" id="internet" value=" 1기가" >  1기가</div></td>
+	</tr>
+
+	<tr>
+	<td rowspan="2" class="title">TV 선택</td>
+	<td><div style="display:inline-block;padding-right:20px"><input type="radio" name="tv" id="tv" value="그린 A+" > 그린 A+</div>
+	  <div style="display:inline-block;padding-right:20px"><input type="radio" name="tv" id="tv" value="블루 A+" > 블루 A+</div><div style="display:inline-block;padding-right:20px"><input type="radio" name="tv" id="tv" value="신청안함" > 신청안함</div></td>
+	</tr>
+<tr>
+	<td><div style="display:inline-block;padding-right:20px"><input type="radio" name="tv3" id="tv3" value="Google Home Mini (AI스피커)" > Google Home Mini (AI스피커)</div></td>
+	</tr>
+	<tr>
+	<td class="title">TV 선택 <span>(추가)</span></td>
+	<td><div style="display:inline-block;padding-right:20px"><input type="radio" name="tv2" id="tv2" value="추가TV 신청" > 추가TV 신청</div><div style="display:inline-block;padding-right:20px"><input type="radio" name="tv2" id="tv2" value="추가TV 신청안함" > 추가TV 신청안함</div></td>
+	</tr>
+	
+	<tr>
+	<td class="title">WiFi</td>
+	<td><div style="display:inline-block;padding-right:20px"><input type="radio" name="combine" id="combine" value="WiFi 신청 (무료)" > WiFi 신청 (무료)</div><div style="display:inline-block;padding-right:20px"><input type="radio" name="combine" id="combine" value=" WiFi 미신청" >  WiFi 미신청</div></td>
+	</tr>
+
+</table>
+<!-- -->
+<p><span class="title"><img src="../_image/icon_red.gif">가입자 고객정보</p>
+<table width="100%" class="otable">
+
+<tr>
+	<td class="title"><div name="unametitle" id="unametitle" style="color:#ED4C00;font-weight:bold">가입자 이름<div></td>
+    <td style="width:35%"><input type="text" class="iptTxt13b" name="uname" id="uname" value="" style="IME-MODE: active" /></td>
+    <td class="title"><div name="birthtitle" id="birthtitle" style="color:#ED4C00;font-weight:bold">생년월일 <span>(6자리)</span></div></td>
+    <td style="width:35%"><input type="text" class="iptTxt13b" maxlength="12" name="birth" id="birth" value=""></td>
+</tr>
+<tr>
+	<td class="title">휴대폰 번호</td>
+	<td><select name="hpcompany" class="select" style="height:30px; margin-left:3px; margin-top:3px; margin-bottom:3px; font-size:14px; padding-left:3px;letter-spacing:-1px"><option>통신사선택</option>
+  <option value="skt" >SKT</option>
+  <option value="kt" >KT</option>
+  <option value="lgt" >LGT</option>
+  <option value="SK텔링크" >SK텔링크</option>
+  <option value="T브로드" >T브로드</option>
+  <option value="T플러스" >T플러스</option>
+  <option value="CJ헬로모바일" >CJ헬로모바일</option>
+  <option value="U+알뜰모바일" >U+알뜰모바일</option>
+  <option value="스노우맨" >스노우맨</option>
+  <option value="플러스모바일" >플러스모바일</option>
+  <option value="에버그린" >에버그린</option>
+  <option value="에넥스텔레콤" >에넥스텔레콤</option>
+  <option value="M모바일" >M모바일</option>
+  <option value="에스원NET" >에스원NET</option>
+  <option value="아이즈모바일" >아이즈모바일</option>
+  <option value="기타" >기타</option>
+  <option value="CJ헬로모바일(KT)" >CJ헬로모바일(KT)</option>
+  <option value="CJ헬로모바일(SK)" >CJ헬로모바일(SK)</option>
+  <option value="에스원NET(KT)" >에스원NET(KT)</option>
+  <option value="에스원NET(SK)" >에스원NET(SK)</option>
+  <option value="프리티" >프리티</option>
+  <option value="머천드" >머천드</option>
+  <option value="이마트" >이마트</option>
+  <option value="MTT" >MTT</option>
+</select> <input type="text" class="iptTxt13b" style="width:130px" maxlength="13" name="hp" id="hp" value="" onKeyUp="return autoTab(this, 13, event);"></td>
+	<td class="title">기타연락처</td>
+	<td><input type="text" class="iptTxt13b" maxlength="13" name="hp2" id="hp2" value="" onKeyUp="return autoTab(this, 13, event);"></td>
+</tr>
+<tr>
+	<td class="title">이메일</td>
+	<td colspan="3"><input type="text" class="iptTxt13b" name="email" id="email" value="" style="IME-MODE:inactive;width:50%"></td>
+</tr>
+<tr>
+	<td rowspan="2" class="title">설치 주소</td>
+	<td colspan="3"> <input type="text" class="iptTxt13" size="20" maxlength="20" name="zip" id="zip" value="">
+	<img src="../_image/bt/bt_serch_red.gif" onclick="DaumPostcode()"  style="cursor:hand"/></td>
+</tr>
+<tr>
+	<td colspan="3"><input type="text" class="iptTxt13" size="55" name="addr1" id="addr1" value=""/> <input type="text" class="iptTxt13" size="40" name="addr2" id="addr2" value=""/></td>
+</tr>
+<tr>
+	<td class="title">추가 요청사항</td>
+	<td colspan="3"><textarea name="memo" class="iptTxt13" style="width:97%; height:60px; line-height:1.2"></textarea></td>
+</tr>
+</table>
+
+<!-- -->
+<p><span class="title"><img src="../_image/icon_red.gif">자동이체 납부정보</span></p>
+<table width="100%" class="otable">
+<tr>
+	<td class="title">요금납부방법</td>
+	<td  style="width:35%;letter-spacing:-1px"><input type="radio" name="pay_gubun" id="pay_gubun" value="은행" > 
+	계좌 자동납부 
+	  <input type="radio" name="pay_gubun" id="pay_gubun" value="카드" > 
+	  카드 자동납부</td>
+	<td class="title">명의자와의 관계</td>
+	<td style="width:35%"><input type="text" class="iptTxt13b" name="owner_real" id="owner_real" value=""/></td>
+</tr>
+<tr>
+	<td class="title">예금주/카드주</td>
+	<td><input type="text" class="iptTxt13b" size="20" name="bankowner" id="bankowner" value="" style="IME-MODE: active" /></td>
+	<td class="title">예금주 생년월일 <span style="color:#666;"><br>(6자리)</span></td>
+	<td><input type="text" class="iptTxt13b" size="20" maxlength="6" name="owner_birth" id="owner_birth" value="" onKeyUp="return autoTab(this, 6, event);" style="IME-MODE: active" /></td>
+</tr>
+<tr>
+	<td class="title">카드사명 <span style="color:#666;">/</span> 은행명</td>
+	<td ><input type="text" class="iptTxt13b" name="bank" id="bank" value=""></td>
+	<td class="title">카드번호 <span style="color:#666;">/</span> 계좌번호</td>
+    <td><input type="text" class="iptTxt13b" name="banknum" id="banknum" value="" style="width:90%"></td>
+</tr>
+<tr>
+	<td class="title">신용카드 유효기간</td>
+	<td colspan="3"><input type="text" class="iptTxt13b" name="cardvalid1" id="cardvalid" value="" style="width:36px" maxlength="2" onKeyUp="return autoTab(this, 2, event);"> 월 / <input type="text" class="iptTxt13b" size="20" name="cardvalid2" id="cardvalid" value="" style="width:36px" maxlength="2" onKeyUp="return autoTab(this, 2, event);"> 년 <span style="font-weight:normal;letter-spacing:-0.5px">※ 신용카드 자동납부 신청인 경우에만 입력해주세요!</span></td>
+  </tr>
+</table>
+<!--업체별 세팅 2019-06-18-->
+<p><span class="title"><img src="../_image/icon_red.gif">사은품 수령 계좌</span> <span style="font-size:13px;padding-left:10px">
+<input type="checkbox" name="sbank" id="sbank" onclick="setbank()"/> 자동이체와 동일합니다.</span></p>
+<table width="100%" class="otable">
+<tr>
+	<td class="title">예금주</td>
+	<td style="width:35%"><input type="text" class="iptTxt13" size="20" name="gbankowner" id="gbankowner" value="" style="IME-MODE: active" /></td>
+	<td class="title">은행명</td>
+	<td style="width:35%"><input type="text" class="iptTxt13" name="gbank" id="gbank" value=""></td>
+</tr>
+<tr>
+	<td class="title">카드번호/계좌번호</td>
+    <td colspan="3"><input type="text" class="iptTxt13" name="gbanknum" id="gbanknum" value="" style="width:50%"></td>
+</tr>
+</table>
+<!-- -->
+<!-- 종합서식일 경우 END -->
+<!-- -->
+<div class="noprint" style="margin: 0px auto"><!-- 프린트X-->
+<table width="100%" class="otable2">
+<tr>
+	<td class="title">약관 동의서 및<br />개인정보 취급방침</td>
+	<td><div style="width:97%; height:88px; margin:5 0px; overflow-y:scroll; border:1px #e5e5e5 solid; padding:10px"><약관동의서 및 개인정보 취급방침><br />
+<br />
+본 신청서에 기재된 본인의 정보 및 서비스 이용과정에서 생성되는 본인의 정보는 , 및 의 규정에 따라 휴대폰 개통및 서비스 목적으로 귀사가 수집,<br />
+이용, 제공 및 취급 위탁을 위해 본인의 동의를 얻거나 본인에게 위 내용을 고지ㆍ공개하여야 하는 정보입니다.<br />
+이에 본인은 귀사의 이동전화 서비스, 부가서비스 및 개인맞춤서비스, 마케팅정보 제공서비스 등을 제공받기 위해 다음의 내용을 확인하고, 귀사가 본인의 개인정보ㆍ신용정보를 다음과같이 수집, 이용 제공 및 취급위탁하는 것에 동의합니다.<br />
+<br />
+1. 개인정보 수집ㆍ이용동의 및 판매조건 동의<br />
+<br />
+(SK텔레콤㈜,KT(주),LG텔레콤(주)귀중)<br />
+가. 개인정보의 수집ㆍ이용 목적<br />
+  (1) 서비스 제공 및 본인식별 등 : 이동전화서비스, 멤버쉽 서비스, 부가서비스, 통신과금서비스, 제휴서비스,  개인맞춤서비스, 광고서비스, 본인확인서비스 등 제반서비스(이하 ‘서비스’) 제공 및 이와 관련된 본인 확인  또는 인증,  결제절차진행(통신과금서비스), 통화품질 조사 등 서비스 품질 확인, 정상개통 여부 확인 및  미납 안내 등<br />
+<br />
+  서비스 제공 관련 연락<br />
+  (2) 서비스 관련 정보 제공 등 : 상품 배송, 고지사항 전달, 본인의사 확인, 서비스 관련 상담·불만 처리,<br />
+  서비스 이용관련 혜택·유의사항·편의사항 등 정보 제공, 신규 서비스나 이벤트 관련 정보 및 광고 전송<br />
+  (3) 요금 정산 및 과금 : \\\\\\\'서비스\\\\\\\' 이용 요금 정산·청구·수납·자동이체·추심, 청구서 송부, 요금 관련<br />
+  상담·불만 처리, 요금관련 혜택·유의사항·편의사항 등 정보 제공, 신규서비스나 이벤트 관련정보 및 광고전송<br />
+  (4) 통계분석 : 개인을 식별할 수 없는 인구통계학적 분석자료 또는<br />
+  지역·시장 조사 자료(연령별, 성별, 지역별 통계분석, 시장조사 등) 등 작성, 이용, 제공<br />
+  (5) 개인 맞춤서비스 제공 : 개인정보, 위치정보, 생성정보 및 이를 조합·분석한 정보를 이용한,<br />
+  요금제 등의 상품 및 서비스 개발 / 서비스 가입 신청·이용 중 문의 등 제반 고객 응대 시<br />
+  고객 맞춤 상담 제공 / 개인 맞춤 상품 서비스 혜택 또는 개인 맞춤 광고 제안 및 제공 /<br />
+  악성코드 분석·차단 서비스 제공 / 분실 단말 관리 서비스 제공<br />
+<br />
+나. 수집하는 개인정보의 항목<br />
+  (1) 식별정보 : 성명(법인명), 주민(법인)등록번호, 여권번호, 외국인등록번호, 전화번호, 주민등록번호 대체수단<br />
+  (2) 연락처정보 : 주소, 전화번호, e-mail 주소<br />
+  (3) 거래정보 : 통신과금서비스 제공에 필요한 거래정보<br />
+  (4) 계좌정보 : 계좌(카드)번호, 예금주명 등<br />
+  (5) 생성정보 : 발·수신번호(통화상대방번호 포함), 통화시각, 사용도수, 서비스이용기록, 접속로그, 쿠키,<br />
+  접속 IP 정보(도메인 주소 정보 및 접속 URL 정보 포함), 결제기록, 이용정지기록, 멤버쉽 정보(멤버쉽 가입고객에 한함),<br />
+  기타 요금 과금에 필요한 데이터 및 이를 조합하여 생성되는 정보(요약개인정보, 데이터마이닝 분석 및<br />
+  고객세분화 정보, 선호도,  라이프스타일, 사회적관계 추정 정보), Application 사용관련 정보(사용 App.정보, 사용량 등)<br />
+  (6) 기타 서비스 제공 관련 필요 정보 : 2.에 따른 개인위치정보, 단말기 정보(모델, IMEI번호, USIM 번호(ICCID, IMSI 등),<br />
+  단말기 S/W버전 정보, MAC Address 등), 직업, 국가유공자 증명·복지할인 증명 등 각종 증명,<br />
+  부가서비스·번호이동·할부매매계약 내역,  이동전화 서비스 가입 및 해지일·이동전화 가입 기간 등<br />
+  (5) 생성정보 : 발·수신번호(통화상대방번호 포함), 통화시각, 사용도수, 서비스이용기록, 접속로그, 쿠키,<br />
+  접속 IP 정보, 결제기록, 이용정지기록, 멤버쉽 정보(멤버쉽 가입고객에 한함),<br />
+  기타 요금 과금에 필요한 데이터 및 이를 조합하여 생성되는 정보(요약개인정보, 데이터마이닝 분석 및<br />
+  고객세분화 정보, 선호도, 라이프스타일, 사회적관계 추정 정보),<br />
+  Application 사용관련 정보(사용 App.정보, 사용량 등)<br />
+  (6) 기타 서비스 제공 관련 필요 정보 : 2.에 따른 개인위치정보, 단말기 정보(모델, IMEI번호,<br />
+  USIM 번호(ICCID, IMSI 등),  단말기 S/W버전 정보 등), 직업, 국가유공자 증명·복지할인 증명 등<br />
+  각종 증명, 부가서비스·번호이동·할부매매계약 내역, 이동전화 서비스 가입 및 해지일·이동전화 가입 기간 등<br />
+  ※ 위 정보는 가입 당시 정보 뿐만 아니라 정보 수정으로 변경된 정보를 포함합니다<br />
+<br />
+다. 개인정보의 보유기간<br />
+  개인정보를 제공받은 제3자는 개인정보의 수집목적 또는 제공받은 목적을 달성한 때에는 당해<br />
+  개인정보를 지체없이 파기합니다.(최대 보유기간은 3개월로한다)<br />
+<br />
+<br />
+  가. 법령에 따로 정하는 경우에는 해당 기간까지 보유<br />
+  나. 요금 관련 분쟁 해결을 위해 해지 후 6개월까지<br />
+  (단, 해지고객이 이용요금을 납부하지 않았거나 요금 관련 분쟁이 계속될 경우에는 해결시까지)<br />
+<br />
+2.통신사의 정책변경 및 기기입고 불가등 불가항적인 요소의 정책변경등으로 서비스의 취소 및 판매 취소를 할수 있다.<br />
+<br />
+<br />
+  - 본 상품의 배송 진행관련 정보를 문자로 구매자에게 통보할수있다<br />
+  - 본 상품의 개통을 한 고객대상 안내 문자 및 마케팅문자를 발송할수있다(단 고객이 원하지않을경우 발송을 중단한다.)<br />
+<br />
+<br />
+<br />
+* 계약의 이행을 위한 개인정보 취급위탁 내역은 <br />
+통신사 홈페이지(www.sktelecom.com) (http://www.kt.com/main.jsp) (http://www.uplus.co.kr/)의 개인정보취급방침에서 모두 공개하고 있습니다.<br />
+<br />
+본인은 위 1항,2항의 내용을 숙지하였으며, 이에 동의합니다.</div></td>
+  </tr>
+  <tr>
+    <td class="title">동의 여부</td>
+    <td><input type="checkbox" name="yak_chk" id="yak_chk" value="Y"/> <b>약관 동의서 및 개인정보 취급방침에 동의합니다.</b></td>
+  </tr>
+</table>
+<!-- 버튼set -->
+<div style="height:30px;"></div>
+<input style="background:#ff0000; color:#fff; font-size:24px; font-weight:bold; padding:20px 50px" type="submit" value="신청하기" name="submit" /></div>
+</div><!-- 프린트X-->
+</form>
+</div><!-- body960-->
+</div><!-- body-->
+</body>
+</html>

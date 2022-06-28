@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>TalkCRM 고객관리</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../assets/js/kcalander_script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script> 
+    <!-- 달력 사용시 필요 -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <!-- <link href="../assets/css/common.css" rel="stylesheet" type="text/css"> -->
+    
+    <link rel="stylesheet" href="../assets/css/pop-up.css">
+    <link href="../assets/css/header.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        window.addEventListener("load", function(){
+        setTimeout(loaded, 100);
+
+        }, false);
+
+        function loaded(){
+        window.scrollTo(0, 1);
+        }
+        
+        function handleFirstTab(e) {
+          if (e.keyCode === 9) {
+            document.body.classList.add('user-is-tabbing');
+
+            window.removeEventListener('keydown', handleFirstTab);
+            window.addEventListener('mousedown', handleMouseDownOnce);
+          }
+        }
+
+        function handleMouseDownOnce() {
+          document.body.classList.remove('user-is-tabbing');
+
+          window.removeEventListener('mousedown', handleMouseDownOnce);
+          window.addEventListener('keydown', handleFirstTab);
+        }
+
+        window.addEventListener('keydown', handleFirstTab);
+    </script>
+    <style type="text/css">
+       
+    </style>
+</head>
+<body>
+    <div class="a4 paper">
+        <p>(약국제출용)</p>
+        <div class="p-wrap content">
+            <h1 class="h1-tit">처방전</h1>
+            <div class="ck-box">
+                <div class="p-ck-box">
+                    <p><span></span> 의료보험</p>
+                    <p><span></span> 의료보험</p>
+                    <p><span></span> 산재보험</p>
+                    <p><span></span> 자동차보험</p>
+                    <p><span></span> 기타</p>
+                </div>
+                <p>요양기관기호 : 00</p>
+            </div>
+            <table>
+                <colgroup>
+                    <col style="width: 10%;">
+                    <col style="width: 10%;">
+                    <col style="width: 12%;">
+                    <col style="width: 20%;">
+                    <col style="width: 13%;">
+                    <col style="width: 15%;">
+                    <col style="width: 10%;">
+                    <col style="width: 10%;">
+                </colgroup>
+                <thead>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2" rowspan="2" class="gray-bac bor-l-n">교부 연월일 및 번호</td>
+                        <td colspan="2" rowspan="2">2020-04-20-0000</td>
+                        <td rowspan="4" class="gray-bac">의료기관</td>
+                        <td class="gray-bac">명칭</td>
+                        <td colspan="2" class="bor-r-n">테스트성형외과1</td>
+                    </tr>
+                    <tr>
+                        <td class="gray-bac">전화번호</td>
+                        <td colspan="2">02-1234-1234</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="gray-bac bor-l-n">고객</td>
+                        <td>성명</td>
+                        <td colspan="2">차명일</td>
+                        <td class="gray-bac">팩스번호</td>
+                        <td colspan="2">02-789-1234</td>
+                    </tr>
+                    <tr>
+                        <td>주민등록번호</td>
+                        <td colspan="2">911212-1234567</td>
+                        <td class="gray-bac">사업자등록번호</td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="gray-bac bor-l-n">질병<br>분류<br>기호</td>
+                        <td>J3456</td>
+                        <td rowspan="2" class="gray-bac">처방의료인의 성명</td>
+                        <td colspan="3" rowspan="2" class="text-r pad-10">의사명 <span>(서명 또는 날인)</span></td>
+                        <td class="gray-bac">면허종별</td>
+                        <td class="gray-bac">의사면허1</td>
+                    </tr>
+                    <tr>
+                        <td>J3456</td>
+                        <td class="gray-bac">면허번호</td>
+                        <td>111111</td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" class="bor-l-n bor-b-n">※ 고객의 요구가 있을 때에는 질병분류기호를 기재하지 아니합니다.</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <table>
+                <colgroup>
+                    <col style="width: 32%;">
+                    <col style="width: 12%;">
+                    <col style="width: 12%;">
+                    <col style="width: 12%;">
+                    <col style="width: 12%;">
+                    <col style="width: 20%;">
+                </colgroup>
+                <thead>
+                    <tr class="gray-bac2 h-50">
+                        <td colspan="2" class="bor-l-n ">처방 의약품의 명칭</td>
+                        <td>1회 투약량</td>
+                        <td>1일 투여 횟수</td>
+                        <td>총 투약일수</td>
+                        <td class="bor-r-n">용법</td>
+                    </tr>
+                </thead>
+                <tbody class="me-he">
+                    <tr class="bor-none">
+                        <td colspan="2">토팜정25밀리그람(토피라메이트)_(25mg/1정)</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td class="bor-r-n">용법설명란입니다.</td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2">토팜정25밀리그람(토피라메이트)_(25mg/1정)</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td class="bor-r-n">용법설명란입니다.</td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2">토팜정25밀리그람(토피라메이트)_(25mg/1정)</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td class="bor-r-n">용법설명란입니다.</td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2">토팜정25밀리그람(토피라메이트)_(25mg/1정)</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td class="bor-r-n">용법설명란입니다.</td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2">토팜정25밀리그람(토피라메이트)_(25mg/1정)</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td class="bor-r-n">용법설명란입니다.</td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="bor-r-n"></td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="bor-r-n"></td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="bor-r-n"></td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="bor-r-n"></td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="bor-r-n"></td>
+                    </tr>
+                    <tr  class="gray-bac2">
+                        <td colspan="5" class="bor-l-n">
+                            주사제 처방 내역(원내조제<span class="ck-box1"></span> 원외처방<span class="ck-box1"></span>)
+                        </td>
+                        <td class="bor-r-n">조제시 참고사항</td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2">토팜정25밀리그람(토피라메이트)_(25mg/1정)</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td class="bor-r-n">용법설명란입니다.</td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="bor-none">
+                        <td colspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td  class="gray-bac bor-l-n">사용기간</td>
+                        <td colspan="2">교부일로부터( 7 )일간</td>
+                        <td colspan="3" class="bor-r-n">사용 기간 내에 약국에 제출하여야 합니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <colgroup>
+                    <col style="width: 17%;">
+                    <col style="width: 20%;">
+                    <col style="width: 27%;">
+                    <col style="width: 36%;">
+                </colgroup>
+                <thead>
+                    <tr class="gray-bac2">
+                        <td colspan="4" class="bor-l-n bor-t-n bor-r-n h-35">의 약 품 제 조 내 역</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="4" class="gray-bac bor-l-n bor-b-n">조제내역</td>
+                        <td>조제기관의 명칭</td>
+                        <td></td>
+                        <td  class="gray-bac bor-r-n bor-b-n">처방의 변경, 수정, 확인, 대체 시 그 내용 등</td>
+                    </tr>
+                    <tr>
+                        <td>조제약사 성명</td>
+                        <td class="text-r pad-10">(서명 또는 날인)</td>
+                        <td rowspan="3" class="bor-r-n bor-b-n"></td>
+                    </tr>
+                    <tr>
+                        <td>조제량(조제일수)</td>
+                        <td class="bor-b-n"></td>
+                    </tr>
+                    <tr>
+                        <td class="bor-b-n">조제년월일</td>
+                        <td class="bor-b-n"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+.timeZone_current {
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(255,0,0,0.5);
+    -moz-box-shadow: 0px 2px 0px 0px rgba(255,0,0,0.5);
+    box-shadow: 0px 2px 0px 0px rgba(255,0,0,0.5);}
+
+/*rcpop*/
+.rcpopdrag{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 101;
+    background:#fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+.rcpopdrag.on{
+    display:block;
+}
+.rcpopdrag ul{
+    width:80px;
+}
+.rcpopdrag ul li{
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+}
+.rcpopdrag ul li a{
+    display:block;
+}
+.rcpopdrag ul li a:hover{
+    background:rgba(106, 177, 255, 0.21);
+}
+
+/*rcpop-2*/
+
+.rcpopdrag .w100px li{
+    line-height:35px;
+    height:35px;
+}
+.rcpopdrag.ver2{
+    border-radius: 0px;
+    font-size:12px;
+}
+.rcpopdrag.ver2 ul{
+    width:100px;
+    padding:5px 0;
+}
+.rcpopdrag.ver2 .bor-b-g{
+    padding-bottom:5px;
+    margin-bottom:5px;
+}
+.rcpopdrag.ver2 ul li{
+    height:auto;
+    line-height:25px;
+    text-align: left;
+    padding:0;
+}
+.rcpopdrag.ver2 ul li a{
+    padding-left:10px;
+    display:block;
+    color:#666666
+}
+.rcpopdrag.ver2 ul li a:hover{
+    background:rgba(106, 177, 255, 0.21);
+    color:#548BC7
+}
+.rcpopdrag.ver2 ul .bor-b-g {
+    border-bottom: 1px solid #ccc;
+}
+/* 05.19 8:00 수정*/
+.rcpopdrag.ver2 ul li .R-arr::after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: url(../img/calendar_arrow_R_grey.png)no-repeat center / contain;
+    float: right;
+    margin: 7px 5px;
+}
+/* 05.19 수정 ~3804 */
+.rcpopdrag.ver2 ul li ul{
+    display: none;
+    background: #fff;
+    position: absolute;
+    left: 0%;
+    top: 70px;
+    background:#fff;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+}
+.rcpopdrag.ver2 ul li .top-80{
+    top: 66px;
+}
+.rcpopdrag.ver2 ul li .top-120{
+    top: 96px;
+}
+.rcpopdrag.ver2 ul li .top-160{
+    top: 127px;
+}
+.rcpopdrag.ver2 ul li ul li{
+    border-bottom: none !important;
+}
+.rcpopdrag.ver2 ul li:hover ul{
+    display: block;
+    left: 100%;
+}
+
+td.ui-selected, td.ui-selecting{
+    background:rgba(90, 179, 255, 0.21);
+}

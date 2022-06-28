@@ -1,0 +1,308 @@
+/*펜차트*/
+.inputPen{
+    width:430px;
+    height:40px;
+    line-height: 32px;
+    padding: 0 10px;
+    margin-right:-3px;
+}
+#penchart1 button{
+    height:40px;
+}
+#penchart1 label{
+    margin-right:3px;
+}
+#penchart1 select{
+    width:200px;
+    height:40px;
+    padding: 0 10px;
+}
+#penchart1 .wrap.chartlist{
+    height:500px;
+}
+#penchart1 .formwrap{
+    margin-bottom:20px;
+}
+.chartlist > div {
+    float: left;
+    position:relative;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: calc((100% - 80px) / 4 - 0.01px);
+    cursor: pointer;
+}
+.chartlist > div:nth-of-type(4n){
+    margin-right:0;
+}
+.chartlist > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    margin: 5px 0; 
+    padding: 9px;
+}
+.chartlist > div > div img {
+    max-width: 155px;
+    max-height: 180px;
+}
+.chartlist p{
+    width:90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+    max-height:40px;
+}
+.page{
+    position:absolute;
+    right:2px;
+    top:2px;
+    font-size: 12px;
+    color:#666666;
+}
+/*200519수정*/
+#penchart2 .mainimgwrap{
+    width:100%;
+    height:676px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    position:relative;/*2020.05.20 추가*/
+}
+.mainimgwrap img{
+    max-width:100%;
+}
+#penchart2 .flex950px{
+    border:1px solid #CCCCCC;
+}
+.mainimgset{
+    position:relative;
+    height:56px;
+    padding:15px;
+}
+.mainimgset .btnbox{
+    position:absolute;
+    left:15px;
+}
+.btnbox button{
+    width:20px;
+    height:20px;
+    margin-right:15px;
+}
+.backbtn{
+    background:url(../img/back2.png) no-repeat center center / 20px;
+}
+.forbtn{
+    background:url(../img/for2.png) no-repeat center center / 20px;
+}
+.backbtn.on{
+    background:url(../img/back1.png) no-repeat center center / 20px;
+}
+.forbtn.on{
+    background:url(../img/for1.png) no-repeat center center / 20px;
+}
+.pagebox{
+    position:absolute;
+    right:0px;
+    width:130px;
+}
+.pagebox button{
+    display: block;
+    float:left;
+    width:50px;
+    height:24px;
+}
+.Larrow{
+    background:url(../img/board%20arrow_L_lightGrey.png) no-repeat center center / 8px;
+}
+.Rarrow{
+    background:url(../img/board%20arrow_R_lightGrey.png) no-repeat center center / 8px;
+}
+.pagenumber{
+    display:block;
+    float:left;
+    height:24px;
+    line-height: 24px;
+}
+#penchart2 .greyTable input.input7{
+    border: 1px solid #cccccc;
+    width: calc(100% - 8px);
+    padding: 5px;
+    text-align: left;
+    background: #fff;
+}
+.editwrap{
+    height:373px;
+}
+.toolwrap::after{
+    content:'';
+    display:block;
+    clear: both;
+}
+.toolwrap button{
+    width:calc(20% - 3px);
+    padding:0;
+    display:block;
+    float:left;
+}
+.active svg#icon_grey_pen *{
+    fill:#323d49!important;
+}
+.active svg#icon_grey_brush *{
+    fill:#323d49!important;
+}
+.active svg#icon_grey_square *{
+    stroke:#323d49!important;
+}
+.active.tool-sq svg *{
+    stroke:#323d49!important;
+}
+.active.tool-sq2 svg *{
+    stroke:#323d49!important;
+    fill:#323d49!important;
+}
+.active.tool-text svg *{
+    fill:#323d49!important;
+}
+.active.tool-eraser svg *{
+    fill:#323d49!important;
+}
+.active.tool-del svg *{
+    stroke:#323d49!important;
+}
+.tool-detail>div{
+    margin:15px 0;
+}
+.tool-detail >div>span{
+    display:block;
+    width:40px;
+}
+.tool-detail .bar, .tool-detail .colorview{
+    width:100px;
+    margin:0 10px;
+
+}
+.tool-detail input{
+    width:38px;
+    border:none;
+    border-bottom:1px solid #999;
+    text-align: center;
+}
+/*200519추가,수정 ~3493*/
+.tool-detail .bar{
+    height:2px;
+    background:#cccccc;
+    margin-top:10px;
+    position:relative;
+    cursor: pointer;
+}
+.tool-detail .ui-state-default{
+    width:10px;
+    height:10px;
+    border-radius: 10px;
+    background:#fff;
+    border:1px solid #cccccc;
+    transform:translateX(5px);
+    cursor: pointer;
+}
+
+.tool-detail .colorview{
+    height:10px;
+    background:#111111;/*2020.05.20 수정*/
+    margin-top:5px;
+    position:relative;
+    cursor: pointer;/*2020.05.20 추가*/
+}
+.colorpop.on{
+    display:block;
+}
+.colorpop{
+    display:none;
+    width:183px;
+    padding:5px;
+    border:1px solid #cccccc;
+    position:absolute;
+    top:25px;
+    left:-35px;
+    background:#F8F8F8;
+}
+.colorpop::before{
+    content:'';
+    display:block;
+    width:15px;
+    height:15px;
+    position:absolute;
+    top:-8px;
+    left:75px;
+    transform: rotate(45deg);
+    background:#f8f8f8;
+    border:1px solid #cccccc;
+
+}
+.colorpop::after{
+    content:'';
+    display:block;
+    width:40px;
+    height:19px;
+    position:absolute;
+    top:0px;
+    left:65px;
+    background:#f8f8f8;
+
+}
+.colorpop .colorbox{
+    float:left;
+    width:19px;
+    height:19px;
+    position: relative;
+    z-index: 1;
+}
+.colorpop .colorbox:hover{
+    border:1px solid #fff;
+}
+/*2020.05.20 수정, 추가 ~ 287
+.colorbox.red{
+    background:#f46161;
+}
+.colorbox.blue{
+    background:#6161d9;
+}
+.colorbox.mint{
+    background:#61c9c5;
+}
+*/
+.colorbox:nth-of-type(1){background-color:#3B88FE}
+.colorbox:nth-of-type(2){background-color:#BE37F5}
+.colorbox:nth-of-type(3){background-color:#E53B7A}
+.colorbox:nth-of-type(4){background-color:#FE6150}
+.colorbox:nth-of-type(5){background-color:#FF8546}
+.colorbox:nth-of-type(6){background-color:#FFB43F}
+.colorbox:nth-of-type(7){background-color:#FECB3C}
+.colorbox:nth-of-type(8){background-color:#FFF768}
+.colorbox:nth-of-type(9){background-color:#111111}
+#penchart3 .iv-imgwrap{
+    max-width: none!important;
+    max-height:700px;
+    height:auto;
+    overflow: auto;
+    padding:10px;
+}
+#penchart3 .right{
+    width:160px;
+}
+#penchart3 .pagebox{
+    bottom:30px;
+    right:-10px;
+    width:150px;
+    display:inline-block;
+    color:#fff;
+    font-weight: 200;
+}
+#penchart3 .iv-hd{
+    border: 1px solid #CCCCCC;
+}

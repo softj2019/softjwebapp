@@ -1,0 +1,174 @@
+.fc-center{/*20.06.17 추가*/
+    display: inline-flex;
+    position: absolute;
+    top:0;/*20.07.30 추가*/
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.popper,
+.tooltip {
+    position: absolute;
+    z-index: 9999;
+    background: #ffffff;
+    color: black;
+    width: 150px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    padding: 10px;
+    text-align: center;
+}
+.style5 .tooltip {
+    background: #1E252B;
+    color: #FFFFFF;
+    max-width: 200px;
+    width: auto;
+    font-size: .8rem;
+    padding: .5em 1em;
+}
+.popper .popper__arrow,
+.tooltip .tooltip-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    margin: 5px;
+}
+
+.tooltip .tooltip-arrow,
+.popper .popper__arrow {
+    border-color: #ffffff;
+}
+.style5 .tooltip .tooltip-arrow {
+    border-color: #1E252B;
+}
+.popper[x-placement^="top"],
+.tooltip[x-placement^="top"] {
+    margin-bottom: 5px;
+}
+.popper[x-placement^="top"] .popper__arrow,
+.tooltip[x-placement^="top"] .tooltip-arrow {
+    border-width: 5px 5px 0 5px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    bottom: -5px;
+    left: calc(50% - 5px);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.popper[x-placement^="bottom"],
+.tooltip[x-placement^="bottom"] {
+    margin-top: 5px;
+}
+.tooltip[x-placement^="bottom"] .tooltip-arrow,
+.popper[x-placement^="bottom"] .popper__arrow {
+    border-width: 0 5px 5px 5px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    top: -5px;
+    left: calc(50% - 5px);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.tooltip[x-placement^="right"],
+.popper[x-placement^="right"] {
+    margin-left: 5px;
+}
+.popper[x-placement^="right"] .popper__arrow,
+.tooltip[x-placement^="right"] .tooltip-arrow {
+    border-width: 5px 5px 5px 0;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    left: -5px;
+    top: calc(50% - 5px);
+    margin-left: 0;
+    margin-right: 0;
+}
+.popper[x-placement^="left"],
+.tooltip[x-placement^="left"] {
+    margin-right: 5px;
+}
+.popper[x-placement^="left"] .popper__arrow,
+.tooltip[x-placement^="left"] .tooltip-arrow {
+    border-width: 5px 0 5px 5px;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    right: -5px;
+    top: calc(50% - 5px);
+    margin-left: 0;
+    margin-right: 0;
+}
+.popper, .tooltip {
+    position: absolute;
+    z-index: inherit;
+    background: inherit;
+    color: inherit;
+     width: inherit;
+    border-radius: inherit;
+    box-shadow: inherit;
+    padding: inherit;
+    text-align: inherit;
+}
+/*마우스오버팝업*/
+.popper, .tooltip {
+    position:absolute;
+    top:300px;
+    right:400px;
+    width:200px;
+    border:1px solid #ccc;
+    background:#fff;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    z-index: 99;
+}
+.popper, .tooltip.type2{
+    width:370px;
+    padding:10px;
+}
+.popper, .tooltip.type2 table{
+    width:100%;
+    min-width: auto!important;
+}
+.popper, .tooltip.type2 tr{
+    height:30px!important;
+}
+.hoverpop.type2 tr *{
+    padding:0 5px!important;
+}
+.popper, .tooltip.type2 th{
+    width:70px;
+    font-weight: 300;
+    text-align: left;
+    font-weight: 500;/*2020.05.14 추가*/
+}
+.popper, .tooltip.type2 .memowrap{
+    margin-top:5px;
+    background:#F8F8F8;
+    padding:10px;
+    border:1px solid #ccc;
+}
+.popper, .tooltip.on{
+    display:block;
+}
+.popper, .tooltip ul{
+    width:100%;
+    padding:8px 10px;
+}
+.rcpopCoustom{
+    position: fixed;
+    top:100px;
+    left:100px;
+}
+/*20.06.17 main.css로 이동 163 ~*/
+/*20.07.30 추가*/
+.fc-toolbar h2{white-space: nowrap;}
+@media screen and (max-width:1450px){
+    .fc-center{
+        margin-left:60px;
+    }
+}
