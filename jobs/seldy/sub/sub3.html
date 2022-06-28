@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>셀디</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    <script src="../assets/plugins/fullcalendar/packages/core/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages-premium/resource-timegrid/main.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    <!--풀캘린더-->    
+    <link href="../assets/plugins/fullcalendar/packages/core/main.css" rel="stylesheet" />
+    <link href="../assets/plugins/fullcalendar/packages/daygrid/main.css" rel="stylesheet" />
+    <link href="../assets/plugins/fullcalendar/packages/timegrid/main.css" rel="stylesheet" />
+
+    <script src="../assets/plugins/fullcalendar/packages/core/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages/interaction/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages/daygrid/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages/timegrid/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages-premium/resource-common/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages-premium/resource-daygrid/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages-premium/resource-timegrid/main.js"></script>
+    <script src="../assets/plugins/fullcalendar/packages/moment/main.js"></script>
+    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+    <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+    </head>
+    <style>
+        .fc-toolbar.fc-header-toolbar{
+            margin-bottom:40px;
+        }
+        .fc-center{
+            width:100%!important;
+            text-align: center;
+        }
+        .fc-toolbar h2{
+            width: 160px;
+            display: inline-block;
+            color:#444444;
+            font-size:26px;
+            font-weight: 500;
+            vertical-align: middle;
+        }
+        .fc-center .fc-button.fc-button-primary:first-child{
+            width:40px;
+            height:40px;
+            vertical-align: middle;
+            background:url(../assets/img/cal-left.png) no-repeat center / 40px;
+        }
+        .fc-center .fc-button.fc-button-primary:nth-child(3){
+            width:40px;
+            height:40px;
+            vertical-align: middle;
+            background:url(../assets/img/cal-right.png) no-repeat center / 40px;
+        }
+        .fc-center .fc-button.fc-button-primary span{
+            display:none;
+        }
+        .fc-day-top{
+            line-height: 20px;
+        }
+        .fc-sun{
+            color:#f46c6c
+        }
+        .fc-sat{
+            color:#4f80ef;
+        }
+        .fc-head{
+            background:#f4f4f4;
+        }
+        .fc-head-container{
+            border:none!important;
+        }
+        .fc-unthemed td, .fc-unthemed th{
+            border-color:#e8e8e8;
+        }
+        .fc-day-number{
+            display: block;
+            overflow: hidden;
+            width: 16px;
+            height: 20px;
+            text-align: center;
+        }
+    </style>
+<body>
+    <header class="main-header">
+        <nav class="gnb">
+            <div class="gnb-inner">
+                <a href=""><h1>seldy</h1></a>
+                <ul>
+                    <li>대메뉴1
+                        <ul class="lnb">
+                            <li><a href="sub1.html">소메뉴1</a></li>
+                            <li><a href="sub1.html">소메뉴2</a></li>
+                            <li><a href="sub1.html">소메뉴3</a></li>
+                        </ul>
+                    </li>
+                    <li>대메뉴2
+                        <ul class="lnb">
+                            <li><a href="sub2.html">소메뉴1</a></li>
+                            <li><a href="sub2.html">소메뉴2</a></li>
+                        </ul>
+                    </li>
+                    <li>대메뉴3
+                        <ul class="lnb">
+                            <li><a href="sub3.html">소메뉴1</a></li>
+                            <li><a href="sub3.html">소메뉴2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="login.html">로그인</a>
+                    </li>
+                    <li><a href="">회원가입</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="ham-btn" type="button"><i class="menu-ic"></i></button>
+            <div class="category">
+                <div class="cate-bg"></div>
+                <div class="cate-content">
+                    <div class="cate-close"><i class="close-i"></i></div>
+                    <div class="cate-body">
+                        <ul class="mobile-gnb">
+                            <li><p>대메뉴1<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="sub1.html">소메뉴1</a></li>
+                                    <li><a href="sub1.html">소메뉴2</a></li>
+                                    <li><a href="sub1.html">소메뉴3</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴2<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="sub2.html">소메뉴1</a></li>
+                                    <li><a href="sub2.html">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴3<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="sub3.html">소메뉴1</a></li>
+                                    <li><a href="sub3.html">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="login.html">로그인</a>
+                            </li>
+                            <li><a href="">회원가입</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main-wrap index">
+        <div class="sub-sec clearfix">
+           <div class="sub-left">
+                <div class="left-nav">
+                    <h3 class="left-sub-title">대메뉴1</h3>
+                    <ul class="left-ul">
+                        <li class="active"><a href="">소메뉴1</a></li>
+                        <li><a href="">소메뉴2</a></li>
+                        <li><a href="">소메뉴3</a></li>
+                        <li><a href="">소메뉴4</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-right">
+                <div class="sub-title-hd">
+                    <div>
+                        <h2 class="title-h2"><i class="cal-i"></i>예약 현황</h2>
+                        <span>현재 예약 현황을 확인하고 관리합니다.</span>
+                    </div>
+                </div>
+                <div class="sub-rightinner">
+                    <div class="fullcalendar" id="calendar"></div>
+                </div>
+            </div>
+            <div class="rcpop">
+                <ul>
+                    <li class="bor-b-g"><a href="#" class="editpop-btn">예약수정</a></li>
+                    <li><a href="#" class="reserv-btn">예약취소</a></li>
+                </ul>
+            </div>
+            <div class="popup" id="eqpop">
+                <div class="eqpopbody">
+                   <div class="eqheader">
+                        <p>예약 상세</p>
+                       <button class="close-btn"></button>
+                    </div>
+                    <div class="eqinner">
+                        <div class="eqinput">
+                            <form action="">
+                                <label for="name">성함</label>
+                                <input type="text" class="w100px" id="" name="name">
+                                <br>
+                                <label for="">연락처</label>
+                                <select name="" id="" class="w100px">
+                                    <option value="010">010</option>
+                                </select> -
+                                <input type="text" class="w100px" id="" name=""> -
+                                <input type="text" class="w100px" id="" name="">
+                                <br>
+                                <label for="place">예약장소</label>
+                                <select name="" id="">
+                                    <option value="개나리실">개나리실</option>
+                                    <option value="국화실">국화실</option>
+                                </select>
+                                <br>
+                                <label for="place">예약시간</label>
+                                <select name="" id="">
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                </select> ~ 
+                                <select name="" id="">
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                </select>
+                                <br>
+                                <label for="eqmemo">메모</label>
+                                <textarea class="w100" name="" id=""></textarea>
+                                <div class="flexEnd">
+                                    <button type="button" class="btn-grey mr10 cancelbtn">취소</button>
+                                    <button type="button" class="btn-purple">수정하기</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+    <button class="menu-btn"><i class="menu-ic"></i></button>
+    <footer>
+        <div class="foot-in">
+            <ul class="footerUl">
+                <li>SELDY</li>
+                <li>주식회사 셀디 ㅣ 대표  한현희 ㅣ 광주광역시 동구 필문대로 253(동명동) ㅣ 사업자번호 712-81-00932 ㅣ 문의전화 080 - 227 - 4585</li>
+                <li></li>
+                <li></li>
+                <li>Copyright ⓒ -2021 스터디카페 셀디 All Rights Reserved.</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../assets/js/common.js"></script>
+    <script type="text/javascript">
+        
+        //fullcalendar
+        var calendar;
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+        if(dd<10) {
+            dd='0'+dd
+        }
+        if(mm<10) {
+            mm='0'+mm
+        }
+        today = yyyy+'-'+mm+'-'+dd;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            locale: 'ko',
+            schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
+            defaultView: 'dayGridMonth',
+            defaultDate: today,
+            initialView: 'dayGridMonth',
+            plugins: ['interaction', 'resourceDayGrid', 'resourceTimeGrid'],
+            allDaySlot: false,//종일 이벤트 숨기기
+            header: {
+                left: false,
+                center: 'prev title next',
+                right: false,
+            },
+            views: {
+                resourceTimeGridDay: {
+                    type: 'resourceTimeGridDay',
+                    buttonText: 'day',
+                    eventLimit: 3 // adjust to 6 only for timeGridWeek/timeGridDay
+                },
+                timeGrid: {
+                    type: 'timeGrid',
+                    buttonText: 'timeGrid',
+                    eventLimit: 3, // adjust to 6 only for timeGridWeek/timeGridDay
+                },
+                timeGridWeek: {
+                    type: 'timeGridWeek',
+                    buttonText: 'Week',
+                },
+                dayGridMonth: {
+                    type: 'dayGridMonth',
+                    buttonText: 'Month',
+                    eventLimit:7,
+                }
+            },
+            slotLabelFormat: [
+                // { month: 'numeric', year: 'numeric' }, // top level of text
+                {
+                    // day: 'numeric',
+                    // weekday: 'long',// lower level of text
+                    hour: '2-digit',    //numeric 3 2-digit 03
+                    minute: '2-digit',  //numeric 3 2-digit 03
+                    hour12: false,      //true am 6 false 06
+                    // meridiem: 'numeric'
+                }
+            ],
+            editable: true,//수정기능
+            selectable: true,//선택기능
+            selectHelper: true,
+            eventLimit: true, // allow "more" link when too many events
+            resources: [
+
+                {id: 'a', title: '1'},
+                {id: 'b', title: '2'},
+                {id: 'c', title: '3'},
+                {id: 'd', title: '4'}
+            ],
+            events: [
+                {
+                    id: '1',
+                    resourceId: 'a',
+                    title: '홍길동'+' '+'개나리실',
+                    start: today + 'T09:00:00',
+                    end: today + 'T09:40:00',
+                },
+                {
+                    id: '2', 
+                    resourceId: 'a', 
+                    start: today + 'T10:00:00', 
+                    end: today + 'T10:30:00', 
+                    title: '김말자'+' '+'국화실',
+                    backgroundColor:'#ffa719',
+                    textColor:'',
+                    borderColor:''
+                },
+                {
+                    id: '3', 
+                    resourceId: 'a', 
+                    start: '2021-08-17' + 'T10:00:00', 
+                    end: '2021-08-17' + 'T10:30:00', 
+                    title: '김말자'+' '+'국화실',
+                    backgroundColor:'#6e3598',
+                },
+                {
+                    id: '4', 
+                    resourceId: 'a', 
+                    start: '2021-08-17' + 'T10:00:00', 
+                    end: '2021-08-18' + 'T10:30:00', 
+                    title: '김말자'+' '+'국화실'
+                }
+            ],
+            eventRender: function(arg){
+                arg.el.onclick = (function(){
+                    $('#eqpop').addClass('on');
+                })
+            },
+             //새로운 날짜 집합이 렌더링되면 트리거됩니다.
+            datesRender: function(arg) {
+                //마우스 우클릭
+                arg.el.oncontextmenu = (function(e){
+                    callRightSmallNavEmptyDate(e, arg);
+                });
+            },
+            //이벤트를 랜더링시 적용할 대상 세팅
+            eventRender: function (arg) {
+                var tooltip = new Tooltip(arg.el, {
+                    title: arg.event.extendedProps.description,
+                    placement: 'right',
+                    trigger: 'hover',
+                    container: 'body',
+                    html: true,
+                });
+                 arg.el.oncontextmenu = (function(e){
+                     callRightSmallNav(e);
+                 });
+            }
+        });
+        calendar.render();
+      });
+        //메뉴호출 예약 이벤트
+        function callRightSmallNav(e){
+            var clientX= e.clientX;
+            var clientY= e.clientY;
+            $('.rcpop').remove()
+            $('.main-wrap').append('<div class="rcpop"><ul><li class="bor-b-g"><a href="#" class="editpop-btn">예약수정</a></li><li><a href="#" class="reserv-btn">예약취소</a></li></ul></div>');
+            $('.rcpop').css('position',"fixed");
+            $('.rcpop').css('display',"block");
+            var winWidth = $(window).width();
+            var winHeight = $(window).height();
+            var posX = e.clientX;
+            var posY = e.clientY;
+            var menuWidth = $('.rcpop').width();
+            var menuHeight = $('.rcpop').height();
+
+            if(posX + menuWidth >= winWidth
+            && posY + menuHeight >= winHeight){
+              //Case 1: right-bottom overflow:
+              posLeft = posX - menuWidth + "px";
+              posTop = posY - menuHeight + "px";
+            }
+            else if(posX + menuWidth >= winWidth){
+              //Case 2: right overflow:
+              posLeft = posX - menuWidth + "px";
+              posTop = posY + "px";
+            }
+            else if(posY + menuHeight >= winHeight){
+              //Case 3: bottom overflow:
+              posLeft = posX + "px";
+              posTop = posY - menuHeight + "px";
+            }
+            else {
+              //Case 4: default values:
+              posLeft = posX + "px";
+              posTop = posY + "px";
+            }
+            $('.rcpop').css({
+               "left": posLeft,
+               "top": posTop
+            });
+            $(".editpop-btn").click(function(){
+                $("#eqpop").addClass('on');
+            });
+             //console.log('callRightSmallNav',e)
+            console.log(e.target.classList)
+            e.preventDefault();
+        }
+
+        //메뉴호출 빈셀 빈날짜
+        function callRightSmallNavEmptyDate(e,el){
+
+            if(e.target.classList=='fc-widget-content' || e.target.classList=='fc-highlight'){
+
+                
+                var clientX= e.clientX;
+                var clientY= e.clientY;
+                $('.rcpop').remove()
+                $('.main-wrap').append(' <div class="rcpop"><ul><li><a href="#" class="eqpop-btn">예약등록</a></li></ul></div>');
+                $('.rcpop').css('position',"fixed");
+                $('.rcpop').css('display',"block");
+                var winWidth = $(window).width();
+                var winHeight = $(window).height();
+                var posX = e.clientX;
+                var posY = e.clientY;
+                var menuWidth = $('.rcpop').width();
+                var menuHeight = $('.rcpop').height();
+
+                if(posX + menuWidth >= winWidth
+                && posY + menuHeight >= winHeight){
+                  //Case 1: right-bottom overflow:
+                  posLeft = posX - menuWidth + "px";
+                  posTop = posY - menuHeight + "px";
+                }
+                else if(posX + menuWidth >= winWidth){
+                  //Case 2: right overflow:
+                  posLeft = posX - menuWidth + "px";
+                  posTop = posY + "px";
+                }
+                else if(posY + menuHeight >= winHeight){
+                  //Case 3: bottom overflow:
+                  posLeft = posX + "px";
+                  posTop = posY - menuHeight + "px";
+                }
+                else {
+                  //Case 4: default values:
+                  posLeft = posX + "px";
+                  posTop = posY + "px";
+                }
+                $('.rcpop').css({
+                   "left": posLeft,
+                   "top": posTop
+                });
+                $(".eqpop-btn").click(function(){
+                    $("#eqpop").addClass('on');
+                });
+                e.preventDefault();
+            }
+        }
+        $('body').on('click', function(e){
+            var $tgPoint = $(e.target);
+            var $popArea = $tgPoint.parents().hasClass('rcpop');
+            if ( !$popArea ){
+                $('.rcpop').remove();
+            }
+        });
+    </script>
+</body>
+</html>

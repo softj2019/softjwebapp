@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>셀디</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+<style>
+    .error-wrap {
+        width: 100%;
+        padding: 100px 50px;
+    }
+
+    #i-error {
+        height: 150px;
+        margin: 0 100px 100px;
+    }
+
+    .error-ttl {
+        font-size: 42px;
+        font-weight: bold;
+        color: #563B69;
+        word-break: keep-all;
+    }
+
+    .error-ttl+p {
+        margin-top: 50px;
+        font-size: 16px;
+    }
+
+    .error-btn {
+        margin-top: 30px;
+        background: #563b69;
+        color: #ffffff;
+    }
+    
+    .cls-1 {
+        fill: #563b69;
+    }
+</style>
+
+<body>
+    <div class="error-wrap">
+        <svg id="i-error" data-name="1" viewbox="0 0 95.92 501.8">
+            <path class="cls-1" d="M312.05,67.27a48,48,0,0,0-95.47,0h-.23l8,328.58h79.92l8-328.58Z" transform="translate(-216.35 -23.91)" />
+            <circle class="cls-1" cx="47.96" cy="453.84" r="47.96" />
+        </svg>
+        <p class="error-ttl">작업 중 에러가 발생했습니다.</p>
+        <p>죄송합니다. 작업 중 에러가 발생하여 원하시는 결과를 찾을 수 없습니다.</p>
+        <button class="error-btn" type="button" onclick="window.open('http://seldy.jerry.or.kr')">메인으로 돌아가기</button>
+    </div>
+    <script src="../assets/js/common.js"></script>
+</body></html>

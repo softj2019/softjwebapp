@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>셀디</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+<body>
+    <header class="main-header">
+        <nav class="gnb">
+            <div class="gnb-inner">
+                <a href=""><h1>seldy</h1></a>
+                <ul>
+                    <li>대메뉴1
+                        <ul class="lnb">
+                            <li><a href="sub1.html">소메뉴1</a></li>
+                            <li><a href="sub1.html">소메뉴2</a></li>
+                            <li><a href="sub1.html">소메뉴3</a></li>
+                        </ul>
+                    </li>
+                    <li>대메뉴2
+                        <ul class="lnb">
+                            <li><a href="sub2.html">소메뉴1</a></li>
+                            <li><a href="sub2.html">소메뉴2</a></li>
+                        </ul>
+                    </li>
+                    <li>대메뉴3
+                        <ul class="lnb">
+                            <li><a href="sub3.html">소메뉴1</a></li>
+                            <li><a href="sub3.html">소메뉴2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="login.html">로그인</a>
+                    </li>
+                    <li><a href="">회원가입</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="ham-btn" type="button"><i class="menu-ic"></i></button>
+            <div class="category">
+                <div class="cate-bg"></div>
+                <div class="cate-content">
+                    <div class="cate-close"><i class="close-i"></i></div>
+                    <div class="cate-body">
+                        <ul class="mobile-gnb">
+                            <li><p>대메뉴1<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="sub1.html">소메뉴1</a></li>
+                                    <li><a href="sub1.html">소메뉴2</a></li>
+                                    <li><a href="sub1.html">소메뉴3</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴2<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="sub2.html">소메뉴1</a></li>
+                                    <li><a href="sub2.html">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><p>대메뉴3<i class="down-i"></i></p>
+                                <ul class="lnb">
+                                    <li><a href="sub3.html">소메뉴1</a></li>
+                                    <li><a href="sub3.html">소메뉴2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="login.html">로그인</a>
+                            </li>
+                            <li><a href="">회원가입</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main-wrap">
+        <div class="sub-sec clearfix">
+            <div class="sub-left">
+                <div class="left-nav">
+                    <h3 class="left-sub-title">대메뉴1</h3>
+                    <ul class="left-ul">
+                        <li class="active"><a href="">소메뉴1</a></li>
+                        <li><a href="">소메뉴2</a></li>
+                        <li><a href="">소메뉴3</a></li>
+                        <li><a href="">소메뉴4</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-right">
+                <div class="sub-title-hd">
+                    <div>
+                        <h2 class="title-h2"><i class="board-i"></i>회원상세</h2>
+                        <span>셀디 회원의 상세 정보를 확인하고 관리합니다.</span>
+                    </div>
+                </div>
+                <div class="sub-rightinner">
+                    <form action="">
+                        <table class="table-p">
+                            <colgroup>
+                                <col style="width: 100px;">
+                                <col style="width: auto;">
+                                <col style="width: 100px;">
+                                <col style="width: auto;">
+                                <col style="width: 100px;">
+                                <col style="width: auto;">
+                            </colgroup>
+                            <tbody class="table2">
+                                <tr>
+                                    <td class="p-title">아이디</td>
+                                    <td><input type="text"></td>
+                                    <td class="p-title">이름</td>
+                                    <td><input type="text"></td>
+                                    <td class="p-title">휴대폰 번호</td>
+                                    <td>
+                                        <div class="phone-num">
+                                            <select name="" id="">
+                                                <option value="">010</option>
+                                                <option value="">010</option>
+                                            </select>
+                                            <span> - </span>
+                                            <input type="text">
+                                            <span> - </span>
+                                            <input type="text">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-title">성별</td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">전체</option>
+                                            <option value="">남</option>
+                                            <option value="">여</option>
+                                        </select>
+                                    </td>
+                                    <td class="p-title">생년월일</td>
+                                    <td>
+                                        <div class="datepick-box">
+                                            <input type="text" id="from_date" name="from_date" class="date_pick">
+                                            <i class="cal"></i>
+                                        </div>
+                                    </td>
+                                    <td class="p-title">데이터</td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-title">지역</td>
+                                    <td colspan="5">
+                                        <input type="radio" name="area-rd" id="ch1"><label for="ch1">서울</label>
+                                        <input type="radio" name="area-rd" id="ch2"><label for="ch2">부산</label>
+                                        <input type="radio" name="area-rd" id="ch3"><label for="ch3">대구</label>
+                                        <input type="radio" name="area-rd" id="ch4"><label for="ch4">인천</label>
+                                        <input type="radio" name="area-rd" id="ch5"><label for="ch5">광주</label>
+                                        <input type="radio" name="area-rd" id="ch6"><label for="ch6">대전</label>
+                                        <input type="radio" name="area-rd" id="ch7"><label for="ch7">울산</label>
+                                        <input type="radio" name="area-rd" id="ch8"><label for="ch8">세종</label>
+                                        <input type="radio" name="area-rd" id="ch9"><label for="ch9">경기</label>
+                                        <input type="radio" name="area-rd" id="ch10"><label for="ch10">경남</label>
+                                        <input type="radio" name="area-rd" id="ch11"><label for="ch11">경북</label>
+                                        <input type="radio" name="area-rd" id="ch12"><label for="ch12">충남</label>
+                                        <input type="radio" name="area-rd" id="ch13"><label for="ch13">충북</label>
+                                        <input type="radio" name="area-rd" id="ch14"><label for="ch14">전남</label>
+                                        <input type="radio" name="area-rd" id="ch15"><label for="ch15">전북</label>
+                                        <input type="radio" name="area-rd" id="ch16"><label for="ch16">강원</label>
+                                        <input type="radio" name="area-rd" id="ch17"><label for="ch17">제주</label>
+                                        <input type="radio" name="area-rd" id="ch18"><label for="ch18">전국</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-title">내용</td>
+                                    <td colspan="5">
+                                        <textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력해 주세요" class="con-txt"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-title">파일첨부</td>
+                                    <td colspan="5">
+                                        <div class="fileBox">
+                                            <input type="text" class="fileName" id="fileName" name="fileName" readonly="readonly" placeholder="선택된 파일 없음">
+                                            <label for="uploadBtn" class="btn_file">파일선택</label>
+                                            <input type="file" id="uploadBtn" name="uploadBtn" class="uploadBtn">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-title">파일목록</td>
+                                    <td colspan="5">
+                                        <ul class="file-up-con">
+                                            <li file-value="1"><i class="file-i"></i><span>파일1</span><button class="cancel-btn"></button></li>
+                                            <li file-value="2"><i class="file-i"></i><span>e98f7d9vas908f0098f9a.png</span><button class="cancel-btn"></button></li>
+                                            <li file-value="1"><i class="file-i"></i><span>파일1</span><button class="cancel-btn"></button></li>
+                                            <li file-value="2"><i class="file-i"></i><span>e98f7d9vas908f0098f9a.png</span><button class="cancel-btn"></button></li><li file-value="1"><i class="file-i"></i><span>파일1</span><button class="cancel-btn"></button></li>
+                                            <li file-value="2"><i class="file-i"></i><span>e98f7d9vas908f0098f9a.png</span><button class="cancel-btn"></button></li><li file-value="1"><i class="file-i"></i><span>파일1</span><button class="cancel-btn"></button></li>
+                                            <li file-value="2"><i class="file-i"></i><span>e98f7d9vas908f0098f9a.png</span><button class="cancel-btn"></button></li><li file-value="1"><i class="file-i"></i><span>파일1</span><button class="cancel-btn"></button></li>
+                                            <li file-value="2"><i class="file-i"></i><span>e98f7d9vas908f0098f9a.png</span><button class="cancel-btn"></button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="fot-btn btn-color">
+                            <button type="button" class="btn-g mr5">취소</button>
+                            <button type="button" class="btn-pur">등록</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <button class="menu-btn"><i class="menu-ic"></i></button>
+    <footer>
+        <div class="foot-in">
+            <ul class="footerUl">
+                <li>SELDY</li>
+                <li>주식회사 셀디 ㅣ 대표  한현희 ㅣ 광주광역시 동구 필문대로 253(동명동) ㅣ 사업자번호 712-81-00932 ㅣ 문의전화 080 - 227 - 4585</li>
+                <li></li>
+                <li></li>
+                <li>Copyright ⓒ -2021 스터디카페 셀디 All Rights Reserved.</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../assets/js/common.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $.datepicker.setDefaults({
+                dateFormat: 'yy-mm-dd',
+                showMonthAfterYear:true,
+                monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                dayNamesMin: ['일','월','화','수','목','금','토'],
+                dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
+                numberOfMonths: [1,1],
+            });
+            $('.date_pick').datepicker();
+                $('#all-ck').click(function(){
+                    var chk = $(this).is(':checked');//.attr('checked');
+                    if(chk) $('.table-w-bd input[type="checkbox"]').prop('checked',true);
+                    else $('.table-w-bd input').prop('checked',false);
+            });
+        });
+    </script>
+</body>
+</html>
