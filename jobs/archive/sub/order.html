@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>굿아키브</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="main-hd">
+        <ul>
+            <li><a href="login.html">
+                로그인
+            </a></li>
+            <li><a href="join.html">
+                회원가입
+            </a></li>
+            <li><a href="mypage.html">
+                MyPage
+            </a></li>
+            <li><a href="cart.html">
+                장바구니
+            </a></li>
+        </ul>
+        <div class="src-wrap">
+            <h1 class="h-logo"><a href="../index.html">굿아키브</a></h1>
+            <div class="src-inner">
+                <form action="">
+                    <div class="srcBox">
+                       <input type="text" class="src-form">
+                       <button type="button" class="src-btn"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <nav class="main-navi">
+            <ul>
+                <li><a href="intro.html">
+                    회사소개
+                    </a>
+                </li>
+                <li><a href="product.html">
+                    취급품목
+                    </a>
+                </li>
+                <li><a href="portfolio.html">
+                    포트폴리오
+                    </a>
+                </li>
+                <li><a href="store-list.html">
+                    STORE
+                    </a>
+                    <ul class="navsub">
+                        <li><a href="">sub1</a></li>
+                        <li><a href="">sub2</a></li>
+                        <li><a href="">sub3</a></li>
+                    </ul></li>
+                <li><a href="partnership.html">
+                    파트너십
+                </a></li>
+                <li><a href="recruit.html">
+                    인재채용
+                </a></li>
+                <li><a href="help.html">
+                    고객센터
+                    </a>
+                    <ul class="navsub">
+                        <li><a href="help.html">1:1 문의</a></li>
+                        <li><a href="privacy.html">개인정보 처리방침</a></li>
+                        <li><a href="ToS.html">이용약관</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-wrap">
+        <div class="main-inner">
+            <h2 class="tit-cart mb40">주문하기</h2>
+            <div class="flexwrap order-wrap">
+                <div class="order-box">
+                    <div class="tit-box mr0">
+                        <h5>주문 상품 정보</h5>
+                    </div>
+                    <table class="cart-table">
+                        <colgroup>
+                            <col style="width: 65%;">
+                            <col style="width: 20%;">
+                            <col style="width: 15%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>상품</th>
+                                <th>상품 가격</th>
+                                <th>수량</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="flexit"><div class="cart-img"><img src="../assets/img/drone02.png" alt=""></div>
+                                    <p class="cart-t">E2000 Z14120</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>000,000,000 원</p>
+                                </td>
+                                <td>
+                                    <div class="flexcenter">
+                                        <span>1</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="flexit"><div class="cart-img"><img src="../assets/img/drone02.png" alt=""></div>
+                                    <p class="cart-t">E2000 Z14120</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>000,000,000 원</p>
+                                </td>
+                                <td>
+                                    <div class="flexcenter">
+                                        <span>1</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="tit-box">
+                        <h5>주문자 정보</h5>
+                    </div>
+                    <form action="" method="POST">
+                        <div class="modi-input clearfix">
+                            <label for="od-name" class="modi-label">주문자 이름</label>
+                            <input type="text" value="홍길동" disabled="disable" name="od-id">
+                            <label for="od-mail" class="modi-label">이메일</label>
+                            <input type="text" value="gildonghong123@gmail.com" disabled="disable" name="od-mail">
+                            <label for="od-phone" class="modi-label">휴대폰 번호</label>
+                            <select name="od-phone" id="" class="phone-input" disabled="disable">
+                                <option value="">010</option>
+                                <option value="">010</option>
+                                <option value="">010</option>
+                            </select>
+                            <span class="phone-">-</span>
+                            <input type="text" value="1234" class="phone-input" disabled="disable">
+                            <span class="phone-">-</span>
+                            <input type="text" value="1234" class="phone-input" disabled="disable">
+                        </div>
+                    </form>
+                    <div class="tit-box">
+                        <h5 class="t-lt">배송지 정보</h5>
+                    </div>
+                    <form action="" method="POST">
+                        <div class="modi-input clearfix">
+                            <div class="mb20">
+                                <input type="radio" id="order1" checked="true" name="orderinfo">
+                                <label for="order1" class="mr10">주문자 정보와 같음</label>
+                                <input type="radio" id="order2" name="orderinfo">
+                                <label for="order2">새로 입력</label>
+                            </div>
+                            <label for="rc-name" class="modi-label">수령자 이름</label>
+                            <input type="text" value="홍길동" name="rc-name">
+                            <label for="rc-phone" class="modi-label">휴대폰 번호</label>
+                            <select name="rc-phone" id="" class="phone-input">
+                                <option value="">010</option>
+                                <option value="">010</option>
+                                <option value="">010</option>
+                            </select>
+                            <span class="phone-">-</span>
+                            <input type="text" value="1234" class="phone-input">
+                            <span class="phone-">-</span>
+                            <input type="text" value="1234" class="phone-input">
+                            <label for="rc-phone2" class="modi-label">전화 번호</label>
+                            <select name="rc-phone2" id="" class="phone-input">
+                                <option value="">010</option>
+                                <option value="">010</option>
+                                <option value="">010</option>
+                            </select>
+                            <span class="phone-">-</span>
+                            <input type="text" value="1234" class="phone-input">
+                            <span class="phone-">-</span>
+                            <input type="text" value="1234" class="phone-input">
+                            <label for="rc-ad" class="modi-label">주소</label>
+                            <input type="text" class="w100-pt" placeholder="우편번호"><button type="button" class="aut-num-btn w120">우편번호 찾기</button>
+                            <input type="text" class="w100 mt10">
+                            <label for="rc-ask" class="modi-label">배송 시 요청사항</label>
+                            <input type="text" name="rc-ask" placeholder="부재 시 현관 앞에 놓아주세요." class="w100">
+                        </div>
+                    </form>
+                    <div class="tit-box">
+                        <h5 class="t-lt">결제 수단</h5>
+                    </div>
+                    <form action="" method="POST">
+                        <div class="modi-input clearfix">
+                            <div class="mb20">
+                                <input type="radio" id="ch1" checked="true" name="orderinfo">
+                                <label for="ch1" class="mr10">신용카드</label>
+                                <input type="radio" id="ch2" name="orderinfo">
+                                <label for="ch2" class="mr10">실시간 계좌이체</label>
+                                <input type="radio" id="ch3" name="orderinfo">
+                                <label for="ch3">휴대폰 결제</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="price-wrap">
+                    <div class="price-box">
+                        <table>
+                            <colgroup>
+                                <col style="width:40%">
+                                <col style="width:60%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>총 상품 금액</th>
+                                    <td><span class="total-goods">999,999,999</span>원</td>
+                                </tr>
+                                <tr>
+                                    <th>배송비</th>
+                                    <td><span>2,500</span>원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <hr style="border: solid 1px #e8e8e8;" />
+                        <table>
+                            <colgroup>
+                                <col style="width:40%">
+                                <col style="width:60%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>최종 결제 금액</th>
+                                    <td class="textBlue"><span class="total-price">999,999,999</span>원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <hr style="border: solid 1px #e8e8e8;" />
+                        <div class="ck-box">
+                            <input type="checkbox" id="le-ck" checked="check">
+                            <label for="le-ck"><span class="textBlue">(필수)</span> 주문 상품정보 및 결제대행 서비스 이용약관에 모두 동의하십니까?</label>
+                        </div>
+                        <button type="button" class="btn-order">결제하기</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+            <div class="footer-inner">
+               <ul class="footer-nav">
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="https://www.ecmc.or.kr/">전자거래 분쟁조정위원회</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                <hr />
+                <div class="footer-div">
+                    <div class="ft-logo"></div>
+                    <p>대표이사 문원진 / 사업자번호 755-87-01570 / 전화번호 070 8871 7705 / 주소 광주광역시 북구 첨단과기로 A동 710-A호<br />특허번호 10-1955113</p>
+                </div>
+            </div>
+        </footer>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>

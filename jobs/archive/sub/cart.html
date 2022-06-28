@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>굿아키브</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="main-hd">
+        <ul>
+            <li><a href="login.html">
+                로그인
+            </a></li>
+            <li><a href="join.html">
+                회원가입
+            </a></li>
+            <li><a href="mypage.html">
+                MyPage
+            </a></li>
+            <li><a href="cart.html">
+                장바구니
+            </a></li>
+        </ul>
+        <div class="src-wrap">
+            <h1 class="h-logo"><a href="../index.html">굿아키브</a></h1>
+            <div class="src-inner">
+                <form action="">
+                    <div class="srcBox">
+                       <input type="text" class="src-form">
+                       <button type="button" class="src-btn"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <nav class="main-navi">
+            <ul>
+                <li><a href="intro.html">
+                    회사소개
+                    </a>
+                </li>
+                <li><a href="product.html">
+                    취급품목
+                    </a>
+                </li>
+                <li><a href="portfolio.html">
+                    포트폴리오
+                    </a>
+                </li>
+                <li><a href="store-list.html">
+                    STORE
+                    </a>
+                    <ul class="navsub">
+                        <li><a href="">sub1</a></li>
+                        <li><a href="">sub2</a></li>
+                        <li><a href="">sub3</a></li>
+                    </ul></li>
+                <li><a href="partnership.html">
+                    파트너십
+                </a></li>
+                <li><a href="recruit.html">
+                    인재채용
+                </a></li>
+                <li><a href="help.html">
+                    고객센터
+                    </a>
+                    <ul class="navsub">
+                        <li><a href="help.html">1:1 문의</a></li>
+                        <li><a href="privacy.html">개인정보 처리방침</a></li>
+                        <li><a href="ToS.html">이용약관</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-wrap">
+        <div class="main-inner">
+            <div class="cart-wrap">
+                <h2 class="tit-cart">장바구니</h2>
+                <div class="sele-box">
+                    <button type="button">선택삭제</button>
+                </div>
+                <table class="cart-table">
+                    <colgroup>
+                        <col style="width: 5%;">
+                        <col style="width: 50%;">
+                        <col style="width: 15%;">
+                        <col style="width: 15%;">
+                        <col style="width: 15%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" id="all-ck"><label for="all-ck"></label></th>
+                            <th>상품</th>
+                            <th>상품 가격</th>
+                            <th>수량</th>
+                            <th>가격</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="cart-ck1"><label for="cart-ck1"></label>
+                            </td>
+                            <td>
+                                <div class="flexit">
+                                    <a href=""><div class="cart-img"><img src="../assets/img/drone02.png" alt=""></div></a>
+                                    <a href=""><p class="cart-t">E2000 Z14120<br><span>산업 멀티로터 응용을 위해 설계된 맞춤형 추진 시스템.</span></p></a>
+                                </div>
+                            </td>
+                            <td>
+                                <p>000,000,000 원</p>
+                            </td>
+                            <td>
+                                <div class="flexcenter">
+                                    <input type="text" value="1" class="num cart-num" name="payment_order">
+                                    <button type="button" class="plus">+</button>
+                                    <button type="button" class="minus">-</button>
+                                </div>
+                            </td>
+                            <td>
+                               <p>000,000,000 원</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="cart-ck2"><label for="cart-ck2"></label>
+                            </td>
+                            <td>
+                                <div class="flexit">
+                                    <a href=""><div class="cart-img"><img src="../assets/img/drone02.png" alt=""></div></a>
+                                    <a href=""><p class="cart-t">E2000 Z14120<br><span>산업 멀티로터 응용을 위해 설계된 맞춤형 추진 시스템.</span></p></a>
+                                </div>
+                            </td>
+                            <td>
+                                <p>000,000,000 원</p>
+                            </td>
+                            <td>
+                                <div class="flexcenter">
+                                    <input type="text" value="1" class="num cart-num" name="payment_order">
+                                    <button type="button" class="plus">+</button>
+                                    <button type="button" class="minus">-</button>
+                                </div>
+                            </td>
+                            <td>
+                               <p>000,000,000 원</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="cart-ck3"><label for="cart-ck3"></label>
+                            </td>
+                            <td>
+                                <div class="flexit">
+                                    <a href=""><div class="cart-img"><img src="../assets/img/drone02.png" alt=""></div></a>
+                                    <a href=""><p class="cart-t">E2000 Z14120<br><span>산업 멀티로터 응용을 위해 설계된 맞춤형 추진 시스템.</span></p></a>
+                                </div>
+                            </td>
+                            <td>
+                                <p>000,000,000 원</p>
+                            </td>
+                            <td>
+                                <div class="flexcenter">
+                                    <input type="text" value="1" class="num cart-num" name="payment_order">
+                                    <button type="button" class="plus">+</button>
+                                    <button type="button" class="minus">-</button>
+                                </div>
+                            </td>
+                            <td>
+                               <p>000,000,000 원</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="cart-total-box">
+                    <div class="cart-total">
+                        <span>결제금액 : </span>
+                        <span>000,000,000 원</span>
+                    </div>
+                    <div class="cart-btn-box">
+                        <button type="button">전체 주문하기</button>
+                        <button type="button">선택 주문하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+            <div class="footer-inner">
+               <ul class="footer-nav">
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="https://www.ecmc.or.kr/">전자거래 분쟁조정위원회</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                <hr />
+                <div class="footer-div">
+                    <div class="ft-logo"></div>
+                    <p>대표이사 문원진 / 사업자번호 755-87-01570 / 전화번호 070 8871 7705 / 주소 광주광역시 북구 첨단과기로 A동 710-A호<br />특허번호 10-1955113</p>
+                </div>
+            </div>
+        </footer>
+    <script src="../assets/js/common.js"></script>
+</body>
+</html>
