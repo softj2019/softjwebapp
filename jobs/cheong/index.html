@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>청시행</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/common.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        window.addEventListener("load", function(){
+        setTimeout(loaded, 100);
+
+        }, false);
+
+        function loaded(){
+        window.scrollTo(0, 1);
+        }
+        
+        function handleFirstTab(e) {
+          if (e.keyCode === 9) {
+            document.body.classList.add('user-is-tabbing');
+
+            window.removeEventListener('keydown', handleFirstTab);
+            window.addEventListener('mousedown', handleMouseDownOnce);
+          }
+        }
+
+        function handleMouseDownOnce() {
+          document.body.classList.remove('user-is-tabbing');
+
+          window.removeEventListener('mousedown', handleMouseDownOnce);
+          window.addEventListener('keydown', handleFirstTab);
+        }
+
+        window.addEventListener('keydown', handleFirstTab);
+    </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+        <div class="logo">청시행 비치</div>
+        <div class="nav">
+            <ul>
+                <li class="nav-on"><a href="index.html">서핑예약</a></li>
+                <li><a href="sub/reservation.html">분류관리</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="main res-main">
+        <h1>서핑예약</h1>
+        <div>
+            <section class="search-box mb20 mt20">
+              <form action="">
+                <input type="text" id="" name="" class="mr5 w100px" placeholder="이름">
+                <div class="date">
+                    <input type="text" id="from_date" class="date_pick input2"> 
+                    <i class="cal1"></i>
+                </div>
+                 <button class="btn-w">검색</button>
+                 <button type="button" class="btn-blue" target="_blank" onclick="window.open('sub/resv-pop.html','','width=700, height=950, toolbar=no, menubar=no, scrollbars=yes, resizable=yes');return false;">예약등록</button>
+              </form>
+            </section>
+            <section class="table-out">
+                <table class="in-table">
+                  <tbody>
+                    <tr>
+                      <td class="td-t1">대분류</td>
+                      <td class="td-t1">중분류</td>
+                      <td>
+                        <table class="sub-in-table font-b">
+                            <tr class="tit-tr">
+                              <td rowspan="2" class="td-name bgpink">이름</td>
+                              <td rowspan="2" class="td-ph bgpink">연락처</td>
+                              <td colspan="4" class="bgpurple">기본옵션(숙박)</td>
+                              <td colspan="4" class="bgLGrey">서핑강습</td>
+                            </tr>
+                            <tr>
+                                <td class="td-w bgpurple">수량</td>
+                                <td class="td-w bgpurple">금액</td>
+                                <td class="td-w bgpurple">구매방법</td>
+                                <td class="td-w bgpurple">입실여부</td>
+                                <td class="td-w bgLGrey">수량</td>
+                                <td class="td-w bgLGrey">금액</td>
+                                <td class="td-w bgLGrey">구매방법</td>
+                                <td class="td-w bgLGrey">강습시간</td>
+                            </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="bgLBlue">남성</td>
+                      <td class="bgBlue">(남)도미토리<br><span>(30인) / 1</span></td>
+                      <td>
+                          <table class="sub-in-table">
+                              <tbody>
+                                  <tr>
+                                      <td class="td-name">이민호(네)</td>
+                                      <td class="td-ph">010-1233-4565</td>
+                                      <td class="td-w">3</td>
+                                      <td class="td-w">100,000</td>
+                                      <td class="td-w">온라인</td>
+                                      <td class="td-w bgBlue">입실</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w ck-cu">1</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="td-name">이민호(네)</td>
+                                    <td class="td-ph">010-1233-4565</td>
+                                    <td class="td-w">3</td>
+                                    <td class="td-w">100,000</td>
+                                    <td class="td-w">온라인</td>
+                                    <td class="td-w">입실</td>
+                                    <td class="td-w">1</td>
+                                    <td class="td-w">1</td>
+                                    <td class="td-w">1</td>
+                                    <td class="td-w ck-cu">1</td>
+                                </tr>
+                                <tr>
+                                  <td class="td-name">이민호(네)</td>
+                                  <td class="td-ph">010-1233-4565</td>
+                                  <td class="td-w">3</td>
+                                  <td class="td-w">100,000</td>
+                                  <td class="td-w">온라인</td>
+                                  <td class="td-w">입실</td>
+                                  <td class="td-w">1</td>
+                                  <td class="td-w">1</td>
+                                  <td class="td-w">1</td>
+                                  <td class="td-w ck-cu">1</td>
+                              </tr>
+                              <tr>
+                                <td class="td-name">이민호(네)</td>
+                                <td class="td-ph">010-1233-4565</td>
+                                <td class="td-w">3</td>
+                                <td class="td-w">100,000</td>
+                                <td class="td-w">온라인</td>
+                                <td class="td-w">입실</td>
+                                <td class="td-w">1</td>
+                                <td class="td-w">1</td>
+                                <td class="td-w">1</td>
+                                <td class="td-w ck-cu">1</td>
+                            </tr>
+                              </tbody>
+                          </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="bgLpink">여성</td>
+                      <td class="bgyellow">(여)도미토리<br><span>(30인) / 1</span></td>
+                      <td>
+                          <table class="sub-in-table">
+                              <tbody>
+                                  <tr>
+                                      <td class="td-name">이민호(네)</td>
+                                      <td class="td-ph">010-1233-4565</td>
+                                      <td class="td-w">3</td>
+                                      <td class="td-w">100,000</td>
+                                      <td class="td-w">온라인</td>
+                                      <td class="td-w">입실</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w ck-cu">1</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="td-name">이민호(네)</td>
+                                    <td class="td-ph">010-1233-4565</td>
+                                    <td class="td-w">3</td>
+                                    <td class="td-w">100,000</td>
+                                    <td class="td-w">온라인</td>
+                                    <td class="td-w">입실</td>
+                                    <td class="td-w">1</td>
+                                    <td class="td-w">1</td>
+                                    <td class="td-w">1</td>
+                                    <td class="td-w ck-cu">1</td>
+                                </tr>
+                                <tr>
+                                  <td class="td-name">이민호(네)</td>
+                                  <td class="td-ph">010-1233-4565</td>
+                                  <td class="td-w">3</td>
+                                  <td class="td-w">100,000</td>
+                                  <td class="td-w">온라인</td>
+                                  <td class="td-w">입실</td>
+                                  <td class="td-w">1</td>
+                                  <td class="td-w">1</td>
+                                  <td class="td-w">1</td>
+                                  <td class="td-w ck-cu">1</td>
+                              </tr>
+                              <tr>
+                                <td class="td-name">이민호(네)</td>
+                                <td class="td-ph">010-1233-4565</td>
+                                <td class="td-w">3</td>
+                                <td class="td-w">100,000</td>
+                                <td class="td-w">온라인</td>
+                                <td class="td-w">입실</td>
+                                <td class="td-w">1</td>
+                                <td class="td-w">1</td>
+                                <td class="td-w">1</td>
+                                <td class="td-w ck-cu">1</td>
+                            </tr>
+                              </tbody>
+                          </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td rowspan="6" class="bgLGrey">층객실(2인실)</td>
+                      <td class="bgpurple">203호<br><span>(100인) / 1</span></td>
+                      <td>
+                          <table class="sub-in-table">
+                              <tbody>
+                                  <tr>
+                                      <td class="td-name">이민호(네)</td>
+                                      <td class="td-ph">010-1233-4565</td>
+                                      <td class="td-w">3</td>
+                                      <td class="td-w">100,000</td>
+                                      <td class="td-w">온라인</td>
+                                      <td class="td-w">입실</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w ck-cu">1</td>
+                                  </tr>
+                                
+                              </tbody>
+                          </table>
+                      </td>
+                    </tr>
+                    <tr class="sub2-tr">
+                      <td class="bgpurple">203호<br><span>(100인) / 1</span></td>
+                      <td>
+                          <table class="sub-in-table">
+                              <tbody>
+                                  <tr>
+                                      <td class="td-name">이민호(네)</td>
+                                      <td class="td-ph">010-1233-4565</td>
+                                      <td class="td-w">3</td>
+                                      <td class="td-w">100,000</td>
+                                      <td class="td-w">온라인</td>
+                                      <td class="td-w">입실</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w ck-cu">1</td>
+                                  </tr>
+                                
+                              </tbody>
+                          </table>
+                      </td>
+                    </tr>
+                    <tr class="sub2-tr">
+                      <td class="bgpurple">203호<br><span>(100인) / 1</span></td>
+                      <td>
+                          <table class="sub-in-table">
+                              <tbody>
+                                  <tr>
+                                      <td class="td-name">이민호(네)</td>
+                                      <td class="td-ph">010-1233-4565</td>
+                                      <td class="td-w">3</td>
+                                      <td class="td-w">100,000</td>
+                                      <td class="td-w">온라인</td>
+                                      <td class="td-w">입실</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w ck-cu">1</td>
+                                  </tr>
+                                
+                              </tbody>
+                          </table>
+                      </td>
+                    </tr>
+                    <tr class="sub2-tr">
+                      <td class="bgpurple">203호<br><span>(100인) / 1</span></td>
+                      <td>
+                          <table class="sub-in-table">
+                              <tbody>
+                                  <tr>
+                                      <td class="td-name">이민호(네)</td>
+                                      <td class="td-ph">010-1233-4565</td>
+                                      <td class="td-w">3</td>
+                                      <td class="td-w">100,000</td>
+                                      <td class="td-w">온라인</td>
+                                      <td class="td-w">입실</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w ck-cu">1</td>
+                                  </tr>
+                                
+                              </tbody>
+                          </table>
+                      </td>
+                    </tr>
+                    <tr class="sub2-tr">
+                      <td class="bgpurple">203호<br><span>(100인) / 1</span></td>
+                      <td>
+                          <table class="sub-in-table">
+                              <tbody>
+                                  <tr>
+                                      <td class="td-name">이민호(네)</td>
+                                      <td class="td-ph">010-1233-4565</td>
+                                      <td class="td-w">3</td>
+                                      <td class="td-w">100,000</td>
+                                      <td class="td-w">온라인</td>
+                                      <td class="td-w">입실</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w ck-cu">1</td>
+                                  </tr>
+                                
+                              </tbody>
+                          </table>
+                      </td>
+                    </tr>
+                    <tr class="sub2-tr">
+                      <td class="bgpurple">203호<br><span>(100인) / 1</span></td>
+                      <td>
+                          <table class="sub-in-table">
+                              <tbody>
+                                  <tr>
+                                      <td class="td-name">이민호(네)</td>
+                                      <td class="td-ph">010-1233-4565</td>
+                                      <td class="td-w">3</td>
+                                      <td class="td-w">100,000</td>
+                                      <td class="td-w">온라인</td>
+                                      <td class="td-w">입실</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w">1</td>
+                                      <td class="td-w ck-cu">1</td>
+                                  </tr>
+                                
+                              </tbody>
+                          </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </section>
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">≪</a></li>
+                <li class="page-item"><a class="page-link" href="#">＜</a></li>
+                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                <li class="page-item"><a class="page-link" href="#">＞</a></li>
+                <li class="page-item"><a class="page-link" href="#">≫</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+  $(function() { 
+      $.datepicker.setDefaults({
+          dateFormat: 'yy-mm-dd',
+          showMonthAfterYear:true,
+          monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+          dayNamesMin: ['일','월','화','수','목','금','토'],
+          dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
+          numberOfMonths: [1,1],
+      });
+      $(".date_pick").datepicker();      
+      $('.ck-cu').click(function(){
+          $(this).toggleClass('c-active')
+      });              
+  });
+</script>
+</body>
+</html>

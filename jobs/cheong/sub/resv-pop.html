@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>청시행</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/jquery.datetimepicker.css" rel="stylesheet" type="text/css"><!--20.07.13 추가-->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/jquery.datetimepicker.full.min.js"></script><!--~-->
+    <script type="text/javascript">
+        window.addEventListener("load", function(){
+        setTimeout(loaded, 100);
+
+        }, false);
+
+        function loaded(){
+        window.scrollTo(0, 1);
+        }
+        
+        function handleFirstTab(e) {
+          if (e.keyCode === 9) {
+            document.body.classList.add('user-is-tabbing');
+
+            window.removeEventListener('keydown', handleFirstTab); 
+            window.addEventListener('mousedown', handleMouseDownOnce);
+          }
+        }
+
+        function handleMouseDownOnce() {
+          document.body.classList.remove('user-is-tabbing');
+
+          window.removeEventListener('mousedown', handleMouseDownOnce);
+          window.addEventListener('keydown', handleFirstTab);
+        }
+
+        window.addEventListener('keydown', handleFirstTab);
+    </script>
+    <style type="text/css">
+       
+    </style>
+</head>
+<body class="white">
+    <div class="wrap">
+        <div class="mb20">
+            <h3 class="title">예약자정보</h3>
+            <table class="greyTable">
+                <colgroup>
+                    <col width="100px">
+                    <col width="*">
+                </colgroup>
+                <tr>
+                    <th>날짜</th>
+                    <td>
+                        <div class="date w145px">
+                            <input type="text" id="datetimepicker1" class="input2"> <!--20.07.13 수정-->
+                            <i class="cal1"></i>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>대분류</th>
+                    <td><select name="1depth" id="1depth">
+                        <option value="여성">여성</option>
+                        <option value="남성">남성</option>
+                        <option value="남성">남성</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <th>중분류</th>
+                    <td><select name="2depth" id="3depth">
+                        <option value="(남)도미토리">(남)도미토리</option>
+                        <option value="(여)도미토리">(여)도미토리</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <th>이름</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>연락처</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>수량</th>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <th>금액</th>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <th>구매방법</th>
+                    <td>
+                        <input type="radio" name="payment" id="pay1"><label for="pay1">네이버 강릉 서핑</label>
+                        <input type="radio" name="payment" id="pay2"><label for="pay2">네이버 양양 서핑</label>
+                        <input type="radio" name="payment" id="pay3"><label for="pay3">네이버 게스트 하우스</label><br>
+                        <input type="radio" name="payment" id="pay4"><label for="pay4">현금</label>
+                        <input type="radio" name="payment" id="pay5"><label for="pay5">카드</label>
+                        <input type="radio" name="payment" id="pay6"><label for="pay6">서비스</label>
+                        <input type="radio" name="payment" id="pay7"><label for="pay7">현장결제 카드</label>
+                        <input type="radio" name="payment" id="pay8"><label for="pay8">현장결제 현금</label><br>
+                        <input type="text" placeholder="직접 입력">
+                    </td>
+                </tr>
+                <tr>
+                    <th>입실여부</th>
+                    <td><select name="room" id="room">
+                        <option value="입실">입실</option>
+                        <option value="미입실">미입실</option>
+                    </select></td>
+                </tr>
+                <tr><!--20.07.13 추가-->
+                    <th>강습시간</th>
+                    <td>
+                        <div class="date w145px">
+                            <input id="datetimepicker2" type="text" class="input2">
+                            <i class="cal1"></i>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>수강</th>
+                    <td><select name="2depth" id="3depth">
+                        <option value="완료">완료</option>
+                        <option value="미완료">미완료</option>
+                    </select></td>
+                </tr><!--~-->
+            </table>
+        </div>
+        <div class="mb20">
+            <h3 class="title">추가옵션 <button type="button" class="btn-blue2 op-add">추가</button></h3>
+            <table class="greyTable v2">
+                <colgroup>
+                    <col width="18%">
+                    <col width="18%">
+                    <col width="22%">
+                    <col width="22%">
+                    <col width="10%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>분류</th>
+                        <th>수량</th>
+                        <th>금액</th>
+                        <th>구매방법</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select name="sort" id="sort">
+                                <option value="서핑강습">서핑강습</option>
+                                <option value="서핑렌탈">서핑렌탈</option>
+                                <option value="파티">파티</option>
+                                <option value="펍">펍</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" class="hastxt" name="">개
+                        </td>
+                        <td>
+                            <input type="text" class="hastxt" name="">원
+                        </td>
+                        <td>
+                            <select name="" id="">
+                                <option value=""></option>
+                            </select>
+                        </td>
+                        <td>
+                            <button type="button" class="btn-red2 op-del">삭제</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mb20">
+            <h3 class="title">비고(메모)</h3>
+            <textarea name="memo" id="" class="memoTA"></textarea>
+        </div>
+        <div class="flexEnd">
+            <button type="button" class="btn-blue v2 mr5">저장</button>
+            <button type="button" class="btn-white v2">취소</button>
+        </div>
+    </div>
+    <script>
+        $('.op-add').click(function(){
+            var tr = '<tr><td><select name="sort" id="sort"><option value="서핑강습">서핑강습</option><option value="서핑렌탈">서핑렌탈</option><option value="파티">파티</option><option value="펍">펍</option></select></td><td><input type="text" class="hastxt" name="">개</td><td><input type="text" class="hastxt" name="">원</td><td><select name="" id=""><option value=""></option></select></td><td><button type="button" class="btn-red2 op-del">삭제</button></td></tr>'
+            $(tr).appendTo('.greyTable.v2 tbody');
+        })
+        $(document).on('click', '.op-del', function(){
+            $(this).parents('tr').remove();
+        })
+
+        $(function() { 
+        $.datepicker.setDefaults({
+            dateFormat: 'yy-mm-dd',
+            showMonthAfterYear:true,
+            monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+            dayNamesMin: ['일','월','화','수','목','금','토'],
+            dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
+            numberOfMonths: [1,1],
+        });
+        $(".date_pick").datepicker();      
+            $('.ck-cu').click(function(){
+                $(this).toggleClass('c-active')
+            });              
+        });
+        
+        $.datetimepicker.setLocale('kr');//20.07.13 추가~
+        $('#datetimepicker1').datetimepicker({
+            timepicker:false,
+            format:'Y-m-d'
+        });
+        $('#datetimepicker2').datetimepicker({
+            format:'Y-m-d H:i',
+            });//~
+    </script>
+</body>
+</html>

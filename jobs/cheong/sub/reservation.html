@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>청시행</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        window.addEventListener("load", function(){
+        setTimeout(loaded, 100);
+
+        }, false);
+
+        function loaded(){
+        window.scrollTo(0, 1);
+        }
+        
+        function handleFirstTab(e) {
+          if (e.keyCode === 9) {
+            document.body.classList.add('user-is-tabbing');
+
+            window.removeEventListener('keydown', handleFirstTab);
+            window.addEventListener('mousedown', handleMouseDownOnce);
+          }
+        }
+
+        function handleMouseDownOnce() {
+          document.body.classList.remove('user-is-tabbing');
+
+          window.removeEventListener('mousedown', handleMouseDownOnce);
+          window.addEventListener('keydown', handleFirstTab);
+        }
+
+        window.addEventListener('keydown', handleFirstTab);
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo">청시행 비치</div>
+            <div class="nav">
+                <ul>
+                    <li><a href="../index.html">서핑예약</a></li>
+                    <li class="nav-on"><a href="reservation.html">분류관리</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="main">
+            <h1>분류관리</h1>
+            <div class="flexwrap">
+                <section class="left-s">
+                    <ul class="category-out">
+                        <li>
+                            <a href="">남성</a>
+                            <ul>
+                                <li>(남)도미트리</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">여성</a>
+                            <ul>
+                                <li>(여)도미트리</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">2층</a>
+                            <ul>
+                                <li>201호</li>
+                                <li>202호</li>
+                                <li>203호</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">3층</a>
+                            <ul>
+                                <li>301호</li>
+                                <li>301호</li>
+                                <li>301호</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section class="right-s">
+                    <div>
+                        <select name="" id="">
+                            <option value="">최상위분류</option>
+                            <option value="">도미트리</option>
+                            <option value="">도미트리</option>
+                            <option value="">도미트리</option>
+                        </select>
+                        <input type="text" class="input3">
+                        <button type="button" class="btn-blue">저장</button>
+                        <button type="button" class="btn-red">삭제</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.category-out > li > a').click(function(e){
+                e.preventDefault();
+                $('.category-out > li > a').removeClass('active');
+                $('.category-out > li > ul > li').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+        $(function(){
+            $('.category-out > li > ul > li').click(function(){
+                $('.category-out > li > ul > li').removeClass('active');
+                $('.category-out > li > a').removeClass('active');
+                $(this).addClass('active');
+                $(this).parent().parent().children('a').addClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

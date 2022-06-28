@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>청시행</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="../assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/common.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        window.addEventListener("load", function(){
+        setTimeout(loaded, 100);
+
+        }, false);
+
+        function loaded(){
+        window.scrollTo(0, 1);
+        }
+        
+        function handleFirstTab(e) {
+          if (e.keyCode === 9) {
+            document.body.classList.add('user-is-tabbing');
+
+            window.removeEventListener('keydown', handleFirstTab);
+            window.addEventListener('mousedown', handleMouseDownOnce);
+          }
+        }
+
+        function handleMouseDownOnce() {
+          document.body.classList.remove('user-is-tabbing');
+
+          window.removeEventListener('mousedown', handleMouseDownOnce);
+          window.addEventListener('keydown', handleFirstTab);
+        }
+
+        window.addEventListener('keydown', handleFirstTab);
+    </script>
+</head>
+<body>
+  <div class="wrap login-w">
+        <div class="login-in">
+            <h1><span>청시행 비치</span> 관리자페이지</h1>
+            <form action="">
+                <div class="login-box">
+                    <table>
+                        <colgroup>
+                            <col style="width: 60px;">
+                            <col style="width: 188px;">
+                            <col style="width: 85px;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>아이디</td>
+                                <td><input type="text" class="input4"></td>
+                                <td rowspan="2"><button class="btn-black">LOGIN</button></td>
+                            </tr>
+                            <tr>
+                                <td>비밀번호</td>
+                                <td><input type="text" class="input4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="ck-box">
+                    <input type="checkbox" id="id-s"><label for="id-s" class="mr30">아이디 저장</label>
+                    <input type="checkbox" id="A-login"><label for="A-login">자동로그인</label>
+                </div>
+            </form>
+        </div>
+  </div>
+</body>
+</html>
