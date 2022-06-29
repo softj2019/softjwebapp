@@ -16,7 +16,7 @@ if (element('latest', $view)) {
                         <li><?=element('info1',element('extravars', $result))?></li>
                         <li><?=element('info2',element('extravars', $result))?></li>
                     </ul>
-                    <a href="<?php echo element('post_url', $result); ?>" target="_blank" class="btn df">포트폴리오 자세히 보기</a>
+                    <a href="<?php echo element('url', $result); ?>" target="_blank" class="btn df">포트폴리오 자세히 보기</a>
                 </div>
             </div>
             <div class='temp-right <?=element('modisplay',element('extravars', $result))?>'>

@@ -1777,7 +1777,7 @@ a.link-btn {
     width: 268px;
     height: 63px;
     line-height: 63px;
-    background:#DA394D;
+    background:#064f82;
     color:  #fff;
     text-align: center;
     font-size: 20px;
@@ -1792,8 +1792,8 @@ a.link-btn {
 }
 a.link-btn:hover{
     background:#fff;
-    color: #DA394D;
-    border: 1px solid #da394d;
+    color: #064f82;
+    border: 1px solid #064f82;
 }
 .in-box2{
     margin-top: 12.5vw;
