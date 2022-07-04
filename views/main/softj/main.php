@@ -9,7 +9,8 @@
                     UI UX 전문가를 통해 완성도 높은
                     <br/><b>통합 솔루션</b>을 제공합니다.
                 </p>
-                <a class="abtn" type="button" onclick="window.open('https://softj.net/jobopening')">채용공고 보기</a>
+                <a class="abtn mg10" type="button" onclick="window.open('https://softj.net/jobopening')"><b>웹 개발자</b> 채용공고 보기</a>
+                <a class="abtn" type="button" onclick="window.open('https://softj.net/jobopening/sub/job.html')">채용중인 공고 보기</a>
             </div>
         </div>
         <div class="temp-right">

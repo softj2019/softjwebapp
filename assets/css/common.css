@@ -872,7 +872,7 @@ section .main-inner{
     position: absolute;
     top: 50%;
     left: 60px;
-    width: 1100px;
+    /* width: 1100px; */
     color: #fff;
     font-size: 3vw;
     font-weight: 100;
@@ -905,6 +905,10 @@ a.abtn{
     padding: 0 25px;
     border-radius: 10px;
     box-shadow: 0px 0px 24px -5px #000000;
+}
+a.mg10 {
+    margin-right: 7px;
+    margin-bottom: 10px;
 }
 .abtn:hover{
     background-color:#1672B8;
