@@ -303,6 +303,7 @@ li:first-child .circle{
     font-size:1.4rem;
     text-align: center;
     line-height: 40px;
+    margin-right: 5px;
 }
 .download-ic{
     width:23px;
@@ -324,8 +325,27 @@ li:first-child .circle{
 .i-my{
     background: url(../img/i-my.png) no-repeat center/30px;
 }
-
-
+.saramin_link{
+    width: 45%;
+    height: 40px;
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #0d6fb8;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 40px;
+}
+.saramin_link::after{
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    background: url(../img/document.png)no-repeat center / contain;
+    vertical-align: -6px;
+}
 
 /*tablet에서보기768px*/
  @media only screen and (min-width: 768px) {
@@ -402,6 +422,9 @@ li:first-child .circle{
 
 .button-download{
     width:150px;
+}
+.saramin_link {
+    width: 150px;
 }
 }
 /*tablet*/
