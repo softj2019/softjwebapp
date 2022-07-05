@@ -266,18 +266,18 @@ li:first-child .circle{
     text-align: left;
     word-break: keep-all;
 }
-.sec3 .list>li:nth-child(4) .sub-list li{
+.sec3 .list>li.pic-li .sub-list li{
     padding:0 0 0 40px;
     margin-bottom:10px;
     background-position: left center!important;
 }
-.sec3 .list>li:nth-child(4) .sub-list li:nth-child(1){
+.sec3 .list>li.pic-li .sub-list li.pic-name{
     background:url(../img/name.png) top center no-repeat;
 }
-.sec3 .list>li:nth-child(4) .sub-list li:nth-child(2){
+.sec3 .list>li.pic-li .sub-list li.pic-call{
     background:url(../img/call.png) top center no-repeat;
 }
-.sec3 .list>li:nth-child(4) .sub-list li:nth-child(3){
+.sec3 .list>li.pic-li .sub-list li.pic-mail{
     background:url(../img/mail.png) top center no-repeat;
 }
 .map{
@@ -303,7 +303,6 @@ li:first-child .circle{
     font-size:1.4rem;
     text-align: center;
     line-height: 40px;
-    margin-right: 5px;
 }
 .download-ic{
     width:23px;
@@ -346,7 +345,7 @@ li:first-child .circle{
     background: url(../img/document.png)no-repeat center / contain;
     vertical-align: -6px;
 }
-
+.mr5{margin-right: 5px;}
 /*tablet에서보기768px*/
  @media only screen and (min-width: 768px) {
 .top{
@@ -424,7 +423,7 @@ li:first-child .circle{
     width:150px;
 }
 .saramin_link {
-    width: 150px;
+    width: 160px;
 }
 }
 /*tablet*/
