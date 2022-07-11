@@ -186,8 +186,7 @@
                     <p>CONTACT US.</p>
 <!--                    <p class="str-p">Tel.   070-7687-5532</p>-->
                     <p class="str-p"><a href="http://pf.kakao.com/_kxexcxgs" class="ch-kakao" target="_blank"></a></p>
-                    <p class="fax-p">대표번호.     1660-0234</p>
-                    <p class="fax-p">직통번호.     070-8656-1572</p>
+                    <p class="fax-p">Tel.     1660-0234</p>
                     <p class="fax-p">Fax.     02-6442-6623</p>
                     <p>Email.     dev@softj.net</p>
                 </div>
