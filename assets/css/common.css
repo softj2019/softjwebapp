@@ -1460,11 +1460,11 @@ footer a{
 .footer-inner .foot-L span{font-size: 16px;}
 .footer-inner .foot-L p {
     font-weight: 300;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .footer-inner .ver-h{
     width: 1px;
-    height: 130px;
+    height: 180px;
     background: #ffffff;
     margin: 0 40px;
 }
@@ -1474,7 +1474,7 @@ footer a{
 .footer-inner .foot-R .str-p{
     font-weight: 500;
     font-size: 30px;
-    margin: 20px 0;
+    margin: 14px 0;
 }
 .footer-inner .foot-R .fax-p{
     margin-top: 4px;
