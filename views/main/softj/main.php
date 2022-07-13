@@ -9,7 +9,7 @@
                     UI UX 전문가를 통해 완성도 높은
                     <br/><b>통합 솔루션</b>을 제공합니다.
                 </p>
-                <a class="abtn" type="button" onclick="window.open('https://softj.net/jobopening')"><b>웹 개발자</b> 채용공고 보기</a>
+                <a class="abtn mg10" type="button" onclick="window.open('https://softj.net/jobopening')"><b>웹 개발자</b> 채용공고 보기</a>
             </div>
         </div>
         <div class="temp-right">
@@ -185,6 +185,7 @@
                     <p>CONTACT US.</p>
 <!--                    <p class="str-p">Tel.   070-7687-5532</p>-->
                     <p class="str-p"><a href="http://pf.kakao.com/_kxexcxgs" class="ch-kakao" target="_blank"></a></p>
+                    <p class="fax-p">Tel.     1660-0234</p>
                     <p class="fax-p">Fax.     02-6442-6623</p>
                     <p>Email.     dev@softj.net</p>
                 </div>

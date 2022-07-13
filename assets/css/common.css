@@ -872,7 +872,7 @@ section .main-inner{
     position: absolute;
     top: 50%;
     left: 60px;
-    width: 1100px;
+    /* width: 1100px; */
     color: #fff;
     font-size: 3vw;
     font-weight: 100;
@@ -905,6 +905,10 @@ a.abtn{
     padding: 0 25px;
     border-radius: 10px;
     box-shadow: 0px 0px 24px -5px #000000;
+}
+a.mg10 {
+    margin-right: 7px;
+    margin-bottom: 10px;
 }
 .abtn:hover{
     background-color:#1672B8;
@@ -1456,11 +1460,11 @@ footer a{
 .footer-inner .foot-L span{font-size: 16px;}
 .footer-inner .foot-L p {
     font-weight: 300;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .footer-inner .ver-h{
     width: 1px;
-    height: 130px;
+    height: 160px;
     background: #ffffff;
     margin: 0 40px;
 }
@@ -1470,7 +1474,7 @@ footer a{
 .footer-inner .foot-R .str-p{
     font-weight: 500;
     font-size: 30px;
-    margin: 20px 0;
+    margin: 14px 0;
 }
 .footer-inner .foot-R .fax-p{
     margin-top: 4px;
