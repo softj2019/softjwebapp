@@ -1449,7 +1449,7 @@ footer a{
 .footer-inner .foot-L .f-logo::before{
     content: '';
     display: inline-block;
-    width: 38px;
+    width: 78px;
     height: 58px;
     background: url(../img/logo.png)no-repeat center / contain;
 }

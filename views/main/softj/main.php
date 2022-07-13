@@ -173,11 +173,10 @@
             <div class="footer-inner">
                 <div class="foot-L">
                     <div class="f-logo">
-                        <span>SOFT J</span>
                     </div>
                     <p>
-                        경기도 고양시 일산동구 정발산로 24 타워3차 603호 (장항동, 웨스턴돔2)<br>
-                        상호 : <span class="ftc_btn">소프트제이</span> ㅣ 대표자 : 김지훈<br>
+                        경기도 고양시 덕양구 원흥동 706, 광양프런티어밸리6차 1219호<br>
+                        상호 : 소프트제이 ㅣ 대표자 : 김지훈<br>
                         Copyright © 2020 SOFTJ. All Rights Reserved.
                     </p>
                 </div>
