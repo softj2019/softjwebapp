@@ -20,7 +20,7 @@ body{min-width:320px}
     top:0;
     width:100%;
     height:50px;
-    background-color:rgba(20, 116, 188, 0.85)
+    background-color: rgb(34 82 157 / 85%);
 }
 h1{
     margin:0 auto;
@@ -70,9 +70,8 @@ h1{
     box-shadow: 0px 0px 14px -1px rgba(0,0,0,0.34);
 }
 .profile img{
-    margin:5%;
-    width:90%;
-    height:90%;
+    margin:19%;
+    width:55%;
 }
 .sec1{
     width:100%;
@@ -138,7 +137,7 @@ li:first-child .circle{
 }
 .list>li h3{
     display:inline-block;
-    color:#508ee4;
+    color:#4572b9;;
     font-size:1.6rem;
     line-height: 2rem;
 }
@@ -163,7 +162,7 @@ li:first-child .circle{
     padding-top:10px;
 }
 .tbBox h3{
-    color: #508ee4;
+    color: #4572b9;;
     font-size: 1.6rem;
     line-height: 2rem;
     padding-left: 30px;
@@ -193,12 +192,21 @@ li:first-child .circle{
     font-weight: 100;
     line-height: 24px;
 }
+.tb1 td h4{
+    margin-bottom: 5px;
+}
+.tb1 td p{
+    margin-bottom: 16px;
+}
+.tb1 td p:last-of-type{
+    margin-bottom: 0px;
+}
 .tb1 td.lineH{
     line-height: 30px;
 }
 .sec2{
     width:100%;
-    background-color:#0d6fb8;
+    background-color:#1E498C;
     color:#fff;
 }
 .sec2 .inner{
@@ -223,7 +231,7 @@ li:first-child .circle{
     float:left;
 }
 .sec2-list h3{
-    color:#4c9edb;
+    color:#5a87cd;
     font-size:2rem;
     height:50px;
 }
@@ -269,16 +277,15 @@ li:first-child .circle{
 .sec3 .list>li.pic-li .sub-list li{
     padding:0 0 0 40px;
     margin-bottom:10px;
-    background-position: left center!important;
 }
 .sec3 .list>li.pic-li .sub-list li.pic-name{
-    background:url(../img/name.png) top center no-repeat;
+    background: url(../img/name.png) no-repeat 10px center / 20px;
 }
 .sec3 .list>li.pic-li .sub-list li.pic-call{
-    background:url(../img/call.png) top center no-repeat;
+    background:url(../img/call.png) no-repeat 10px center / 20px;
 }
 .sec3 .list>li.pic-li .sub-list li.pic-mail{
-    background:url(../img/mail.png) top center no-repeat;
+    background:url(../img/mail.png) no-repeat 9px center / 22px;
 }
 .map{
     width:90%;
@@ -298,7 +305,7 @@ li:first-child .circle{
     display:inline-block;
     margin-top:10px;
     color:#fff;
-    background-color:#0d6fb8;
+    background-color:#1E498C;
     border-radius: 10px;
     font-size:1.4rem;
     text-align: center;
@@ -330,7 +337,7 @@ li:first-child .circle{
     display: inline-block;
     margin-top: 10px;
     color: #fff;
-    background-color: #0d6fb8;
+    background-color: #1E498C;
     border-radius: 10px;
     font-size: 1.4rem;
     text-align: center;

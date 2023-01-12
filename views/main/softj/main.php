@@ -175,7 +175,7 @@
                     <div class="f-logo">
                     </div>
                     <p>
-                        경기도 고양시 덕양구 원흥동 706, 광양프런티어밸리6차 1219호<br>
+                        경기 고양시 덕양구 원흥동 704 고양 아크비즈 지식산업센터 623호<br>
                         상호 : 소프트제이 ㅣ 대표자 : 김지훈<br>
                         Copyright © 2020 SOFTJ. All Rights Reserved.
                     </p>
