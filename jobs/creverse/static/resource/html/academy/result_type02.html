@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>입학시험 결과 조회 인쇄하기</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link rel="shortcut icon" type="image/x-icon" href="../..images/common/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" href="../..images/common/apple-touch-icon.png" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/sub.css">
+  <link rel="stylesheet" href="../../css/print.css" media="print">
+  <script src="../../js/ui.vendor.js"></script>
+  <script src="../../js/ui.js"></script>
+</head>
+
+<body>
+<div class="pop-wrap" data-resizewrap="true">
+  <!-- pop-cont // -->
+  <div class="pop-cont">
+    <div class="result-bg ty-mt"></div>
+    <div class="result-head">
+      <h2 class="result-title">
+         <span data-picture='' data-alt='CMS 영재교육센터' class="result-logo">
+            <span data-src='../../images/brand/cc-mt.png'></span>
+            <span data-src='../../images/brand/cc-mt.png' data-media='(min-width: 768px)'></span>
+          </span>Diagnostic Test Report
+      </h2>
+      <dl class="result-profile">
+        <dt>이름</dt>
+        <dd>김선아</dd>
+        <dt>학교/학년</dt>
+        <dd>대도초등학교/5학년</dd>
+        <dt>응시일</dt>
+        <dd>2019년 1월 17일</dd>
+      </dl>
+    </div>
+    <div class="result-info ty-mt">
+      <div class="info-item">
+        <dl class="my-result ty-mt">
+          <dt>단계 배정 결과</dt>
+          <dd><strong class="fc-13">IG-O</strong></dd>
+        </dl>
+        <div class="des ty-mt">
+          여러 가지 도형을 제외한 전 단원에 걸쳐 이해력과 <br>
+          문제 해결력이 우수합니다.
+          </div>
+      </div>
+      <div class="info-item score">
+        <dl class="my-result">
+          <dt>영역별 점수</dt>
+        </dl>
+        <div class="points">
+          <div class="points-item points-half">
+            <dl>
+              <dt>기본사고력</dt>
+              <dd><strong>46</strong> / <span class="">0</span></dd>
+            </dl>
+            <dl>
+              <dt>심화사고력</dt>
+              <dd><strong>20</strong> / <span class="">30</span></dd>
+            </dl>
+          </div>
+          <div class="points-item">
+            <dl>
+              <dt>종합</dt>
+              <dd class="total"><strong class="fc-13">66</strong> / 100</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="print-tit ty-mt">수능 모의고사 성적표</div>
+    <!-- tab // -->
+    <ul data-tab='{"activeidx" : "0"}' class="tab tab-col-3 cmgt mo-show result-tab">
+      <li data-act='tab' class="tab-item active"><a href="#tabCont, #tabCont-4" onclick='$jq("#tabCont-4").replaceClass("td-view-case-[^ ]*","td-view-case-1")'><span class="mid">Listening</span></a></li>
+      <li data-act='tab' class="tab-item"><a href="#tabCont-2, #tabCont-4" onclick='$jq("#tabCont-4").replaceClass("td-view-case-[^ ]*","td-view-case-2")'><span class="mid">Reading</span></a></li>
+      <li data-act='tab' class="tab-item"><a href="#tabCont-3"><span class="mid">영어 능력 지표</span></a></li>
+    </ul>
+    <h3 class="blind" id="tabSelTitle" title="선택">Listening</h3>
+
+    <!-- 문항별 채점 결과 // -->
+    <div class="print-inside">
+      <h3 class="g-title-5 cmgt-2 mo-blind">문항별 채점 결과</h3>
+      <div id="tabCont" class="tb-data-wrap cmgt-3 result-tab-cont-3">
+        <table class="tb-data tb-pd">
+          <caption>문항별 채점 결과</caption>
+          <colgroup>
+            <col width="15%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="5%" />
+            <col width="10%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">문항</th>
+              <th scope="col" colspan="12">기본 사고력</th>
+              <th scope="col" colspan="3">심화 사고력</th>
+              <th scope="col" rowspan="4">합계</th>
+            </tr>            
+            <tr>
+              <th scope="col">1</th>
+              <th scope="col">2</th>
+              <th scope="col">3</th>
+              <th scope="col">4</th>
+              <th scope="col">5</th>
+              <th scope="col">6</th>
+              <th scope="col">7</th>
+              <th scope="col">8</th>
+              <th scope="col">9</th>
+              <th scope="col">10</th>
+              <th scope="col">11</th>
+              <th scope="col">12</th>
+              <th scope="col">13</th>
+              <th scope="col">14</th>
+              <th scope="col">15</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>핵심 영역</td>
+              <td class="ac">A</td>
+              <td class="ac">E</td>
+              <td class="ac">A</td>
+              <td class="ac">E</td>
+              <td class="ac">C</td>
+              <td class="ac">E</td>
+              <td class="ac">D</td>
+              <td class="ac">D</td>
+              <td class="ac">B</td>
+              <td class="ac">B</td>
+              <td class="ac">D</td>
+              <td class="ac">C</td>
+              <td class="ac">D</td>
+              <td class="ac">F</td>
+              <td class="ac">F</td>
+              <th rowspan="2"></th>
+            </tr>            
+            <tr>
+              <td>난도</td>
+              <td class="ac">하</td>
+              <td class="ac">하</td>
+              <td class="ac">하</td>
+              <td class="ac">하</td>
+              <td class="ac">중</td>
+              <td class="ac">하</td>
+              <td class="ac">하</td>
+              <td class="ac">중</td>
+              <td class="ac">중</td>
+              <td class="ac">중</td>
+              <td class="ac">중</td>
+              <td class="ac">중</td>
+              <td class="ac">중</td>
+              <td class="ac">중</td>
+              <td class="ac">중</td>
+            </tr>  
+            <tr>
+              <td>배점</td>
+              <td class="ac">5</td>
+              <td class="ac">5</td>
+              <td class="ac">5</td>
+              <td class="ac">5</td>
+              <td class="ac">7</td>
+              <td class="ac">5</td>
+              <td class="ac">7</td>
+              <td class="ac">7</td>
+              <td class="ac">7</td>
+              <td class="ac">7</td>
+              <td class="ac">7</td>
+              <td class="ac">7</td>
+              <td class="ac">10</td>
+              <td class="ac">10</td>
+              <td class="ac">10</td>
+              <td class="ac">100</td>
+            </tr>  
+            <tr>
+              <td>득점</td>
+              <td class="ac">5</td>
+              <td class="ac">5</td>
+              <td class="ac">0</td>
+              <td class="ac">5</td>
+              <td class="ac">7</td>
+              <td class="ac">5</td>
+              <td class="ac">7</td>
+              <td class="ac">7</td>
+              <td class="ac">7</td>
+              <td class="ac">0</td>
+              <td class="ac">0</td>
+              <td class="ac">12</td>
+              <td class="ac">10</td>
+              <td class="ac">10</td>
+              <td class="ac">10</td>
+              <td>60</td>
+            </tr>
+          </tbody>
+          <tfoot class="tfoot-mt">
+            <tr>
+              
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <!-- // Listening -->
+
+    <!-- 영역별 평가 // -->
+    <div class="print-inside">
+      <h3 class="g-title-5 cmgt-2 mo-blind">영역별 평가</h3>
+      <div id="tabCont-2" class="tb-data-wrap cmgt-3 result-tab-cont">
+        <table class="tb-data tb-pd">
+          <caption>영역별 평가</caption>
+          <colgroup><col width="22.6%" /><col width="11.6%" /><col width="11.6%" /><col width="*" /></colgroup>
+          <thead>
+            <tr>
+              <th scope="col">구분</th>
+              <th scope="col">문항</th>
+              <th scope="col">배점</th>
+              <th scope="col">득점</th>
+              <th scope="col">성취도</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>              
+              <td>A. 수/연산</td>
+              <td class="ac">1, 3, 4</td>
+              <td class="ac">39</td>
+              <td class="ac">27</td>
+              <td class="ac">69%</td>
+            </tr>
+            <tr>              
+              <td>B. 도형</td>
+              <td class="ac">1, 3, 4</td>
+              <td class="ac">39</td>
+              <td class="ac">27</td>
+              <td class="ac">69%</td>
+            </tr>
+            <tr>
+              <td>C. 규칙</td>
+              <td class="ac">1, 3, 4</td>
+              <td class="ac">30</td>
+              <td class="ac">25</td>
+              <td class="ac">83%</td>
+            </tr>            
+            <tr>
+              <td>D. 분류</td>
+              <td class="ac">1, 3, 4</td>
+              <td class="ac">34</td>
+              <td class="ac">17</td>
+              <td class="ac">50%</td>
+            </tr>            
+            <tr>              
+              <td>E. 공간</td>
+              <td class="ac">1, 3, 4</td>
+              <td class="ac">27</td>
+              <td class="ac">22</td>
+              <td class="ac">81%</td>
+            </tr>
+            <tr>              
+              <td>F. 논리</td>
+              <td class="ac">1, 3, 4</td>
+              <td class="ac">29</td>
+              <td class="ac">22</td>
+              <td class="ac">76%</td>
+            </tr>
+          </tbody>          
+          <tfoot class="tfoot-ap">
+            <tr>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="radar-chart">
+          <div class="legend"><span class="case">나의 위치</span> <span class="case ty-2">응시생 평균 (해당 학년)</span></div>
+          <div class="chart"><canvas id="chart1" width="100%" height="75%"></canvas></div>
+        </div>
+      </div>
+    </div>
+    <div class="print-inside">
+      <h3>영역별 평가능력</h3>
+      <ul>
+        <li><span>A. 수/연산</span>기본적인 수 개념에 대한 이해를 바탕으로 연산문제를 푸는 능력</li>
+        <li><span>B. 도형</span>기본 도형들의 구조 및 특징을 이해하고, 다양한 도형들을 관찰하여 구별하는 능력</li>
+        <li><span>C. 규칙</span>특정한 규칙을 찾고, 이를 분석하여 다음에 올 그림이나 수를 예상하는 능력</li>
+        <li><span>D. 분류</span>공통점과 차이점을 찾아, 단순 분류에서부터 복잡한 포함관계를 파악하는 능력</li>
+        <li><span>E. 공간</span>위치, 방향 등의 속성을 시각적으로 이해하고, 이를 통해 공간의 연관성을 찾는 능력</li>
+        <li><span>F. 논리</span>옳고, 그름을 판단하거나 인과관계를 해결하는 능력</li>
+      </ul>
+    </div>
+    <!-- // 영역별 평가 -->
+
+    <!-- 난도별 해결력 비교 // -->
+    <div class="print-inside">      
+      <h3 class="g-title-5 cmgt-2 mo-blind">난도별 해결력 비교</h3>
+      <div id="tabCont-4" class="tb-data-wrap cmgt-4 result-tab-cont-4 td-view-case-1">
+        <table class="tb-data tb-pd">
+          <caption>난도별 해결력 비교</caption>
+          <colgroup><col class="tb-col-18" /><col class="tb-col-3 case-1" /><col class="tb-col-3 case-2" /></colgroup>
+          <thead>
+            <tr>
+              <th scope="col">구분</th>
+              <th scope="col">문항수</th>
+              <th scope="col">배점</th>
+              <th scope="col">득점</th>
+              <th scope="col">성취도</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ac">하</td>
+              <td class="ac">5</td>
+              <td class="ac">25</td>
+              <td class="ac">20</td>
+              <td class="ac">80%</td>
+            </tr>
+            <tr>
+              <td class="ac">중</td>
+              <td class="ac">7</td>
+              <td class="ac">45</td>
+              <td class="ac">26</td>
+              <td class="ac">58%</td>
+            </tr>
+            <tr>
+              <td class="ac">상</td>
+              <td class="ac">3</td>
+              <td class="ac">30</td>
+              <td class="ac">20</td>
+              <td class="ac">67%</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="radar-chart">
+          <div class="legend"><span class="case">나의 위치</span> <span class="case ty-2">응시생 평균 (해당 학년)</span></div>
+          <div class="chart"><canvas id="chart1" width="100%" height="75%"></canvas></div>
+        </div>
+      </div>
+    </div>
+    <!-- // 난이도 -->
+    <!-- 사고능력 비교 // -->
+    <div class="print-inside">      
+      <h3 class="g-title-5 cmgt-2 mo-blind">사고능력 비교</h3>
+      <div id="tabCont-4" class="tb-data-wrap cmgt-4 result-tab-cont-4 td-view-case-1">
+        <table class="tb-data tb-pd">
+          <caption>사고능력 비교</caption>
+          <colgroup><col class="tb-col-18" /><col class="tb-col-3 case-1" /><col class="tb-col-3 case-2" /></colgroup>
+          <thead>
+            <tr>
+              <th scope="col">구분</th>
+              <th scope="col">배점</th>
+              <th scope="col">득점</th>
+              <th scope="col">성취도</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ac">기본사고력</td>
+              <td class="ac">70</td>
+              <td class="ac">46</td>
+              <td class="ac">66%</td>
+            </tr>
+            <tr>
+              <td class="ac">심화사고력</td>
+              <td class="ac">30</td>
+              <td class="ac">20</td>
+              <td class="ac">67%</td>
+            </tr>
+          </tbody>
+          <tfoot class="tfoot-mt">
+            <tr>
+              <td >심화사고력</td>
+              <td >30</td>
+              <td >20</td>
+              <td >67%</td>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="radar-chart">
+          <div class="legend"><span class="case">나의 위치</span> <span class="case ty-2">응시생 평균 (해당 학년)</span></div>
+          <div class="chart"><canvas id="chart1" width="100%" height="75%"></canvas></div>
+        </div>
+      </div>
+    </div>
+    <!-- // 난이도 -->
+    <div class="print-inside">
+      <!-- 관찰 평가 PC // -->
+      <h3 class="g-title-5 cmgt-2 mo-blind">관찰 평가</h3>
+      <div class="tb-data-wrap cmgt-3 mo-hide">
+        <table class="tb-data separate">
+          <caption>관찰 평가</caption>
+          <colgroup><col width="22.6%" /><col width="26%" /><col width="19.5%" /><col width="*" /></colgroup>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">문항</th>
+              <th scope="col" colspan="3">지필고사</th>
+              <th scope="col" colspan="5">수행평가</th>
+            </tr>
+            <tr>
+              <th scope="col">문장이해력</th>
+              <th scope="col">의사소통 능력</th>
+              <th scope="col">응시태도</th>
+              <th scope="col">호기심</th>
+              <th scope="col">적극성</th>
+              <th scope="col">독립성</th>
+              <th scope="col">인내심</th>
+              <th scope="col">창의성</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ac">평가</td>
+              <td class="ac">상</td>
+              <td class="ac">상</td>
+              <td class="ac">상</td>
+              <td class="ac">상</td>
+              <td class="ac">상</td>
+              <td class="ac">상</td>
+              <td class="ac">상</td>
+              <td class="ac">상</td>
+            </tr>            
+            <tr>
+              <td class="ac" rowspan="3">응시생 비율</td>
+              <td class="ac">상(59%)</td>
+              <td class="ac">상(73%)</td>
+              <td class="ac">상(76%)</td>
+              <td class="ac">상(00%)</td>
+              <td class="ac">상(00%)</td>
+              <td class="ac">상(00%)</td>
+              <td class="ac">상(00%)</td>
+              <td class="ac">상(00%)</td>
+            </tr>
+            <tr>
+              <td class="ac">중(59%)</td>
+              <td class="ac">중(73%)</td>
+              <td class="ac">중(76%)</td>
+              <td class="ac">상(00%)</td>
+              <td class="ac">상(00%)</td>
+              <td class="ac">상(00%)</td>
+              <td class="ac">상(00%)</td>
+              <td class="ac">상(00%)</td>
+            </tr>
+            <tr>
+              <td class="ac">하(59%)</td>
+              <td class="ac">하(73%)</td>
+              <td class="ac">하(76%)</td>
+              <td class="ac">상(00%)</td>
+              <td class="ac">상(00%)</td>
+              <td class="ac">상(00%)</td>
+              <td class="ac">상(00%)</td>
+              <td class="ac">상(00%)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- // 영어 능력 지표 PC -->
+      <div class="print-inside">
+        <h3>평가항목</h3>
+        <ul>
+          <li><span>문장이해력</span>기본적인 수 개념에 대한 이해를 바탕으로 연산문제를 푸는 능력</li>
+          <li><span>의사소통능력</span>기본 도형들의 구조 및 특징을 이해하고, 다양한 도형들을 관찰하여 구별하는 능력</li>
+          <li><span>응시태도</span>일정한 규칙을 찾고, 이를 분석하여 다음에 올 그림이나 수를 예상하는 능력</li>
+        </ul>
+        
+        <ul>
+          <li><span>호기심</span>사물을 자세히 관찰하고 새로운 활동에 관심을 보이는가?</li>
+          <li><span>적극성</span>활동에 적극적으로 참여하고 문제를 해결하기 위해 열심히 노력하였는가?</li>
+          <li><span>독립성</span>타인에게 의존하지 않고 자신의 힘을 해결해보려 노력하는가?</li>
+          <li><span>인내심</span>해결되지 않는 문제를 포기하지 않고, 끝까지 해결하려고 하는가?</li>
+          <li><span>창의성</span>얼마나 다양한 결과를 찾아내고, 보다 창의적으로 해결하였는가</li>
+        </ul>
+      </div>
+      <!-- 영어 능력 지표 Mobile // -->
+      <div id="tabCont-3" class="tb-data-wrap cmgt-3 result-tab-cont-2">
+        <table class="tb-data tb-data-accor" data-accordion=''>
+          <caption>영어 능력 지표</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="mo-col-etc"><span class="mid">Program</span></th>
+              <th scope="col" class="mo-col-etc-2"><span class="mid">본인 해당 학년의<br />레벨 별 학생 수 분포</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-act='title'>
+              <td class="ac mo-col-etc">Junior Master 2</td>
+              <td class="tb-img mo-col-etc-2">
+                <span class="graph-wrap"><span class="graph-in ty-ap-2" style="width:20%"></span><span class="blind">20%</span></span>
+                <a href="#none" data-act='btn' class="acc-title-2"><span class="blind">내용 보기</span></a>
+              </td>
+            </tr>
+            <tr data-act='cont' class="acc-cont">
+              <td colspan="2">
+                <dl class="def-5">
+                  <dt>교재 난이도, 어휘/언어</dt>
+                  <dd>Grade 5-6</dd>
+                  <dt>특징</dt>
+                  <dd>Advanced Reading</dd>
+                  <dd>Certification</dd>
+                  <dd>Debate/Research &amp; Presentation</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr data-act='title'>
+              <td class="ac mo-col-etc">Junior Master 1</td>
+              <td class="tb-img mo-col-etc-2">
+                <span class="graph-wrap"><span class="graph-in ty-ap-2" style="width:80%"></span><span class="blind">80%</span></span>
+                <a href="#none" data-act='btn' class="acc-title-2"><span class="blind">내용 보기</span></a>
+              </td>
+            </tr>
+            <tr data-act='cont' class="acc-cont">
+              <td colspan="2">
+                <dl class="def-5">
+                  <dt>교재 난이도, 어휘/언어</dt>
+                  <dd>Grade 5-6</dd>
+                  <dt>특징</dt>
+                  <dd>Advanced Reading</dd>
+                  <dd>Certification</dd>
+                  <dd>Debate/Research &amp; Presentation</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr data-act='title'>
+              <td class="ac mo-col-etc">Sapling 2</td>
+              <td class="tb-img mo-col-etc-2">
+                <span class="graph-wrap"><span class="graph-in ty-ap-2" style="width:100%"></span><span class="blind">100%</span></span>
+                <a href="#none" data-act='btn' class="acc-title-2"><span class="blind">내용 보기</span></a>
+              </td>
+            </tr>
+            <tr data-act='cont' class="acc-cont">
+              <td colspan="2">
+                <dl class="def-5">
+                  <dt>교재 난이도, 어휘/언어</dt>
+                  <dd>Grade 4</dd>
+                  <dt>특징</dt>
+                  <dd>Intermediate Reading</dd>
+                  <dd>Essay Writing</dd>
+                  <dd>Presentation</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr data-act='title'>
+              <td class="ac mo-col-etc">Sapling 1</td>
+              <td class="tb-img mo-col-etc-2">
+                <span class="graph-wrap"><span class="graph-in ty-ap-2" style="width:80%"></span><span class="blind">80%</span></span>
+                <a href="#none" data-act='btn' class="acc-title-2"><span class="blind">내용 보기</span></a>
+              </td>
+            </tr>
+            <tr data-act='cont' class="acc-cont">
+              <td colspan="2">
+                <dl class="def-5">
+                  <dt>교재 난이도, 어휘/언어</dt>
+                  <dd>Grade 4</dd>
+                  <dt>특징</dt>
+                  <dd>Intermediate Reading</dd>
+                  <dd>Essay Writing</dd>
+                  <dd>Presentation</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr data-act='title'>
+              <td class="ac mo-col-etc">Sprout 3</td>
+              <td class="tb-img mo-col-etc-2">
+                <span class="graph-wrap"><span class="graph-in ty-ap-2" style="width:100%"></span><span class="blind">100%</span></span>
+                <a href="#none" data-act='btn' class="acc-title-2"><span class="blind">내용 보기</span></a>
+              </td>
+            </tr>
+            <tr data-act='cont' class="acc-cont">
+              <td colspan="2">
+                <dl class="def-5">
+                  <dt>교재 난이도, 어휘/언어</dt>
+                  <dd>Grade 2-3</dd>
+                  <dt>특징</dt>
+                  <dd>Reading</dd>
+                  <dd>Story Writing</dd>
+                  <dd>Storytelling</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr data-act='title'>
+              <td class="ac mo-col-etc">Sprout 2</td>
+              <td class="tb-img mo-col-etc-2">
+                <span class="graph-wrap"><span class="graph-in ty-ap-2" style="width:30%"></span><span class="blind">30%</span></span>
+                <a href="#none" data-act='btn' class="acc-title-2"><span class="blind">내용 보기</span></a>
+              </td>
+            </tr>
+            <tr data-act='cont' class="acc-cont">
+              <td colspan="2">
+                <dl class="def-5">
+                  <dt>교재 난이도, 어휘/언어</dt>
+                  <dd>Grade 2-3</dd>
+                  <dt>특징</dt>
+                  <dd>Reading</dd>
+                  <dd>Story Writing</dd>
+                  <dd>Storytelling</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr data-act='title'>
+              <td class="ac mo-col-etc">Sprout 1</td>
+              <td class="tb-img mo-col-etc-2">
+                <span class="graph-wrap"><span class="graph-in ty-ap-2" style="width:10%"></span><span class="blind">10%</span></span>
+                <a href="#none" data-act='btn' class="acc-title-2"><span class="blind">내용 보기</span></a>
+              </td>
+            </tr>
+            <tr data-act='cont' class="acc-cont">
+              <td colspan="2">
+                <dl class="def-5">
+                  <dt>교재 난이도, 어휘/언어</dt>
+                  <dd>Grade 2-3</dd>
+                  <dt>특징</dt>
+                  <dd>Reading</dd>
+                  <dd>Story Writing</dd>
+                  <dd>Storytelling</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr data-act='title' class="result-yet-level result-level-multi"> <!-- 년후 레벨일 경우 class:result-yet-level / blind 텍스트 추가, 1년후 레벨 이어서 있을 경우 : result-level-multi -->
+              <td class="ac mo-col-etc">Seed 2<span class="blind">1년후 레벨</span></td>
+              <td class="tb-img mo-col-etc-2">
+                <span class="graph-wrap"><span class="graph-in ty-ap-2" style="width:100%"></span><span class="blind">100%</span></span>
+                <a href="#none" data-act='btn' class="acc-title-2"><span class="blind">내용 보기</span></a>
+              </td>
+            </tr>
+            <tr data-act='cont' class="acc-cont">
+              <td colspan="2">
+                <dl class="def-5">
+                  <dt>교재 난이도, 어휘/언어</dt>
+                  <dd>Grade 1</dd>
+                  <dt>특징</dt>
+                  <dd>Basic Reading</dd>
+                  <dd>Sentence Writing</dd>
+                  <dd>Movie/News</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr data-act='title' class="result-yet-level result-level-multi"> <!-- 년후 레벨일 경우 class:result-yet-level / blind 텍스트 추가, 1년후 레벨 이어서 있을 경우 : result-level-multi -->
+              <td class="ac mo-col-etc">Seed 2<span class="blind">1년후 레벨</span></td>
+              <td class="tb-img mo-col-etc-2">
+                <span class="graph-wrap"><span class="graph-in ty-ap-2" style="width:100%"></span><span class="blind">100%</span></span>
+                <a href="#none" data-act='btn' class="acc-title-2"><span class="blind">내용 보기</span></a>
+              </td>
+            </tr>
+            <tr data-act='cont' class="acc-cont">
+              <td colspan="2">
+                <dl class="def-5">
+                  <dt>교재 난이도, 어휘/언어</dt>
+                  <dd>Grade 1</dd>
+                  <dt>특징</dt>
+                  <dd>Basic Reading</dd>
+                  <dd>Sentence Writing</dd>
+                  <dd>Movie/News</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr data-act='title' class="result-yet-level"> <!-- 1년후 레벨 여러개일 경우 마지막에는 result-level-multi 추가 안함. -->
+              <td class="ac mo-col-etc">Seed 1<span class="blind">1년후 레벨</span></td>
+              <td class="tb-img mo-col-etc-2">
+                <span class="graph-wrap"><span class="graph-in ty-ap-2" style="width:100%"></span><span class="blind">100%</span></span>
+                <a href="#none" data-act='btn' class="acc-title-2"><span class="blind">내용 보기</span></a>
+              </td>
+            </tr>
+            <tr data-act='cont' class="acc-cont">
+              <td colspan="2">
+                <dl class="def-5">
+                  <dt>교재 난이도, 어휘/언어</dt>
+                  <dd>Grade 1</dd>
+                  <dt>특징</dt>
+                  <dd>Basic Reading</dd>
+                  <dd>Sentence Writing</dd>
+                  <dd>Movie/News</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr data-act='title'>
+              <td class="ac mo-col-etc">Seedbed 2</td>
+              <td class="tb-img mo-col-etc-2">
+                <span class="graph-wrap"><span class="graph-in ty-ap-2" style="width:60%"></span><span class="blind">60%</span></span>
+                <a href="#none" data-act='btn' class="acc-title-2"><span class="blind">내용 보기</span></a>
+              </td>
+            </tr>
+            <tr data-act='cont' class="acc-cont">
+              <td colspan="2">
+                <dl class="def-5">
+                  <dt>교재 난이도, 어휘/언어</dt>
+                  <dd>K – Grade 1	</dd>
+                  <dt>특징</dt>
+                  <dd>Pre-Reading</dd>
+                  <dd>Daily Expression</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr data-act='title' class="result-my-level"> <!-- 배정 레벨일 경우 tr result-my-level 추가, blind 텍스트 추가 // -->
+              <td class="ac mo-col-etc">Seedbed 1<span class="blind">배정레벨</span></td>
+              <td class="tb-img mo-col-etc-2">
+                <span class="graph-wrap"><span class="graph-in ty-ap" style="width:22.2%"></span><span class="blind">22.2%</span></span>
+                <a href="#none" data-act='btn' class="acc-title-2"><span class="blind">내용 보기</span></a>
+              </td>
+            </tr>
+            <tr data-act='cont' class="acc-cont">
+              <td colspan="2">
+                <dl class="def-5">
+                  <dt>교재 난이도, 어휘/언어</dt>
+                  <dd>K</dd>
+                  <dt>특징</dt>
+                  <dd>Phonics</dd>
+                  <dd>Daily Expression</dd>
+                </dl>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="result-level-des">
+          <span class="result-yet-level">1년후 레벨</span>
+          <span class="result-my-level">배정레벨</span>
+        </div>
+      </div>
+      <!-- // 영어 능력 지표 Mobile -->
+      <!-- 수행평가 결과 -->
+      <div>
+        <h3>수행평가 결과</h3>
+        <div>
+          모든 평가항목에서 태도 역량이 탁월합니다. 그중에서도 가장 강점인 부분은 창의성입니다. 자신만의 해결전략을 이용하여 다양한 답을 찾아내거나 독창적인 결과를 만들어 내려는 태도가 뛰어납니다. 이러한 부분들이 지속해서 유지, 발전될 수 있도록 수준에 맞는 교육을 제공해 주시기 바랍니다.
+        </div>
+      </div>
+      <script src="../../js/chart.min.js"></script>
+      <script type="text/javascript">
+        $jq(document).ready(function () {
+            // 레이더 차트
+            var ctx = document.getElementById("chart1").getContext('2d');
+            var color = ['rgba(239, 62, 66, 1)', "rgba(48, 63, 80, 1)"];
+  
+            if (ctx != null) {
+              var dataList = [];
+  
+              var myData = {
+                label: '나의 위치',
+                data: [136,139,150,130,150],
+                fill: false,
+                //pointStyle: 'line',
+                borderWidth:2,
+                borderColor: color[0],
+                pointBorderColor: color[0],
+                pointBackgroundColor: color[0],
+                pointHoverBackgroundColor: color[0],
+                pointHoverBorderColor: color[0]
+              };
+  
+              var avgData = {
+                label: "응시생 평균",
+                data: [147.0, 146.0, 148.1, 151.0, 148.0],
+                fill: false,
+                borderColor: color[1],
+                pointStyle: 'line',
+                borderWidth:2,
+                pointBackgroundColor: "rgba({{ radarColors[loop.index0] }},1)"
+              }
+              dataList.push(myData);
+              dataList.push(avgData);
+  
+              var data = { labels: ['Writing','Speaking','Listening','Logic','Reading'], datasets: dataList };
+  
+              var options = {
+                legend: {
+                  display: false, position: 'right',
+                  labels: { fontSize: 14, fontStyle: 'bold' }
+                },
+                layout: {
+                  padding: { top: 0, right: 0, bottom: 0, left: 0 }
+                },
+                scale: {
+                  angleLines: { color: '#eeeeee' },
+                  gridLines: { color: ['#eeeeee','#eeeeee','#dddddd']},
+                  ticks: { min: 130, max: 160, stepSize: 10, display: false },
+                  pointLabels: { fontSize: 14, fontStyle: 'bold', fontColor:"#000000", fontFamily:"'맑은 고딕','Malgun Gothic','돋움',dotum, sans-serif" }
+                },
+                animation: {
+                  onComplete: function () {
+                    var chartInstance = this.chart;
+                    var ctx = chartInstance.ctx;
+                    ctx.textAlign = "center";
+                    ctx.textBaseline = "bottom";
+                    Chart.helpers.each(this.data.datasets.forEach(function (dataset, i) {
+                      if (i == 0) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        Chart.helpers.each(meta.data.forEach(function (bar, index) {
+                          var gap = [0,0];
+                          switch(index){
+                            case 0 : ctx.textAlign = "center", ctx.textBaseline = "bottom", gap = [0,-5]; break;
+                            case 1 : ctx.textAlign = "left", ctx.textBaseline = "middle", gap = [5,0]; break;
+                            case 2 : ctx.textAlign = "left", ctx.textBaseline = "top", gap = [5,5]; break;
+                            case 3 : ctx.textAlign = "right", ctx.textBaseline = "top", gap = [-8,5]; break;
+                            case 4 : ctx.textAlign = "right", ctx.textBaseline = "middle", gap = [-8,0]; break;
+                          }
+                          ctx.fillText(dataset.data[index], bar._model.x + gap[0], bar._model.y + gap[1]);
+                        }), this)
+                      }
+                    }), this);
+                  }
+                }
+              };
+              var myRadarChart = new Chart(ctx, {type: 'radar', data: data, options: options});
+            }
+        });
+        var ctx = document.getElementById('chart2').getContext('2d');
+        var chart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['듣기 / 말하기','대의 파악','세부 사항','어법 / 어휘','빈칸 추론','간접 쓰기','영문 독해'],
+            datasets: [
+              {
+                label: '문항',
+                backgroundColor: '#70C2D4',
+                borderWidth: 0,
+                data: [25 ,25, 25,25 ,25, 25, 25],
+              },
+              {
+                label: '맞은 갯수',
+                backgroundColor: '#9A8BBC',
+                borderWidth: 0,
+                data: [23 ,22, 6,22 ,22, 3, 8]
+              },
+              {
+                label: '문항 점수',
+                backgroundColor: '#FCA554',
+                borderWidth: 0,
+                data: [22 ,22, 22,22 ,22, 22,22]
+              },
+              {
+                label: '내점수',
+                backgroundColor: '#EB5357',
+                borderWidth: 0,
+                data: [22 ,22, 22,22 ,22, 22,28]
+              },      
+            ]
+          },
+          options: {
+            maxBarThickness: 20,
+            maintainAspectRatio:false,
+            borderRadius:4,
+            layout: {
+              padding:0,
+            },
+            legend: {//범례 설정            
+              display: false,
+            },
+            responsive: true,
+            scales: {
+                y: { 
+                  min: 0,
+                  max: 40,  
+                  grid: {  
+                    display:false,
+                  },
+                },
+                x: {
+                  grid: {
+                    drawTicks: false,
+                    tickLength: 0,
+                    color: '#E7E1E1',
+                    drawBorder: false,
+                  },
+                  border: {
+                    dash: [2,4],
+                  }
+                }
+            },
+            plugins: {
+              legend: {
+                display: false,
+              }
+              
+            }
+          }
+        });  
+      </script>
+    </div>
+
+    <div class="btn-wrap btn-print">
+      <span class="btn-in"><button type="button" class="btn-t btn-c" onclick="window.print();">인쇄</button></span>
+      <span class="btn-in"><a href="#none" target="_blank" title="새창으로 열립니다." class="btn-t btn-c-2">PDF</a></span>
+    </div>
+  </div>
+  <!-- // pop-cont -->
+</div>
+</body>
+</html>

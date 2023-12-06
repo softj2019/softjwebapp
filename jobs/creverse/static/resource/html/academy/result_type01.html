@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>입학시험 결과 조회 인쇄하기</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initi al-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link rel="shortcut icon" type="image/x-icon" href="../../images/common/favicon.ico" />
+  <link rel="apple-touch-icon-precomposed" href="../../images/common/apple-touch-icon.png" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/sub.css">
+  <link rel="stylesheet" href="../../css/print.css" media="print">
+  <script src="../../js/ui.vendor.js"></script>
+  <script src="../../js/ui.js"></script>
+</head>
+
+<body>
+<div class="pop-wrap" data-resizewrap="true">
+  <!-- pop-cont // -->
+  <div class="pop-cont">
+    <div class="result-bg"></div>
+    <div class="result-head">
+      <h2 class="result-title">
+         <span data-picture='' data-alt='청담어학원' class="result-logo">
+            <span data-src='../../images/common/result-title-mo.png'></span>
+            <span data-src='../../images/common/result-title.png' data-media='(min-width: 768px)'></span>
+          </span>Diagnostic Test Report
+      </h2>
+      <div class="result-con">
+        <dl class="result-profile">
+          <dt>레벨</dt>
+          <dd>Mega</dd>
+          <dt>상담교사</dt>
+          <dd>김헬레나</dd>
+        </dl>
+        <dl class="result-profile">
+          <dt>이름</dt>
+          <dd>김선아</dd>
+          <dt>학교 / 학년</dt>
+          <dd>대도초등학교/5학년</dd>
+          <dt>응시일</dt>
+          <dd>2019년 1월 17일</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="result-info">
+      <div class="info-item">
+        <dl class="my-result">
+          <dt>단계 배정 결과</dt>
+          <dd><strong class="fc-4">8등급</strong></dd>
+        </dl>
+        <dl class="my-result">
+          <dt>레벨</dt>
+          <dd><strong class="fc-4">TO 1</strong></dd>
+        </dl>
+      </div>
+      <div class="info-item score">
+        <dl class="my-result">
+          <dt>영역별 점수</dt>
+        </dl>
+        <div class="points">
+          <div class="points-item points-half">
+            <dl>
+              <dt>Listening</dt>
+              <dd><strong>144</strong> / <span class="">160</span></dd>
+            </dl>
+            <dl>
+              <dt>Reading</dt>
+              <dd><strong>145</strong> / <span class="">160</span></dd>
+            </dl>
+          </div>
+          <div class="points-item">
+            <dl>
+              <dt>종합</dt>
+              <dd class="total"><strong class="fc-4">720</strong> / 800</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="print-tit">수능 모의고사 성적표</div>
+    <!-- 등급 & 누적 & 비율 // -->
+    <div class="print-inside">
+      <h3 class="g-title-5 cmgt-2 first-1">등급 & 누적 & 비율</h3>
+      <div class="tb-data-wrap cmgt-3">
+        <table class="tb-data">
+          <caption>등급 & 누적 & 비율</caption>
+          <colgroup>
+            <col width="12%" />
+            <col width="9.7%" />
+            <col width="9.7%" />
+            <col width="9.7%" />
+            <col width="9.7%" />
+            <col width="9.7%" />
+            <col width="9.7%" />
+            <col width="9.7%" />
+            <col width="9.7%" />
+            <col width="9.7%" />
+           </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">구분</th>
+              <th scope="col">1등급</th>
+              <th scope="col">2등급</th>
+              <th scope="col">3등급</th>
+              <th scope="col">4등급</th>
+              <th scope="col">5등급</th>
+              <th scope="col">6등급</th>
+              <th scope="col">7등급</th>
+              <th scope="col">8등급</th>
+              <th scope="col">9등급</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>등급점수</td>
+              <td class="ac">90</td>
+              <td class="ac">80</td>
+              <td class="ac">70</td>
+              <td class="ac">60</td>
+              <td class="ac">50</td>
+              <td class="ac">40</td>
+              <td class="ac">30</td>
+              <td class="ac">20</td>
+              <td class="ac">20미만</td>
+            </tr>
+            <tr>
+              <td>누적인원</td>
+              <td class="ac">385</td>
+              <td class="ac">1,488</td>
+              <td class="ac">34,725</td>
+              <td class="ac">6,073</td>
+              <td class="ac">8,696</td>
+              <td class="ac">11,181</td>
+              <td class="ac">13,573</td>
+              <td class="ac">16,070</td>
+              <td class="ac">16,824</td>
+            </tr>
+            <tr>
+              <td>누적비율</td>
+              <td class="ac">2.3</td>
+              <td class="ac">8.8</td>
+              <td class="ac">20.6</td>
+              <td class="ac">36.1</td>
+              <td class="ac">51.7</td>
+              <td class="ac">66.5</td>
+              <td class="ac">80.7</td>
+              <td class="ac">95.5</td>
+              <td class="ac">100</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- // 등급 & 누적 & 비율 -->
+
+    <!-- 영역별 점수 // -->
+    <div class="print-inside">
+      <h3 class="g-title-5 cmgt-2">영역별 점수</h3>
+      <div class="tb-data-wrap cmgt-3">
+        <table class="tb-data">
+          <caption>영역별 점수</caption>
+          <colgroup>
+            <col width="10%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="10%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col" colspan="2">구분</th>
+              <th scope="col">문항</th>
+              <th scope="col">맞은갯수</th>
+              <th scope="col">문항점수</th>
+              <th scope="col">내 점수</th>
+              <th scope="col">해당문항</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ac">Listening</td>
+              <td class="ac">듣기 / 말하기</td>
+              <td class="ac">17</td>
+              <td class="ac">4</td>
+              <td class="ac">37</td>
+              <td class="ac">8</td>
+              <td class="ac">1 ~ 17</td>
+            </tr>
+            <tr>
+              <td class="ac" rowspan="6">Reading</td>
+              <td class="ac">대의파악</td>
+              <td class="ac">7</td>
+              <td class="ac">0</td>
+              <td class="ac">14</td>
+              <td class="ac">0</td>
+              <td class="ac">18 ~ 24</td>
+            </tr>
+            <tr>
+              <td class="ac">세부사항</td>
+              <td class="ac">4</td>
+              <td class="ac">1</td>
+              <td class="ac">8</td>
+              <td class="ac">2</td>
+              <td class="ac">25 ~ 28</td>
+            </tr>
+            <tr>
+              <td class="ac">어법 / 어휘</td>
+              <td class="ac">2</td>
+              <td class="ac">1</td>
+              <td class="ac">5</td>
+              <td class="ac">1</td>
+              <td class="ac">29 ~ 30</td>
+            </tr>
+            <tr>
+              <td class="ac">빈칸 추론</td>
+              <td class="ac">4</td>
+              <td class="ac">2</td>
+              <td class="ac">11</td>
+              <td class="ac">6</td>
+              <td class="ac">31 ~ 34</td>
+            </tr>
+            <tr>
+              <td class="ac">간접 쓰기</td>
+              <td class="ac">6</td>
+              <td class="ac">3</td>
+              <td class="ac">14</td>
+              <td class="ac">7</td>
+              <td class="ac">35 ~ 40</td>
+            </tr>
+            <tr>
+              <td class="ac">장문 독해 </td>
+              <td class="ac">5</td>
+              <td class="ac">2</td>
+              <td class="ac">11</td>
+              <td class="ac">4</td>
+              <td class="ac">41 ~ 45</td>
+            </tr>
+          </tbody>
+          <tfoot class="tfoot-cd">
+            <tr>
+              <td  colspan="2">총합</td>
+              <td >45</td>
+              <td >13</td>
+              <td >100</td>
+              <td >29</td>
+              <td >-</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <!-- // 영역별 점수 -->
+    <!-- 성적 분포도 // -->
+    <div class="print-inside">
+      <h3 class="g-title-5 cmgt-2">성적 분포도</h3>
+      <div class="radar-chart">
+        <div class="legend">
+          <span class="case">문항</span> 
+          <span class="case ty-2">맞은 갯수</span>
+          <span class="case ty-3">문항 점수</span>
+          <span class="case ty-4">내 점수</span>
+        </div>
+        <div class="chart">
+          <canvas id="chart2" width="100%" max-height="251px"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="btn-wrap btn-print">
+      <span class="btn-in">
+        <a href="#none" target="_blank" title="새창으로 열립니다." class="btn-t btn-c-2">PDF</a>
+      </span>
+      <span class="btn-in">
+        <button type="button" class="btn-t btn-c" onclick="window.print();">인쇄</button>
+      </span>
+    </div>
+  </div>
+  <!-- // pop-cont -->
+</div>
+<script src="../../js/chart.min.js"></script>
+<script type="text/javascript">
+  var ctx = document.getElementById('chart2').getContext('2d');
+  var chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['듣기 / 말하기','대의 파악','세부 사항','어법 / 어휘','빈칸 추론','간접 쓰기','영문 독해'],
+      datasets: [
+        {
+          label: '문항',
+          backgroundColor: '#70C2D4',
+          borderWidth: 0,
+          data: [25 ,25, 25,25 ,25, 25, 25],
+        },
+        {
+          label: '맞은 갯수',
+          backgroundColor: '#9A8BBC',
+          borderWidth: 0,
+          data: [23 ,22, 6,22 ,22, 3, 8]
+        },
+        {
+          label: '문항 점수',
+          backgroundColor: '#FCA554',
+          borderWidth: 0,
+          data: [22 ,22, 22,22 ,22, 22,22]
+        },
+        {
+          label: '내점수',
+          backgroundColor: '#EB5357',
+          borderWidth: 0,
+          data: [22 ,22, 22,22 ,22, 22,28]
+        },      
+      ]
+    },
+    options: {
+      maxBarThickness: 20,
+      maintainAspectRatio:false,
+      borderRadius:4,
+      layout: {
+        padding:0,
+      },
+      legend: {//범례 설정            
+        display: false,
+      },
+      responsive: true,
+      scales: {
+          y: { 
+            min: 0,
+            max: 40,  
+            grid: {  
+              display:false,
+            },
+          },
+          x: {
+            grid: {
+              drawTicks: false,
+              tickLength: 0,
+              color: '#E7E1E1',
+              drawBorder: false,
+            },
+            border: {
+              dash: [2,4],
+            }
+          }
+      },
+      plugins: {
+        legend: {
+          display: false,
+        }
+        
+      }
+    }
+  });  
+</script>
+</body>
+</html>
